@@ -1,5 +1,6 @@
 require 'rake/testtask'
 require 'rake/clean'
+require 'fileutils'
 require 'open3'
 
 # generate depend file for gcc dependencies
@@ -132,6 +133,42 @@ task :clean_core do
 	end
 end
 
+
+
+
+
+
+
+# temporarily swap out the makefile for an alternate version
+# 
+# main_filepath, alt_filepath:  Paths to main and alt makefile, relative to common_root.
+# common_root:                  As above.
+# work_dir:                     Path under which to run the commands specified in the block.
+def swap_makefile(common_root, main_filepath, alt_filepath, work_dir, &block)
+	swap_ext = ".temp"
+	swap_filepath = File.join(common_root, "Makefile#{swap_ext}")
+	
+	Dir.chdir BASEPATH do
+		main_filepath = File.expand_path(File.join(common_root, main_filepath))
+		alt_filepath  = File.expand_path(File.join(common_root, alt_filepath))
+	end
+	
+	
+	
+	FileUtils.mv main_filepath, swap_filepath # rename main makefile
+	FileUtils.cp alt_filepath, main_filepath  # switch to .a-creating mkfile
+	
+	
+	# run tasks associated with the alternate file
+	Dir.chdir work_dir do
+		block.call
+	end
+	
+	
+	FileUtils.cp swap_filepath, main_filepath # restore temp
+	FileUtils.rm swap_filepath                # delete temp		
+end
+
 # use a modified version of the oF build system to generate a C++ static lib
 task :build_library do
 	# this command is to use the weird symlinked directory
@@ -143,31 +180,13 @@ task :build_library do
 	
 	
 	
+	swap_makefile("./mySketch/", "./Makefile", "./Makefile.static_lib", "./mySketch") do
+		run_i "make static_lib"
+	end
+	
 	
 	# this command copies over the other makefile temporarily.
 	# this totally works, but is ugly in many ways.
-	
-	Dir.chdir BASEPATH do
-		x=[
-			"cp ./mySketch/Makefile ./mySketch/Makefile.temp", # backup main makefile
-			"rm ./mySketch/Makefile",
-			"cp ./static_lib_creator/Makefile ./mySketch/Makefile", # switch to .a-creating mkfile
-			
-			# make the library (the branch below executes here)
-			
-			"cp ./mySketch/Makefile.temp ./mySketch/Makefile", # restore temp
-			"rm ./mySketch/Makefile.temp"                      # delete temp
-		]
-		x.each_with_index do |cmd, i|
-			run_i cmd
-			
-			if i == 2
-				Dir.chdir "./mySketch" do
-					run_i "make static_lib"
-				end
-			end
-		end
-	end
 end
 
 task :clean_library do
@@ -218,6 +237,7 @@ end
 task :examine do
 	path = File.expand_path("./mySketch/obj/linux64/Release/src", BASEPATH)
 	Dir.chdir path do
+		puts "local oF build directory:"
 		p Dir['./*']
 	end
 end
