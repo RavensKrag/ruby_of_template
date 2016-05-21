@@ -137,7 +137,8 @@ end
 # use a modified version of the oF build system to generate a C++ static lib
 task :build_library => "mySketch/lib/libOFSketch.a"
 
-local_oF_cpp_source = Dir["mySketch/src/*.cpp"] + Dir["mySketch/src/*.h"]
+
+local_oF_cpp_source = Dir.glob("mySketch/src/*{.cpp,.h}")
 file "mySketch/lib/libOFSketch.a" => local_oF_cpp_source do
 	run_task('clean_library')
 	
