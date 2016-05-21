@@ -117,7 +117,23 @@ number_of_cores = 4
 
 
 
-task :default => :build
+task :default => :run
+
+# TODO: current build system generates a C++ only executable. Delete that.
+task :build => [:build_core, :build_library]
+task :clean => [:clean_core, :clean_library]
+
+# run just the C++ components
+task :run => :build do
+	Dir.chdir CORE_BUILD_PATH do
+		run_i "make RunRelease"
+	end
+end
+
+
+
+
+
 
 # generate all the .o files using the standard openFrameworks build system
 task :build_core do
@@ -186,6 +202,9 @@ task :clean_library do
 end
 
 
+
+
+
 # a way to test that all variables needed to build the static lib are set
 task :lib_variable_test do
 	swap_makefile("./mySketch/", "Makefile", "Makefile.static_lib") do
@@ -207,17 +226,7 @@ end
 
 
 
-# TODO: current build system generates a C++ only executable. Delete that.
-task :build => [:build_core, :build_library]
-task :clean => [:clean_core, :clean_library]
 
-
-# run just the C++ components
-task :run => :build do
-	Dir.chdir CORE_BUILD_PATH do
-		run_i "make RunRelease"
-	end
-end
 
 
 
