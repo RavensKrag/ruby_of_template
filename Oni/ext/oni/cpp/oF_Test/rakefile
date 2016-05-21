@@ -111,18 +111,20 @@ def swap_makefile(common_root, main_filepath, alt_filepath, &block)
 	
 	
 	
-	FileUtils.mv main_filepath, swap_filepath # rename main makefile
-	FileUtils.cp alt_filepath, main_filepath  # switch to .a-creating mkfile
-	
 	
 	# run tasks associated with the alternate file
-	block.call
-	# TODO: need to make sure that files are restored even if there is an error thrown in the block
-	
-	
-	FileUtils.cp swap_filepath, main_filepath # restore temp
-	FileUtils.rm swap_filepath                # delete temp		
-	
+	begin
+		FileUtils.mv main_filepath, swap_filepath # rename main makefile
+		FileUtils.cp alt_filepath, main_filepath  # switch to .a-creating mkfile
+		
+		block.call
+	ensure
+		FileUtils.cp swap_filepath, main_filepath # restore temp
+		FileUtils.rm swap_filepath                # delete temp		
+		# I think this ensure block should make it so the Makefile always restores,
+		# even if there is an error in the block.
+		# src: http://stackoverflow.com/questions/2191632/begin-rescue-and-ensure-in-ruby
+	end
 end
 
 # use a modified version of the oF build system to generate a C++ static lib
