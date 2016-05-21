@@ -33,6 +33,12 @@ def run_i(cmd_string)
 	stdout_and_stderr.close
 end
 
+def run_task(task)
+	Rake::Task[task].invoke
+	Rake::Task[task].reenable
+	# src: http://stackoverflow.com/questions/577944/how-to-run-rake-tasks-from-within-rake-tasks
+end
+
 
 
 # make the :test task depend on the shared
@@ -185,7 +191,12 @@ def swap_makefile(common_root, main_filepath, alt_filepath, &block)
 end
 
 # use a modified version of the oF build system to generate a C++ static lib
-task :build_library do
+task :build_library => "mySketch/lib/libOFSketch.a"
+
+local_oF_cpp_source = Dir["mySketch/src/*.cpp"] + Dir["mySketch/src/*.h"]
+file "mySketch/lib/libOFSketch.a" => local_oF_cpp_source do
+	run_task('clean_library')
+	
 	swap_makefile("./mySketch/", "Makefile", "Makefile.static_lib") do
 		Dir.chdir CORE_BUILD_PATH do
 			run_i "make static_lib"
