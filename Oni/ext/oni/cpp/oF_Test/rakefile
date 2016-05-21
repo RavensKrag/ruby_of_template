@@ -118,6 +118,9 @@ BASEPATH = File.absolute_path(File.dirname(__FILE__))
 CORE_BUILD_PATH = File.expand_path("./mySketch", BASEPATH)
 LIB_OUTPUT_PATH = File.expand_path("./mySketch/lib", BASEPATH)
 
+PLATFORM = "linux64"
+TARGET   = "Release"
+
 number_of_cores = 4
 
 
@@ -246,9 +249,10 @@ end
 
 # show the .o files generated that are specific to this project
 task :examine do
-	path = File.expand_path("./mySketch/obj/linux64/Release/src", BASEPATH)
+	path = File.expand_path("./mySketch/obj/#{PLATFORM}/#{TARGET}/src", BASEPATH)
 	Dir.chdir path do
 		puts "local oF build directory:"
+		puts Dir.pwd
 		p Dir['./*']
 	end
 end
