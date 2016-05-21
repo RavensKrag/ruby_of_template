@@ -107,10 +107,9 @@ end
 
 
 BASEPATH = File.absolute_path(File.dirname(__FILE__))
-puts BASEPATH
+	puts BASEPATH
 
 CORE_BUILD_PATH = File.expand_path("./mySketch", BASEPATH)
-LIB_BUILD_PATH  = File.expand_path("./static_lib_creator", BASEPATH)
 LIB_OUTPUT_PATH = File.expand_path("./mySketch/lib", BASEPATH)
 
 number_of_cores = 4
@@ -144,7 +143,7 @@ end
 # main_filepath, alt_filepath:  Paths to main and alt makefile, relative to common_root.
 # common_root:                  As above.
 # work_dir:                     Path under which to run the commands specified in the block.
-def swap_makefile(common_root, main_filepath, alt_filepath, work_dir, &block)
+def swap_makefile(common_root, main_filepath, alt_filepath, &block)
 	swap_ext = ".temp"
 	swap_filepath = File.join(common_root, "Makefile#{swap_ext}")
 	
@@ -160,9 +159,7 @@ def swap_makefile(common_root, main_filepath, alt_filepath, work_dir, &block)
 	
 	
 	# run tasks associated with the alternate file
-	Dir.chdir work_dir do
-		block.call
-	end
+	block.call
 	
 	
 	FileUtils.cp swap_filepath, main_filepath # restore temp
@@ -171,17 +168,10 @@ end
 
 # use a modified version of the oF build system to generate a C++ static lib
 task :build_library do
-	# this command is to use the weird symlinked directory
-	# this doesn't seem to work right...
-	
-	# Dir.chdir LIB_BUILD_PATH do
-	# 	run_i "make static_lib"
-	# end
-	
-	
-	
-	swap_makefile("./mySketch/", "./Makefile", "./Makefile.static_lib", "./mySketch") do
-		run_i "make static_lib"
+	swap_makefile("./mySketch/", "Makefile", "Makefile.static_lib") do
+		Dir.chdir CORE_BUILD_PATH do
+			run_i "make static_lib"
+		end
 	end
 	
 	
