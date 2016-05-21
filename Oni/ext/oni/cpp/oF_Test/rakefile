@@ -147,7 +147,7 @@ def swap_makefile(common_root, main_filepath, alt_filepath, &block)
 	swap_ext = ".temp"
 	swap_filepath = File.join(common_root, "Makefile#{swap_ext}")
 	
-	Dir.chdir BASEPATH do
+	Dir.chdir BASEPATH do # NOTE: this chdir may be unnecesary
 		main_filepath = File.expand_path(File.join(common_root, main_filepath))
 		alt_filepath  = File.expand_path(File.join(common_root, alt_filepath))
 	end
@@ -160,10 +160,12 @@ def swap_makefile(common_root, main_filepath, alt_filepath, &block)
 	
 	# run tasks associated with the alternate file
 	block.call
+	# TODO: need to make sure that files are restored even if there is an error thrown in the block
 	
 	
 	FileUtils.cp swap_filepath, main_filepath # restore temp
 	FileUtils.rm swap_filepath                # delete temp		
+	
 end
 
 # use a modified version of the oF build system to generate a C++ static lib
@@ -173,24 +175,23 @@ task :build_library do
 			run_i "make static_lib"
 		end
 	end
-	
-	
-	# this command copies over the other makefile temporarily.
-	# this totally works, but is ugly in many ways.
 end
 
 task :clean_library do
-	Dir.chdir LIB_BUILD_PATH do
-		run_i "make clean_static_lib"
+	swap_makefile("./mySketch/", "Makefile", "Makefile.static_lib") do
+		Dir.chdir CORE_BUILD_PATH do
+			run_i "make clean_static_lib"
+		end
 	end
 end
 
 
 # a way to test that all variables needed to build the static lib are set
 task :lib_variable_test do
-	# NOTE: if the library-building procedure changes, this should change to match
-	Dir.chdir LIB_BUILD_PATH do
-		run_i "make variable_test"
+	swap_makefile("./mySketch/", "Makefile", "Makefile.static_lib") do
+		Dir.chdir CORE_BUILD_PATH do
+			run_i "make variable_test"
+		end
 	end
 end
 
