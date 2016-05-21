@@ -107,7 +107,7 @@ end
 
 
 BASEPATH = File.absolute_path(File.dirname(__FILE__))
-	puts BASEPATH
+	# puts BASEPATH
 
 CORE_BUILD_PATH = File.expand_path("./mySketch", BASEPATH)
 LIB_OUTPUT_PATH = File.expand_path("./mySketch/lib", BASEPATH)
@@ -216,7 +216,7 @@ end
 
 # check what's in the static lib that's being outputted
 # (linux and OS only)
-task :lib_output_test do
+task :lib_test do
 	# NOTE: this can stay the same regaurdless of the library-building method
 	Dir.chdir LIB_OUTPUT_PATH do
 		# the -C flag is for de-mangling the C++ function names
