@@ -25,6 +25,7 @@ TARGET_NAME = Release
 # (not sure why this variable ends up blank by this time, but w/e)
 include $(OF_ROOT)/libs/openFrameworksCompiled/project/makefileCommon/config.project.mk
 
+
 # run this task to make sure the variables work
 variable_test:
 	@echo "=================="
@@ -51,8 +52,15 @@ variable_test:
 static_lib: lib/libOFSketch.a
 	
 lib/libOFSketch.a:
-	@mkdir lib
+	@mkdir -p lib
 	ar rcs $@ $(OF_PROJECT_OBJS) $(OF_PROJECT_ADDONS_OBJS)
+
+clean_static_lib:
+	@rm -f lib/libOFSketch.a
+
+
+
+
 # this doesn't seem to work. might have to do this in a rakefile, because that's something I actually understand, lol.
 # these variables are coming up empty, and I'm not sure why.
 
@@ -87,6 +95,17 @@ lib/libOFSketch.a:
 # NOTE: this generates a proper-looking .a now, but if you turn the TARGET_NAME and include lines on, then the main project will not build, and you will not get the .o objects you need to build the .a
 # that's a fail....
 # either need to move this step to some other file, 
+
+
+
+
+# oh wait no, just put the variable set / config import
+# under the section for the static lib, and then it works just fine.
+
+# ???
+
+# I thought that's what I saw?
+# oh well...
 
 
 
