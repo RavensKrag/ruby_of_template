@@ -25,6 +25,7 @@ TARGET_NAME = Release
 # because the config assumes this var is defined already
 # (not sure why this variable ends up blank by this time, but w/e)
 include $(OF_ROOT)/libs/openFrameworksCompiled/project/makefileCommon/config.project.mk
+include $(OF_ROOT)/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk
 
 
 # run this task to make sure the variables work
@@ -47,6 +48,21 @@ variable_test:
 	
 	@echo "OF_PROJECT_OBJ_OUTPUT_PATH"
 	@echo $(OF_PROJECT_OBJ_OUTPUT_PATH)
+	
+	@echo "OF_PROJECT_SOURCE_PATHS"
+	@echo $(OF_PROJECT_SOURCE_PATHS)
+	@echo "PROJECT_EXTERNAL_SOURCE_PATHS"
+	@echo $(PROJECT_EXTERNAL_SOURCE_PATHS)
+	@echo "ALL_OF_PROJECT_SOURCE_PATHS"
+	@echo $(ALL_OF_PROJECT_SOURCE_PATHS)
+	@echo "OF_CORE_HEADER_PATHS"
+	@echo $(OF_CORE_HEADER_PATHS)
+	
+	@echo "ALL_OF_CORE_THIRDPARTY_HEADER_PATHS"
+	@echo $(ALL_OF_CORE_THIRDPARTY_HEADER_PATHS)
+	
+	@echo "OF_CORE_THIRDPARTY_HEADER_PATHS"
+	@echo $(OF_CORE_THIRDPARTY_HEADER_PATHS)
 	@echo "=================="
 
 # create static library

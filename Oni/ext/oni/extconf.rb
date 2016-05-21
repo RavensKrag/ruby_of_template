@@ -29,6 +29,17 @@ dir_config(
 	File.expand_path("./cpp/oF_Test/mySketch/lib/")  # libs
 )
 
+headers = []
+libs = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/openFrameworksCompiled/lib/linux64/"
+dir_config(
+	"openFrameworks", # name to use with 'have_library'
+	headers, # headers
+	File.expand_path(libs)  # libs
+)
+
+
+
+
 # C++ stuff
 # dir_config(
 # 	"OFSketch",
@@ -37,7 +48,8 @@ dir_config(
 # )
 
 
-
+have_library("stdc++")
 have_library('OFSketch')
+have_library('openFrameworks')
 
 create_makefile('oni/oni')
