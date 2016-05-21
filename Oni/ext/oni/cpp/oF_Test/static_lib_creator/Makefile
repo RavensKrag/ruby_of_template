@@ -30,9 +30,9 @@ include $(OF_ROOT)/libs/openFrameworksCompiled/project/makefileCommon/config.pro
 # run this task to make sure the variables work
 variable_test:
 	@echo "=================="
-	@echo "project"
+	@echo "project objs"
 	@echo $(OF_PROJECT_OBJS)
-	@echo "ad-ons"
+	@echo "ad-on objs"
 	@echo $(OF_PROJECT_ADDONS_OBJS)
 	@echo "core libs"
 	@echo $(OF_CORE_LIBS)
@@ -107,6 +107,12 @@ clean_static_lib:
 
 # I thought that's what I saw?
 # oh well...
+
+
+
+# NOTE: the symlink directory hack setup is currently dropping the .o files that are specific to this project, OF_PROJECT_OBJS
+
+# WARNING: 'core libs' includes linker flags, as well as .a files. that might not be what you want.
 
 
 

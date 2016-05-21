@@ -106,11 +106,15 @@ end
 
 
 BASEPATH = File.absolute_path(File.dirname(__FILE__))
+puts BASEPATH
 
 CORE_BUILD_PATH = File.expand_path("./mySketch", BASEPATH)
 LIB_BUILD_PATH  = File.expand_path("./static_lib_creator", BASEPATH)
+LIB_OUTPUT_PATH = File.expand_path("./mySketch/lib", BASEPATH)
 
-NUMBER_OF_CORES = 4
+number_of_cores = 4
+
+
 
 
 task :default => :build
@@ -118,7 +122,7 @@ task :default => :build
 # generate all the .o files using the standard openFrameworks build system
 task :build_core do
 	Dir.chdir CORE_BUILD_PATH do
-		run_i "make -j#{NUMBER_OF_CORES}"
+		run_i "make -j#{number_of_cores}"
 	end
 end
 
@@ -130,8 +134,39 @@ end
 
 # use a modified version of the oF build system to generate a C++ static lib
 task :build_library do
-	Dir.chdir LIB_BUILD_PATH do
-		run_i "make static_lib"
+	# this command is to use the weird symlinked directory
+	# this doesn't seem to work right...
+	
+	# Dir.chdir LIB_BUILD_PATH do
+	# 	run_i "make static_lib"
+	# end
+	
+	
+	
+	
+	# this command copies over the other makefile temporarily.
+	# this totally works, but is ugly in many ways.
+	
+	Dir.chdir BASEPATH do
+		x=[
+			"cp ./mySketch/Makefile ./mySketch/Makefile.temp", # backup main makefile
+			"rm ./mySketch/Makefile",
+			"cp ./static_lib_creator/Makefile ./mySketch/Makefile", # switch to .a-creating mkfile
+			
+			# make the library (the branch below executes here)
+			
+			"cp ./mySketch/Makefile.temp ./mySketch/Makefile", # restore temp
+			"rm ./mySketch/Makefile.temp"                      # delete temp
+		]
+		x.each_with_index do |cmd, i|
+			run_i cmd
+			
+			if i == 2
+				Dir.chdir "./mySketch" do
+					run_i "make static_lib"
+				end
+			end
+		end
 	end
 end
 
@@ -140,6 +175,26 @@ task :clean_library do
 		run_i "make clean_static_lib"
 	end
 end
+
+
+# a way to test that all variables needed to build the static lib are set
+task :lib_variable_test do
+	# NOTE: if the library-building procedure changes, this should change to match
+	Dir.chdir LIB_BUILD_PATH do
+		run_i "make variable_test"
+	end
+end
+
+# check what's in the static lib that's being outputted
+# (linux and OS only)
+task :lib_output_test do
+	# NOTE: this can stay the same regaurdless of the library-building method
+	Dir.chdir LIB_OUTPUT_PATH do
+		# the -C flag is for de-mangling the C++ function names
+		run_i "nm -C libOFSketch.a "
+	end
+end
+
 
 
 # TODO: current build system generates a C++ only executable. Delete that.
@@ -151,5 +206,18 @@ task :clean => [:clean_core, :clean_library]
 task :run => :build do
 	Dir.chdir CORE_BUILD_PATH do
 		run_i "make RunRelease"
+	end
+end
+
+
+
+
+
+
+# show the .o files generated that are specific to this project
+task :examine do
+	path = File.expand_path("./mySketch/obj/linux64/Release/src", BASEPATH)
+	Dir.chdir path do
+		p Dir['./*']
 	end
 end
