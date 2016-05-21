@@ -1,4 +1,5 @@
 # Do not track files that are created by the build system
+Oni/ext/oni/cpp/oF_Test/mySketch/bin/
 ext/oni/cpp/build_*
 /ext/oni/Makefile
 *.o
