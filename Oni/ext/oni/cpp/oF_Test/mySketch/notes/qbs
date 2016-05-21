@@ -1,0 +1,29 @@
+# run this once to set the default profile
+qbs build profile:gcc
+
+
+
+
+
+# run these commands to actually do work
+# (don't need to state the profile every time)
+
+# if you omit the "type", it will make the debug build
+# types include: debug, release
+# you can totally list both if you want to build both
+
+qbs build -j 4 debug
+qbs run
+
+qbs clean debug
+
+
+
+
+# build system specified in the following file
+mySketch.qbs
+
+# need to list out all files to be compiled, addons, and other options in that file
+# (more human-readable than make, but harder to automate)
+# probably will end up using make, because it should be easier to chain into that
+# from Ruby's build system.

@@ -1,0 +1,8 @@
+# require 'rake/testtask'
+# require 'rake/clean'
+# require 'open3'
+
+
+# o_files Dir
+# task 'libOniBase' => o_files do
+# end
