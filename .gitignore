@@ -1,0 +1,26 @@
+# Do not track files that are created by the build system
+ext/oni/cpp/build_*
+/ext/oni/Makefile
+*.o
+*.log
+*.def
+
+# Ignore files needed to build Windows pre-compiled gem
+*.dll
+*.a
+
+# Do not track test resources
+media
+
+# Do not track Ogre config files
+*.cfg
+
+# More Ogre files
+Ogre.log
+
+# Packaged gems
+*.gem
+
+# Compiled extension binaries
+*.so
+*.bundle
