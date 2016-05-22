@@ -177,6 +177,10 @@ task :lib_test do
 	Dir.chdir LIB_OUTPUT_PATH do
 		# the -C flag is for de-mangling the C++ function names
 		run_i "nm -C libOFSketch.a "
+		
+		# this command will let you see inside an .so
+		# nm -C -D libfmodex.so
+		# src: http://stackoverflow.com/questions/4514745/how-do-i-view-the-list-of-functions-a-linux-shared-library-is-exporting
 	end
 end
 

@@ -1,0 +1,665 @@
+0000000000229571 B __bss_start
+                 U __cxa_allocate_exception
+                 U __cxa_atexit
+                 U __cxa_begin_catch
+                 U __cxa_call_unexpected
+                 U __cxa_demangle
+                 U __cxa_end_catch
+                 w __cxa_finalize
+                 U __cxa_free_exception
+                 U __cxa_guard_acquire
+                 U __cxa_guard_release
+                 U __cxa_pure_virtual
+                 U __cxa_rethrow
+                 U __cxa_throw
+0000000000229571 D _edata
+00000000002298a8 B _end
+00000000000220e8 T _fini
+                 U free
+                 w __gmon_start__
+                 U __gxx_personality_v0
+00000000000100c8 T _init
+00000000000116b0 T Init_Oni
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+                 w _Jv_RegisterClasses
+                 U memcpy
+                 U memset
+                 U rb_ary_entry
+                 U rb_attr_get
+                 U rb_cClass
+                 U rb_cFalseClass
+                 U rb_cFixnum
+                 U rb_cFloat
+                 U rb_check_type
+                 U rb_class2name
+                 U rb_cNilClass
+                 U rb_cObject
+                 U rb_cSymbol
+                 U rb_cTrueClass
+                 U rb_data_object_alloc
+                 U rb_define_alloc_func
+                 U rb_define_class
+                 U rb_define_class_under
+                 U rb_define_method
+                 U rb_define_module
+                 U rb_define_module_under
+                 U rb_eArgError
+                 U rb_eFloatDomainError
+                 U rb_eNoMemError
+                 U rb_eRangeError
+                 U rb_errinfo
+                 U rb_eRuntimeError
+                 U rb_eTypeError
+                 U rb_exc_new
+                 U rb_exc_new_cstr
+                 U rb_exc_raise
+                 U rb_fix2int
+                 U rb_frame_method_id_and_class
+                 U rb_funcall
+                 U rb_funcallv
+                 U rb_funcallv_public
+                 U rb_gc_mark
+                 U rb_gc_register_address
+                 U rb_gc_unregister_address
+                 U rb_id2name
+                 U rb_intern
+                 U rb_intern2
+                 U rb_ivar_get
+                 U rb_ivar_set
+                 U rb_jump_tag
+                 U rb_mod_ancestors
+                 U rb_mod_name
+                 U rb_module_new
+                 U rb_num2int
+                 U rb_obj_alloc
+                 U rb_obj_class
+                 U rb_obj_freeze
+                 U rb_obj_instance_eval
+                 U rb_obj_is_instance_of
+                 U rb_obj_is_kind_of
+                 U rb_protect
+                 U rb_raise
+                 U rb_respond_to
+                 U rb_scan_args
+                 U rb_set_end_proc
+                 U rb_set_errinfo
+                 U rb_string_value_ptr
+                 U rb_str_new
+                 U rb_str_new_cstr
+                 U rb_undef_alloc_func
+                 U rb_undef_method
+                 U ruby_vsnprintf
+                 U __stack_chk_fail
+                 U strlen
+                 U _Unwind_Resume
+                 U ofDrawLine(float, float, float, float)
+                 U ofSetColor(int)
+                 U ofBackground(int, int)
+                 U ofDrawCircle(float, float, float)
+                 U ofDrawEllipse(float, float, float, float)
+                 U ofSetupOpenGL(int, int, ofWindowMode)
+                 U ofDrawTriangle(float, float, float, float, float, float)
+                 U ofLogToConsole()
+                 U ofDrawRectangle(float, float, float, float)
+                 U ofRunApp(ofBaseApp*)
+0000000000012720 W void ruby_mark<Launcher>(Launcher*)
+0000000000012750 W void ruby_mark<Rice::detail::Wrapped_Function>(Rice::detail::Wrapped_Function*)
+00000000000126a0 W void ruby_mark<Rice::detail::Exception_Handler>(Rice::detail::Exception_Handler*)
+00000000000126d0 W void ruby_mark<Rice::detail::Default_Exception_Handler>(Rice::detail::Default_Exception_Handler*)
+000000000001c4e0 W void ruby_mark<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >(std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >*)
+                 U operator delete(void*)
+                 U operator delete(void*, unsigned long)
+00000000002295c8 u guard variable for Rice::Data_Type<Launcher>::caster_
+00000000002295a0 u guard variable for Rice::Data_Type<Rice::detail::Wrapped_Function>::caster_
+0000000000229598 u guard variable for Rice::Data_Type<Rice::detail::Exception_Handler>::caster_
+0000000000229590 u guard variable for Rice::Data_Type<Rice::detail::Iterator>::caster_
+00000000002296f8 u guard variable for Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::caster_
+0000000000229588 u guard variable for Rice::Data_Type<void>::caster_
+00000000002296b0 u guard variable for Rice::Data_Type<Launcher>::unbound_instances()::unbound_instances
+00000000002295e0 u guard variable for Rice::Data_Type<Rice::detail::Wrapped_Function>::unbound_instances()::unbound_instances
+0000000000229630 u guard variable for Rice::Data_Type<Rice::detail::Exception_Handler>::unbound_instances()::unbound_instances
+0000000000229708 u guard variable for Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::unbound_instances()::unbound_instances
+0000000000229670 u guard variable for Rice::Data_Type<void>::unbound_instances()::unbound_instances
+00000000000214f0 W ofBaseSoundInput::audioReceived(float*, int, int)
+                 U ofBaseSoundInput::audioIn(float*, int, int)
+                 U ofBaseSoundInput::audioIn(float*, int, int, int, unsigned long long)
+                 U ofBaseSoundInput::audioIn(ofSoundBuffer&)
+0000000000021500 W ofBaseSoundOutput::audioRequested(float*, int, int)
+                 U ofBaseSoundOutput::audioOut(float*, int, int)
+                 U ofBaseSoundOutput::audioOut(float*, int, int, int, unsigned long long)
+                 U ofBaseSoundOutput::audioOut(ofSoundBuffer&)
+0000000000012950 W Rice::Constructor<Launcher, void, void, void, void, void, void, void, void, void, void, void, void, void, void, void, void>::construct(Rice::Object)
+00000000000128b0 W Rice::Data_Object<Launcher>::~Data_Object()
+0000000000012700 W Rice::Data_Object<Launcher>::~Data_Object()
+0000000000012700 W Rice::Data_Object<Launcher>::~Data_Object()
+00000000000128f0 W Rice::Data_Object<Rice::detail::Wrapped_Function>::~Data_Object()
+0000000000012710 W Rice::Data_Object<Rice::detail::Wrapped_Function>::~Data_Object()
+0000000000012710 W Rice::Data_Object<Rice::detail::Wrapped_Function>::~Data_Object()
+00000000000128c0 W Rice::Data_Object<Rice::detail::Exception_Handler>::~Data_Object()
+0000000000012850 W Rice::Data_Object<Rice::detail::Exception_Handler>::~Data_Object()
+0000000000012850 W Rice::Data_Object<Rice::detail::Exception_Handler>::~Data_Object()
+00000000000128d0 W Rice::Data_Object<Rice::detail::Default_Exception_Handler>::~Data_Object()
+0000000000012830 W Rice::Data_Object<Rice::detail::Default_Exception_Handler>::~Data_Object()
+0000000000012830 W Rice::Data_Object<Rice::detail::Default_Exception_Handler>::~Data_Object()
+000000000001c550 W Rice::Data_Object<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::~Data_Object()
+000000000001c540 W Rice::Data_Object<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::~Data_Object()
+000000000001c540 W Rice::Data_Object<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::~Data_Object()
+0000000000012ee0 W Rice::Module_base::~Module_base()
+0000000000012910 W Rice::Module_base::~Module_base()
+0000000000012910 W Rice::Module_base::~Module_base()
+0000000000012f10 W Rice::Module_impl<Rice::Module_base, Rice::Module>::~Module_impl()
+0000000000012e60 W Rice::Module_impl<Rice::Module_base, Rice::Module>::~Module_impl()
+0000000000012e60 W Rice::Module_impl<Rice::Module_base, Rice::Module>::~Module_impl()
+000000000001c750 W Rice::Module_impl<Rice::Class, Rice::Data_Type_Base>::~Module_impl()
+000000000001c710 W Rice::Module_impl<Rice::Class, Rice::Data_Type_Base>::~Module_impl()
+000000000001c710 W Rice::Module_impl<Rice::Class, Rice::Data_Type_Base>::~Module_impl()
+0000000000012ff0 W Rice::Module_impl<Rice::Module, Rice::Class>::~Module_impl()
+0000000000012f40 W Rice::Module_impl<Rice::Module, Rice::Class>::~Module_impl()
+0000000000012f40 W Rice::Module_impl<Rice::Module, Rice::Class>::~Module_impl()
+000000000001bbe0 T Rice::define_class(char const*, Rice::Object)
+000000000001f410 T Rice::define_module(char const*)
+0000000000012890 W Rice::Builtin_Object<5>::~Builtin_Object()
+0000000000012680 W Rice::Builtin_Object<5>::~Builtin_Object()
+0000000000012680 W Rice::Builtin_Object<5>::~Builtin_Object()
+000000000001f730 W Rice::Builtin_Object<7>::~Builtin_Object()
+000000000001f650 W Rice::Builtin_Object<7>::~Builtin_Object()
+000000000001f650 W Rice::Builtin_Object<7>::~Builtin_Object()
+000000000001bf30 T Rice::Data_Type_Base::casters()
+00000000002296f0 B Rice::Data_Type_Base::casters_
+000000000001beb0 T Rice::Data_Type_Base::Data_Type_Base(unsigned long)
+000000000001be90 T Rice::Data_Type_Base::Data_Type_Base()
+000000000001beb0 T Rice::Data_Type_Base::Data_Type_Base(unsigned long)
+000000000001be90 T Rice::Data_Type_Base::Data_Type_Base()
+000000000001bf10 T Rice::Data_Type_Base::~Data_Type_Base()
+000000000001bed0 T Rice::Data_Type_Base::~Data_Type_Base()
+000000000001bed0 T Rice::Data_Type_Base::~Data_Type_Base()
+000000000001bc00 T Rice::anonymous_class(Rice::Object)
+000000000001f430 T Rice::anonymous_module()
+000000000001bbb0 T Rice::define_class_under(Rice::Object, char const*, Rice::Object)
+000000000001f3f0 T Rice::define_module_under(Rice::Object, char const*)
+0000000000012730 W Rice::Default_Free_Function<Launcher>::free(Launcher*)
+00000000000128e0 W Rice::Default_Free_Function<Rice::detail::Wrapped_Function>::free(Rice::detail::Wrapped_Function*)
+00000000000126b0 W Rice::Default_Free_Function<Rice::detail::Exception_Handler>::free(Rice::detail::Exception_Handler*)
+00000000000126e0 W Rice::Default_Free_Function<Rice::detail::Default_Exception_Handler>::free(Rice::detail::Default_Exception_Handler*)
+000000000001cbf0 W Rice::Default_Free_Function<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::free(std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >*)
+0000000000020da0 T Rice::Address_Registration_Guard::registerExitHandler()
+00000000002297a1 B Rice::Address_Registration_Guard::exit_handler_registered
+0000000000020dd0 T Rice::Address_Registration_Guard::disable()
+0000000000229570 D Rice::Address_Registration_Guard::enabled
+0000000000229790 B Rice::Nil
+0000000000229780 B Rice::True
+000000000001f720 W Rice::Array::~Array()
+000000000001f710 W Rice::Array::~Array()
+000000000001f710 W Rice::Array::~Array()
+000000000001bb80 T Rice::Class::undef_creation_funcs()
+000000000001b970 T Rice::Class::Class(unsigned long)
+000000000001b950 T Rice::Class::Class()
+000000000001b970 T Rice::Class::Class(unsigned long)
+000000000001b950 T Rice::Class::Class()
+0000000000013020 W Rice::Class::~Class()
+0000000000012fb0 W Rice::Class::~Class()
+0000000000012fb0 W Rice::Class::~Class()
+0000000000229770 B Rice::False
+0000000000229760 B Rice::Undef
+000000000001f740 W Rice::detail::check_type(Rice::Object, int)
+0000000000018160 W Rice::detail::from_ruby_<Launcher*>::convert(Rice::Object)
+0000000000021100 T Rice::detail::method_data()
+0000000000020df0 T Rice::detail::check_ruby_type(unsigned long, unsigned long, bool)
+0000000000012ac0 W unsigned long Rice::detail::data_get_struct<Launcher>(unsigned long, Launcher**)
+0000000000012a90 W unsigned long Rice::detail::data_get_struct<Rice::detail::Wrapped_Function>(unsigned long, Rice::detail::Wrapped_Function**)
+0000000000012a60 W unsigned long Rice::detail::data_get_struct<Rice::detail::Exception_Handler>(unsigned long, Rice::detail::Exception_Handler**)
+000000000001c560 W unsigned long Rice::detail::data_get_struct<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >(unsigned long, std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >**)
+000000000001f660 W Rice::detail::Ruby_Function_0<unsigned long, unsigned long (*)()>::call(Rice::detail::Ruby_Function_0<unsigned long, unsigned long (*)()>*)
+000000000001f680 W Rice::detail::Ruby_Function_1<unsigned long, unsigned long (*)(unsigned long), Rice::Module>::call(Rice::detail::Ruby_Function_1<unsigned long, unsigned long (*)(unsigned long), Rice::Module>*)
+0000000000020470 W Rice::detail::Ruby_Function_1<unsigned long, unsigned long (*)(unsigned long), unsigned long volatile>::call(Rice::detail::Ruby_Function_1<unsigned long, unsigned long (*)(unsigned long), unsigned long volatile>*)
+0000000000020d80 W Rice::detail::Ruby_Function_1<unsigned long, unsigned long (*)(char const*), char [1]>::call(Rice::detail::Ruby_Function_1<unsigned long, unsigned long (*)(char const*), char [1]>*)
+0000000000020d40 W Rice::detail::Ruby_Function_1<unsigned long, unsigned long (*)(char const*), char const*>::call(Rice::detail::Ruby_Function_1<unsigned long, unsigned long (*)(char const*), char const*>*)
+0000000000020450 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, long), unsigned long volatile, unsigned long>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, long), unsigned long volatile, unsigned long>*)
+00000000000204f0 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, unsigned long), Rice::Object, unsigned long>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, unsigned long), Rice::Object, unsigned long>*)
+00000000000204c0 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, unsigned long), Rice::Object, Rice::Object>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, unsigned long), Rice::Object, Rice::Object>*)
+000000000001f070 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, char const*), Rice::Object, char [8192]>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, char const*), Rice::Object, char [8192]>*)
+0000000000012810 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, Launcher**), unsigned long, Launcher**>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, Launcher**), unsigned long, Launcher**>*)
+00000000000127f0 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, Rice::detail::Wrapped_Function**), unsigned long, Rice::detail::Wrapped_Function**>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, Rice::detail::Wrapped_Function**), unsigned long, Rice::detail::Wrapped_Function**>*)
+0000000000012790 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, Rice::detail::Exception_Handler**), unsigned long, Rice::detail::Exception_Handler**>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, Rice::detail::Exception_Handler**), unsigned long, Rice::detail::Exception_Handler**>*)
+000000000001c520 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >**), unsigned long, std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >**>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(unsigned long, std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >**), unsigned long, std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >**>*)
+000000000001f6a0 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(Rice::Object, int), Rice::Object, int>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(Rice::Object, int), Rice::Object, int>*)
+0000000000020d60 W Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(char const*, long), char const*, unsigned long>::call(Rice::detail::Ruby_Function_2<unsigned long, unsigned long (*)(char const*, long), char const*, unsigned long>*)
+0000000000020490 W Rice::detail::Ruby_Function_3<unsigned long, unsigned long (*)(int, unsigned long*, unsigned long), int, unsigned long*, Rice::Object>::call(Rice::detail::Ruby_Function_3<unsigned long, unsigned long (*)(int, unsigned long*, unsigned long), int, unsigned long*, Rice::Object>*)
+000000000001f090 W Rice::detail::Ruby_Function_3<unsigned long, unsigned long (*)(unsigned long, unsigned long, int, ...), unsigned long volatile, unsigned long, int>::call(Rice::detail::Ruby_Function_3<unsigned long, unsigned long (*)(unsigned long, unsigned long, int, ...), unsigned long volatile, unsigned long, int>*)
+000000000001c4f0 W Rice::detail::Ruby_Function_3<unsigned long, unsigned long (*)(unsigned long, unsigned long, unsigned long), Rice::Object, unsigned long, Rice::Object>::call(Rice::detail::Ruby_Function_3<unsigned long, unsigned long (*)(unsigned long, unsigned long, unsigned long), Rice::Object, unsigned long, Rice::Object>*)
+0000000000020510 W Rice::detail::Ruby_Function_4<unsigned long, unsigned long (*)(unsigned long, unsigned long, int, unsigned long const*), Rice::Object, Rice::Identifier, unsigned long, unsigned long*>::call(Rice::detail::Ruby_Function_4<unsigned long, unsigned long (*)(unsigned long, unsigned long, int, unsigned long const*), Rice::Object, Rice::Identifier, unsigned long, unsigned long*>*)
+000000000001bd30 W Rice::detail::Ruby_Function_4<unsigned long, unsigned long (*)(unsigned long, unsigned long, int, unsigned long const*), unsigned long volatile, Rice::Identifier, int, unsigned long [0]>::call(Rice::detail::Ruby_Function_4<unsigned long, unsigned long (*)(unsigned long, unsigned long, int, unsigned long const*), unsigned long volatile, Rice::Identifier, int, unsigned long [0]>*)
+0000000000020540 W Rice::detail::Ruby_Function_4<unsigned long, unsigned long (*)(unsigned long, unsigned long, int, unsigned long const*), unsigned long volatile, Rice::Identifier, int, unsigned long [1]>::call(Rice::detail::Ruby_Function_4<unsigned long, unsigned long (*)(unsigned long, unsigned long, int, unsigned long const*), unsigned long volatile, Rice::Identifier, int, unsigned long [1]>*)
+0000000000012760 W Rice::detail::Ruby_Function_4<unsigned long, unsigned long (*)(unsigned long, void (*)(void*), void (*)(void*), void*), unsigned long, void (*)(void*), void (*)(void*), void*>::call(Rice::detail::Ruby_Function_4<unsigned long, unsigned long (*)(unsigned long, void (*)(void*), void (*)(void*), void*), unsigned long, void (*)(void*), void (*)(void*), void*>*)
+00000000000127b0 W Rice::detail::Ruby_Function_5<unsigned long, unsigned long (*)(unsigned long, unsigned long, unsigned long (*)(...), int, unsigned long), unsigned long, unsigned long, unsigned long (*)(...), int, Rice::Data_Object<Rice::detail::Wrapped_Function> >::call(Rice::detail::Ruby_Function_5<unsigned long, unsigned long (*)(unsigned long, unsigned long, unsigned long (*)(...), int, unsigned long), unsigned long, unsigned long, unsigned long (*)(...), int, Rice::Data_Object<Rice::detail::Wrapped_Function> >*)
+0000000000012990 W Rice::detail::data_wrap_struct(unsigned long, void (*)(void*), void (*)(void*), void*)
+0000000000019f30 W Rice::detail::Auto_Function_Wrapper<void (*)(Rice::Object), void, Rice::Object, void, void, void, void, void, void, void, void, void, void, void, void, void, void, void>::call(int, unsigned long*, unsigned long)
+00000000000129b0 W unsigned long Rice::detail::default_allocation_func<Launcher>(unsigned long)
+0000000000021250 T Rice::detail::define_method_with_data(unsigned long, unsigned long, unsigned long (*)(...), int, unsigned long)
+0000000000012e30 W Rice::detail::Default_Exception_Handler::~Default_Exception_Handler()
+0000000000012df0 W Rice::detail::Default_Exception_Handler::~Default_Exception_Handler()
+0000000000012df0 W Rice::detail::Default_Exception_Handler::~Default_Exception_Handler()
+0000000000013e70 W void Rice::detail::define_method_and_auto_wrap<void (Launcher::*)()>(unsigned long, Rice::Identifier, void (Launcher::*)(), Rice::Data_Object<Rice::detail::Exception_Handler>, Rice::Arguments*)
+00000000000140c0 W void Rice::detail::define_method_and_auto_wrap<void (*)(Rice::Object)>(unsigned long, Rice::Identifier, void (*)(Rice::Object), Rice::Data_Object<Rice::detail::Exception_Handler>, Rice::Arguments*)
+000000000001b380 W Rice::detail::Auto_Member_Function_Wrapper<void (Launcher::*)(), void, Launcher, void, void, void, void, void, void, void, void, void, void, void, void, void, void, void, void>::call(int, unsigned long*, unsigned long)
+0000000000013190 W Rice::detail::Caster<Launcher, void>::~Caster()
+0000000000013050 W Rice::detail::Caster<Launcher, void>::~Caster()
+0000000000013050 W Rice::detail::Caster<Launcher, void>::~Caster()
+00000000000131d0 W Rice::detail::Caster<Rice::detail::Wrapped_Function, void>::~Caster()
+0000000000013140 W Rice::detail::Caster<Rice::detail::Wrapped_Function, void>::~Caster()
+0000000000013140 W Rice::detail::Caster<Rice::detail::Wrapped_Function, void>::~Caster()
+0000000000013250 W Rice::detail::Caster<Rice::detail::Exception_Handler, void>::~Caster()
+00000000000130f0 W Rice::detail::Caster<Rice::detail::Exception_Handler, void>::~Caster()
+00000000000130f0 W Rice::detail::Caster<Rice::detail::Exception_Handler, void>::~Caster()
+000000000001c7d0 W Rice::detail::Caster<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >, void>::~Caster()
+000000000001c780 W Rice::detail::Caster<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >, void>::~Caster()
+000000000001c780 W Rice::detail::Caster<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >, void>::~Caster()
+0000000000013210 W Rice::detail::Caster<void, void>::~Caster()
+00000000000130a0 W Rice::detail::Caster<void, void>::~Caster()
+00000000000130a0 W Rice::detail::Caster<void, void>::~Caster()
+0000000000021340 T Rice::detail::protect(unsigned long (*)(unsigned long), unsigned long)
+0000000000020f10 T Rice::detail::demangle[abi:cxx11](char const*)
+00000000000210c0 T Rice::detail::demangle(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+000000000001f490 T Rice::Module::swap(Rice::Module&)
+000000000001f120 T Rice::Module::Module(unsigned long)
+000000000001f0c0 T Rice::Module::Module()
+000000000001f120 T Rice::Module::Module(unsigned long)
+000000000001f0c0 T Rice::Module::Module()
+0000000000012f80 W Rice::Module::~Module()
+0000000000012ea0 W Rice::Module::~Module()
+0000000000012ea0 W Rice::Module::~Module()
+000000000001fb60 T Rice::Object::instance_eval(Rice::String const&)
+000000000001fb40 T Rice::Object::swap(Rice::Object&)
+000000000001fe80 T Rice::Object::vcall(Rice::Identifier, Rice::Array)
+000000000001f900 T Rice::Object::freeze()
+0000000000020120 T Rice::Object::set_value(unsigned long)
+0000000000012880 W Rice::Object::~Object()
+0000000000012670 W Rice::Object::~Object()
+0000000000012670 W Rice::Object::~Object()
+0000000000020aa0 T Rice::String::format(char const*, ...)
+0000000000020650 T Rice::String::String(unsigned long)
+00000000000209b0 T Rice::String::String(Rice::Identifier)
+0000000000020700 T Rice::String::String(Rice::Object)
+00000000000207c0 T Rice::String::String(char const*)
+00000000000208b0 T Rice::String::String(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000020570 T Rice::String::String()
+0000000000020650 T Rice::String::String(unsigned long)
+00000000000209b0 T Rice::String::String(Rice::Identifier)
+0000000000020700 T Rice::String::String(Rice::Object)
+00000000000207c0 T Rice::String::String(char const*)
+00000000000208b0 T Rice::String::String(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000020570 T Rice::String::String()
+00000000000128a0 W Rice::String::~String()
+0000000000012840 W Rice::String::~String()
+0000000000012840 W Rice::String::~String()
+0000000000013cf0 W Rice::Data_Type<Launcher>::check_is_bound()
+0000000000016010 W Rice::Data_Type<Launcher> Rice::Data_Type<Launcher>::bind<void>(Rice::Module const&)
+0000000000229518 u Rice::Data_Type<Launcher>::klass_
+00000000002295d0 u Rice::Data_Type<Launcher>::caster_
+0000000000016bc0 W Rice::Data_Type<Launcher>::operator=(Rice::Module const&)
+0000000000014800 W Rice::Data_Type<Launcher>::~Data_Type()
+00000000000145c0 W Rice::Data_Type<Launcher>::~Data_Type()
+00000000000145c0 W Rice::Data_Type<Launcher>::~Data_Type()
+0000000000229508 u Rice::Data_Type<Rice::detail::Wrapped_Function>::klass_
+00000000002295a8 u Rice::Data_Type<Rice::detail::Wrapped_Function>::caster_
+00000000000191f0 W Rice::Data_Type<Rice::detail::Wrapped_Function>::operator=(Rice::Module const&)
+0000000000018fe0 W Rice::Data_Type<Rice::detail::Wrapped_Function>::~Data_Type()
+0000000000018da0 W Rice::Data_Type<Rice::detail::Wrapped_Function>::~Data_Type()
+0000000000018da0 W Rice::Data_Type<Rice::detail::Wrapped_Function>::~Data_Type()
+0000000000229510 u Rice::Data_Type<Rice::detail::Exception_Handler>::klass_
+00000000002295b0 u Rice::Data_Type<Rice::detail::Exception_Handler>::caster_
+0000000000017420 W Rice::Data_Type<Rice::detail::Exception_Handler>::operator=(Rice::Module const&)
+0000000000017210 W Rice::Data_Type<Rice::detail::Exception_Handler>::~Data_Type()
+0000000000016fd0 W Rice::Data_Type<Rice::detail::Exception_Handler>::~Data_Type()
+0000000000016fd0 W Rice::Data_Type<Rice::detail::Exception_Handler>::~Data_Type()
+00000000002295c0 u Rice::Data_Type<Rice::detail::Iterator>::caster_
+000000000001d350 W Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > > Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::bind<void>(Rice::Module const&)
+0000000000229568 u Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::klass_
+0000000000229700 u Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::caster_
+000000000001def0 W Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::operator=(Rice::Module const&)
+000000000001d140 W Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::~Data_Type()
+000000000001cf00 W Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::~Data_Type()
+000000000001cf00 W Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::~Data_Type()
+000000000001e130 W Rice::Data_Type<void> Rice::Data_Type<void>::bind<void>(Rice::Module const&)
+0000000000229520 u Rice::Data_Type<void>::klass_
+00000000002295b8 u Rice::Data_Type<void>::caster_
+0000000000015300 W Rice::Data_Type<void>::operator=(Rice::Module const&)
+00000000000150f0 W Rice::Data_Type<void>::~Data_Type()
+0000000000014eb0 W Rice::Data_Type<void>::~Data_Type()
+0000000000014eb0 W Rice::Data_Type<void>::~Data_Type()
+000000000001ec70 T Rice::Exception::Exception(unsigned long)
+000000000001ed50 T Rice::Exception::Exception(Rice::Object, char const*, ...)
+000000000001ece0 T Rice::Exception::Exception(Rice::Exception const&)
+000000000001ec70 T Rice::Exception::Exception(unsigned long)
+000000000001ed50 T Rice::Exception::Exception(Rice::Object, char const*, ...)
+000000000001ece0 T Rice::Exception::Exception(Rice::Exception const&)
+000000000001bdf0 W Rice::Exception::~Exception()
+000000000001bd60 W Rice::Exception::~Exception()
+000000000001bd60 W Rice::Exception::~Exception()
+00000000000201c0 T Rice::operator==(Rice::Object const&, Rice::Object const&)
+0000000000020380 T Rice::operator>(Rice::Object const&, Rice::Object const&)
+0000000000020130 T Rice::operator<<(std::ostream&, Rice::Object const&)
+00000000000202b0 T Rice::operator<(Rice::Object const&, Rice::Object const&)
+0000000000020290 T Rice::operator!=(Rice::Object const&, Rice::Object const&)
+0000000000021930 W boost::system::system_error::~system_error()
+00000000000217c0 W boost::system::system_error::~system_error()
+00000000000217c0 W boost::system::system_error::~system_error()
+                 U boost::system::system_category()
+                 U boost::system::generic_category()
+0000000000021f20 T ofApp::gotMessage(ofMessage)
+0000000000022020 T ofApp::keyPressed(int)
+0000000000021f10 T ofApp::mouseMoved(int, int)
+0000000000021ef0 T ofApp::keyReleased(int)
+0000000000021f10 T ofApp::mouseExited(int, int)
+0000000000021f00 T ofApp::mouseDragged(int, int, int)
+0000000000021f10 T ofApp::mouseEntered(int, int)
+0000000000021f00 T ofApp::mousePressed(int, int, int)
+0000000000021f00 T ofApp::mouseReleased(int, int, int)
+0000000000021f10 T ofApp::windowResized(int, int)
+0000000000021f50 T ofApp::draw()
+0000000000021f40 T ofApp::setup()
+0000000000021ee0 T ofApp::update()
+0000000000021f30 T ofApp::dragEvent(ofDragInfo)
+00000000000220d0 W ofApp::~ofApp()
+00000000000220b0 W ofApp::~ofApp()
+00000000000220b0 W ofApp::~ofApp()
+                 U ofLog::padding[abi:cxx11]
+                 U ofLog::ofLog()
+                 U ofLog::~ofLog()
+00000000000214a0 T Launcher::initialize()
+00000000000214e0 T Launcher::show()
+0000000000021480 T Launcher::Launcher()
+0000000000021480 T Launcher::Launcher()
+0000000000021460 T Launcher::~Launcher()
+0000000000021430 T Launcher::~Launcher()
+0000000000021430 T Launcher::~Launcher()
+0000000000021620 W ofBaseApp::gotMessage(ofMessage)
+0000000000021580 W ofBaseApp::keyPressed(int)
+0000000000021670 W ofBaseApp::keyPressed(ofKeyEventArgs&)
+00000000000215a0 W ofBaseApp::mouseMoved(int, int)
+0000000000021690 W ofBaseApp::mouseMoved(ofMouseEventArgs&)
+0000000000021760 W ofBaseApp::touchMoved(int, int, int)
+0000000000021850 W ofBaseApp::touchMoved(ofTouchEventArgs&)
+0000000000021590 W ofBaseApp::keyReleased(int)
+0000000000021680 W ofBaseApp::keyReleased(ofKeyEventArgs&)
+0000000000021600 W ofBaseApp::mouseExited(int, int)
+0000000000021730 W ofBaseApp::mouseExited(ofMouseEventArgs&)
+00000000000215b0 W ofBaseApp::mouseDragged(int, int, int)
+00000000000216b0 W ofBaseApp::mouseDragged(ofMouseEventArgs&)
+00000000000215f0 W ofBaseApp::mouseEntered(int, int)
+0000000000021710 W ofBaseApp::mouseEntered(ofMouseEventArgs&)
+00000000000215c0 W ofBaseApp::mousePressed(int, int, int)
+00000000000216d0 W ofBaseApp::mousePressed(ofMouseEventArgs&)
+00000000000215d0 W ofBaseApp::mouseReleased(int, int, int)
+00000000000216f0 W ofBaseApp::mouseReleased(ofMouseEventArgs&)
+00000000000215e0 W ofBaseApp::mouseScrolled(int, int, float, float)
+00000000000217f0 W ofBaseApp::mouseScrolled(ofMouseEventArgs&)
+0000000000021570 W ofBaseApp::windowResized(int, int)
+0000000000021660 W ofBaseApp::windowResized(ofResizeEventArgs&)
+0000000000021790 W ofBaseApp::touchCancelled(int, int, int)
+00000000000218e0 W ofBaseApp::touchCancelled(ofTouchEventArgs&)
+0000000000021780 W ofBaseApp::touchDoubleTap(int, int, int)
+00000000000218b0 W ofBaseApp::touchDoubleTap(ofTouchEventArgs&)
+0000000000021c50 W ofBaseApp::messageReceived(ofMessage&)
+0000000000021650 W ofBaseApp::draw(ofEventArgs&)
+0000000000021550 W ofBaseApp::draw()
+0000000000021910 W ofBaseApp::exit(ofEventArgs&)
+0000000000021560 W ofBaseApp::exit()
+0000000000021630 W ofBaseApp::setup(ofEventArgs&)
+0000000000021530 W ofBaseApp::setup()
+0000000000021640 W ofBaseApp::update(ofEventArgs&)
+0000000000021540 W ofBaseApp::update()
+0000000000021970 W ofBaseApp::dragged(ofDragInfo&)
+0000000000021770 W ofBaseApp::touchUp(int, int, int)
+0000000000021880 W ofBaseApp::touchUp(ofTouchEventArgs&)
+0000000000021610 W ofBaseApp::dragEvent(ofDragInfo)
+0000000000021750 W ofBaseApp::touchDown(int, int, int)
+0000000000021820 W ofBaseApp::touchDown(ofTouchEventArgs&)
+00000000000217a0 W ofBaseApp::~ofBaseApp()
+0000000000021510 W ofBaseApp::~ofBaseApp()
+0000000000021510 W ofBaseApp::~ofBaseApp()
+0000000000012900 W Rice::detail::Default_Exception_Handler::handle_exception() const
+0000000000013290 W Rice::detail::Caster<Launcher, void>::cast_to_base(void*, Rice::Module) const
+00000000000136b0 W Rice::detail::Caster<Rice::detail::Wrapped_Function, void>::cast_to_base(void*, Rice::Module) const
+00000000000134a0 W Rice::detail::Caster<Rice::detail::Exception_Handler, void>::cast_to_base(void*, Rice::Module) const
+000000000001c810 W Rice::detail::Caster<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >, void>::cast_to_base(void*, Rice::Module) const
+00000000000138c0 W Rice::detail::Caster<void, void>::cast_to_base(void*, Rice::Module) const
+000000000001f590 T Rice::Module::singleton_class() const
+000000000001f360 T Rice::Module::name() const
+000000000001f4b0 T Rice::Module::ancestors() const
+000000000001fcf0 T Rice::Object::respond_to(Rice::Identifier) const
+000000000001fd10 T Rice::Object::is_instance_of(Rice::Object) const
+000000000001fc80 T Rice::Object::is_a(Rice::Object) const
+0000000000020110 T Rice::Object::mark() const
+000000000001f9c0 T Rice::Object::to_s() const
+000000000001fd80 T Rice::Object::iv_get(Rice::Identifier) const
+000000000001f820 T Rice::Object::compare(Rice::Object const&) const
+000000000001fa80 T Rice::Object::inspect() const
+000000000001fc00 T Rice::Object::rb_type() const
+000000000001fe00 T Rice::Object::attr_get(Rice::Identifier) const
+000000000001f760 T Rice::Object::class_of() const
+000000000001f960 T Rice::Object::is_frozen() const
+0000000000020c20 T Rice::String::str[abi:cxx11]() const
+0000000000020c00 T Rice::String::c_str() const
+0000000000020d20 T Rice::String::intern() const
+0000000000020ba0 T Rice::String::length() const
+0000000000020bd0 T Rice::String::operator[](long) const
+0000000000013ad0 W Rice::Data_Type<Launcher>::caster() const
+0000000000012af0 W Rice::Data_Type<Rice::detail::Wrapped_Function>::caster() const
+0000000000012c70 W Rice::Data_Type<Rice::detail::Exception_Handler>::caster() const
+000000000001c590 W Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::caster() const
+0000000000012690 W Rice::Data_Type<void>::caster() const
+000000000001efb0 T Rice::Exception::what() const
+000000000001eef0 T Rice::Exception::message() const
+0000000000021d90 W boost::system::system_error::what() const
+                 U std::runtime_error::what() const
+                 U std::ostream::operator<<(int)
+                 U std::runtime_error::runtime_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+                 U std::runtime_error::~runtime_error()
+                 U std::runtime_error::~runtime_error()
+                 U std::invalid_argument::invalid_argument(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+                 U std::invalid_argument::~invalid_argument()
+00000000000147c0 W std::set<Rice::Data_Type<Launcher>*, std::less<Rice::Data_Type<Launcher>*>, std::allocator<Rice::Data_Type<Launcher>*> >::~set()
+00000000000147c0 W std::set<Rice::Data_Type<Launcher>*, std::less<Rice::Data_Type<Launcher>*>, std::allocator<Rice::Data_Type<Launcher>*> >::~set()
+0000000000018fa0 W std::set<Rice::Data_Type<Rice::detail::Wrapped_Function>*, std::less<Rice::Data_Type<Rice::detail::Wrapped_Function>*>, std::allocator<Rice::Data_Type<Rice::detail::Wrapped_Function>*> >::~set()
+0000000000018fa0 W std::set<Rice::Data_Type<Rice::detail::Wrapped_Function>*, std::less<Rice::Data_Type<Rice::detail::Wrapped_Function>*>, std::allocator<Rice::Data_Type<Rice::detail::Wrapped_Function>*> >::~set()
+00000000000171d0 W std::set<Rice::Data_Type<Rice::detail::Exception_Handler>*, std::less<Rice::Data_Type<Rice::detail::Exception_Handler>*>, std::allocator<Rice::Data_Type<Rice::detail::Exception_Handler>*> >::~set()
+00000000000171d0 W std::set<Rice::Data_Type<Rice::detail::Exception_Handler>*, std::less<Rice::Data_Type<Rice::detail::Exception_Handler>*>, std::allocator<Rice::Data_Type<Rice::detail::Exception_Handler>*> >::~set()
+000000000001d100 W std::set<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*, std::less<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*>, std::allocator<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*> >::~set()
+000000000001d100 W std::set<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*, std::less<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*>, std::allocator<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*> >::~set()
+00000000000150b0 W std::set<Rice::Data_Type<void>*, std::less<Rice::Data_Type<void>*>, std::allocator<Rice::Data_Type<void>*> >::~set()
+00000000000150b0 W std::set<Rice::Data_Type<void>*, std::less<Rice::Data_Type<void>*>, std::allocator<Rice::Data_Type<void>*> >::~set()
+                 U std::locale::locale()
+                 U std::locale::~locale()
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+0000000000013ca0 W std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+0000000000013c60 W std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+0000000000013c60 W std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+                 U std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_stringstream()
+0000000000012860 W std::auto_ptr<Rice::detail::Abstract_Caster>::~auto_ptr()
+0000000000012860 W std::auto_ptr<Rice::detail::Abstract_Caster>::~auto_ptr()
+                 U std::ios_base::Init::Init()
+                 U std::ios_base::Init::~Init()
+                 U std::ios_base::ios_base()
+                 U std::ios_base::~ios_base()
+0000000000014300 W std::_Rb_tree<unsigned long, std::pair<unsigned long const, Rice::detail::Abstract_Caster*>, std::_Select1st<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >::_M_insert_unique(std::pair<unsigned long const, Rice::detail::Abstract_Caster*> const&)
+000000000001ca20 W std::_Rb_tree<unsigned long, std::pair<unsigned long const, Rice::detail::Abstract_Caster*>, std::_Select1st<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> >*)
+0000000000014a10 W std::_Rb_tree<Rice::Data_Type<Launcher>*, Rice::Data_Type<Launcher>*, std::_Identity<Rice::Data_Type<Launcher>*>, std::less<Rice::Data_Type<Launcher>*>, std::allocator<Rice::Data_Type<Launcher>*> >::_M_insert_unique(Rice::Data_Type<Launcher>* const&)
+00000000000143f0 W std::_Rb_tree<Rice::Data_Type<Launcher>*, Rice::Data_Type<Launcher>*, std::_Identity<Rice::Data_Type<Launcher>*>, std::less<Rice::Data_Type<Launcher>*>, std::allocator<Rice::Data_Type<Launcher>*> >::_M_erase(std::_Rb_tree_node<Rice::Data_Type<Launcher>*>*)
+0000000000018ae0 W std::_Rb_tree<Rice::Data_Type<Rice::detail::Wrapped_Function>*, Rice::Data_Type<Rice::detail::Wrapped_Function>*, std::_Identity<Rice::Data_Type<Rice::detail::Wrapped_Function>*>, std::less<Rice::Data_Type<Rice::detail::Wrapped_Function>*>, std::allocator<Rice::Data_Type<Rice::detail::Wrapped_Function>*> >::_M_insert_unique(Rice::Data_Type<Rice::detail::Wrapped_Function>* const&)
+0000000000018bd0 W std::_Rb_tree<Rice::Data_Type<Rice::detail::Wrapped_Function>*, Rice::Data_Type<Rice::detail::Wrapped_Function>*, std::_Identity<Rice::Data_Type<Rice::detail::Wrapped_Function>*>, std::less<Rice::Data_Type<Rice::detail::Wrapped_Function>*>, std::allocator<Rice::Data_Type<Rice::detail::Wrapped_Function>*> >::_M_erase(std::_Rb_tree_node<Rice::Data_Type<Rice::detail::Wrapped_Function>*>*)
+0000000000014bf0 W std::_Rb_tree<Rice::Data_Type<Rice::detail::Exception_Handler>*, Rice::Data_Type<Rice::detail::Exception_Handler>*, std::_Identity<Rice::Data_Type<Rice::detail::Exception_Handler>*>, std::less<Rice::Data_Type<Rice::detail::Exception_Handler>*>, std::allocator<Rice::Data_Type<Rice::detail::Exception_Handler>*> >::_M_insert_unique(Rice::Data_Type<Rice::detail::Exception_Handler>* const&)
+0000000000016e00 W std::_Rb_tree<Rice::Data_Type<Rice::detail::Exception_Handler>*, Rice::Data_Type<Rice::detail::Exception_Handler>*, std::_Identity<Rice::Data_Type<Rice::detail::Exception_Handler>*>, std::less<Rice::Data_Type<Rice::detail::Exception_Handler>*>, std::allocator<Rice::Data_Type<Rice::detail::Exception_Handler>*> >::_M_erase(std::_Rb_tree_node<Rice::Data_Type<Rice::detail::Exception_Handler>*>*)
+000000000001cc40 W std::_Rb_tree<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*, Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*, std::_Identity<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*>, std::less<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*>, std::allocator<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*> >::_M_insert_unique(Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >* const&)
+000000000001cd30 W std::_Rb_tree<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*, Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*, std::_Identity<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*>, std::less<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*>, std::allocator<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*> >::_M_erase(std::_Rb_tree_node<Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >*>*)
+0000000000014b00 W std::_Rb_tree<Rice::Data_Type<void>*, Rice::Data_Type<void>*, std::_Identity<Rice::Data_Type<void>*>, std::less<Rice::Data_Type<void>*>, std::allocator<Rice::Data_Type<void>*> >::_M_insert_unique(Rice::Data_Type<void>* const&)
+0000000000014ce0 W std::_Rb_tree<Rice::Data_Type<void>*, Rice::Data_Type<void>*, std::_Identity<Rice::Data_Type<void>*>, std::less<Rice::Data_Type<void>*>, std::allocator<Rice::Data_Type<void>*> >::_M_erase(std::_Rb_tree_node<Rice::Data_Type<void>*>*)
+                 U std::basic_ios<char, std::char_traits<char> >::init(std::basic_streambuf<char, std::char_traits<char> >*)
+                 U std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
+                 U std::exception::~exception()
+                 U operator new(unsigned long)
+                 U std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+                 U std::__throw_bad_alloc()
+                 U std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+                 U std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
+                 U std::__throw_logic_error(char const*)
+                 U std::__throw_length_error(char const*)
+                 U std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+                 U std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+000000000001be80 W non-virtual thunk to Rice::Exception::~Exception()
+000000000001bde0 W non-virtual thunk to Rice::Exception::~Exception()
+00000000000220e0 W non-virtual thunk to ofApp::~ofApp()
+00000000000220c0 W non-virtual thunk to ofApp::~ofApp()
+00000000000217b0 W non-virtual thunk to ofBaseApp::~ofBaseApp()
+0000000000021520 W non-virtual thunk to ofBaseApp::~ofBaseApp()
+                 U typeinfo for ofBaseSoundInput
+                 U typeinfo for ofBaseSoundOutput
+0000000000228648 V typeinfo for ofApp
+00000000002285a0 V typeinfo for Launcher
+0000000000228610 V typeinfo for ofBaseApp
+0000000000227f28 V typeinfo for Rice::Data_Object<Rice::detail::Wrapped_Function>
+0000000000227e00 V typeinfo for Rice::Data_Object<Rice::detail::Exception_Handler>
+0000000000227f40 V typeinfo for Rice::Data_Object<Rice::detail::Default_Exception_Handler>
+0000000000227e48 V typeinfo for Rice::Module_base
+0000000000227e60 V typeinfo for Rice::Module_impl<Rice::Module_base, Rice::Module>
+0000000000227f98 V typeinfo for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Launcher> >
+0000000000228020 V typeinfo for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Rice::detail::Wrapped_Function> >
+0000000000227fe0 V typeinfo for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Rice::detail::Exception_Handler> >
+00000000002283b0 V typeinfo for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > > >
+0000000000227f68 V typeinfo for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<void> >
+0000000000227ec0 V typeinfo for Rice::Module_impl<Rice::Class, Rice::Data_Type_Base>
+0000000000227e90 V typeinfo for Rice::Module_impl<Rice::Module, Rice::Class>
+0000000000228530 V typeinfo for Rice::Builtin_Object<5>
+00000000002284c0 V typeinfo for Rice::Builtin_Object<7>
+0000000000227ed8 V typeinfo for Rice::Data_Type_Base
+0000000000227ef0 V typeinfo for Rice::Exception_Base
+00000000002284d8 V typeinfo for Rice::Array
+0000000000227ea8 V typeinfo for Rice::Class
+0000000000227d20 V typeinfo for Rice::detail::Not_Copyable
+0000000000227f58 V typeinfo for Rice::detail::Abstract_Caster
+0000000000227e18 V typeinfo for Rice::detail::Exception_Handler
+0000000000227e30 V typeinfo for Rice::detail::Default_Exception_Handler
+0000000000227fc8 V typeinfo for Rice::detail::Caster<Launcher, void>
+0000000000227d30 V typeinfo for Rice::detail::Caster<Rice::detail::Wrapped_Function, void>
+0000000000227d48 V typeinfo for Rice::detail::Caster<Rice::detail::Exception_Handler, void>
+0000000000228370 V typeinfo for Rice::detail::Caster<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >, void>
+0000000000227d60 V typeinfo for Rice::detail::Caster<void, void>
+0000000000227e78 V typeinfo for Rice::Module
+0000000000227df0 V typeinfo for Rice::Object
+0000000000228548 V typeinfo for Rice::String
+0000000000228010 V typeinfo for Rice::Jump_Tag
+0000000000227fb0 V typeinfo for Rice::Data_Type<Launcher>
+0000000000228038 V typeinfo for Rice::Data_Type<Rice::detail::Wrapped_Function>
+0000000000227ff8 V typeinfo for Rice::Data_Type<Rice::detail::Exception_Handler>
+00000000002283c8 V typeinfo for Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >
+0000000000227f80 V typeinfo for Rice::Data_Type<void>
+0000000000228460 V typeinfo for Rice::Exception
+00000000002285b0 V typeinfo for boost::system::system_error
+                 U typeinfo for std::domain_error
+                 U typeinfo for std::out_of_range
+                 U typeinfo for std::runtime_error
+                 U typeinfo for std::invalid_argument
+                 U typeinfo for std::bad_alloc
+                 U typeinfo for std::exception
+                 U typeinfo for void
+0000000000022c0b V typeinfo name for ofApp
+0000000000022bd0 V typeinfo name for Launcher
+0000000000022c00 V typeinfo name for ofBaseApp
+0000000000022580 V typeinfo name for Rice::Data_Object<Rice::detail::Wrapped_Function>
+0000000000022380 V typeinfo name for Rice::Data_Object<Rice::detail::Exception_Handler>
+00000000000225c0 V typeinfo name for Rice::Data_Object<Rice::detail::Default_Exception_Handler>
+0000000000022430 V typeinfo name for Rice::Module_base
+0000000000022460 V typeinfo name for Rice::Module_impl<Rice::Module_base, Rice::Module>
+0000000000022680 V typeinfo name for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Launcher> >
+0000000000022800 V typeinfo name for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Rice::detail::Wrapped_Function> >
+0000000000022740 V typeinfo name for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Rice::detail::Exception_Handler> >
+00000000000229a0 V typeinfo name for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > > >
+0000000000022620 V typeinfo name for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<void> >
+0000000000022500 V typeinfo name for Rice::Module_impl<Rice::Class, Rice::Data_Type_Base>
+00000000000224c0 V typeinfo name for Rice::Module_impl<Rice::Module, Rice::Class>
+0000000000022b10 V typeinfo name for Rice::Builtin_Object<5>
+0000000000022ac0 V typeinfo name for Rice::Builtin_Object<7>
+0000000000022540 V typeinfo name for Rice::Data_Type_Base
+0000000000022560 V typeinfo name for Rice::Exception_Base
+0000000000022ae0 V typeinfo name for Rice::Array
+00000000000224f0 V typeinfo name for Rice::Class
+0000000000022260 V typeinfo name for Rice::detail::Not_Copyable
+0000000000022600 V typeinfo name for Rice::detail::Abstract_Caster
+0000000000022280 V typeinfo name for Rice::detail::Wrapped_Function
+00000000000223c0 V typeinfo name for Rice::detail::Exception_Handler
+0000000000022400 V typeinfo name for Rice::detail::Default_Exception_Handler
+0000000000022700 V typeinfo name for Rice::detail::Caster<Launcher, void>
+00000000000222c0 V typeinfo name for Rice::detail::Caster<Rice::detail::Wrapped_Function, void>
+0000000000022300 V typeinfo name for Rice::detail::Caster<Rice::detail::Exception_Handler, void>
+0000000000022940 V typeinfo name for Rice::detail::Caster<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >, void>
+0000000000022340 V typeinfo name for Rice::detail::Caster<void, void>
+0000000000022498 V typeinfo name for Rice::Module
+0000000000022360 V typeinfo name for Rice::Object
+0000000000022b30 V typeinfo name for Rice::String
+00000000000227e0 V typeinfo name for Rice::Jump_Tag
+00000000000226d0 V typeinfo name for Rice::Data_Type<Launcher>
+0000000000022860 V typeinfo name for Rice::Data_Type<Rice::detail::Wrapped_Function>
+00000000000227a0 V typeinfo name for Rice::Data_Type<Rice::detail::Exception_Handler>
+0000000000022a20 V typeinfo name for Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >
+0000000000022660 V typeinfo name for Rice::Data_Type<void>
+0000000000022a80 V typeinfo name for Rice::Exception
+0000000000022be0 V typeinfo name for boost::system::system_error
+0000000000022898 V typeinfo name for Launcher*
+00000000000228e0 V typeinfo name for std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >
+                 U VTT for std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
+0000000000228660 V vtable for ofApp
+00000000002285f0 V vtable for Launcher
+                 U vtable for __cxxabiv1::__class_type_info
+                 U vtable for __cxxabiv1::__si_class_type_info
+                 U vtable for __cxxabiv1::__vmi_class_type_info
+0000000000228140 V vtable for Rice::Data_Object<Rice::detail::Wrapped_Function>
+0000000000228070 V vtable for Rice::Data_Object<Rice::detail::Exception_Handler>
+0000000000228160 V vtable for Rice::Data_Object<Rice::detail::Default_Exception_Handler>
+0000000000228090 V vtable for Rice::Module_base
+00000000002280b0 V vtable for Rice::Module_impl<Rice::Module_base, Rice::Module>
+00000000002281d8 V vtable for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Launcher> >
+00000000002282b0 V vtable for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Rice::detail::Wrapped_Function> >
+0000000000228258 V vtable for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<Rice::detail::Exception_Handler> >
+0000000000228408 V vtable for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > > >
+0000000000228180 V vtable for Rice::Module_impl<Rice::Data_Type_Base, Rice::Data_Type<void> >
+0000000000228560 V vtable for Rice::Builtin_Object<5>
+00000000002284f0 V vtable for Rice::Builtin_Object<7>
+00000000002283e0 V vtable for Rice::Data_Type_Base
+0000000000228328 V vtable for Rice::Exception_Base
+0000000000228510 V vtable for Rice::Array
+0000000000228308 V vtable for Rice::Class
+00000000002280f0 V vtable for Rice::detail::Exception_Handler
+0000000000228118 V vtable for Rice::detail::Default_Exception_Handler
+0000000000228230 V vtable for Rice::detail::Caster<Launcher, void>
+0000000000227d78 V vtable for Rice::detail::Caster<Rice::detail::Wrapped_Function, void>
+0000000000227da0 V vtable for Rice::detail::Caster<Rice::detail::Exception_Handler, void>
+0000000000228388 V vtable for Rice::detail::Caster<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > >, void>
+0000000000227dc8 V vtable for Rice::detail::Caster<void, void>
+00000000002280d0 V vtable for Rice::Module
+0000000000228050 V vtable for Rice::Object
+0000000000228580 V vtable for Rice::String
+0000000000228200 V vtable for Rice::Data_Type<Launcher>
+00000000002282d8 V vtable for Rice::Data_Type<Rice::detail::Wrapped_Function>
+0000000000228280 V vtable for Rice::Data_Type<Rice::detail::Exception_Handler>
+0000000000228430 V vtable for Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >
+00000000002281a8 V vtable for Rice::Data_Type<void>
+0000000000228478 V vtable for Rice::Exception
+00000000002285c8 V vtable for boost::system::system_error
+                 U vtable for std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
+                 U vtable for std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
+                 U vtable for std::basic_streambuf<char, std::char_traits<char> >
+                 U vtable for std::basic_ios<char, std::char_traits<char> >
+00000000002296c0 u Rice::Data_Type<Launcher>::unbound_instances()::unbound_instances
+00000000002295d8 u Rice::Data_Type<Launcher>::from_ruby(Rice::Object)::rb_intern_id_cache
+0000000000229600 u Rice::Data_Type<Rice::detail::Wrapped_Function>::unbound_instances()::unbound_instances
+0000000000229640 u Rice::Data_Type<Rice::detail::Exception_Handler>::unbound_instances()::unbound_instances
+0000000000229720 u Rice::Data_Type<std::map<unsigned long, Rice::detail::Abstract_Caster*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, Rice::detail::Abstract_Caster*> > > >::unbound_instances()::unbound_instances
+0000000000229680 u Rice::Data_Type<void>::unbound_instances()::unbound_instances
+

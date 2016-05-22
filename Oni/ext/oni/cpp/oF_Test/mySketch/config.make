@@ -104,7 +104,7 @@ OF_ROOT = /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/
 #
 #   Note: Leave a leading space when adding list items with the += operator
 ################################################################################
-# PROJECT_CFLAGS = 
+PROJECT_CFLAGS = -fPIC
 
 ################################################################################
 # PROJECT OPTIMIZATION CFLAGS

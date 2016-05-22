@@ -34,6 +34,8 @@ EOS
 	# If you have other dependencies, add them here
 	# s.add_dependency "another", "~> 1.2"
 	
+	# TODO: update which files get packed into the gem.
+	
 	s.files = Dir["{lib}/**/*.rb", "bin/*", "LICENSE", "*.md"]
 	
 	if ENABLE_C_EXTENSION

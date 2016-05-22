@@ -1,5 +1,6 @@
 obj/linux64/Release/src/launcher.o: \
  /home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src/launcher.cpp \
+ /home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src/launcher.h \
  /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/ofMain.h \
  /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofConstants.h \
  /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/include/tesselator.h \
@@ -347,8 +348,9 @@ obj/linux64/Release/src/launcher.o: \
  /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofGstVideoPlayer.h \
  /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofCamera.h \
  /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofEasyCam.h \
- /home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src/launcher.h \
  /home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src/ofApp.h
+
+/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src/launcher.h:
 
 /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/ofMain.h:
 
@@ -1077,7 +1079,5 @@ obj/linux64/Release/src/launcher.o: \
 /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofCamera.h:
 
 /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofEasyCam.h:
-
-/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src/launcher.h:
 
 /home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src/ofApp.h:

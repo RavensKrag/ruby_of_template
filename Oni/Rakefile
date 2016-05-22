@@ -1,16 +1,27 @@
-# require 'rake/testtask'
-# require 'rake/clean'
-# require 'open3'
-
-
-# o_files Dir
-# task 'libOniBase' => o_files do
-# end
-
-
 require 'rake/testtask'
 require 'rake/clean'
 require 'open3'
+
+
+
+
+# interactive command-line program execution
+def run_i(cmd_string)
+	stdin, stdout_and_stderr, wait_thr = Open3.popen2e cmd_string
+	
+	output = nil
+	begin
+		output = stdout_and_stderr.gets
+		puts output
+	end while output
+	
+	stdin.close
+	stdout_and_stderr.close
+end
+
+
+
+
 
 # generate depend file for gcc dependencies
 # sh "gcc -MM *.c > depend"
@@ -96,6 +107,36 @@ CLOBBER.include('lib/**/*.so')
 
 desc "Run tests"
 task :default => [:test, :package]
+
+task :run do
+	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni.rb"
+	require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni/oni.so"
+	
+	class Window < Oni::Window
+		def initialize
+			super()
+		end
+		
+		def setup
+			
+		end
+		
+		def update
+			
+		end
+		
+		def draw
+			
+		end
+	end
+	
+	x = Window.new
+	x.show
+end
+
+task :so_test do
+	run_i "nm -C -D /home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni/oni.so"
+end
 
 # namespace :windows do
 # 	task :package => :default do

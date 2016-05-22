@@ -1,5 +1,7 @@
 // #include "ofMain.h"
 #include "launcher.h"
+#include "ofMain.h"
+#include "ofApp.h"
 
 Launcher::Launcher(){
 	ofSetupOpenGL(1024,768,OF_WINDOW); // <-------- setup the GL context

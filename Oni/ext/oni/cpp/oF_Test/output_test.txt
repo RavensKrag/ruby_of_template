@@ -6,8 +6,16 @@ launcher.o:
                  U __cxa_end_catch
                  U __cxa_rethrow
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN8LauncherC2Ev
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_launcher.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC42
+0000000000000000 r .LC57
+000000000000000b r .LC58
+0000000000000011 r .LC59
+000000000000001b r .LC61
+0000000000000030 r .LC62
                  U memcpy
                  U __stack_chk_fail
                  U strlen
@@ -27,10 +35,10 @@ launcher.o:
 0000000000000000 n boost::system::system_error::~system_error()
                  U boost::system::system_category()
                  U boost::system::generic_category()
-0000000000000080 T Launcher::initialize()
-00000000000000c0 T Launcher::show()
-0000000000000060 T Launcher::Launcher()
-0000000000000060 T Launcher::Launcher()
+0000000000000070 T Launcher::initialize()
+00000000000000b0 T Launcher::show()
+0000000000000050 T Launcher::Launcher()
+0000000000000050 T Launcher::Launcher()
 0000000000000030 T Launcher::~Launcher()
 0000000000000000 T Launcher::~Launcher()
 0000000000000000 T Launcher::~Launcher()
@@ -115,9 +123,17 @@ main.o:
                  U __cxa_end_catch
                  U __cxa_rethrow
                  U __dso_handle
-0000000000000110 t _GLOBAL__sub_I_main
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000130 t _GLOBAL__sub_I_main.cpp
                  U __gxx_personality_v0
-00000000000000c0 T main
+0000000000000000 r .LC40
+0000000000000000 r .LC53
+000000000000000b r .LC54
+0000000000000011 r .LC55
+000000000000001b r .LC57
+0000000000000030 r .LC58
+00000000000000d0 T main
                  U memcpy
                  U __stack_chk_fail
                  U strlen
@@ -214,7 +230,9 @@ ofApp.o:
                  U __cxa_end_catch
                  U __cxa_rethrow
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN5ofApp5setupEv
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofApp.cpp
                  U __gxx_personality_v0
 0000000000000000 r .LC46
 0000000000000004 r .LC47
@@ -226,6 +244,12 @@ ofApp.o:
 000000000000001c r .LC53
 0000000000000020 r .LC54
 0000000000000024 r .LC55
+0000000000000000 r .LC62
+0000000000000000 r .LC74
+000000000000000b r .LC75
+0000000000000011 r .LC76
+000000000000001b r .LC79
+0000000000000030 r .LC80
                  U memcpy
                  U __stack_chk_fail
                  U strlen
@@ -365,8 +389,16 @@ ofxAssimpMeshHelper.o:
                  U __cxa_call_unexpected
                  U __cxa_end_catch
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN19ofxAssimpMeshHelperC2Ev
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxAssimpMeshHelper.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC1
+000000000000001b r .LC11
+0000000000000030 r .LC12
+0000000000000000 r .LC6
+000000000000000b r .LC7
+0000000000000011 r .LC8
                  U memcpy
                  U __stack_chk_fail
                  U strlen
@@ -435,23 +467,76 @@ ofxAssimpModelLoader.o:
                  U __cxa_end_catch
                  U __cxa_rethrow
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
                  U glDisable
                  U glEnable
-00000000000000c0 t _GLOBAL__sub_I__ZN20ofxAssimpModelLoaderC2Ev
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxAssimpModelLoader.cpp
                  U glPolygonMode
                  U __gxx_personality_v0
-000000000000000c r .LC123
-0000000000000018 r .LC175
-0000000000000000 r .LC37
-0000000000000004 r .LC38
+0000000000000076 r .LC120
+000000000000000c r .LC122
+0000000000000090 r .LC139
+000000000000009b r .LC140
+00000000000000a1 r .LC141
+0000000000000240 r .LC148
+00000000000000ab r .LC153
+00000000000000c2 r .LC155
+0000000000000260 r .LC156
+00000000000000de r .LC157
+00000000000000eb r .LC158
+00000000000000f9 r .LC159
+0000000000000106 r .LC160
+0000000000000114 r .LC161
+0000000000000123 r .LC162
+000000000000012e r .LC163
+0000000000000288 r .LC164
+000000000000013c r .LC165
+00000000000002b0 r .LC166
+0000000000000143 r .LC167
+00000000000002e0 r .LC168
+0000000000000310 r .LC169
+000000000000014c r .LC170
+0000000000000340 r .LC171
+000000000000014e r .LC172
+0000000000000010 r .LC174
+0000000000000169 r .LC175
+0000000000000181 r .LC176
+000000000000018c r .LC177
+00000000000001a6 r .LC178
+0000000000000370 r .LC180
+00000000000001b4 r .LC181
+0000000000000398 r .LC183
+00000000000001cb r .LC185
+0000000000000000 r .LC19
+0000000000000030 r .LC23
+0000000000000000 r .LC27
+000000000000000e r .LC28
+0000000000000000 r .LC36
+0000000000000004 r .LC37
 0000000000000000 r .LC55
 0000000000000020 r .LC56
-0000000000000000 r .LC60
-000000000000001f r .LC61
-0000000000000008 r .LC65
+000000000000001f r .LC60
+0000000000000070 r .LC61
+0000000000000034 r .LC62
+000000000000003f r .LC63
+0000000000000008 r .LC64
+0000000000000000 r .LC65
 0000000000000000 r .LC66
-0000000000000008 r .LC67
-0000000000000010 r .LC69
+00000000000000a0 r .LC67
+0000000000000008 r .LC68
+00000000000000d0 r .LC79
+000000000000004b r .LC80
+000000000000004d r .LC82
+00000000000000f8 r .LC83
+0000000000000061 r .LC86
+0000000000000120 r .LC87
+0000000000000150 r .LC89
+0000000000000178 r .LC90
+00000000000001a0 r .LC92
+00000000000001d0 r .LC94
+00000000000001f0 r .LC96
+0000000000000220 r .LC98
                  U memcmp
                  U memcpy
                  U memmove
@@ -478,7 +563,7 @@ ofxAssimpModelLoader.o:
 0000000000000000 b OF_TTF_MONO
 0000000000000040 b OF_TTF_SANS
 0000000000000020 b OF_TTF_SERIF
-00000000000000d0 t aiMeshToOfMesh(aiMesh const*, ofMesh&, ofxAssimpMeshHelper*) [clone .constprop.391]
+00000000000000d0 t aiMeshToOfMesh(aiMesh const*, ofMesh&, ofxAssimpMeshHelper*) [clone .constprop.394]
                  U ofFilePath::getFileName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)
                  U ofFilePath::getEnclosingDirectory(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)
                  U ofFilePath::join(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
@@ -534,82 +619,82 @@ ofxAssimpModelLoader.o:
 0000000000000000 W ofxAssimpMeshHelper::~ofxAssimpMeshHelper()
 0000000000000000 W ofxAssimpMeshHelper::~ofxAssimpMeshHelper()
 0000000000000000 n ofxAssimpMeshHelper::~ofxAssimpMeshHelper()
-00000000000013d0 T ofxAssimpModelLoader::getDuration(int)
-0000000000004070 T ofxAssimpModelLoader::getPosition()
-0000000000004530 T ofxAssimpModelLoader::getSceneMax(bool)
-00000000000044a0 T ofxAssimpModelLoader::getSceneMin(bool)
-0000000000001dd0 T ofxAssimpModelLoader::setPosition(float, float, float)
-0000000000005c00 T ofxAssimpModelLoader::setRotation(int, float, float, float, float)
-0000000000004aa0 T ofxAssimpModelLoader::updateBones()
-0000000000002040 T ofxAssimpModelLoader::drawVertices()
-00000000000046d0 T ofxAssimpModelLoader::enableColors()
-00000000000010b0 T ofxAssimpModelLoader::getAnimation(int)
-0000000000001460 T ofxAssimpModelLoader::getMeshCount()
-0000000000002050 T ofxAssimpModelLoader::getMeshNames[abi:cxx11]()
-00000000000021b0 T ofxAssimpModelLoader::getNumMeshes()
-0000000000008d80 T ofxAssimpModelLoader::processScene()
-0000000000001380 T ofxAssimpModelLoader::setAnimation(int)
-00000000000006a0 T ofxAssimpModelLoader::updateMeshes(aiNode*, ofMatrix4x4)
-0000000000004710 T ofxAssimpModelLoader::disableColors()
-0000000000002020 T ofxAssimpModelLoader::drawWireframe()
-00000000000046c0 T ofxAssimpModelLoader::enableNormals()
-0000000000001490 T ofxAssimpModelLoader::getMeshHelper(int)
-0000000000001070 T ofxAssimpModelLoader::hasAnimations()
-0000000000000620 T ofxAssimpModelLoader::optimizeScene()
-0000000000004700 T ofxAssimpModelLoader::disableNormals()
-00000000000046b0 T ofxAssimpModelLoader::enableTextures()
-00000000000046a0 T ofxAssimpModelLoader::getAssimpScene()
-0000000000004150 T ofxAssimpModelLoader::getModelMatrix()
-00000000000040b0 T ofxAssimpModelLoader::getSceneCenter()
-00000000000046f0 T ofxAssimpModelLoader::disableTextures()
-00000000000046e0 T ofxAssimpModelLoader::enableMaterials()
-00000000000045c0 T ofxAssimpModelLoader::getNumRotations()
-00000000000045e0 T ofxAssimpModelLoader::getRotationAxis(int)
-0000000000006910 T ofxAssimpModelLoader::loadGLResources()
-0000000000006860 T ofxAssimpModelLoader::createEmptyModel()
-0000000000004720 T ofxAssimpModelLoader::disableMaterials()
-0000000000004670 T ofxAssimpModelLoader::getRotationAngle(int)
-0000000000000640 T ofxAssimpModelLoader::updateAnimations()
-0000000000001090 T ofxAssimpModelLoader::getAnimationCount()
-0000000000003e60 T ofxAssimpModelLoader::getTextureForMesh(int)
-00000000000039e0 T ofxAssimpModelLoader::getTextureForMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-0000000000001120 T ofxAssimpModelLoader::playAllAnimations()
-0000000000005870 T ofxAssimpModelLoader::setNormalizedTime(float)
-0000000000001180 T ofxAssimpModelLoader::stopAllAnimations()
-0000000000000950 T ofxAssimpModelLoader::updateGLResources()
-0000000000000a60 T ofxAssimpModelLoader::updateModelMatrix()
-00000000000037a0 T ofxAssimpModelLoader::getMaterialForMesh(int)
-00000000000032e0 T ofxAssimpModelLoader::getMaterialForMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-0000000000004100 T ofxAssimpModelLoader::getNormalizedScale()
-00000000000011e0 T ofxAssimpModelLoader::resetAllAnimations()
-00000000000018a0 T ofxAssimpModelLoader::calculateDimensions()
-00000000000004d0 T ofxAssimpModelLoader::initImportProperties(bool)
-0000000000001510 T ofxAssimpModelLoader::getBoundingBoxForNode(ofxAssimpMeshHelper const&, aiVector3t<float>*, aiVector3t<float>*)
-0000000000001e10 T ofxAssimpModelLoader::setScaleNormalization(bool)
-0000000000002e60 T ofxAssimpModelLoader::getCurrentAnimatedMesh(int)
-0000000000002730 T ofxAssimpModelLoader::getCurrentAnimatedMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-0000000000000610 T ofxAssimpModelLoader::setNormalizationFactor(float)
-0000000000004730 T ofxAssimpModelLoader::createLightsFromAiModel()
-0000000000001240 T ofxAssimpModelLoader::setPausedForAllAnimations(bool)
-00000000000017b0 T ofxAssimpModelLoader::getBoundingBoxWithMinVector(aiVector3t<float>*, aiVector3t<float>*)
-0000000000001310 T ofxAssimpModelLoader::setPositionForAllAnimations(float)
-00000000000012b0 T ofxAssimpModelLoader::setLoopStateForAllAnimations(ofLoopType)
-0000000000001e20 T ofxAssimpModelLoader::draw(ofPolyRenderMode)
-0000000000005eb0 T ofxAssimpModelLoader::clear()
-0000000000005660 T ofxAssimpModelLoader::update()
-0000000000002550 T ofxAssimpModelLoader::getMesh(int)
-00000000000021c0 T ofxAssimpModelLoader::getMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-0000000000005980 T ofxAssimpModelLoader::setTime(float)
-0000000000004110 T ofxAssimpModelLoader::getScale()
-0000000000001df0 T ofxAssimpModelLoader::setScale(float, float, float)
-0000000000002030 T ofxAssimpModelLoader::drawFaces()
-0000000000001430 T ofxAssimpModelLoader::hasMeshes()
-0000000000009160 T ofxAssimpModelLoader::loadModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
-00000000000096c0 T ofxAssimpModelLoader::loadModel(ofBuffer&, bool, char const*)
-0000000000006220 T ofxAssimpModelLoader::ofxAssimpModelLoader()
-0000000000006220 T ofxAssimpModelLoader::ofxAssimpModelLoader()
-0000000000006540 T ofxAssimpModelLoader::~ofxAssimpModelLoader()
-0000000000006540 T ofxAssimpModelLoader::~ofxAssimpModelLoader()
+0000000000001480 T ofxAssimpModelLoader::getDuration(int)
+0000000000004020 T ofxAssimpModelLoader::getPosition()
+00000000000044e0 T ofxAssimpModelLoader::getSceneMax(bool)
+0000000000004450 T ofxAssimpModelLoader::getSceneMin(bool)
+0000000000001d40 T ofxAssimpModelLoader::setPosition(float, float, float)
+00000000000057c0 T ofxAssimpModelLoader::setRotation(int, float, float, float, float)
+0000000000004a50 T ofxAssimpModelLoader::updateBones()
+0000000000001fb0 T ofxAssimpModelLoader::drawVertices()
+0000000000004680 T ofxAssimpModelLoader::enableColors()
+0000000000001160 T ofxAssimpModelLoader::getAnimation(int)
+0000000000001520 T ofxAssimpModelLoader::getMeshCount()
+0000000000001fc0 T ofxAssimpModelLoader::getMeshNames[abi:cxx11]()
+0000000000002120 T ofxAssimpModelLoader::getNumMeshes()
+0000000000008960 T ofxAssimpModelLoader::processScene()
+0000000000001430 T ofxAssimpModelLoader::setAnimation(int)
+00000000000006e0 T ofxAssimpModelLoader::updateMeshes(aiNode*, ofMatrix4x4)
+00000000000046c0 T ofxAssimpModelLoader::disableColors()
+0000000000001f90 T ofxAssimpModelLoader::drawWireframe()
+0000000000004670 T ofxAssimpModelLoader::enableNormals()
+0000000000001550 T ofxAssimpModelLoader::getMeshHelper(int)
+0000000000001020 T ofxAssimpModelLoader::hasAnimations()
+0000000000000660 T ofxAssimpModelLoader::optimizeScene()
+00000000000046b0 T ofxAssimpModelLoader::disableNormals()
+0000000000004660 T ofxAssimpModelLoader::enableTextures()
+0000000000004650 T ofxAssimpModelLoader::getAssimpScene()
+0000000000004100 T ofxAssimpModelLoader::getModelMatrix()
+0000000000004060 T ofxAssimpModelLoader::getSceneCenter()
+00000000000046a0 T ofxAssimpModelLoader::disableTextures()
+0000000000004690 T ofxAssimpModelLoader::enableMaterials()
+0000000000004570 T ofxAssimpModelLoader::getNumRotations()
+0000000000004590 T ofxAssimpModelLoader::getRotationAxis(int)
+0000000000006500 T ofxAssimpModelLoader::loadGLResources()
+0000000000006450 T ofxAssimpModelLoader::createEmptyModel()
+00000000000046d0 T ofxAssimpModelLoader::disableMaterials()
+0000000000004620 T ofxAssimpModelLoader::getRotationAngle(int)
+0000000000000680 T ofxAssimpModelLoader::updateAnimations()
+0000000000001140 T ofxAssimpModelLoader::getAnimationCount()
+0000000000003e20 T ofxAssimpModelLoader::getTextureForMesh(int)
+0000000000003980 T ofxAssimpModelLoader::getTextureForMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000000011d0 T ofxAssimpModelLoader::playAllAnimations()
+0000000000005740 T ofxAssimpModelLoader::setNormalizedTime(float)
+0000000000001230 T ofxAssimpModelLoader::stopAllAnimations()
+0000000000001040 T ofxAssimpModelLoader::updateGLResources()
+00000000000009a0 T ofxAssimpModelLoader::updateModelMatrix()
+0000000000003740 T ofxAssimpModelLoader::getMaterialForMesh(int)
+0000000000003250 T ofxAssimpModelLoader::getMaterialForMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000000040b0 T ofxAssimpModelLoader::getNormalizedScale()
+0000000000001290 T ofxAssimpModelLoader::resetAllAnimations()
+0000000000001990 T ofxAssimpModelLoader::calculateDimensions()
+0000000000000500 T ofxAssimpModelLoader::initImportProperties(bool)
+00000000000015d0 T ofxAssimpModelLoader::getBoundingBoxForNode(ofxAssimpMeshHelper const&, aiVector3t<float>*, aiVector3t<float>*)
+0000000000001d80 T ofxAssimpModelLoader::setScaleNormalization(bool)
+0000000000002df0 T ofxAssimpModelLoader::getCurrentAnimatedMesh(int)
+00000000000026b0 T ofxAssimpModelLoader::getCurrentAnimatedMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0000000000000650 T ofxAssimpModelLoader::setNormalizationFactor(float)
+00000000000046e0 T ofxAssimpModelLoader::createLightsFromAiModel()
+00000000000012f0 T ofxAssimpModelLoader::setPausedForAllAnimations(bool)
+0000000000001890 T ofxAssimpModelLoader::getBoundingBoxWithMinVector(aiVector3t<float>*, aiVector3t<float>*)
+00000000000013c0 T ofxAssimpModelLoader::setPositionForAllAnimations(float)
+0000000000001360 T ofxAssimpModelLoader::setLoopStateForAllAnimations(ofLoopType)
+0000000000001d90 T ofxAssimpModelLoader::draw(ofPolyRenderMode)
+0000000000005a70 T ofxAssimpModelLoader::clear()
+0000000000005620 T ofxAssimpModelLoader::update()
+00000000000024e0 T ofxAssimpModelLoader::getMesh(int)
+0000000000002130 T ofxAssimpModelLoader::getMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000000056e0 T ofxAssimpModelLoader::setTime(float)
+00000000000040c0 T ofxAssimpModelLoader::getScale()
+0000000000001d60 T ofxAssimpModelLoader::setScale(float, float, float)
+0000000000001fa0 T ofxAssimpModelLoader::drawFaces()
+00000000000014f0 T ofxAssimpModelLoader::hasMeshes()
+0000000000008d80 T ofxAssimpModelLoader::loadModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000000092d0 T ofxAssimpModelLoader::loadModel(ofBuffer&, bool, char const*)
+0000000000005e00 T ofxAssimpModelLoader::ofxAssimpModelLoader()
+0000000000005e00 T ofxAssimpModelLoader::ofxAssimpModelLoader()
+0000000000006120 T ofxAssimpModelLoader::~ofxAssimpModelLoader()
+0000000000006120 T ofxAssimpModelLoader::~ofxAssimpModelLoader()
 0000000000000000 W boost::system::system_error::~system_error()
 0000000000000000 W boost::system::system_error::~system_error()
 0000000000000000 W boost::system::system_error::~system_error()
@@ -731,14 +816,14 @@ ofxAssimpModelLoader.o:
 0000000000000000 W std::vector<ofColor_<float>, std::allocator<ofColor_<float> > >::operator=(std::vector<ofColor_<float>, std::allocator<ofColor_<float> > > const&)
 0000000000000000 W std::vector<unsigned int, std::allocator<unsigned int> >::operator=(std::vector<unsigned int, std::allocator<unsigned int> > const&)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
-0000000000000000 t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.154]
-0000000000000000 t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.146]
+0000000000000000 t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.155]
+0000000000000000 t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.147]
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::swap(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned long)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
-0000000000000000 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.148]
+0000000000000000 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.149]
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
                  U std::ios_base::Init::Init()
                  U std::ios_base::Init::~Init()
@@ -789,12 +874,20 @@ ofxAssimpAnimation.o:
                  U __cxa_call_unexpected
                  U __cxa_end_catch
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
                  U fmodf
-00000000000000c0 t _GLOBAL__sub_I__ZN18ofxAssimpAnimationC2ESt10shared_ptrIK7aiSceneEP11aiAnimation
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxAssimpAnimation.cpp
                  U __gxx_personality_v0
-0000000000000000 r .LC12
-0000000000000008 r .LC13
-0000000000000000 r .LC15
+0000000000000000 r .LC1
+0000000000000000 r .LC22
+0000000000000008 r .LC23
+0000000000000000 r .LC28
+0000000000000000 r .LC34
+000000000000000b r .LC35
+0000000000000011 r .LC36
+000000000000001b r .LC38
+0000000000000030 r .LC39
 0000000000000000 r .LC6
 0000000000000004 r .LC7
                  U memcpy
@@ -811,26 +904,26 @@ ofxAssimpAnimation.o:
 0000000000000000 b OF_TTF_MONO
 0000000000000040 b OF_TTF_SANS
 0000000000000020 b OF_TTF_SERIF
-0000000000000ec0 T ofxAssimpAnimation::isFinished()
-0000000000000e90 T ofxAssimpAnimation::isFrameNew()
-0000000000000ee0 T ofxAssimpAnimation::getPosition()
-0000000000000f50 T ofxAssimpAnimation::setPosition(float)
+0000000000000400 T ofxAssimpAnimation::isFinished()
+00000000000003c0 T ofxAssimpAnimation::isFrameNew()
+00000000000003f0 T ofxAssimpAnimation::getPosition()
+0000000000000d50 T ofxAssimpAnimation::setPosition(float)
 00000000000003a0 T ofxAssimpAnimation::getAnimation()
-0000000000000fa0 T ofxAssimpAnimation::setLoopState(ofLoopType)
-0000000000000f20 T ofxAssimpAnimation::getDurationInSeconds()
-0000000000000ef0 T ofxAssimpAnimation::getPositionInSeconds()
-00000000000003b0 T ofxAssimpAnimation::updateAnimationNodes()
-0000000000000f30 T ofxAssimpAnimation::getDurationInMilliSeconds()
-0000000000000f00 T ofxAssimpAnimation::getPositionInMilliSeconds()
-0000000000000da0 T ofxAssimpAnimation::play()
-0000000000000e20 T ofxAssimpAnimation::stop()
-0000000000000e30 T ofxAssimpAnimation::reset()
-0000000000000ca0 T ofxAssimpAnimation::update()
-0000000000000f10 T ofxAssimpAnimation::getSpeed()
-0000000000000ea0 T ofxAssimpAnimation::isPaused()
-0000000000000fb0 T ofxAssimpAnimation::setSpeed(float)
-0000000000000eb0 T ofxAssimpAnimation::isPlaying()
-0000000000000f40 T ofxAssimpAnimation::setPaused(bool)
+0000000000000f30 T ofxAssimpAnimation::setLoopState(ofLoopType)
+0000000000000460 T ofxAssimpAnimation::getDurationInSeconds()
+0000000000000430 T ofxAssimpAnimation::getPositionInSeconds()
+0000000000000470 T ofxAssimpAnimation::updateAnimationNodes()
+0000000000000d30 T ofxAssimpAnimation::getDurationInMilliSeconds()
+0000000000000440 T ofxAssimpAnimation::getPositionInMilliSeconds()
+0000000000000ee0 T ofxAssimpAnimation::play()
+00000000000003b0 T ofxAssimpAnimation::stop()
+0000000000000f20 T ofxAssimpAnimation::reset()
+0000000000000de0 T ofxAssimpAnimation::update()
+0000000000000450 T ofxAssimpAnimation::getSpeed()
+00000000000003d0 T ofxAssimpAnimation::isPaused()
+0000000000000f40 T ofxAssimpAnimation::setSpeed(float)
+00000000000003e0 T ofxAssimpAnimation::isPlaying()
+0000000000000d40 T ofxAssimpAnimation::setPaused(bool)
 0000000000000210 T ofxAssimpAnimation::ofxAssimpAnimation(std::shared_ptr<aiScene const>, aiAnimation*)
 0000000000000210 T ofxAssimpAnimation::ofxAssimpAnimation(std::shared_ptr<aiScene const>, aiAnimation*)
 0000000000000330 T ofxAssimpAnimation::~ofxAssimpAnimation()
@@ -867,8 +960,17 @@ ofxAssimpTexture.o:
                  U __cxa_call_unexpected
                  U __cxa_end_catch
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN16ofxAssimpTextureC2Ev
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxAssimpTexture.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC1
+000000000000001b r .LC11
+000000000000001c r .LC14
+0000000000000031 r .LC15
+0000000000000000 r .LC7
+000000000000000b r .LC8
+0000000000000011 r .LC9
                  U memcpy
                  U __stack_chk_fail
                  U strlen
@@ -923,13 +1025,27 @@ ofxToggle.o:
                  U __cxa_end_catch
                  U __cxa_throw
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
+0000000000000000 V DW.ref._ZTI24ofEventAttendedException
+0000000000000000 V DW.ref._ZTISt17bad_function_call
                  U __dynamic_cast
-0000000000000000 t _GLOBAL__sub_I__ZN9ofxToggleC2E11ofParameterIbEff
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxToggle.cpp
                  U __gxx_personality_v0
-0000000000000000 r .LC47
-0000000000000004 r .LC48
-0000000000000008 r .LC49
-000000000000000c r .LC72
+0000000000000000 r .LC43
+0000000000000000 r .LC48
+0000000000000004 r .LC49
+0000000000000008 r .LC50
+0000000000000000 r .LC58
+0000000000000030 r .LC59
+0000000000000068 r .LC61
+000000000000000c r .LC62
+000000000000000c r .LC73
+000000000000000d r .LC83
+0000000000000018 r .LC84
+000000000000001e r .LC85
+0000000000000028 r .LC92
+000000000000003d r .LC93
                  U memcpy
                  w __pthread_key_create
                  w pthread_mutex_lock
@@ -1028,25 +1144,25 @@ ofxToggle.o:
                  U ofVboMesh::operator=(ofMesh const&)
                  U ofVboMesh::ofVboMesh()
                  U ofVboMesh::~ofVboMesh()
-0000000000000020 T ofxToggle::mouseMoved(ofMouseEventArgs&)
-0000000000000360 T ofxToggle::generateDraw()
-0000000000000000 T ofxToggle::getParameter()
-00000000000000a0 T ofxToggle::mouseDragged(ofMouseEventArgs&)
-0000000000001dc0 T ofxToggle::mousePressed(ofMouseEventArgs&)
-0000000000000010 T ofxToggle::valueChanged(bool&)
-0000000000000110 T ofxToggle::mouseReleased(ofMouseEventArgs&)
+0000000000000040 T ofxToggle::mouseMoved(ofMouseEventArgs&)
+0000000000000390 T ofxToggle::generateDraw()
+0000000000000020 T ofxToggle::getParameter()
+00000000000000c0 T ofxToggle::mouseDragged(ofMouseEventArgs&)
+0000000000000000 T ofxToggle::mousePressed(ofMouseEventArgs&)
+0000000000000030 T ofxToggle::valueChanged(bool&)
+0000000000000130 T ofxToggle::mouseReleased(ofMouseEventArgs&)
 0000000000000000 W ofxToggle::mouseScrolled(ofMouseEventArgs&)
-0000000000000890 T ofxToggle::setup(ofParameter<bool>, float, float)
-0000000000000a00 T ofxToggle::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, float, float)
-0000000000000190 T ofxToggle::render()
-0000000000001c60 T ofxToggle::setValue(float, float, bool)
-0000000000000840 T ofxToggle::operator=(bool)
-0000000000000cd0 T ofxToggle::ofxToggle(ofParameter<bool>, float, float)
-0000000000000cd0 T ofxToggle::ofxToggle(ofParameter<bool>, float, float)
-0000000000000880 T ofxToggle::operator bool const&()
-0000000000001c40 T ofxToggle::~ofxToggle()
-0000000000000ef0 T ofxToggle::~ofxToggle()
-0000000000000ef0 T ofxToggle::~ofxToggle()
+00000000000008c0 T ofxToggle::setup(ofParameter<bool>, float, float)
+0000000000000a30 T ofxToggle::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, float, float)
+00000000000001b0 T ofxToggle::render()
+0000000000001b50 T ofxToggle::setValue(float, float, bool)
+0000000000000870 T ofxToggle::operator=(bool)
+0000000000000ba0 T ofxToggle::ofxToggle(ofParameter<bool>, float, float)
+0000000000000ba0 T ofxToggle::ofxToggle(ofParameter<bool>, float, float)
+00000000000008b0 T ofxToggle::operator bool const&()
+0000000000001b30 T ofxToggle::~ofxToggle()
+0000000000000dc0 T ofxToggle::~ofxToggle()
+0000000000000dc0 T ofxToggle::~ofxToggle()
 0000000000000000 W ofParameter<bool>::isReadOnly() const
 0000000000000000 W ofParameter<bool>::newReference() const
 0000000000000000 W ofParameter<bool>::getFirstParent() const
@@ -1115,7 +1231,7 @@ ofxToggle.o:
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
-00000000000002a0 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.87]
+00000000000002c0 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.87]
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
 0000000000000000 W std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
 0000000000000000 W std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
@@ -1211,11 +1327,35 @@ ofxSliderGroup.o:
                  U __cxa_end_catch
                  U __cxa_throw
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
+0000000000000000 V DW.ref._ZTI24ofEventAttendedException
+0000000000000000 V DW.ref._ZTISt17bad_function_call
                  U __dynamic_cast
+                 U _GLOBAL_OFFSET_TABLE_
 0000000000000000 t _GLOBAL__sub_I_ofxSliderGroup.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC233
 0000000000000000 r .LC279
 0000000000000000 r .LC337
+0000000000000000 r .LC407
+0000000000000016 r .LC414
+0000000000000017 r .LC415
+0000000000000019 r .LC416
+000000000000001b r .LC417
+000000000000001d r .LC418
+000000000000001f r .LC438
+0000000000000021 r .LC439
+0000000000000023 r .LC440
+0000000000000025 r .LC441
+0000000000000027 r .LC457
+0000000000000030 r .LC458
+0000000000000033 r .LC465
+0000000000000068 r .LC466
+0000000000000036 r .LC520
+0000000000000041 r .LC521
+0000000000000047 r .LC522
+0000000000000051 r .LC550
+0000000000000066 r .LC551
                  U memcpy
                  w __pthread_key_create
                  w pthread_mutex_lock
@@ -2356,11 +2496,25 @@ ofxLabel.o:
                  U __cxa_end_catch
                  U __cxa_throw
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
+0000000000000000 V DW.ref._ZTI24ofEventAttendedException
+0000000000000000 V DW.ref._ZTISt17bad_function_call
                  U __dynamic_cast
-0000000000000000 t _GLOBAL__sub_I__ZN8ofxLabelC2E11ofParameterINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEff
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxLabel.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC45
+0000000000000000 r .LC49
+0000000000000030 r .LC50
+000000000000000c r .LC56
+0000000000000021 r .LC57
 0000000000000000 r .LC58
 0000000000000004 r .LC59
+0000000000000068 r .LC61
+0000000000000024 r .LC62
+0000000000000025 r .LC81
+0000000000000030 r .LC82
+0000000000000036 r .LC83
                  U memcpy
                  w __pthread_key_create
                  w pthread_mutex_lock
@@ -2446,24 +2600,24 @@ ofxLabel.o:
 0000000000000000 W ofStyle::~ofStyle()
 0000000000000000 n ofStyle::~ofStyle()
 0000000000000000 W ofxLabel::mouseMoved(ofMouseEventArgs&)
-00000000000001c0 T ofxLabel::generateDraw()
+00000000000001d0 T ofxLabel::generateDraw()
 0000000000000000 T ofxLabel::getParameter()
 0000000000000000 W ofxLabel::mouseDragged(ofMouseEventArgs&)
 0000000000000000 W ofxLabel::mousePressed(ofMouseEventArgs&)
 0000000000000010 T ofxLabel::valueChanged(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
 0000000000000000 W ofxLabel::mouseReleased(ofMouseEventArgs&)
 0000000000000000 W ofxLabel::mouseScrolled(ofMouseEventArgs&)
-0000000000000750 T ofxLabel::setup(ofParameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, float, float)
-00000000000008e0 T ofxLabel::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, float)
+0000000000000740 T ofxLabel::setup(ofParameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, float, float)
+00000000000008d0 T ofxLabel::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, float)
 0000000000000020 T ofxLabel::render()
 0000000000000000 W ofxLabel::saveTo(ofBaseSerializer&)
 0000000000000000 W ofxLabel::loadFrom(ofBaseSerializer&)
 0000000000000000 W ofxLabel::setValue(float, float, bool)
-0000000000000b90 T ofxLabel::ofxLabel(ofParameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, float, float)
-0000000000000b90 T ofxLabel::ofxLabel(ofParameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, float, float)
-00000000000017e0 T ofxLabel::~ofxLabel()
-0000000000000e60 T ofxLabel::~ofxLabel()
-0000000000000e60 T ofxLabel::~ofxLabel()
+0000000000000a40 T ofxLabel::ofxLabel(ofParameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, float, float)
+0000000000000a40 T ofxLabel::ofxLabel(ofParameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, float, float)
+0000000000001590 T ofxLabel::~ofxLabel()
+0000000000000bf0 T ofxLabel::~ofxLabel()
+0000000000000bf0 T ofxLabel::~ofxLabel()
                  U ofVboMesh::operator=(ofMesh const&)
                  U ofVboMesh::ofVboMesh()
                  U ofVboMesh::~ofVboMesh()
@@ -2615,8 +2769,12 @@ ofxSlider.o:
                  U __cxa_end_catch
                  U __cxa_throw
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
+0000000000000000 V DW.ref._ZTI24ofEventAttendedException
+0000000000000000 V DW.ref._ZTISt17bad_function_call
                  U __dynamic_cast
-0000000000000000 t _GLOBAL__sub_I__ZN9ofxSliderIhE12generateTextEv
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxSlider.cpp
                  U __gxx_personality_v0
 0000000000000000 r .LC290
 0000000000000004 r .LC291
@@ -2626,7 +2784,18 @@ ofxSlider.o:
 0000000000000008 r .LC302
 000000000000000c r .LC303
 0000000000000010 r .LC317
+0000000000000000 r .LC329
+0000000000000000 r .LC607
+0000000000000016 r .LC649
+0000000000000030 r .LC650
+0000000000000068 r .LC661
+0000000000000022 r .LC662
+0000000000000023 r .LC715
+000000000000002e r .LC716
+0000000000000034 r .LC717
 0000000000000014 r .LC719
+000000000000003e r .LC771
+0000000000000053 r .LC772
                  U memcpy
                  w __pthread_key_create
                  w pthread_mutex_lock
@@ -3039,7 +3208,7 @@ ofxSlider.o:
 0000000000000000 n ofxSlider<float>::~ofxSlider()
 0000000000000000 W ofxSlider<unsigned char>::mouseMoved(ofMouseEventArgs&)
 0000000000000000 W ofxSlider<unsigned char>::generateDraw()
-0000000000000310 T ofxSlider<unsigned char>::generateText()
+0000000000000340 T ofxSlider<unsigned char>::generateText()
 0000000000000000 W ofxSlider<unsigned char>::getParameter()
 0000000000000000 W ofxSlider<unsigned char>::mouseDragged(ofMouseEventArgs&)
 0000000000000000 W ofxSlider<unsigned char>::mousePressed(ofMouseEventArgs&)
@@ -3345,7 +3514,7 @@ ofxSlider.o:
 0000000000000000 W std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__weak_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
 0000000000000000 W std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__weak_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
 0000000000000000 n std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__weak_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
-0000000000000140 t std::unique_lock<std::recursive_mutex>::lock() [clone .constprop.847]
+0000000000000140 t std::unique_lock<std::recursive_mutex>::lock() [clone .constprop.848]
 0000000000000000 W std::unique_lock<std::recursive_mutex>::unlock()
 0000000000000000 W std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
 0000000000000000 W std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
@@ -3686,7 +3855,7 @@ ofxSlider.o:
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
                  U std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::_Ios_Openmode)
                  U std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_stringstream()
-0000000000000180 t std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::basic_ostringstream(std::_Ios_Openmode) [clone .constprop.849]
+0000000000000180 t std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::basic_ostringstream(std::_Ios_Openmode) [clone .constprop.850]
                  U std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstream()
 0000000000000000 W std::enable_if<std::function<void (signed char const&)>::_Callable<std::decay<std::_Bind<std::_Mem_fn<void (ofParameter<signed char>::*)(signed char const&)> (ofParameter<signed char>*, std::_Placeholder<1>)> >::type, std::result_of<std::decay<std::_Bind<std::_Mem_fn<void (ofParameter<signed char>::*)(signed char const&)> (ofParameter<signed char>*, std::_Placeholder<1>)> >::type (signed char const&)>::type>::value, std::function<void (signed char const&)>&>::type std::function<void (signed char const&)>::operator=<std::_Bind<std::_Mem_fn<void (ofParameter<signed char>::*)(signed char const&)> (ofParameter<signed char>*, std::_Placeholder<1>)> >(std::_Bind<std::_Mem_fn<void (ofParameter<signed char>::*)(signed char const&)> (ofParameter<signed char>*, std::_Placeholder<1>)>&&)
 0000000000000000 W std::function<void (signed char const&)>::function<std::_Bind<std::_Mem_fn<void (ofParameter<signed char>::*)(signed char const&)> (ofParameter<signed char>*, std::_Placeholder<1>)>, void, void>(std::_Bind<std::_Mem_fn<void (ofParameter<signed char>::*)(signed char const&)> (ofParameter<signed char>*, std::_Placeholder<1>)>)
@@ -4086,16 +4255,37 @@ ofxGuiGroup.o:
                  U __cxa_end_catch
                  U __cxa_throw
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
+0000000000000000 V DW.ref._ZTI24ofEventAttendedException
+0000000000000000 V DW.ref._ZTISt17bad_function_call
                  U __dynamic_cast
-0000000000000000 t _GLOBAL__sub_I__ZN11ofxGuiGroupC2Ev
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxGuiGroup.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC220
 0000000000000000 r .LC252
 0000000000000000 r .LC256
 0000000000000004 r .LC257
 0000000000000008 r .LC258
 000000000000000c r .LC259
 0000000000000010 r .LC260
+0000000000000000 r .LC261
+0000000000000002 r .LC262
+0000000000000004 r .LC436
+0000000000000030 r .LC437
+0000000000000010 r .LC453
+0000000000000068 r .LC454
+0000000000000013 r .LC455
+0000000000000014 r .LC474
+0000000000000024 r .LC475
+000000000000003d r .LC562
+0000000000000048 r .LC563
+000000000000004e r .LC564
+0000000000000058 r .LC572
 0000000000000014 r .LC573
+0000000000000098 r .LC574
+0000000000000065 r .LC583
+000000000000007a r .LC584
                  U memcmp
                  U memcpy
                  U memmove
@@ -4369,52 +4559,52 @@ ofxGuiGroup.o:
                  U ofRectangle::ofRectangle(float, float, float, float)
                  U ofRectangle::ofRectangle()
                  U ofRectangle::~ofRectangle()
-0000000000001470 T ofxGuiGroup::getControl(unsigned long)
-0000000000001080 T ofxGuiGroup::getControl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0000000000000670 T ofxGuiGroup::mouseMoved(ofMouseEventArgs&)
-0000000000001340 T ofxGuiGroup::maximizeAll()
-0000000000001280 T ofxGuiGroup::minimizeAll()
+00000000000013b0 T ofxGuiGroup::getControl(unsigned long)
+0000000000001060 T ofxGuiGroup::getControl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000000960 T ofxGuiGroup::mouseMoved(ofMouseEventArgs&)
+0000000000001300 T ofxGuiGroup::maximizeAll()
+0000000000001270 T ofxGuiGroup::minimizeAll()
 0000000000000010 T ofxGuiGroup::setPosition(float, float)
 00000000000002a0 T ofxGuiGroup::setPosition(ofVec3f const&)
-0000000000000d40 T ofxGuiGroup::generateDraw()
-0000000000001ee0 T ofxGuiGroup::getIntSlider(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000000d80 T ofxGuiGroup::generateDraw()
+0000000000001f30 T ofxGuiGroup::getIntSlider(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0000000000000000 T ofxGuiGroup::getParameter()
-0000000000000770 T ofxGuiGroup::mouseDragged(ofMouseEventArgs&)
-0000000000000590 T ofxGuiGroup::mousePressed(ofMouseEventArgs&)
-0000000000000850 T ofxGuiGroup::mouseReleased(ofMouseEventArgs&)
-0000000000000950 T ofxGuiGroup::mouseScrolled(ofMouseEventArgs&)
+0000000000000780 T ofxGuiGroup::mouseDragged(ofMouseEventArgs&)
+00000000000005a0 T ofxGuiGroup::mousePressed(ofMouseEventArgs&)
+0000000000000860 T ofxGuiGroup::mouseReleased(ofMouseEventArgs&)
+0000000000000680 T ofxGuiGroup::mouseScrolled(ofMouseEventArgs&)
 0000000000000060 T ofxGuiGroup::sizeChangedCB()
 0000000000000000 W ofxButton& ofxGuiGroup::getControlType<ofxButton>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0000000000000000 W ofxSlider<float>& ofxGuiGroup::getControlType<ofxSlider<float> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0000000000000000 W ofxSlider<int>& ofxGuiGroup::getControlType<ofxSlider<int> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0000000000000000 W ofxToggle& ofxGuiGroup::getControlType<ofxToggle>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0000000000000000 W ofxGuiGroup& ofxGuiGroup::getControlType<ofxGuiGroup>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0000000000001ed0 T ofxGuiGroup::getFloatSlider(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0000000000000be0 T ofxGuiGroup::setWidthElements(float)
-00000000000014a0 T ofxGuiGroup::add(ofxBaseGui*)
-0000000000001820 T ofxGuiGroup::add(ofParameter<ofVec2f>&)
-00000000000018f0 T ofxGuiGroup::add(ofParameter<ofVec3f>&)
-00000000000019c0 T ofxGuiGroup::add(ofParameter<ofVec4f>&)
-0000000000001c30 T ofxGuiGroup::add(ofParameter<ofColor_<float> >&)
-0000000000001a90 T ofxGuiGroup::add(ofParameter<ofColor_<unsigned char> >&)
-0000000000001b60 T ofxGuiGroup::add(ofParameter<ofColor_<unsigned short> >&)
-0000000000001680 T ofxGuiGroup::add(ofParameter<bool>&)
-0000000000001750 T ofxGuiGroup::add(ofParameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&)
-0000000000003250 T ofxGuiGroup::add(ofParameterGroup const&)
-0000000000000d00 T ofxGuiGroup::clear()
-00000000000021d0 T ofxGuiGroup::setup(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
-0000000000003200 T ofxGuiGroup::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000001f20 T ofxGuiGroup::getFloatSlider(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000000c20 T ofxGuiGroup::setWidthElements(float)
+00000000000013e0 T ofxGuiGroup::add(ofxBaseGui*)
+00000000000017b0 T ofxGuiGroup::add(ofParameter<ofVec2f>&)
+00000000000018a0 T ofxGuiGroup::add(ofParameter<ofVec3f>&)
+0000000000001990 T ofxGuiGroup::add(ofParameter<ofVec4f>&)
+0000000000001c60 T ofxGuiGroup::add(ofParameter<ofColor_<float> >&)
+0000000000001a80 T ofxGuiGroup::add(ofParameter<ofColor_<unsigned char> >&)
+0000000000001b70 T ofxGuiGroup::add(ofParameter<ofColor_<unsigned short> >&)
+00000000000015d0 T ofxGuiGroup::add(ofParameter<bool>&)
+00000000000016c0 T ofxGuiGroup::add(ofParameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&)
+0000000000003350 T ofxGuiGroup::add(ofParameterGroup const&)
+0000000000000d40 T ofxGuiGroup::clear()
+0000000000002240 T ofxGuiGroup::setup(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000003300 T ofxGuiGroup::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
 0000000000000190 T ofxGuiGroup::render()
-0000000000002040 T ofxGuiGroup::getGroup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-00000000000011f0 T ofxGuiGroup::maximize()
-00000000000011b0 T ofxGuiGroup::minimize()
-0000000000003330 T ofxGuiGroup::setValue(float, float, bool)
-0000000000001ec0 T ofxGuiGroup::getButton(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0000000000003320 T ofxGuiGroup::getToggle(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0000000000002050 T ofxGuiGroup::ofxGuiGroup(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
-0000000000001ef0 T ofxGuiGroup::ofxGuiGroup()
-0000000000002050 T ofxGuiGroup::ofxGuiGroup(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
-0000000000001ef0 T ofxGuiGroup::ofxGuiGroup()
+00000000000020a0 T ofxGuiGroup::getGroup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+00000000000011e0 T ofxGuiGroup::maximize()
+00000000000011a0 T ofxGuiGroup::minimize()
+0000000000003430 T ofxGuiGroup::setValue(float, float, bool)
+0000000000001f10 T ofxGuiGroup::getButton(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000003420 T ofxGuiGroup::getToggle(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+00000000000020b0 T ofxGuiGroup::ofxGuiGroup(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000001f40 T ofxGuiGroup::ofxGuiGroup()
+00000000000020b0 T ofxGuiGroup::ofxGuiGroup(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000001f40 T ofxGuiGroup::ofxGuiGroup()
 0000000000000000 W ofxGuiGroup::~ofxGuiGroup()
 0000000000000000 W ofxGuiGroup::~ofxGuiGroup()
 0000000000000000 W ofxGuiGroup::~ofxGuiGroup()
@@ -4638,8 +4828,8 @@ ofxGuiGroup.o:
                  U ofRectangle::getPosition() const
                  U ofRectangle::inside(float, float) const
                  U ofRectangle::inside(ofVec3f const&) const
-0000000000001450 T ofxGuiGroup::getNumControls() const
-0000000000001d00 T ofxGuiGroup::getControlNames[abi:cxx11]() const
+0000000000001390 T ofxGuiGroup::getNumControls() const
+0000000000001d50 T ofxGuiGroup::getControlNames[abi:cxx11]() const
                  U ofParameterGroup::getFloatColor(unsigned long) const
                  U ofParameterGroup::getShortColor(unsigned long) const
                  U ofParameterGroup::get(unsigned long) const
@@ -4683,7 +4873,7 @@ ofxGuiGroup.o:
 0000000000000000 W std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__weak_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
 0000000000000000 W std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__weak_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
 0000000000000000 n std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__weak_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
-0000000000000550 t std::unique_lock<std::recursive_mutex>::lock() [clone .constprop.772]
+0000000000000560 t std::unique_lock<std::recursive_mutex>::lock() [clone .constprop.775]
 0000000000000000 W std::unique_lock<std::recursive_mutex>::unlock()
 0000000000000000 W std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
 0000000000000000 W std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
@@ -4691,25 +4881,25 @@ ofxGuiGroup.o:
 0000000000000000 W std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
 0000000000000000 n std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&)
 0000000000000000 n std::__shared_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<ofParameterGroup::Value, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofVec2f, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofVec2f, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.516]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofVec3f, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofVec3f, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.520]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofVec4f, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofVec4f, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.524]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofColor_<float>, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofColor_<float>, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.536]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofColor_<unsigned char>, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofColor_<unsigned char>, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.528]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofColor_<unsigned short>, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofColor_<unsigned short>, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.532]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<signed char, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<signed char, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.492]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<bool, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<bool, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.465]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<double, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<double, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.512]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<float, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<float, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.508]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<unsigned char, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<unsigned char, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.496]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<int, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<int, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.476]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<unsigned int, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<unsigned int, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.480]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<long, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<long, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.484]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<unsigned long, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<unsigned long, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.488]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.472]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<short, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<short, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.500]
-0000000000000520 t std::_Vector_base<std::shared_ptr<of::priv::Function<unsigned short, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<unsigned short, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.504]
-0000000000000520 t std::_Vector_base<std::weak_ptr<ofParameterGroup::Value>, std::allocator<std::weak_ptr<ofParameterGroup::Value> > >::_M_allocate(unsigned long) [clone .isra.587]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofVec2f, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofVec2f, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.516]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofVec3f, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofVec3f, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.520]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofVec4f, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofVec4f, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.524]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofColor_<float>, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofColor_<float>, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.536]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofColor_<unsigned char>, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofColor_<unsigned char>, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.528]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<ofColor_<unsigned short>, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<ofColor_<unsigned short>, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.532]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<signed char, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<signed char, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.492]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<bool, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<bool, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.465]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<double, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<double, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.512]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<float, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<float, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.508]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<unsigned char, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<unsigned char, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.496]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<int, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<int, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.476]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<unsigned int, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<unsigned int, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.480]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<long, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<long, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.484]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<unsigned long, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<unsigned long, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.488]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.472]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<short, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<short, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.500]
+0000000000000530 t std::_Vector_base<std::shared_ptr<of::priv::Function<unsigned short, std::recursive_mutex> >, std::allocator<std::shared_ptr<of::priv::Function<unsigned short, std::recursive_mutex> > > >::_M_allocate(unsigned long) [clone .isra.504]
+0000000000000530 t std::_Vector_base<std::weak_ptr<ofParameterGroup::Value>, std::allocator<std::weak_ptr<ofParameterGroup::Value> > >::_M_allocate(unsigned long) [clone .isra.587]
                  U std::runtime_error::~runtime_error()
 0000000000000000 W std::_Function_base::_Base_manager<std::_Bind<std::_Mem_fn<void (ofParameter<ofVec2f>::*)(ofVec2f const&)> (ofParameter<ofVec2f>*, std::_Placeholder<1>)> >::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
 0000000000000000 W std::_Function_base::_Base_manager<std::_Bind<std::_Mem_fn<void (ofParameter<ofVec3f>::*)(ofVec3f const&)> (ofParameter<ofVec3f>*, std::_Placeholder<1>)> >::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
@@ -4949,16 +5139,16 @@ ofxGuiGroup.o:
 0000000000000000 W void std::vector<std::weak_ptr<ofParameterGroup::Value>, std::allocator<std::weak_ptr<ofParameterGroup::Value> > >::_M_emplace_back_aux<std::shared_ptr<ofParameterGroup::Value>&>(std::shared_ptr<ofParameterGroup::Value>&)
 0000000000000000 W std::vector<std::weak_ptr<ofParameterGroup::Value>, std::allocator<std::weak_ptr<ofParameterGroup::Value> > >::_M_erase(__gnu_cxx::__normal_iterator<std::weak_ptr<ofParameterGroup::Value>*, std::vector<std::weak_ptr<ofParameterGroup::Value>, std::allocator<std::weak_ptr<ofParameterGroup::Value> > > >, __gnu_cxx::__normal_iterator<std::weak_ptr<ofParameterGroup::Value>*, std::vector<std::weak_ptr<ofParameterGroup::Value>, std::allocator<std::weak_ptr<ofParameterGroup::Value> > > >)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
-0000000000000410 t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.237]
-0000000000000410 t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.229]
+0000000000000420 t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.237]
+0000000000000420 t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.229]
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
-00000000000004e0 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.231]
+00000000000004f0 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.231]
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
                  U std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::_Ios_Openmode)
                  U std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_stringstream()
-0000000000000a50 t std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::basic_ostringstream(std::_Ios_Openmode) [clone .constprop.773]
+0000000000000a60 t std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::basic_ostringstream(std::_Ios_Openmode) [clone .constprop.776]
                  U std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstream()
                  U std::ios_base::Init::Init()
                  U std::ios_base::Init::~Init()
@@ -5320,11 +5510,25 @@ ofxButton.o:
                  U __cxa_end_catch
                  U __cxa_throw
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
+0000000000000000 V DW.ref._ZTI24ofEventAttendedException
+0000000000000000 V DW.ref._ZTISt17bad_function_call
                  U __dynamic_cast
-0000000000000000 t _GLOBAL__sub_I__ZN9ofxButtonC2Ev
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxButton.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC37
+0000000000000000 r .LC48
+0000000000000030 r .LC49
+0000000000000068 r .LC51
+000000000000000c r .LC52
 0000000000000000 r .LC65
 0000000000000004 r .LC66
+000000000000000d r .LC75
+0000000000000018 r .LC76
+000000000000001e r .LC77
+0000000000000028 r .LC81
+000000000000003d r .LC82
                  U memcpy
                  w __pthread_key_create
                  w pthread_mutex_lock
@@ -5398,14 +5602,14 @@ ofxButton.o:
 0000000000000030 T ofxButton::mouseMoved(ofMouseEventArgs&)
 0000000000000050 T ofxButton::mouseDragged(ofMouseEventArgs&)
 0000000000000040 T ofxButton::mousePressed(ofMouseEventArgs&)
-0000000000000310 T ofxButton::valueChanged(bool&)
+0000000000000250 T ofxButton::valueChanged(bool&)
 0000000000000000 T ofxButton::mouseReleased(ofMouseEventArgs&)
-0000000000000790 T ofxButton::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
-0000000000000880 T ofxButton::ofxButton()
-0000000000000880 T ofxButton::ofxButton()
-0000000000000210 T ofxButton::~ofxButton()
-0000000000000120 T ofxButton::~ofxButton()
-0000000000000120 T ofxButton::~ofxButton()
+00000000000006f0 T ofxButton::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+00000000000007e0 T ofxButton::ofxButton()
+00000000000007e0 T ofxButton::ofxButton()
+0000000000000230 T ofxButton::~ofxButton()
+0000000000000130 T ofxButton::~ofxButton()
+0000000000000130 T ofxButton::~ofxButton()
                  U ofxToggle::mouseMoved(ofMouseEventArgs&)
                  U ofxToggle::generateDraw()
                  U ofxToggle::getParameter()
@@ -5572,13 +5776,23 @@ ofxPanel.o:
                  U __cxa_end_catch
                  U __cxa_throw
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN8ofxPanel8loadIconE
+0000000000000000 V DW.ref.__gxx_personality_v0
+0000000000000000 V DW.ref._ZTI24ofEventAttendedException
+0000000000000000 V DW.ref._ZTISt17bad_function_call
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxPanel.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC16
+000000000000000b r .LC17
+0000000000000011 r .LC18
 0000000000000000 r .LC29
 0000000000000004 r .LC30
 0000000000000008 r .LC31
 0000000000000000 r .LC32
 000000000000000c r .LC33
+000000000000001b r .LC35
+0000000000000030 r .LC36
+0000000000000000 r .LC8
                  U memcpy
                  w __pthread_key_create
                  w pthread_mutex_lock
@@ -5663,22 +5877,22 @@ ofxPanel.o:
                  U ofImage_<unsigned char>::allocate(int, int, ofImageType)
                  U ofImage_<unsigned char>::ofImage_()
                  U ofImage_<unsigned char>::~ofImage_()
-0000000000001f80 T ofxPanel::generateDraw()
-0000000000000190 T ofxPanel::mouseReleased(ofMouseEventArgs&)
-0000000000001ee0 T ofxPanel::setup(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
-0000000000001e40 T ofxPanel::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000001970 T ofxPanel::generateDraw()
+0000000000000180 T ofxPanel::mouseReleased(ofMouseEventArgs&)
+00000000000018d0 T ofxPanel::setup(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000001830 T ofxPanel::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
 0000000000000000 T ofxPanel::render()
 0000000000000120 B ofxPanel::loadIcon
 0000000000000000 B ofxPanel::saveIcon
-0000000000000230 T ofxPanel::setValue(float, float, bool)
-0000000000001b60 T ofxPanel::loadIcons()
-0000000000001c70 T ofxPanel::ofxPanel(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
-0000000000000cc0 T ofxPanel::ofxPanel()
-0000000000001c70 T ofxPanel::ofxPanel(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
-0000000000000cc0 T ofxPanel::ofxPanel()
-0000000000000e30 T ofxPanel::~ofxPanel()
-00000000000014d0 T ofxPanel::~ofxPanel()
-00000000000014d0 T ofxPanel::~ofxPanel()
+0000000000000220 T ofxPanel::setValue(float, float, bool)
+0000000000001530 T ofxPanel::loadIcons()
+0000000000001650 T ofxPanel::ofxPanel(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000000ce0 T ofxPanel::ofxPanel()
+0000000000001650 T ofxPanel::ofxPanel(ofParameterGroup const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000000ce0 T ofxPanel::ofxPanel()
+0000000000001510 T ofxPanel::~ofxPanel()
+0000000000000e60 T ofxPanel::~ofxPanel()
+0000000000000e60 T ofxPanel::~ofxPanel()
                  U ofTexture::setTextureMinMagFilter(int, int)
                  U ofVboMesh::operator=(ofMesh const&)
                  U ofVboMesh::~ofVboMesh()
@@ -5738,13 +5952,27 @@ ofxBaseGui.o:
                  U __cxa_end_catch
                  U __cxa_pure_virtual
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
                  U __dynamic_cast
-00000000000000c0 t _GLOBAL__sub_I__Z13ofxGuiSetFontRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEibbi
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxBaseGui.cpp
                  U __gxx_personality_v0
+0000000000000009 r .LC104
+0000000000000014 r .LC105
+000000000000001a r .LC106
 0000000000000004 r .LC107
 0000000000000008 r .LC108
 000000000000000c r .LC109
 0000000000000010 r .LC110
+0000000000000024 r .LC115
+0000000000000039 r .LC116
+0000000000000000 r .LC29
+0000000000000030 r .LC42
+0000000000000058 r .LC44
+0000000000000000 r .LC86
+0000000000000002 r .LC87
+0000000000000005 r .LC88
+0000000000000007 r .LC89
 0000000000000000 r .LC91
                  U memcpy
                  U memmove
@@ -5756,18 +5984,18 @@ ofxBaseGui.o:
                  U _Unwind_Resume
 0000000000000000 W void ofAddListener<ofEvent<ofMouseEventArgs, std::recursive_mutex>, ofMouseEventArgs, ofxBaseGui>(ofEvent<ofMouseEventArgs, std::recursive_mutex>&, ofxBaseGui*, bool (ofxBaseGui::*)(ofMouseEventArgs&), int)
                  U ofGetFrameNum()
-00000000000005b0 T ofxGuiSetFont(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, bool, bool, int)
-0000000000000640 T ofxGuiSetFillColor(ofColor_<unsigned char> const&)
-0000000000000630 T ofxGuiSetTextColor(ofColor_<unsigned char> const&)
-00000000000005f0 T ofxGuiSetBitmapFont()
-0000000000000620 T ofxGuiSetBorderColor(ofColor_<unsigned char> const&)
-0000000000000600 T ofxGuiSetHeaderColor(ofColor_<unsigned char> const&)
-0000000000000650 T ofxGuiSetTextPadding(int)
+00000000000000a0 T ofxGuiSetFont(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, bool, bool, int)
+0000000000000f30 T ofxGuiSetFillColor(ofColor_<unsigned char> const&)
+0000000000000f10 T ofxGuiSetTextColor(ofColor_<unsigned char> const&)
+0000000000000100 T ofxGuiSetBitmapFont()
+0000000000000ef0 T ofxGuiSetBorderColor(ofColor_<unsigned char> const&)
+0000000000000eb0 T ofxGuiSetHeaderColor(ofColor_<unsigned char> const&)
+0000000000000f50 T ofxGuiSetTextPadding(int)
 0000000000000000 W void ofRegisterMouseEvents<ofxBaseGui>(ofxBaseGui*, int)
-0000000000000660 T ofxGuiSetDefaultWidth(int)
-0000000000000670 T ofxGuiSetDefaultHeight(int)
+0000000000000f70 T ofxGuiSetDefaultWidth(int)
+0000000000000f90 T ofxGuiSetDefaultHeight(int)
 0000000000000000 W void ofUnregisterMouseEvents<ofxBaseGui>(ofxBaseGui*, int)
-0000000000000610 T ofxGuiSetBackgroundColor(ofColor_<unsigned char> const&)
+0000000000000ed0 T ofxGuiSetBackgroundColor(ofColor_<unsigned char> const&)
                  U ofEvents()
                  U operator delete(void*)
                  U operator delete(void*, unsigned long)
@@ -5781,64 +6009,68 @@ ofxBaseGui.o:
 0000000000000000 n ofLogError::~ofLogError()
 0000000000000000 B ofxBaseGui::bitmapFont
 00000000000000b9 B ofxBaseGui::fontLoaded
-0000000000000e60 T ofxBaseGui::saveToFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000000880 T ofxBaseGui::saveToFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0000000000000340 B ofxBaseGui::borderColor
-00000000000007f0 T ofxBaseGui::getTextMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000000200 T ofxBaseGui::getTextMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
 0000000000000000 W ofxBaseGui::mouseExited(ofMouseEventArgs&)
-0000000000000060 T ofxBaseGui::setPosition(float, float)
-0000000000000080 T ofxBaseGui::setPosition(ofVec3f const&)
+0000000000000fb0 T ofxBaseGui::setPosition(float, float)
+0000000000000fb0 t ofxBaseGui::setPosition(float, float) [clone .localalias.176]
+0000000000001070 T ofxBaseGui::setPosition(ofVec3f const&)
 0000000000000008 D ofxBaseGui::textPadding
 0000000000000004 D ofxBaseGui::defaultWidth
-0000000000000750 T ofxBaseGui::isGuiDrawing()
-0000000000000ff0 T ofxBaseGui::loadFromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000000140 T ofxBaseGui::isGuiDrawing()
+0000000000000a20 T ofxBaseGui::loadFromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0000000000000000 W ofxBaseGui::mouseEntered(ofMouseEventArgs&)
-00000000000014a0 T ofxBaseGui::setFillColor(ofColor_<unsigned char> const&)
-0000000000001490 T ofxBaseGui::setTextColor(ofColor_<unsigned char> const&)
+0000000000001050 T ofxBaseGui::setFillColor(ofColor_<unsigned char> const&)
+0000000000001030 T ofxBaseGui::setTextColor(ofColor_<unsigned char> const&)
 0000000000000000 D ofxBaseGui::defaultHeight
-00000000000004d0 T ofxBaseGui::sizeChangedCB()
-0000000000001480 T ofxBaseGui::setBorderColor(ofColor_<unsigned char> const&)
-0000000000001530 T ofxBaseGui::setNeedsRedraw()
+00000000000014f0 T ofxBaseGui::sizeChangedCB()
+00000000000014f0 t ofxBaseGui::sizeChangedCB() [clone .localalias.175]
+0000000000001010 T ofxBaseGui::setBorderColor(ofColor_<unsigned char> const&)
+0000000000000fa0 T ofxBaseGui::setNeedsRedraw()
 0000000000000344 B ofxBaseGui::backgroundColor
-0000000000000770 T ofxBaseGui::bindFontTexture()
-0000000000001510 T ofxBaseGui::setDefaultWidth(int)
-0000000000001540 T ofxBaseGui::saveStencilToHex[abi:cxx11](ofImage_<unsigned char> const&)
-0000000000001520 T ofxBaseGui::setDefaultHeight(int)
-00000000000007b0 T ofxBaseGui::unbindFontTexture()
-0000000000000df0 T ofxBaseGui::getTextBoundingBox(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
-0000000000001c30 T ofxBaseGui::loadStencilFromHex(ofImage_<unsigned char>&, unsigned char*)
-0000000000001470 T ofxBaseGui::setBackgroundColor(ofColor_<unsigned char> const&)
-0000000000001da0 T ofxBaseGui::registerMouseEvents()
-00000000000014f0 T ofxBaseGui::setDefaultFillColor(ofColor_<unsigned char> const&)
-00000000000014e0 T ofxBaseGui::setDefaultTextColor(ofColor_<unsigned char> const&)
-0000000000001160 T ofxBaseGui::setDefaultSerializer(std::shared_ptr<ofBaseFileSerializer>)
+0000000000000160 T ofxBaseGui::bindFontTexture()
+0000000000000f60 T ofxBaseGui::setDefaultWidth(int)
+00000000000015f0 T ofxBaseGui::saveStencilToHex[abi:cxx11](ofImage_<unsigned char> const&)
+0000000000000f80 T ofxBaseGui::setDefaultHeight(int)
+00000000000001b0 T ofxBaseGui::unbindFontTexture()
+0000000000000810 T ofxBaseGui::getTextBoundingBox(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float)
+0000000000001df0 T ofxBaseGui::loadStencilFromHex(ofImage_<unsigned char>&, unsigned char*)
+0000000000000ff0 T ofxBaseGui::setBackgroundColor(ofColor_<unsigned char> const&)
+0000000000001f60 T ofxBaseGui::registerMouseEvents()
+0000000000000f20 T ofxBaseGui::setDefaultFillColor(ofColor_<unsigned char> const&)
+0000000000000f00 T ofxBaseGui::setDefaultTextColor(ofColor_<unsigned char> const&)
+0000000000000ba0 T ofxBaseGui::setDefaultSerializer(std::shared_ptr<ofBaseFileSerializer>)
 0000000000000348 B ofxBaseGui::headerBackgroundColor
-00000000000014d0 T ofxBaseGui::setDefaultBorderColor(ofColor_<unsigned char> const&)
-0000000000001500 T ofxBaseGui::setDefaultTextPadding(int)
-0000000000001d70 T ofxBaseGui::unregisterMouseEvents()
-0000000000001460 T ofxBaseGui::setHeaderBackgroundColor(ofColor_<unsigned char> const&)
-00000000000014c0 T ofxBaseGui::setDefaultBackgroundColor(ofColor_<unsigned char> const&)
-00000000000014b0 T ofxBaseGui::setDefaultHeaderBackgroundColor(ofColor_<unsigned char> const&)
-0000000000000720 T ofxBaseGui::draw()
+0000000000000ee0 T ofxBaseGui::setDefaultBorderColor(ofColor_<unsigned char> const&)
+0000000000000f40 T ofxBaseGui::setDefaultTextPadding(int)
+0000000000001f30 T ofxBaseGui::unregisterMouseEvents()
+0000000000000fd0 T ofxBaseGui::setHeaderBackgroundColor(ofColor_<unsigned char> const&)
+0000000000000ec0 T ofxBaseGui::setDefaultBackgroundColor(ofColor_<unsigned char> const&)
+0000000000000ea0 T ofxBaseGui::setDefaultHeaderBackgroundColor(ofColor_<unsigned char> const&)
+0000000000000110 T ofxBaseGui::draw()
 00000000000000c0 B ofxBaseGui::font
 0000000000000000 T ofxBaseGui::saveTo(ofBaseSerializer&)
+0000000000000000 t ofxBaseGui::saveTo(ofBaseSerializer&) [clone .localalias.178]
 00000000000000b8 B ofxBaseGui::useTTF
-0000000000001230 T ofxBaseGui::getName[abi:cxx11]()
-0000000000001280 T ofxBaseGui::setName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-00000000000000c0 T ofxBaseGui::setSize(float, float)
-0000000000000680 T ofxBaseGui::loadFont(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, bool, bool, int)
+0000000000000c70 T ofxBaseGui::getName[abi:cxx11]()
+0000000000000cc0 T ofxBaseGui::setName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+00000000000010b0 T ofxBaseGui::setSize(float, float)
+0000000000000060 T ofxBaseGui::loadFont(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, bool, bool, int)
 0000000000000030 T ofxBaseGui::loadFrom(ofBaseSerializer&)
-0000000000000210 T ofxBaseGui::setShape(ofRectangle)
-0000000000000370 T ofxBaseGui::setShape(float, float, float, float)
+0000000000000030 t ofxBaseGui::loadFrom(ofBaseSerializer&) [clone .localalias.177]
+0000000000001210 T ofxBaseGui::setShape(ofRectangle)
+0000000000001380 T ofxBaseGui::setShape(float, float, float, float)
 0000000000000338 B ofxBaseGui::fillColor
-0000000000001d60 T ofxBaseGui::getParent()
-0000000000001d50 T ofxBaseGui::setParent(ofxBaseGui*)
-00000000000006c0 T ofxBaseGui::setUseTTF(bool)
+0000000000001f20 T ofxBaseGui::getParent()
+0000000000001f10 T ofxBaseGui::setParent(ofxBaseGui*)
+00000000000000b0 T ofxBaseGui::setUseTTF(bool)
 000000000000033c B ofxBaseGui::textColor
-0000000000001dc0 T ofxBaseGui::ofxBaseGui()
-0000000000001dc0 T ofxBaseGui::ofxBaseGui()
-00000000000020d0 T ofxBaseGui::~ofxBaseGui()
-0000000000002030 T ofxBaseGui::~ofxBaseGui()
-0000000000002030 T ofxBaseGui::~ofxBaseGui()
+0000000000001f80 T ofxBaseGui::ofxBaseGui()
+0000000000001f80 T ofxBaseGui::ofxBaseGui()
+00000000000022b0 T ofxBaseGui::~ofxBaseGui()
+0000000000002210 T ofxBaseGui::~ofxBaseGui()
+0000000000002210 T ofxBaseGui::~ofxBaseGui()
                  U ofRectangle::set(float, float, float, float)
                  U ofRectangle::operator=(ofRectangle const&)
                  U ofRectangle::ofRectangle(ofRectangle const&)
@@ -5870,15 +6102,15 @@ ofxBaseGui.o:
                  U ofColor_<unsigned char>::ofColor_(float, float)
                  U ofImage_<unsigned char>::update()
                  U ofImage_<unsigned char>::setColor(int, int, ofColor_<unsigned char> const&)
-00000000000012a0 T ofxBaseGui::getPosition() const
-0000000000001420 T ofxBaseGui::getFillColor() const
-00000000000013e0 T ofxBaseGui::getTextColor() const
-00000000000013a0 T ofxBaseGui::getBorderColor() const
-0000000000001360 T ofxBaseGui::getBackgroundColor() const
-0000000000001320 T ofxBaseGui::getHeaderBackgroundColor() const
-00000000000012e0 T ofxBaseGui::getShape() const
-0000000000001300 T ofxBaseGui::getWidth() const
-0000000000001310 T ofxBaseGui::getHeight() const
+0000000000000ce0 T ofxBaseGui::getPosition() const
+0000000000000e60 T ofxBaseGui::getFillColor() const
+0000000000000e20 T ofxBaseGui::getTextColor() const
+0000000000000de0 T ofxBaseGui::getBorderColor() const
+0000000000000da0 T ofxBaseGui::getBackgroundColor() const
+0000000000000d60 T ofxBaseGui::getHeaderBackgroundColor() const
+0000000000000d20 T ofxBaseGui::getShape() const
+0000000000000d40 T ofxBaseGui::getWidth() const
+0000000000000d50 T ofxBaseGui::getHeight() const
                  U ofBitmapFont::getTexture() const
                  U ofBitmapFont::getBoundingBox(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int) const
                  U ofBitmapFont::getMesh(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, ofDrawBitmapMode, bool) const
@@ -5997,8 +6229,40 @@ ofxTCPServer.o:
                  U __cxa_end_catch
                  U __cxa_rethrow
                  U __dso_handle
-0000000000000000 t _GLOBAL__sub_I__ZN12ofxTCPServerC2Ev
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxTCPServer.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC16
+0000000000000000 r .LC18
+0000000000000048 r .LC20
+0000000000000001 r .LC21
+0000000000000070 r .LC29
+0000000000000010 r .LC33
+00000000000000a0 r .LC43
+00000000000000c0 r .LC44
+0000000000000017 r .LC46
+000000000000002f r .LC47
+000000000000003e r .LC49
+00000000000000e0 r .LC51
+0000000000000054 r .LC53
+000000000000006f r .LC55
+0000000000000088 r .LC57
+00000000000000a1 r .LC59
+00000000000000b8 r .LC63
+00000000000000d4 r .LC65
+00000000000000e4 r .LC67
+00000000000000f7 r .LC68
+00000000000000ff r .LC69
+0000000000000114 r .LC70
+0000000000000122 r .LC75
+0000000000000100 r .LC76
+000000000000013b r .LC77
+000000000000014c r .LC78
+0000000000000164 r .LC79
+0000000000000178 r .LC80
+0000000000000191 r .LC83
+00000000000001a7 r .LC85
                  U memcpy
                  U memmove
                  w pthread_cond_timedwait
@@ -6042,40 +6306,40 @@ ofxTCPServer.o:
                  U ofxTCPClient::receive[abi:cxx11]()
                  U ofxTCPClient::ofxTCPClient()
                  U ofxTCPClient::~ofxTCPClient()
-0000000000001540 T ofxTCPServer::sendRawMsg(int, char const*, int)
+00000000000013b0 T ofxTCPServer::sendRawMsg(int, char const*, int)
 0000000000000000 T ofxTCPServer::setVerbose(bool)
-0000000000002290 T ofxTCPServer::getClientIP[abi:cxx11](int)
-0000000000000380 T ofxTCPServer::isConnected()
-0000000000001290 T ofxTCPServer::sendRawBytes(int, char const*, int)
-0000000000001ff0 T ofxTCPServer::getClientPort(int)
-0000000000000350 T ofxTCPServer::getNumClients()
-0000000000000390 T ofxTCPServer::isClientSetup(int)
-0000000000001d40 T ofxTCPServer::receiveRawMsg(int, char*, int)
-0000000000001a90 T ofxTCPServer::receiveRawBytes(int, char*, int)
-0000000000000d10 T ofxTCPServer::sendRawMsgToAll(char const*, int)
-00000000000026b0 T ofxTCPServer::disconnectClient(int)
-0000000000003550 T ofxTCPServer::threadedFunction()
-0000000000002560 T ofxTCPServer::isClientConnected(int)
-0000000000000b80 T ofxTCPServer::sendRawBytesToAll(char const*, int)
-00000000000017f0 T ofxTCPServer::getNumReceivedBytes(int)
-0000000000004430 T ofxTCPServer::peekReceiveRawBytes(int, char*, int)
-0000000000000110 T ofxTCPServer::setMessageDelimiter(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-0000000000000ea0 T ofxTCPServer::waitConnectedClient(int)
-0000000000000ab0 T ofxTCPServer::waitConnectedClient()
-0000000000000740 T ofxTCPServer::disconnectAllClients()
-0000000000002970 T ofxTCPServer::send(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-0000000000000150 T ofxTCPServer::close()
-0000000000000fe0 T ofxTCPServer::setup(int, bool)
-0000000000000370 T ofxTCPServer::getPort()
-0000000000002da0 T ofxTCPServer::receive[abi:cxx11](int)
-0000000000000300 T ofxTCPServer::getClient(int)
-0000000000000360 T ofxTCPServer::getLastID()
-0000000000003230 T ofxTCPServer::sendToAll(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-00000000000003e0 T ofxTCPServer::ofxTCPServer()
-00000000000003e0 T ofxTCPServer::ofxTCPServer()
-00000000000005c0 T ofxTCPServer::~ofxTCPServer()
-0000000000000940 T ofxTCPServer::~ofxTCPServer()
-0000000000000940 T ofxTCPServer::~ofxTCPServer()
+0000000000001eb0 T ofxTCPServer::getClientIP[abi:cxx11](int)
+00000000000003a0 T ofxTCPServer::isConnected()
+0000000000001170 T ofxTCPServer::sendRawBytes(int, char const*, int)
+0000000000001c80 T ofxTCPServer::getClientPort(int)
+0000000000000370 T ofxTCPServer::getNumClients()
+00000000000003b0 T ofxTCPServer::isClientSetup(int)
+0000000000001a50 T ofxTCPServer::receiveRawMsg(int, char*, int)
+0000000000001820 T ofxTCPServer::receiveRawBytes(int, char*, int)
+0000000000000bf0 T ofxTCPServer::sendRawMsgToAll(char const*, int)
+0000000000002210 T ofxTCPServer::disconnectClient(int)
+0000000000002ed0 T ofxTCPServer::threadedFunction()
+0000000000002110 T ofxTCPServer::isClientConnected(int)
+0000000000000a60 T ofxTCPServer::sendRawBytesToAll(char const*, int)
+00000000000015f0 T ofxTCPServer::getNumReceivedBytes(int)
+0000000000003d70 T ofxTCPServer::peekReceiveRawBytes(int, char*, int)
+0000000000000120 T ofxTCPServer::setMessageDelimiter(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0000000000000d80 T ofxTCPServer::waitConnectedClient(int)
+0000000000000980 T ofxTCPServer::waitConnectedClient()
+00000000000005f0 T ofxTCPServer::disconnectAllClients()
+0000000000002460 T ofxTCPServer::send(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0000000000000170 T ofxTCPServer::close()
+0000000000000eb0 T ofxTCPServer::setup(int, bool)
+0000000000000390 T ofxTCPServer::getPort()
+00000000000027c0 T ofxTCPServer::receive[abi:cxx11](int)
+0000000000000320 T ofxTCPServer::getClient(int)
+0000000000000380 T ofxTCPServer::getLastID()
+0000000000002b90 T ofxTCPServer::sendToAll(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0000000000000400 T ofxTCPServer::ofxTCPServer()
+0000000000000400 T ofxTCPServer::ofxTCPServer()
+0000000000000960 T ofxTCPServer::~ofxTCPServer()
+00000000000007f0 T ofxTCPServer::~ofxTCPServer()
+00000000000007f0 T ofxTCPServer::~ofxTCPServer()
                  U ofxTCPManager::Bind(unsigned short)
                  U ofxTCPManager::Close()
                  U ofxTCPManager::Accept(ofxTCPManager&)
@@ -6197,10 +6461,61 @@ ofxTCPClient.o:
                  U __cxa_call_unexpected
                  U __cxa_end_catch
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
                  U __errno_location
-0000000000000000 t _GLOBAL__sub_I__ZN12ofxTCPClientC2Ev
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxTCPClient.cpp
                  U __gxx_personality_v0
                  U inet_ntoa
+0000000000000000 r .LC10
+0000000000000000 r .LC13
+0000000000000003 r .LC14
+0000000000000030 r .LC15
+0000000000000058 r .LC16
+0000000000000088 r .LC17
+000000000000001a r .LC18
+00000000000000c8 r .LC19
+00000000000000f8 r .LC20
+0000000000000025 r .LC21
+0000000000000039 r .LC22
+0000000000000130 r .LC23
+0000000000000170 r .LC24
+00000000000001a8 r .LC25
+00000000000001f8 r .LC26
+0000000000000248 r .LC27
+0000000000000278 r .LC28
+00000000000002c8 r .LC29
+0000000000000318 r .LC30
+0000000000000360 r .LC31
+00000000000003a8 r .LC32
+0000000000000400 r .LC33
+0000000000000440 r .LC34
+0000000000000480 r .LC35
+00000000000004e8 r .LC36
+0000000000000568 r .LC37
+0000000000000048 r .LC38
+0000000000000062 r .LC39
+00000000000005b0 r .LC40
+0000000000000073 r .LC42
+0000000000000074 r .LC43
+0000000000000084 r .LC44
+00000000000005e0 r .LC46
+0000000000000628 r .LC48
+000000000000008b r .LC49
+00000000000000a9 r .LC50
+0000000000000648 r .LC53
+00000000000000ab r .LC54
+0000000000000668 r .LC60
+0000000000000698 r .LC61
+0000000000000708 r .LC62
+00000000000000ba r .LC63
+0000000000000730 r .LC65
+0000000000000750 r .LC68
+00000000000000d7 r .LC69
+00000000000000f3 r .LC70
+000000000000010a r .LC71
+0000000000000780 r .LC72
+000000000000011f r .LC74
                  U memcpy
                  U memmove
                  U memset
@@ -6225,29 +6540,29 @@ ofxTCPClient.o:
 0000000000000000 W ofLogWarning::~ofLogWarning()
 0000000000000000 W ofLogWarning::~ofLogWarning()
 0000000000000000 n ofLogWarning::~ofLogWarning()
-00000000000022f0 T ofxTCPClient::receiveRaw[abi:cxx11]()
-0000000000001070 T ofxTCPClient::sendRawMsg(char const*, int)
-0000000000000270 T ofxTCPClient::setVerbose(bool)
-00000000000024b0 T ofxTCPClient::isConnected()
-00000000000015c0 T ofxTCPClient::sendRawBytes(char const*, int)
-0000000000001d40 T ofxTCPClient::receiveRawMsg(char*, int)
-00000000000021b0 T ofxTCPClient::receiveRawBytes(char*, int)
-0000000000001790 T ofxTCPClient::isClosingCondition(int, int)
-0000000000000630 T ofxTCPClient::setupConnectionIdx(int, bool)
-0000000000001780 T ofxTCPClient::getNumReceivedBytes()
-0000000000002250 T ofxTCPClient::peekReceiveRawBytes(char*, int)
-00000000000009f0 T ofxTCPClient::setMessageDelimiter(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-0000000000000a30 T ofxTCPClient::send(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
-0000000000000700 T ofxTCPClient::close()
-00000000000024f0 T ofxTCPClient::getIP[abi:cxx11]()
-0000000000000380 T ofxTCPClient::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, bool)
-00000000000024e0 T ofxTCPClient::getPort()
-0000000000001800 T ofxTCPClient::receive[abi:cxx11]()
-0000000000001400 T ofxTCPClient::sendRaw(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0000000000002170 T ofxTCPClient::receiveRaw[abi:cxx11]()
+0000000000000b00 T ofxTCPClient::sendRawMsg(char const*, int)
+0000000000000280 T ofxTCPClient::setVerbose(bool)
+00000000000022f0 T ofxTCPClient::isConnected()
+0000000000000fe0 T ofxTCPClient::sendRawBytes(char const*, int)
+0000000000001d00 T ofxTCPClient::receiveRawMsg(char*, int)
+0000000000001ca0 T ofxTCPClient::receiveRawBytes(char*, int)
+0000000000000a90 T ofxTCPClient::isClosingCondition(int, int)
+0000000000000660 T ofxTCPClient::setupConnectionIdx(int, bool)
+0000000000000a80 T ofxTCPClient::getNumReceivedBytes()
+0000000000002110 T ofxTCPClient::peekReceiveRawBytes(char*, int)
+0000000000000a30 T ofxTCPClient::setMessageDelimiter(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0000000000001160 T ofxTCPClient::send(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0000000000000730 T ofxTCPClient::close()
+0000000000002330 T ofxTCPClient::getIP[abi:cxx11]()
+00000000000003a0 T ofxTCPClient::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, bool)
+0000000000002320 T ofxTCPClient::getPort()
+0000000000001770 T ofxTCPClient::receive[abi:cxx11]()
+0000000000000e50 T ofxTCPClient::sendRaw(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
 0000000000000000 T ofxTCPClient::ofxTCPClient()
 0000000000000000 T ofxTCPClient::ofxTCPClient()
-00000000000008f0 T ofxTCPClient::~ofxTCPClient()
-00000000000008f0 T ofxTCPClient::~ofxTCPClient()
+0000000000000930 T ofxTCPClient::~ofxTCPClient()
+0000000000000930 T ofxTCPClient::~ofxTCPClient()
                  U ofxTCPManager::PeekReceive(char*, int)
                  U ofxTCPManager::GetRemoteAddr(InetAddr*)
                  U ofxTCPManager::IsNonBlocking()
@@ -6330,18 +6645,53 @@ ofxUDPManager.o:
                  U __cxa_call_unexpected
                  U __cxa_end_catch
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
                  U __errno_location
                  U __fdelt_chk
                  U gethostbyname
                  U getsockopt
-0000000000000000 t _GLOBAL__sub_I__ZN13ofxUDPManager14m_bWinsockInitE
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxUDPManager.cpp
                  U __gxx_personality_v0
                  U inet_addr
                  U inet_ntoa
                  U ioctl
+0000000000000000 r .LC10
+000000000000000b r .LC11
+000000000000000e r .LC12
+0000000000000030 r .LC13
+0000000000000058 r .LC14
+0000000000000088 r .LC15
+00000000000000c8 r .LC16
+00000000000000f8 r .LC17
+0000000000000025 r .LC18
+0000000000000039 r .LC19
+0000000000000130 r .LC20
+0000000000000170 r .LC21
+00000000000001a8 r .LC22
+00000000000001f8 r .LC23
+0000000000000248 r .LC24
+0000000000000278 r .LC25
+00000000000002c8 r .LC26
+0000000000000318 r .LC27
+0000000000000360 r .LC28
+00000000000003a8 r .LC29
+0000000000000400 r .LC30
+0000000000000440 r .LC31
+0000000000000480 r .LC32
+00000000000004e8 r .LC33
+0000000000000568 r .LC34
+0000000000000048 r .LC35
+0000000000000062 r .LC36
+00000000000005b0 r .LC37
+00000000000005e0 r .LC40
+0000000000000650 r .LC49
+0000000000000000 r .LC53
 0000000000000000 r .LC54
-0000000000000000 r .LC55
-0000000000000004 r .LC56
+0000000000000004 r .LC55
+0000000000000073 r .LC58
+0000000000000000 r .LC7
+0000000000000082 r .LC77
                  U memcpy
                  U memset
                  U recvfrom
@@ -6371,31 +6721,31 @@ ofxUDPManager.o:
 0000000000000000 W ofLogWarning::~ofLogWarning()
 0000000000000000 W ofLogWarning::~ofLogWarning()
 0000000000000000 n ofLogWarning::~ofLogWarning()
-0000000000000b40 T ofxUDPManager::PeekReceive()
+0000000000000870 T ofxUDPManager::PeekReceive()
 0000000000000130 T ofxUDPManager::WaitReceive(long, long)
-0000000000000610 T ofxUDPManager::ConnectMcast(char*, unsigned short)
-0000000000001090 T ofxUDPManager::GetMaxMsgSize()
-0000000000000f70 T ofxUDPManager::GetTimeoutSend()
+0000000000001110 T ofxUDPManager::ConnectMcast(char*, unsigned short)
+0000000000000ce0 T ofxUDPManager::GetMaxMsgSize()
+0000000000000bc0 T ofxUDPManager::GetTimeoutSend()
 0000000000000000 B ofxUDPManager::m_bWinsockInit
 00000000000002b0 T ofxUDPManager::SetNonBlocking(bool)
-0000000000000f50 T ofxUDPManager::SetTimeoutSend(int)
-00000000000012d0 T ofxUDPManager::SetReuseAddress(bool)
-00000000000011f0 T ofxUDPManager::GetSendBufferSize()
-0000000000000f80 T ofxUDPManager::GetTimeoutReceive()
-0000000000001270 T ofxUDPManager::SetSendBufferSize(int)
-0000000000000f60 T ofxUDPManager::SetTimeoutReceive(int)
-0000000000001360 T ofxUDPManager::SetEnableBroadcast(bool)
-0000000000001110 T ofxUDPManager::GetReceiveBufferSize()
-0000000000001190 T ofxUDPManager::SetReceiveBufferSize(int)
+0000000000000ba0 T ofxUDPManager::SetTimeoutSend(int)
+0000000000000f20 T ofxUDPManager::SetReuseAddress(bool)
+0000000000000e40 T ofxUDPManager::GetSendBufferSize()
+0000000000000bd0 T ofxUDPManager::GetTimeoutReceive()
+0000000000000ec0 T ofxUDPManager::SetSendBufferSize(int)
+0000000000000bb0 T ofxUDPManager::SetTimeoutReceive(int)
+0000000000000fb0 T ofxUDPManager::SetEnableBroadcast(bool)
+0000000000000d60 T ofxUDPManager::GetReceiveBufferSize()
+0000000000000de0 T ofxUDPManager::SetReceiveBufferSize(int)
 0000000000000330 T ofxUDPManager::Bind(unsigned short)
-0000000000000780 T ofxUDPManager::Send(char const*, int)
+00000000000005c0 T ofxUDPManager::Send(char const*, int)
 0000000000000030 T ofxUDPManager::Close()
 0000000000000080 T ofxUDPManager::Create()
-00000000000013d0 T ofxUDPManager::GetTTL()
-0000000000001450 T ofxUDPManager::SetTTL(int)
-0000000000000590 T ofxUDPManager::Connect(char const*, unsigned short)
-0000000000000d10 T ofxUDPManager::Receive(char*, int)
-00000000000008a0 T ofxUDPManager::SendAll(char const*, int)
+0000000000001030 T ofxUDPManager::GetTTL()
+00000000000010b0 T ofxUDPManager::SetTTL(int)
+0000000000000540 T ofxUDPManager::Connect(char const*, unsigned short)
+00000000000009d0 T ofxUDPManager::Receive(char*, int)
+0000000000000650 T ofxUDPManager::SendAll(char const*, int)
 00000000000001f0 T ofxUDPManager::WaitSend(long, long)
 0000000000000390 T ofxUDPManager::BindMcast(char*, unsigned short)
 0000000000000000 T ofxUDPManager::ofxUDPManager()
@@ -6412,8 +6762,8 @@ ofxUDPManager.o:
                  U boost::system::generic_category()
                  U ofLog::padding[abi:cxx11]
                  U ofLog::~ofLog()
-0000000000001020 T ofxUDPManager::GetListenAddr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int&) const
-0000000000000f90 T ofxUDPManager::GetRemoteAddr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int&) const
+0000000000000c70 T ofxUDPManager::GetListenAddr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int&) const
+0000000000000be0 T ofxUDPManager::GetRemoteAddr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int&) const
 0000000000000000 W boost::system::system_error::what() const
                  U std::runtime_error::what() const
                  U std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)
@@ -6460,6 +6810,7 @@ ofxTCPManager.o:
                  U __cxa_call_unexpected
                  U __cxa_end_catch
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
                  U __errno_location
                  U fcntl
                  U __fdelt_chk
@@ -6468,12 +6819,42 @@ ofxTCPManager.o:
                  U getpeername
                  U getsockname
                  U getsockopt
-0000000000000000 t _GLOBAL__sub_I__ZN13ofxTCPManager14m_bWinsockInitE
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_ofxTCPManager.cpp
                  U __gxx_personality_v0
                  U inet_addr
+0000000000000028 r .LC10
+0000000000000058 r .LC11
+0000000000000098 r .LC12
+00000000000000c8 r .LC13
+000000000000001a r .LC14
+000000000000002e r .LC15
+0000000000000100 r .LC16
+0000000000000140 r .LC17
+0000000000000178 r .LC18
+00000000000001c8 r .LC19
+0000000000000218 r .LC20
+0000000000000248 r .LC21
+0000000000000298 r .LC22
+00000000000002e8 r .LC23
+0000000000000330 r .LC24
+0000000000000378 r .LC25
+00000000000003d0 r .LC26
+0000000000000410 r .LC27
+0000000000000450 r .LC28
+00000000000004b8 r .LC29
+0000000000000538 r .LC30
+000000000000003d r .LC31
+0000000000000057 r .LC32
+0000000000000580 r .LC33
+00000000000005b0 r .LC36
 0000000000000000 r .LC53
 0000000000000000 r .LC54
 0000000000000004 r .LC55
+0000000000000000 r .LC7
+0000000000000068 r .LC77
+0000000000000003 r .LC8
+0000000000000000 r .LC9
                  U listen
                  U recv
                  U select
@@ -6499,41 +6880,41 @@ ofxTCPManager.o:
 0000000000000000 W ofLogVerbose::~ofLogVerbose()
 0000000000000000 W ofLogVerbose::~ofLogVerbose()
 0000000000000000 n ofLogVerbose::~ofLogVerbose()
-0000000000001030 T ofxTCPManager::ReceiveAll(char*, int)
-0000000000001330 T ofxTCPManager::GetInetAddr(InetAddr*)
-0000000000000f30 T ofxTCPManager::PeekReceive(char*, int)
-0000000000000750 T ofxTCPManager::WaitReceive(long, long)
-00000000000012c0 T ofxTCPManager::GetRemoteAddr(InetAddr*)
-0000000000000960 T ofxTCPManager::IsNonBlocking()
-00000000000013f0 T ofxTCPManager::GetTimeoutSend()
+0000000000000b40 T ofxTCPManager::ReceiveAll(char*, int)
+0000000000000dc0 T ofxTCPManager::GetInetAddr(InetAddr*)
+0000000000000af0 T ofxTCPManager::PeekReceive(char*, int)
+0000000000000340 T ofxTCPManager::WaitReceive(long, long)
+0000000000000d50 T ofxTCPManager::GetRemoteAddr(InetAddr*)
+00000000000007b0 T ofxTCPManager::IsNonBlocking()
+0000000000000e80 T ofxTCPManager::GetTimeoutSend()
 0000000000000000 B ofxTCPManager::m_bWinsockInit
-00000000000008d0 T ofxTCPManager::SetNonBlocking(bool)
-00000000000013b0 T ofxTCPManager::SetTimeoutSend(int)
-00000000000000e0 T ofxTCPManager::CheckIsConnected()
-0000000000001410 T ofxTCPManager::GetTimeoutAccept()
-00000000000013d0 T ofxTCPManager::SetTimeoutAccept(int)
-00000000000015e0 T ofxTCPManager::GetMaxConnections()
-0000000000001500 T ofxTCPManager::GetSendBufferSize()
-00000000000013e0 T ofxTCPManager::GetTimeoutConnect()
-0000000000001400 T ofxTCPManager::GetTimeoutReceive()
-0000000000001580 T ofxTCPManager::SetSendBufferSize(int)
-00000000000013a0 T ofxTCPManager::SetTimeoutConnect(int)
-00000000000013c0 T ofxTCPManager::SetTimeoutReceive(int)
-0000000000001420 T ofxTCPManager::GetReceiveBufferSize()
-00000000000014a0 T ofxTCPManager::SetReceiveBufferSize(int)
-00000000000002f0 T ofxTCPManager::Bind(unsigned short)
-0000000000000ab0 T ofxTCPManager::Send(char const*, int)
+00000000000004c0 T ofxTCPManager::SetNonBlocking(bool)
+0000000000000e40 T ofxTCPManager::SetTimeoutSend(int)
+0000000000000550 T ofxTCPManager::CheckIsConnected()
+0000000000000ea0 T ofxTCPManager::GetTimeoutAccept()
+0000000000000e60 T ofxTCPManager::SetTimeoutAccept(int)
+0000000000001070 T ofxTCPManager::GetMaxConnections()
+0000000000000f90 T ofxTCPManager::GetSendBufferSize()
+0000000000000e70 T ofxTCPManager::GetTimeoutConnect()
+0000000000000e90 T ofxTCPManager::GetTimeoutReceive()
+0000000000001010 T ofxTCPManager::SetSendBufferSize(int)
+0000000000000e30 T ofxTCPManager::SetTimeoutConnect(int)
+0000000000000e50 T ofxTCPManager::SetTimeoutReceive(int)
+0000000000000eb0 T ofxTCPManager::GetReceiveBufferSize()
+0000000000000f30 T ofxTCPManager::SetReceiveBufferSize(int)
+0000000000000170 T ofxTCPManager::Bind(unsigned short)
+00000000000007c0 T ofxTCPManager::Send(char const*, int)
 0000000000000070 T ofxTCPManager::Close()
-0000000000000970 T ofxTCPManager::Write(char const*, int)
-0000000000000370 T ofxTCPManager::Accept(ofxTCPManager&)
-0000000000000260 T ofxTCPManager::Create()
-00000000000002b0 T ofxTCPManager::Listen(int)
+0000000000000810 T ofxTCPManager::Write(char const*, int)
+0000000000000200 T ofxTCPManager::Accept(ofxTCPManager&)
+00000000000000e0 T ofxTCPManager::Create()
+0000000000000130 T ofxTCPManager::Listen(int)
 00000000000000d0 T ofxTCPManager::CleanUp()
-00000000000004a0 T ofxTCPManager::Connect(char const*, unsigned short)
-0000000000000e30 T ofxTCPManager::Receive(char*, int)
-0000000000000bb0 T ofxTCPManager::SendAll(char const*, int)
-0000000000000810 T ofxTCPManager::WaitSend(long, long)
-00000000000015f0 T ofxTCPManager::CheckHost(char const*)
+0000000000000630 T ofxTCPManager::Connect(char const*, unsigned short)
+0000000000000aa0 T ofxTCPManager::Receive(char*, int)
+0000000000000880 T ofxTCPManager::SendAll(char const*, int)
+0000000000000400 T ofxTCPManager::WaitSend(long, long)
+0000000000001080 T ofxTCPManager::CheckHost(char const*)
 0000000000000000 T ofxTCPManager::ofxTCPManager()
 0000000000000000 T ofxTCPManager::ofxTCPManager()
 0000000000000000 W ofxTCPManager::~ofxTCPManager()
@@ -6584,10 +6965,53 @@ ofxOscMessage.o:
                  U __cxa_call_unexpected
                  U __cxa_end_catch
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN13ofxOscMessageC2Ev
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxOscMessage.cpp
                  U __gxx_personality_v0
+0000000000000200 r .LC100
+000000000000010a r .LC101
+0000000000000125 r .LC105
+000000000000012a r .LC106
+0000000000000240 r .LC107
+0000000000000144 r .LC109
+0000000000000161 r .LC110
+0000000000000268 r .LC114
+0000000000000173 r .LC115
+0000000000000190 r .LC116
+00000000000001a7 r .LC118
+00000000000001c1 r .LC119
+00000000000002a8 r .LC121
+00000000000001d0 r .LC122
+00000000000001e5 r .LC142
+00000000000001f0 r .LC143
+00000000000001f6 r .LC144
+0000000000000200 r .LC146
+0000000000000215 r .LC147
+0000000000000000 r .LC61
+0000000000000000 r .LC66
+0000000000000001 r .LC70
+0000000000000016 r .LC71
+0000000000000025 r .LC73
+0000000000000030 r .LC75
+000000000000003e r .LC76
+0000000000000059 r .LC77
 0000000000000000 r .LC79
+0000000000000070 r .LC80
+000000000000006a r .LC81
 0000000000000000 r .LC83
+00000000000000b0 r .LC84
+0000000000000085 r .LC85
+00000000000000a1 r .LC87
+00000000000000f0 r .LC88
+00000000000000a4 r .LC89
+0000000000000130 r .LC90
+00000000000000a7 r .LC91
+00000000000000c3 r .LC92
+0000000000000170 r .LC94
+00000000000001b8 r .LC95
+00000000000000d4 r .LC96
+00000000000000f0 r .LC97
                  U memcpy
                  U memmove
                  U __sprintf_chk
@@ -6627,28 +7051,28 @@ ofxOscMessage.o:
 0000000000000000 W ofxOscArgChar::~ofxOscArgChar()
 0000000000000000 W ofxOscArgChar::~ofxOscArgChar()
 0000000000000000 n ofxOscArgChar::~ofxOscArgChar()
-0000000000002e70 T ofxOscMessage::addBlobArg(ofBuffer const&)
-0000000000002920 T ofxOscMessage::addBoolArg(bool)
-0000000000002b60 T ofxOscMessage::addCharArg(char)
-0000000000002a40 T ofxOscMessage::addFloatArg(float)
-0000000000002800 T ofxOscMessage::addInt32Arg(int)
-00000000000029b0 T ofxOscMessage::addInt64Arg(long)
-0000000000002ad0 T ofxOscMessage::addDoubleArg(double)
-0000000000002d90 T ofxOscMessage::addStringArg(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-00000000000030a0 T ofxOscMessage::addSymbolArg(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0000000000002670 T ofxOscMessage::addImpulseArg()
-0000000000002d00 T ofxOscMessage::addTimetagArg(long)
-00000000000026f0 T ofxOscMessage::addTriggerArg()
-0000000000002c80 T ofxOscMessage::addInfinitumArg()
-0000000000002890 T ofxOscMessage::addRgbaColorArg(int)
-0000000000002bf0 T ofxOscMessage::addMidiMessageArg(int)
-0000000000003190 T ofxOscMessage::copy(ofxOscMessage const&)
-0000000000000100 T ofxOscMessage::clear()
-0000000000002770 T ofxOscMessage::addIntArg(int)
+0000000000002ee0 T ofxOscMessage::addBlobArg(ofBuffer const&)
+0000000000002bb0 T ofxOscMessage::addBoolArg(bool)
+0000000000002b20 T ofxOscMessage::addCharArg(char)
+00000000000029e0 T ofxOscMessage::addFloatArg(float)
+00000000000028c0 T ofxOscMessage::addInt32Arg(int)
+0000000000002950 T ofxOscMessage::addInt64Arg(long)
+0000000000002a80 T ofxOscMessage::addDoubleArg(double)
+0000000000002df0 T ofxOscMessage::addStringArg(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000003110 T ofxOscMessage::addSymbolArg(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000002680 T ofxOscMessage::addImpulseArg()
+0000000000002d60 T ofxOscMessage::addTimetagArg(long)
+0000000000002710 T ofxOscMessage::addTriggerArg()
+0000000000002cd0 T ofxOscMessage::addInfinitumArg()
+0000000000002830 T ofxOscMessage::addRgbaColorArg(int)
+0000000000002c40 T ofxOscMessage::addMidiMessageArg(int)
+0000000000003210 T ofxOscMessage::copy(ofxOscMessage const&)
+0000000000000040 T ofxOscMessage::clear()
+00000000000027a0 T ofxOscMessage::addIntArg(int)
 0000000000000000 T ofxOscMessage::ofxOscMessage()
 0000000000000000 T ofxOscMessage::ofxOscMessage()
-0000000000000040 T ofxOscMessage::~ofxOscMessage()
-0000000000000040 T ofxOscMessage::~ofxOscMessage()
+00000000000000c0 T ofxOscMessage::~ofxOscMessage()
+00000000000000c0 T ofxOscMessage::~ofxOscMessage()
 0000000000000000 W ofxOscArgFloat::getTypeName[abi:cxx11]()
 0000000000000000 W ofxOscArgFloat::getType()
 0000000000000000 W ofxOscArgFloat::~ofxOscArgFloat()
@@ -6727,25 +7151,26 @@ ofxOscMessage.o:
 0000000000000000 W ofxOscArg::~ofxOscArg()
 0000000000000000 W ofxOscArg::~ofxOscArg()
 0000000000000000 n ofxOscArg::~ofxOscArg()
-0000000000000190 T ofxOscMessage::getArgType(int) const
-0000000000000180 T ofxOscMessage::getNumArgs() const
-0000000000001b00 T ofxOscMessage::getArgAsInt(int) const
-00000000000021b0 T ofxOscMessage::getArgAsBlob(int) const
-0000000000001b20 T ofxOscMessage::getArgAsBool(int) const
+0000000000000120 T ofxOscMessage::getArgType(int) const
+0000000000000110 T ofxOscMessage::getNumArgs() const
+0000000000001b20 T ofxOscMessage::getArgAsInt(int) const
+00000000000021d0 T ofxOscMessage::getArgAsBlob(int) const
+0000000000001b30 T ofxOscMessage::getArgAsBool(int) const
 0000000000001720 T ofxOscMessage::getArgAsChar(int) const
-0000000000000780 T ofxOscMessage::getArgAsFloat(int) const
+0000000000000720 T ofxOscMessage::getArgAsFloat(int) const
 0000000000001b10 T ofxOscMessage::getArgAsInt32(int) const
-0000000000000540 T ofxOscMessage::getArgAsInt64(int) const
-00000000000009d0 T ofxOscMessage::getArgAsDouble(int) const
-0000000000000c20 T ofxOscMessage::getArgAsString[abi:cxx11](int) const
-00000000000011a0 T ofxOscMessage::getArgAsSymbol[abi:cxx11](int) const
-0000000000000330 T ofxOscMessage::getArgTypeName[abi:cxx11](int) const
-0000000000001f40 T ofxOscMessage::getArgAsImpulse(int) const
-0000000000001f60 T ofxOscMessage::getArgAsTimetag(int) const
-0000000000001da0 T ofxOscMessage::getArgAsTrigger(int) const
-0000000000001f50 T ofxOscMessage::getArgAsInfinitum(int) const
-00000000000024d0 T ofxOscMessage::getArgAsRgbaColor(int) const
+00000000000004d0 T ofxOscMessage::getArgAsInt64(int) const
+0000000000000980 T ofxOscMessage::getArgAsDouble(int) const
+0000000000000be0 T ofxOscMessage::getArgAsString[abi:cxx11](int) const
+0000000000001180 T ofxOscMessage::getArgAsSymbol[abi:cxx11](int) const
+00000000000002c0 T ofxOscMessage::getArgTypeName[abi:cxx11](int) const
+0000000000001f60 T ofxOscMessage::getArgAsImpulse(int) const
+0000000000001f80 T ofxOscMessage::getArgAsTimetag(int) const
+0000000000001dc0 T ofxOscMessage::getArgAsTrigger(int) const
+0000000000001f70 T ofxOscMessage::getArgAsInfinitum(int) const
+00000000000024e0 T ofxOscMessage::getArgAsRgbaColor(int) const
 00000000000018c0 T ofxOscMessage::getArgAsMidiMessage(int) const
+00000000000018c0 t ofxOscMessage::getArgAsMidiMessage(int) const [clone .localalias.80]
 0000000000000000 W boost::system::system_error::what() const
                  U std::runtime_error::what() const
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const
@@ -6829,9 +7254,20 @@ ofxOscParameterSync.o:
                  U __cxa_end_catch
                  U __cxa_throw
                  U __dso_handle
+0000000000000000 V DW.ref.__gxx_personality_v0
                  U __dynamic_cast
-00000000000000c0 t _GLOBAL__sub_I__ZN19ofxOscParameterSyncC2Ev
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxOscParameterSync.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC17
+0000000000000000 r .LC21
+0000000000000030 r .LC22
+0000000000000058 r .LC23
+0000000000000014 r .LC36
+000000000000001f r .LC37
+0000000000000025 r .LC38
+000000000000002f r .LC40
+0000000000000044 r .LC41
                  U memcpy
                  w __pthread_key_create
                  w pthread_mutex_lock
@@ -6860,10 +7296,10 @@ ofxOscParameterSync.o:
                  U ofParameterGroup::parameterChangedE()
                  U ofParameterGroup::ofParameterGroup()
 0000000000000000 T ofxOscParameterSync::parameterChanged(ofAbstractParameter&)
-0000000000000940 T ofxOscParameterSync::setup(ofParameterGroup&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)
+0000000000000960 T ofxOscParameterSync::setup(ofParameterGroup&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)
 0000000000000020 T ofxOscParameterSync::update()
-0000000000000a90 T ofxOscParameterSync::ofxOscParameterSync()
-0000000000000a90 T ofxOscParameterSync::ofxOscParameterSync()
+0000000000000ab0 T ofxOscParameterSync::ofxOscParameterSync()
+0000000000000ab0 T ofxOscParameterSync::ofxOscParameterSync()
 0000000000000060 T ofxOscParameterSync::~ofxOscParameterSync()
 0000000000000060 T ofxOscParameterSync::~ofxOscParameterSync()
                  U osc::ReceivedBundle::ReceivedBundle(osc::ReceivedPacket const&)
@@ -6967,8 +7403,16 @@ ofxOscBundle.o:
                  U __cxa_end_catch
                  U __cxa_rethrow
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN12ofxOscBundleC2Ev
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxOscBundle.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC1
+0000000000000000 r .LC13
+000000000000000b r .LC14
+0000000000000011 r .LC15
+000000000000001b r .LC17
+0000000000000030 r .LC18
                  U memcpy
                  U __stack_chk_fail
                  U strlen
@@ -6978,9 +7422,9 @@ ofxOscBundle.o:
 0000000000000000 b OF_TTF_MONO
 0000000000000040 b OF_TTF_SANS
 0000000000000020 b OF_TTF_SERIF
-0000000000000100 T ofxOscBundle::addMessage(ofxOscMessage const&)
-00000000000001d0 T ofxOscBundle::copy(ofxOscBundle const&)
-00000000000003f0 T ofxOscBundle::addBundle(ofxOscBundle const&)
+00000000000000c0 T ofxOscBundle::addMessage(ofxOscMessage const&)
+0000000000000190 T ofxOscBundle::copy(ofxOscBundle const&)
+00000000000003b0 T ofxOscBundle::addBundle(ofxOscBundle const&)
 0000000000000000 T ofxOscBundle::ofxOscBundle()
 0000000000000000 T ofxOscBundle::ofxOscBundle()
 0000000000000030 T ofxOscBundle::~ofxOscBundle()
@@ -7029,8 +7473,19 @@ ofxOscSender.o:
                  U __cxa_call_unexpected
                  U __cxa_end_catch
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN12ofxOscSenderC2Ev
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxOscSender.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC16
+0000000000000015 r .LC17
+0000000000000030 r .LC19
+0000000000000017 r .LC21
+0000000000000033 r .LC27
+000000000000003e r .LC28
+0000000000000044 r .LC29
+000000000000004e r .LC31
+0000000000000000 r .LC6
                  U memcpy
                  U __stack_chk_fail
                  U strlen
@@ -7049,21 +7504,21 @@ ofxOscSender.o:
                  U ofxOscBundle::addBundle(ofxOscBundle const&)
                  U ofxOscBundle::ofxOscBundle()
                  U ofxOscBundle::~ofxOscBundle()
-0000000000001cf0 T ofxOscSender::sendBundle(ofxOscBundle&)
-00000000000012b0 T ofxOscSender::sendMessage(ofxOscMessage&, bool)
-0000000000001470 T ofxOscSender::appendBundle(ofxOscBundle&, osc::OutboundPacketStream&)
-0000000000000d40 T ofxOscSender::appendMessage(ofxOscMessage&, osc::OutboundPacketStream&)
-0000000000001f50 T ofxOscSender::sendParameter(ofAbstractParameter const&)
-0000000000000970 T ofxOscSender::appendParameter(ofxOscBundle&, ofAbstractParameter const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0000000000000690 T ofxOscSender::appendParameter(ofxOscMessage&, ofAbstractParameter const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0000000000000560 T ofxOscSender::enableBroadcast()
-0000000000000460 T ofxOscSender::disableBroadcast()
-0000000000000360 T ofxOscSender::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)
-0000000000000660 T ofxOscSender::shutdown()
-0000000000000230 T ofxOscSender::operator=(ofxOscSender const&)
-0000000000000030 T ofxOscSender::ofxOscSender(ofxOscSender const&)
+0000000000001270 T ofxOscSender::sendBundle(ofxOscBundle&)
+0000000000000fa0 T ofxOscSender::sendMessage(ofxOscMessage&, bool)
+0000000000001170 T ofxOscSender::appendBundle(ofxOscBundle&, osc::OutboundPacketStream&)
+0000000000000a20 T ofxOscSender::appendMessage(ofxOscMessage&, osc::OutboundPacketStream&)
+0000000000001410 T ofxOscSender::sendParameter(ofAbstractParameter const&)
+0000000000000650 T ofxOscSender::appendParameter(ofxOscBundle&, ofAbstractParameter const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000000370 T ofxOscSender::appendParameter(ofxOscMessage&, ofAbstractParameter const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000000310 T ofxOscSender::enableBroadcast()
+00000000000002e0 T ofxOscSender::disableBroadcast()
+0000000000000030 T ofxOscSender::setup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)
+0000000000000340 T ofxOscSender::shutdown()
+0000000000000130 T ofxOscSender::operator=(ofxOscSender const&)
+0000000000000180 T ofxOscSender::ofxOscSender(ofxOscSender const&)
 0000000000000000 T ofxOscSender::ofxOscSender()
-0000000000000030 T ofxOscSender::ofxOscSender(ofxOscSender const&)
+0000000000000180 T ofxOscSender::ofxOscSender(ofxOscSender const&)
 0000000000000000 T ofxOscSender::ofxOscSender()
                  U ofxOscMessage::addBoolArg(bool)
                  U ofxOscMessage::addFloatArg(float)
@@ -7179,8 +7634,21 @@ ofxOscReceiver.o:
                  U __cxa_rethrow
                  U __cxa_throw
                  U __dso_handle
-00000000000000c0 t _GLOBAL__sub_I__ZN14ofxOscReceiverC2Ev
+0000000000000000 V DW.ref.__gxx_personality_v0
+                 U _GLOBAL_OFFSET_TABLE_
+00000000000000d0 t _GLOBAL__sub_I_ofxOscReceiver.cpp
                  U __gxx_personality_v0
+0000000000000000 r .LC24
+0000000000000000 r .LC25
+0000000000000028 r .LC26
+0000000000000050 r .LC29
+0000000000000080 r .LC48
+00000000000000a8 r .LC49
+0000000000000014 r .LC51
+000000000000001f r .LC52
+0000000000000025 r .LC53
+000000000000002f r .LC55
+0000000000000044 r .LC56
                  U memcmp
                  U memcpy
                  U memmove
@@ -7218,20 +7686,20 @@ ofxOscReceiver.o:
                  U ofxOscMessage::addIntArg(int)
                  U ofxOscMessage::ofxOscMessage()
                  U ofxOscMessage::~ofxOscMessage()
-0000000000000710 T ofxOscReceiver::enableReuse()
-00000000000006e0 T ofxOscReceiver::disableReuse()
-0000000000000960 T ofxOscReceiver::getParameter(ofAbstractParameter&)
-00000000000014c0 T ofxOscReceiver::getNextMessage(ofxOscMessage*)
-0000000000000740 T ofxOscReceiver::getNextMessage(ofxOscMessage&)
-0000000000001f10 T ofxOscReceiver::ProcessMessage(osc::ReceivedMessage const&, osc::IpEndpointName const&)
-0000000000000360 T ofxOscReceiver::hasWaitingMessages()
-0000000000000370 T ofxOscReceiver::setup(int)
-0000000000000300 T ofxOscReceiver::shutdown()
-00000000000006a0 T ofxOscReceiver::operator=(ofxOscReceiver const&)
-00000000000016e0 T ofxOscReceiver::ofxOscReceiver(ofxOscReceiver const&)
-0000000000001b20 T ofxOscReceiver::ofxOscReceiver()
-00000000000016e0 T ofxOscReceiver::ofxOscReceiver(ofxOscReceiver const&)
-0000000000001b20 T ofxOscReceiver::ofxOscReceiver()
+0000000000000720 T ofxOscReceiver::enableReuse()
+00000000000006f0 T ofxOscReceiver::disableReuse()
+0000000000000980 T ofxOscReceiver::getParameter(ofAbstractParameter&)
+0000000000000970 T ofxOscReceiver::getNextMessage(ofxOscMessage*)
+0000000000000750 T ofxOscReceiver::getNextMessage(ofxOscMessage&)
+0000000000001cf0 T ofxOscReceiver::ProcessMessage(osc::ReceivedMessage const&, osc::IpEndpointName const&)
+0000000000000380 T ofxOscReceiver::hasWaitingMessages()
+0000000000000390 T ofxOscReceiver::setup(int)
+0000000000000320 T ofxOscReceiver::shutdown()
+00000000000006b0 T ofxOscReceiver::operator=(ofxOscReceiver const&)
+00000000000014b0 T ofxOscReceiver::ofxOscReceiver(ofxOscReceiver const&)
+0000000000001900 T ofxOscReceiver::ofxOscReceiver()
+00000000000014b0 T ofxOscReceiver::ofxOscReceiver(ofxOscReceiver const&)
+0000000000001900 T ofxOscReceiver::ofxOscReceiver()
 0000000000000000 W ofxOscReceiver::~ofxOscReceiver()
 0000000000000000 W ofxOscReceiver::~ofxOscReceiver()
 0000000000000000 W ofxOscReceiver::~ofxOscReceiver()
@@ -7314,7 +7782,7 @@ ofxOscReceiver.o:
                  U std::condition_variable::condition_variable()
                  U std::condition_variable::~condition_variable()
 0000000000000020 t std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
-00000000000001f0 t std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+0000000000000180 t std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 0000000000000030 t std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
 0000000000000010 t std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
 0000000000000000 t std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
@@ -7326,9 +7794,9 @@ ofxOscReceiver.o:
 0000000000000000 n std::deque<ofxOscMessage, std::allocator<ofxOscMessage> >::~deque()
                  U std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>, void (*)())
 0000000000000060 t std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >::_M_run()
-0000000000000270 t std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >::~_Impl()
-0000000000000170 t std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >::~_Impl()
-0000000000000170 t std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >::~_Impl()
+0000000000000280 t std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >::~_Impl()
+0000000000000200 t std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >::~_Impl()
+0000000000000200 t std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >::~_Impl()
                  U std::thread::detach()
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
                  U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
@@ -7361,14 +7829,14 @@ ofxOscReceiver.o:
                  U typeinfo for osc::UdpSocket
 0000000000000000 V typeinfo for boost::system::system_error
 0000000000000000 V typeinfo for std::thread::_Impl_base
-0000000000000000 r typeinfo for std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >
+0000000000000000 d typeinfo for std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >
 0000000000000000 V typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
                  U typeinfo for std::runtime_error
 0000000000000000 V typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 0000000000000000 V typeinfo for std::_Sp_make_shared_tag
-00000000000000c8 r typeinfo for std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>
+0000000000000028 d typeinfo for std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>
                  U typeinfo for std::exception
-0000000000000070 r typeinfo for ofxOscReceiver::setup(int)::{lambda(osc::UdpListeningReceiveSocket*)#1}
+0000000000000018 d typeinfo for ofxOscReceiver::setup(int)::{lambda(osc::UdpListeningReceiveSocket*)#1}
 0000000000000000 V typeinfo name for ofLogError
 0000000000000000 V typeinfo name for ofParameter<bool>
 0000000000000000 V typeinfo name for ofParameter<double>
@@ -7382,12 +7850,12 @@ ofxOscReceiver.o:
 0000000000000000 V typeinfo name for osc::Exception
 0000000000000000 V typeinfo name for boost::system::system_error
 0000000000000000 V typeinfo name for std::thread::_Impl_base
-0000000000000020 r typeinfo name for std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >
+0000000000000000 r typeinfo name for std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >
 0000000000000000 V typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 0000000000000000 V typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 0000000000000000 V typeinfo name for std::_Sp_make_shared_tag
-00000000000000e0 r typeinfo name for std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>
-0000000000000080 r typeinfo name for ofxOscReceiver::setup(int)::{lambda(osc::UdpListeningReceiveSocket*)#1}
+00000000000000c0 r typeinfo name for std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>
+0000000000000060 r typeinfo name for ofxOscReceiver::setup(int)::{lambda(osc::UdpListeningReceiveSocket*)#1}
 0000000000000000 V vtable for ofLogError
 0000000000000000 V vtable for ofxOscReceiver
                  U vtable for __cxxabiv1::__class_type_info
@@ -7397,11 +7865,12 @@ ofxOscReceiver.o:
 0000000000000000 V vtable for osc::Exception
 0000000000000000 V vtable for boost::system::system_error
 0000000000000000 V vtable for std::thread::_Impl_base
-0000000000000170 r vtable for std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >
-0000000000000198 r vtable for std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>
+0000000000000000 d vtable for std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >
+0000000000000028 d vtable for std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, std::allocator<std::_Bind_simple<ofxOscReceiver::setup(int)::{lambda()#2} ()> >, (__gnu_cxx::_Lock_policy)2>
 
 NetworkingUtils.o:
                  U gethostbyname
+                 U _GLOBAL_OFFSET_TABLE_
                  U __memcpy_chk
                  U __stack_chk_fail
 0000000000000020 T osc::GetHostByName(char const*)
@@ -7420,14 +7889,24 @@ UdpSocket.o:
                  U __cxa_free_exception
                  U __cxa_rethrow
                  U __cxa_throw
+0000000000000000 V DW.ref.__gxx_personality_v0
                  U __errno_location
                  U __fdelt_chk
                  U getsockname
                  U gettimeofday
+                 U _GLOBAL_OFFSET_TABLE_
                  U __gxx_personality_v0
-0000000000000040 T InterruptSignalHandler
+0000000000000950 T InterruptSignalHandler
+000000000000001d r .LC11
+000000000000003b r .LC12
+0000000000000000 r .LC13
+0000000000000052 r .LC18
+0000000000000028 r .LC22
+000000000000006d r .LC27
 0000000000000000 r .LC40
 0000000000000008 r .LC42
+000000000000006f r .LC43
+0000000000000000 r .LC5
                  U memmove
                  U pipe
                  U read
@@ -7446,38 +7925,38 @@ UdpSocket.o:
                  U operator delete(void*, unsigned long)
 0000000000000000 W osc::SocketReceiveMultiplexer::Implementation::Run()
 0000000000000ba0 T osc::SocketReceiveMultiplexer::RunUntilSigInt()
-0000000000000960 T osc::SocketReceiveMultiplexer::AsynchronousBreak()
+0000000000000930 T osc::SocketReceiveMultiplexer::AsynchronousBreak()
 0000000000000980 T osc::SocketReceiveMultiplexer::AttachSocketListener(osc::UdpSocket*, osc::PacketListener*)
 00000000000009f0 T osc::SocketReceiveMultiplexer::DetachSocketListener(osc::UdpSocket*, osc::PacketListener*)
 0000000000000a90 T osc::SocketReceiveMultiplexer::AttachPeriodicTimerListener(int, int, osc::TimerListener*)
 0000000000000b10 T osc::SocketReceiveMultiplexer::AttachPeriodicTimerListener(int, osc::TimerListener*)
-00000000000008e0 T osc::SocketReceiveMultiplexer::DetachPeriodicTimerListener(osc::TimerListener*)
+00000000000008b0 T osc::SocketReceiveMultiplexer::DetachPeriodicTimerListener(osc::TimerListener*)
 0000000000000b90 T osc::SocketReceiveMultiplexer::Run()
-0000000000000950 T osc::SocketReceiveMultiplexer::Break()
-00000000000007c0 T osc::SocketReceiveMultiplexer::SocketReceiveMultiplexer()
-00000000000007c0 T osc::SocketReceiveMultiplexer::SocketReceiveMultiplexer()
-0000000000000890 T osc::SocketReceiveMultiplexer::~SocketReceiveMultiplexer()
-0000000000000890 T osc::SocketReceiveMultiplexer::~SocketReceiveMultiplexer()
+0000000000000920 T osc::SocketReceiveMultiplexer::Break()
+0000000000000780 T osc::SocketReceiveMultiplexer::SocketReceiveMultiplexer()
+0000000000000780 T osc::SocketReceiveMultiplexer::SocketReceiveMultiplexer()
+0000000000000860 T osc::SocketReceiveMultiplexer::~SocketReceiveMultiplexer()
+0000000000000860 T osc::SocketReceiveMultiplexer::~SocketReceiveMultiplexer()
 0000000000000000 B osc::multiplexerInstanceToAbortWithSigInt_
-0000000000000730 T osc::UdpSocket::ReceiveFrom(osc::IpEndpointName&, char*, unsigned long)
+00000000000006f0 T osc::UdpSocket::ReceiveFrom(osc::IpEndpointName&, char*, unsigned long)
 0000000000000008 B osc::UdpSocket::maxBufferSize
-0000000000000250 T osc::UdpSocket::SetAllowReuse(bool)
-00000000000001e0 T osc::UdpSocket::GetUdpBufferSize()
-00000000000001d0 T osc::UdpSocket::SetUdpBufferSize(unsigned long)
-00000000000001f0 T osc::UdpSocket::SetEnableBroadcast(bool)
-0000000000000620 T osc::UdpSocket::Bind(osc::IpEndpointName const&, bool)
-00000000000005d0 T osc::UdpSocket::Send(char const*, unsigned long)
-00000000000005e0 T osc::UdpSocket::SendTo(osc::IpEndpointName const&, char const*, unsigned long)
-00000000000004c0 T osc::UdpSocket::Connect(osc::IpEndpointName const&, bool)
-00000000000000d0 T osc::UdpSocket::UdpSocket()
-00000000000000d0 T osc::UdpSocket::UdpSocket()
-0000000000000080 T osc::UdpSocket::~UdpSocket()
+00000000000001f0 T osc::UdpSocket::SetAllowReuse(bool)
+0000000000000180 T osc::UdpSocket::GetUdpBufferSize()
+0000000000000170 T osc::UdpSocket::SetUdpBufferSize(unsigned long)
+0000000000000190 T osc::UdpSocket::SetEnableBroadcast(bool)
+00000000000005d0 T osc::UdpSocket::Bind(osc::IpEndpointName const&, bool)
+0000000000000580 T osc::UdpSocket::Send(char const*, unsigned long)
+0000000000000590 T osc::UdpSocket::SendTo(osc::IpEndpointName const&, char const*, unsigned long)
+0000000000000460 T osc::UdpSocket::Connect(osc::IpEndpointName const&, bool)
+0000000000000060 T osc::UdpSocket::UdpSocket()
+0000000000000060 T osc::UdpSocket::UdpSocket()
+0000000000000040 T osc::UdpSocket::~UdpSocket()
 0000000000000000 T osc::UdpSocket::~UdpSocket()
 0000000000000000 T osc::UdpSocket::~UdpSocket()
 0000000000000000 t osc::CompareScheduledTimerCalls(std::pair<double, osc::AttachedTimerListener> const&, std::pair<double, osc::AttachedTimerListener> const&)
                  U operator new[](unsigned long)
-00000000000002b0 T osc::UdpSocket::LocalEndpointFor(osc::IpEndpointName const&) const
-0000000000000720 T osc::UdpSocket::IsBound() const
+0000000000000250 T osc::UdpSocket::LocalEndpointFor(osc::IpEndpointName const&) const
+00000000000006e0 T osc::UdpSocket::IsBound() const
                  U std::runtime_error::runtime_error(char const*)
                  U std::runtime_error::~runtime_error()
 0000000000000000 W void std::vector<osc::AttachedTimerListener, std::allocator<osc::AttachedTimerListener> >::_M_emplace_back_aux<osc::AttachedTimerListener>(osc::AttachedTimerListener&&)
@@ -7499,14 +7978,20 @@ UdpSocket.o:
 0000000000000000 V vtable for osc::UdpSocket
 
 IpEndpointName.o:
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 r .LC1
+000000000000000c r .LC3
+000000000000001e r .LC4
+0000000000000027 r .LC5
                  U __sprintf_chk
                  U osc::GetHostByName(char const*)
 0000000000000000 T osc::IpEndpointName::GetHostByName(char const*)
 0000000000000010 T osc::IpEndpointName::AddressAsString(char*) const
-0000000000000070 T osc::IpEndpointName::AddressAndPortAsString(char*) const
+0000000000000080 T osc::IpEndpointName::AddressAndPortAsString(char*) const
 
 OscTypes.o:
-0000000000000000 t _GLOBAL__sub_I__ZN3osc20BeginBundleImmediateE
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_OscTypes.cpp
 0000000000000001 B osc::BeginArray
 0000000000000005 B osc::EndMessage
 0000000000000008 B osc::BeginBundleImmediate
@@ -7520,7 +8005,38 @@ OscPrintReceivedElements.o:
                  U ctime
                  U __cxa_atexit
                  U __dso_handle
-0000000000000000 t _GLOBAL__sub_I__ZN3osclsERSoRKNS_23ReceivedMessageArgumentE
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 t _GLOBAL__sub_I_OscPrintReceivedElements.cpp
+0000000000000000 r .LC1
+0000000000000000 r .LC10
+0000000000000048 r .LC11
+000000000000004b r .LC12
+000000000000004f r .LC13
+0000000000000052 r .LC14
+0000000000000059 r .LC15
+0000000000000066 r .LC16
+0000000000000068 r .LC17
+0000000000000070 r .LC18
+000000000000007d r .LC19
+000000000000000a r .LC2
+0000000000000093 r .LC20
+000000000000009f r .LC21
+00000000000000a1 r .LC22
+00000000000000a3 r .LC23
+00000000000000ab r .LC25
+00000000000000ae r .LC27
+00000000000000b3 r .LC28
+00000000000000b6 r .LC29
+0000000000000015 r .LC3
+00000000000000c0 r .LC30
+00000000000000c4 r .LC31
+00000000000000c6 r .LC32
+000000000000001b r .LC4
+0000000000000027 r .LC5
+000000000000002e r .LC6
+0000000000000037 r .LC7
+000000000000003e r .LC8
+0000000000000040 r .LC9
                  U __stack_chk_fail
                  U strlen
                  U osc::ReceivedBundle::ReceivedBundle(osc::ReceivedPacket const&)
@@ -7528,9 +8044,9 @@ OscPrintReceivedElements.o:
                  U osc::ReceivedMessage::ReceivedMessage(osc::ReceivedPacket const&)
                  U osc::ReceivedMessage::ReceivedMessage(osc::ReceivedBundleElement const&)
                  U osc::ReceivedMessageArgumentIterator::Advance()
-0000000000000a40 T osc::operator<<(std::ostream&, osc::ReceivedBundle const&)
-0000000000000c40 T osc::operator<<(std::ostream&, osc::ReceivedPacket const&)
-0000000000000910 T osc::operator<<(std::ostream&, osc::ReceivedMessage const&)
+0000000000000ab0 T osc::operator<<(std::ostream&, osc::ReceivedBundle const&)
+0000000000000cc0 T osc::operator<<(std::ostream&, osc::ReceivedPacket const&)
+0000000000000970 T osc::operator<<(std::ostream&, osc::ReceivedMessage const&)
 0000000000000000 T osc::operator<<(std::ostream&, osc::ReceivedMessageArgument const&)
                  U osc::ReceivedBundle::TimeTag() const
                  U osc::ReceivedPacket::IsBundle() const
@@ -7565,18 +8081,40 @@ OscPrintReceivedElements.o:
 OscReceivedElements.o:
                  U __cxa_allocate_exception
                  U __cxa_throw
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 r .LC14
+0000000000000011 r .LC15
+0000000000000025 r .LC36
+0000000000000037 r .LC43
+0000000000000000 r .LC44
+0000000000000028 r .LC45
+000000000000004c r .LC46
+0000000000000069 r .LC47
+0000000000000050 r .LC48
+000000000000007f r .LC49
+000000000000009d r .LC50
+00000000000000ba r .LC51
+0000000000000088 r .LC52
+00000000000000cb r .LC56
+00000000000000df r .LC57
+00000000000000d8 r .LC58
+00000000000000fb r .LC59
+0000000000000100 r .LC60
+0000000000000128 r .LC61
+0000000000000158 r .LC62
+0000000000000116 r .LC63
                  U __stack_chk_fail
                  U operator delete(void*, unsigned long)
-0000000000001670 T osc::ReceivedBundle::Init(char const*, int)
-0000000000001880 T osc::ReceivedBundle::ReceivedBundle(osc::ReceivedPacket const&)
-00000000000018a0 T osc::ReceivedBundle::ReceivedBundle(osc::ReceivedBundleElement const&)
-0000000000001880 T osc::ReceivedBundle::ReceivedBundle(osc::ReceivedPacket const&)
-00000000000018a0 T osc::ReceivedBundle::ReceivedBundle(osc::ReceivedBundleElement const&)
-0000000000001180 T osc::ReceivedMessage::Init(char const*, int)
-00000000000015e0 T osc::ReceivedMessage::ReceivedMessage(osc::ReceivedPacket const&)
-0000000000001600 T osc::ReceivedMessage::ReceivedMessage(osc::ReceivedBundleElement const&)
-00000000000015e0 T osc::ReceivedMessage::ReceivedMessage(osc::ReceivedPacket const&)
-0000000000001600 T osc::ReceivedMessage::ReceivedMessage(osc::ReceivedBundleElement const&)
+00000000000013c0 T osc::ReceivedBundle::Init(char const*, int)
+00000000000015e0 T osc::ReceivedBundle::ReceivedBundle(osc::ReceivedPacket const&)
+0000000000001600 T osc::ReceivedBundle::ReceivedBundle(osc::ReceivedBundleElement const&)
+00000000000015e0 T osc::ReceivedBundle::ReceivedBundle(osc::ReceivedPacket const&)
+0000000000001600 T osc::ReceivedBundle::ReceivedBundle(osc::ReceivedBundleElement const&)
+0000000000000eb0 T osc::ReceivedMessage::Init(char const*, int)
+0000000000001360 T osc::ReceivedMessage::ReceivedMessage(osc::ReceivedPacket const&)
+0000000000001380 T osc::ReceivedMessage::ReceivedMessage(osc::ReceivedBundleElement const&)
+0000000000001360 T osc::ReceivedMessage::ReceivedMessage(osc::ReceivedPacket const&)
+0000000000001380 T osc::ReceivedMessage::ReceivedMessage(osc::ReceivedBundleElement const&)
 0000000000000000 W osc::MalformedBundleException::~MalformedBundleException()
 0000000000000000 W osc::MalformedBundleException::~MalformedBundleException()
 0000000000000000 W osc::MalformedBundleException::~MalformedBundleException()
@@ -7593,41 +8131,40 @@ OscReceivedElements.o:
 0000000000000000 W osc::WrongArgumentTypeException::~WrongArgumentTypeException()
 0000000000000000 W osc::WrongArgumentTypeException::~WrongArgumentTypeException()
 0000000000000000 n osc::WrongArgumentTypeException::~WrongArgumentTypeException()
-0000000000001030 T osc::ReceivedMessageArgumentIterator::Advance()
+0000000000000d60 T osc::ReceivedMessageArgumentIterator::Advance()
 0000000000000000 W osc::Exception::~Exception()
 0000000000000000 W osc::Exception::~Exception()
 0000000000000000 W osc::Exception::~Exception()
 0000000000000000 n osc::Exception::~Exception()
-0000000000001910 T osc::ReceivedBundle::TimeTag() const
+0000000000001640 T osc::ReceivedBundle::TimeTag() const
 0000000000000000 T osc::ReceivedPacket::IsBundle() const
-0000000000001120 T osc::ReceivedMessage::AddressPatternAsUInt32() const
-0000000000001110 T osc::ReceivedMessage::AddressPatternIsUInt32() const
-0000000000000090 T osc::ReceivedBundleElement::Size() const
-0000000000000020 T osc::ReceivedBundleElement::IsBundle() const
-0000000000000510 T osc::ReceivedMessageArgument::AsRgbaColor() const
-0000000000000630 T osc::ReceivedMessageArgument::AsMidiMessage() const
-0000000000000f40 T osc::ReceivedMessageArgument::AsBlobUnchecked(void const*&, int&) const
-0000000000000000 t osc::ReceivedMessageArgument::AsBlobUnchecked(void const*&, int&) const [clone .part.4]
-0000000000000170 T osc::ReceivedMessageArgument::AsBoolUnchecked() const
-00000000000004b0 T osc::ReceivedMessageArgument::AsCharUnchecked() const
-0000000000000390 T osc::ReceivedMessageArgument::AsFloatUnchecked() const
-0000000000000270 T osc::ReceivedMessageArgument::AsInt32Unchecked() const
-0000000000000890 T osc::ReceivedMessageArgument::AsInt64Unchecked() const
-0000000000000cb0 T osc::ReceivedMessageArgument::AsDoubleUnchecked() const
-0000000000000aa0 T osc::ReceivedMessageArgument::AsTimeTagUnchecked() const
-00000000000005d0 T osc::ReceivedMessageArgument::AsRgbaColorUnchecked() const
-0000000000000fb0 T osc::ReceivedMessageArgument::ComputeArrayItemCount() const
-00000000000006f0 T osc::ReceivedMessageArgument::AsMidiMessageUnchecked() const
-0000000000000e60 T osc::ReceivedMessageArgument::AsBlob(void const*&, int&) const
-00000000000000f0 T osc::ReceivedMessageArgument::AsBool() const
-00000000000003f0 T osc::ReceivedMessageArgument::AsChar() const
-00000000000002d0 T osc::ReceivedMessageArgument::AsFloat() const
-00000000000001b0 T osc::ReceivedMessageArgument::AsInt32() const
-0000000000000750 T osc::ReceivedMessageArgument::AsInt64() const
-0000000000000b70 T osc::ReceivedMessageArgument::AsDouble() const
-0000000000000d80 T osc::ReceivedMessageArgument::AsString() const
-0000000000000df0 T osc::ReceivedMessageArgument::AsSymbol() const
-0000000000000960 T osc::ReceivedMessageArgument::AsTimeTag() const
+0000000000000e50 T osc::ReceivedMessage::AddressPatternAsUInt32() const
+0000000000000e40 T osc::ReceivedMessage::AddressPatternIsUInt32() const
+0000000000000020 T osc::ReceivedBundleElement::Size() const
+0000000000000080 T osc::ReceivedBundleElement::IsBundle() const
+00000000000004d0 T osc::ReceivedMessageArgument::AsRgbaColor() const
+00000000000005c0 T osc::ReceivedMessageArgument::AsMidiMessage() const
+0000000000000b90 T osc::ReceivedMessageArgument::AsBlobUnchecked(void const*&, int&) const
+0000000000000150 T osc::ReceivedMessageArgument::AsBoolUnchecked() const
+0000000000000380 T osc::ReceivedMessageArgument::AsCharUnchecked() const
+0000000000000290 T osc::ReceivedMessageArgument::AsFloatUnchecked() const
+00000000000001a0 T osc::ReceivedMessageArgument::AsInt32Unchecked() const
+0000000000000650 T osc::ReceivedMessageArgument::AsInt64Unchecked() const
+0000000000000910 T osc::ReceivedMessageArgument::AsDoubleUnchecked() const
+00000000000007b0 T osc::ReceivedMessageArgument::AsTimeTagUnchecked() const
+0000000000000470 T osc::ReceivedMessageArgument::AsRgbaColorUnchecked() const
+0000000000000cd0 T osc::ReceivedMessageArgument::ComputeArrayItemCount() const
+0000000000000560 T osc::ReceivedMessageArgument::AsMidiMessageUnchecked() const
+0000000000000c40 T osc::ReceivedMessageArgument::AsBlob(void const*&, int&) const
+00000000000000b0 T osc::ReceivedMessageArgument::AsBool() const
+00000000000003e0 T osc::ReceivedMessageArgument::AsChar() const
+00000000000002f0 T osc::ReceivedMessageArgument::AsFloat() const
+0000000000000200 T osc::ReceivedMessageArgument::AsInt32() const
+0000000000000720 T osc::ReceivedMessageArgument::AsInt64() const
+00000000000009e0 T osc::ReceivedMessageArgument::AsDouble() const
+0000000000000a70 T osc::ReceivedMessageArgument::AsString() const
+0000000000000b00 T osc::ReceivedMessageArgument::AsSymbol() const
+0000000000000880 T osc::ReceivedMessageArgument::AsTimeTag() const
 0000000000000000 W osc::Exception::what() const
                  U std::exception::~exception()
 0000000000000000 V typeinfo for osc::MalformedBundleException
@@ -7651,6 +8188,11 @@ OscReceivedElements.o:
 OscOutboundPacketStream.o:
                  U __cxa_allocate_exception
                  U __cxa_throw
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 r .LC11
+0000000000000000 r .LC28
+0000000000000048 r .LC30
+0000000000000080 r .LC33
                  U memcpy
                  U memmove
                  U memset
@@ -7660,37 +8202,37 @@ OscOutboundPacketStream.o:
                  U operator delete(void*, unsigned long)
 0000000000000070 T osc::OutboundPacketStream::EndElement(char*)
 0000000000000040 T osc::OutboundPacketStream::BeginElement(char*)
-00000000000000f0 T osc::OutboundPacketStream::CheckForAvailableBundleSpace()
+00000000000001b0 T osc::OutboundPacketStream::CheckForAvailableBundleSpace()
 0000000000000000 t osc::OutboundPacketStream::CheckForAvailableBundleSpace() [clone .part.1]
-0000000000000140 T osc::OutboundPacketStream::CheckForAvailableMessageSpace(char const*)
+0000000000000200 T osc::OutboundPacketStream::CheckForAvailableMessageSpace(char const*)
 0000000000000000 t osc::OutboundPacketStream::CheckForAvailableMessageSpace(char const*) [clone .part.2]
-00000000000001b0 T osc::OutboundPacketStream::CheckForAvailableArgumentSpace(unsigned long)
+0000000000000120 T osc::OutboundPacketStream::CheckForAvailableArgumentSpace(unsigned long)
 0000000000000000 t osc::OutboundPacketStream::CheckForAvailableArgumentSpace(unsigned long) [clone .part.0]
-00000000000001f0 T osc::OutboundPacketStream::Clear()
+00000000000000f0 T osc::OutboundPacketStream::Clear()
 0000000000000000 T osc::OutboundPacketStream::OutboundPacketStream(char*, unsigned long)
 0000000000000000 T osc::OutboundPacketStream::OutboundPacketStream(char*, unsigned long)
 0000000000000030 T osc::OutboundPacketStream::~OutboundPacketStream()
 0000000000000030 T osc::OutboundPacketStream::~OutboundPacketStream()
-00000000000007b0 T osc::OutboundPacketStream::operator<<(bool)
-00000000000009f0 T osc::OutboundPacketStream::operator<<(char)
-0000000000000d50 T osc::OutboundPacketStream::operator<<(double)
-0000000000000940 T osc::OutboundPacketStream::operator<<(float)
-00000000000008a0 T osc::OutboundPacketStream::operator<<(int)
-0000000000000bd0 T osc::OutboundPacketStream::operator<<(long)
-0000000000000e40 T osc::OutboundPacketStream::operator<<(char const*)
-0000000000000b30 T osc::OutboundPacketStream::operator<<(osc::MidiMessage const&)
-00000000000004c0 T osc::OutboundPacketStream::operator<<(osc::BeginMessage const&)
-0000000000000850 T osc::OutboundPacketStream::operator<<(osc::InfinitumType const&)
-00000000000010a0 T osc::OutboundPacketStream::operator<<(osc::ArrayInitiator const&)
-00000000000010f0 T osc::OutboundPacketStream::operator<<(osc::ArrayTerminator const&)
-00000000000002a0 T osc::OutboundPacketStream::operator<<(osc::BundleInitiator const&)
-00000000000003e0 T osc::OutboundPacketStream::operator<<(osc::BundleTerminator const&)
-0000000000000600 T osc::OutboundPacketStream::operator<<(osc::MessageTerminator const&)
-0000000000000fa0 T osc::OutboundPacketStream::operator<<(osc::Blob const&)
-0000000000000ef0 T osc::OutboundPacketStream::operator<<(osc::Symbol const&)
-0000000000000800 T osc::OutboundPacketStream::operator<<(osc::NilType const&)
-0000000000000c90 T osc::OutboundPacketStream::operator<<(osc::TimeTag const&)
-0000000000000a90 T osc::OutboundPacketStream::operator<<(osc::RgbaColor const&)
+0000000000000680 T osc::OutboundPacketStream::operator<<(bool)
+0000000000000810 T osc::OutboundPacketStream::operator<<(char)
+0000000000000ae0 T osc::OutboundPacketStream::operator<<(double)
+0000000000000780 T osc::OutboundPacketStream::operator<<(float)
+0000000000000700 T osc::OutboundPacketStream::operator<<(int)
+0000000000000990 T osc::OutboundPacketStream::operator<<(long)
+0000000000000bb0 T osc::OutboundPacketStream::operator<<(char const*)
+0000000000000910 T osc::OutboundPacketStream::operator<<(osc::MidiMessage const&)
+0000000000000440 T osc::OutboundPacketStream::operator<<(osc::BeginMessage const&)
+00000000000006e0 T osc::OutboundPacketStream::operator<<(osc::InfinitumType const&)
+0000000000000da0 T osc::OutboundPacketStream::operator<<(osc::ArrayInitiator const&)
+0000000000000dc0 T osc::OutboundPacketStream::operator<<(osc::ArrayTerminator const&)
+0000000000000290 T osc::OutboundPacketStream::operator<<(osc::BundleInitiator const&)
+00000000000003a0 T osc::OutboundPacketStream::operator<<(osc::BundleTerminator const&)
+0000000000000510 T osc::OutboundPacketStream::operator<<(osc::MessageTerminator const&)
+0000000000000cd0 T osc::OutboundPacketStream::operator<<(osc::Blob const&)
+0000000000000c40 T osc::OutboundPacketStream::operator<<(osc::Symbol const&)
+00000000000006c0 T osc::OutboundPacketStream::operator<<(osc::NilType const&)
+0000000000000a30 T osc::OutboundPacketStream::operator<<(osc::TimeTag const&)
+0000000000000890 T osc::OutboundPacketStream::operator<<(osc::RgbaColor const&)
 0000000000000000 W osc::MessageInProgressException::~MessageInProgressException()
 0000000000000000 W osc::MessageInProgressException::~MessageInProgressException()
 0000000000000000 W osc::MessageInProgressException::~MessageInProgressException()
@@ -7711,13 +8253,13 @@ OscOutboundPacketStream.o:
 0000000000000000 W osc::Exception::~Exception()
 0000000000000000 W osc::Exception::~Exception()
 0000000000000000 n osc::Exception::~Exception()
-0000000000000290 T osc::OutboundPacketStream::IsBundleInProgress() const
-0000000000000280 T osc::OutboundPacketStream::IsMessageInProgress() const
+0000000000000260 T osc::OutboundPacketStream::IsBundleInProgress() const
+0000000000000160 T osc::OutboundPacketStream::IsMessageInProgress() const
 00000000000000e0 T osc::OutboundPacketStream::ElementSizeSlotRequired() const
-0000000000000250 T osc::OutboundPacketStream::Data() const
-0000000000000220 T osc::OutboundPacketStream::Size() const
-0000000000000260 T osc::OutboundPacketStream::IsReady() const
-0000000000000210 T osc::OutboundPacketStream::Capacity() const
+0000000000000150 T osc::OutboundPacketStream::Data() const
+0000000000000170 T osc::OutboundPacketStream::Size() const
+0000000000000270 T osc::OutboundPacketStream::IsReady() const
+0000000000000110 T osc::OutboundPacketStream::Capacity() const
 0000000000000000 W osc::Exception::what() const
                  U std::exception::~exception()
 0000000000000000 V typeinfo for osc::MessageInProgressException

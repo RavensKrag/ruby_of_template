@@ -1,9 +1,5 @@
 #pragma once
 
-// #include "ofMain.h"
-// #include "ofApp.h"
-
-
 // This header will be included in the C++ Rice level.
 // It should NOT pull in ANY oF headers.
 // Those symbols will be in the static library, so it be fine once it gets to the linker.

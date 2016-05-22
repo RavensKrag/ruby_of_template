@@ -181,30 +181,30 @@ module Oni
 			:kb_menu
 		]
 		
-		def update(dt)
-		end
+		# def update(dt)
+		# end
 		
-		def draw
-		end
+		# def draw
+		# end
 		
-		def button_down(id)
+		# def button_down(id)
 			
-		end
+		# end
 		
-		def button_up(id)
+		# def button_up(id)
 			
-		end
+		# end
 		
-		def button_id_to_sym(id)
-			return KEY_ID[id]
-		end
+		# def button_id_to_sym(id)
+		# 	return KEY_ID[id]
+		# end
 	end
 	
-	class Animation
-		class Track
-			def playing?
-				return !ended?
-			end
-		end
-	end
+	# class Animation
+	# 	class Track
+	# 		def playing?
+	# 			return !ended?
+	# 		end
+	# 	end
+	# end
 end

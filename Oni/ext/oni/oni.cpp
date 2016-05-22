@@ -15,11 +15,11 @@ void Init_Oni()
 	Module rb_mOni = define_module("Oni");
 	
 	
-	// Data_Type<Window> rb_cWindow = define_class_under<Window>(rb_mOni, "Window");
+	Data_Type<Launcher> rb_cWindow = define_class_under<Launcher>(rb_mOni, "Window");
 	
-	// rb_cWindow
-	// 	.define_constructor(Constructor<Window>())
-	// 	.define_method("open", &Test::open);
+	rb_cWindow
+		.define_constructor(Constructor<Launcher>())
+		.define_method("show", &Launcher::show);
 }
 
 
