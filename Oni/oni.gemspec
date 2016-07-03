@@ -59,7 +59,7 @@ EOS
 		# Licensing
 		s.files      += Dir["legal/*.{txt}"]
 		
-		s.extensions = ["ext/#{NAME}/extconf.rb"]
+		s.extensions = ["ext/#{NAME}/extconf.deploy.rb"]
 	else
 		
 	end

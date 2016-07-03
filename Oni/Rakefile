@@ -264,14 +264,23 @@ source_files += ["ext/#{NAME}/extconf.rb", __FILE__]
 
 # FIXME: can't seem to just run rake again to rebuild. keep having to clobber, and then do a full clean build again.
 
+
+
+# Mimic RubyGems gem install procedure, for testing purposes.
+# * run extconf
+# * execute the resultant makefile
+# * move the .so to it's correct location
 file c_library => source_files do
 	Dir.chdir("ext/#{NAME}") do
 		# this does essentially the same thing
 		# as what RubyGems does
+		puts "=== starting extconf..."
+		
 		run_i "ruby extconf.rb"
 		
 		
 		puts "======= Top level Rakefile"
+		puts "=== configuration complete. building C extension"
 		
 		
 		# Run make
@@ -351,7 +360,8 @@ end
 # check what symbols are in the dynamic library
 # (linux and OSX only)
 task :dump_so do
-	run_i "nm -C -D /home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni/oni.so"
+	filepath = File.expand_path('lib/oni/oni.so', GEM_ROOT)
+	run_i "nm -C -D #{filepath}"
 end
 
 
@@ -359,6 +369,16 @@ end
 
 
 
+# this will be used by extconf in deployment
+task :build_core => [
+	'base:build',
+	'oF_sketch:build',
+	'oF_sketch_lib:build'
+]
+
+
+
+# this is what you use while testing / developing
 
 task :build => [
 	'base:build',
@@ -366,6 +386,7 @@ task :build => [
 	'oF_sketch_lib:build',
 	c_library
 ]
+
 
 
 task :clean => [:clean_core, :clean_library]
@@ -389,7 +410,7 @@ task :build_ext => :build do
 	# TODO: implement this
 end
 
-
+task :default => :build
 
 
 

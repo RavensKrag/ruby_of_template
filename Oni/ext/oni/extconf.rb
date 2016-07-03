@@ -18,9 +18,6 @@ end
 
 
 
-Dir.chdir "./cpp/oF_Test/" do
-	run_i "rake build"
-end
 
 # oF stuff
 dir_config(
