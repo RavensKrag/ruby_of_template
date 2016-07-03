@@ -27,15 +27,63 @@ dir_config(
 	"OFSketch", # name to use with 'have_library'
 	File.expand_path("./cpp/oF_Test/mySketch/src/"), # headers
 	File.expand_path("./cpp/oF_Test/mySketch/lib/")  # libs
+	
+	# File.expand_path("./cpp/oF_Test/mySketch/obj/linux64/Release/src/")
 )
 
-headers = []
-libs = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/openFrameworksCompiled/lib/linux64/"
+# headers = []
+# libs = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/openFrameworksCompiled/lib/linux64/"
+# dir_config(
+# 	"openFrameworks", # name to use with 'have_library'
+# 	headers, # headers
+# 	File.expand_path(libs)  # libs
+# )
+
+
+
+OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
+
+deps = %w[boost  fmodex  FreeImage  freetype  glfw  kiss  openFrameworks  openFrameworksCompiled  poco  tess2  utf8cpp]
+deps.each do |dependency_name|
+	
+	headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
+	libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib")
+	puts "headers"
+	p headers
+	puts "libs"
+	p libs
+	
+	dir_config(
+		dependency_name, # name to use with 'have_library'
+		headers, libs
+	)
+	
+	have_library(dependency_name)
+end
+
+
+dependency_name = "openFrameworks"
+headers = "#{OF_ROOT}/libs/openFrameworks/"
+libs    = "#{OF_ROOT}/libs/openFrameworksCompiled/lib/linux64"
+
 dir_config(
-	"openFrameworks", # name to use with 'have_library'
-	headers, # headers
-	File.expand_path(libs)  # libs
+	dependency_name, # name to use with 'have_library'
+	headers, libs
 )
+
+have_library(dependency_name)
+# have_func(name, header_name)
+
+
+
+
+
+# dir_config(
+# 	"boost", # name to use with 'have_library'
+# 	Dir.glob(File.join(OF_ROOT, "libs/#{"boost"}/include/**/*.h")), # headers
+# 	Dir.glob(File.join(OF_ROOT, "libs/#{"boost"}/lib/**/*{.a,.o}")) # libs
+# )
+
 
 
 
@@ -50,7 +98,7 @@ dir_config(
 
 
 have_library("stdc++")
+# have_library('openFrameworks')
 have_library('OFSketch')
-have_library('openFrameworks')
 
 create_makefile('oni/oni')

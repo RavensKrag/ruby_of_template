@@ -19,6 +19,12 @@ def run_i(cmd_string)
 	stdout_and_stderr.close
 end
 
+def run_task(task)
+	Rake::Task[task].invoke
+	Rake::Task[task].reenable
+	# src: http://stackoverflow.com/questions/577944/how-to-run-rake-tasks-from-within-rake-tasks
+end
+
 
 
 
@@ -52,20 +58,20 @@ c_library = "lib/#{NAME}/#{NAME}.so"
 # TODO: update source file list
 source_files = Array.new
 # source_files += Dir.glob("ext/#{NAME}/*{.rb,.c}")
-# source_files += ["ext/#{NAME}/extconf.rb"]
 
 
 # Dir.glob("ext/#{NAME}/cpp/oF_Test/*{.cpp,.h}")
 source_files += Dir.glob("ext/#{NAME}/**/*{.cpp,.h}")
+source_files += ["ext/#{NAME}/extconf.rb", __FILE__]
 
 
-
+# FIXME: can't seem to just run rake again to rebuild. keep having to clobber, and then do a full clean build again.
 
 file c_library => source_files do
 	Dir.chdir("ext/#{NAME}") do
 		# this does essentially the same thing
 		# as what RubyGems does
-		ruby "extconf.rb"
+		run_i "ruby extconf.rb"
 		
 		
 		puts "======= Top level Rakefile"
@@ -106,7 +112,9 @@ CLOBBER.include('lib/**/*.so')
 # CLOBBER.include('lib/**/*.gem') # fix this up. I do want to clobber the gem tho
 
 desc "Run tests"
-task :default => [:test, :package]
+task :default => [:test, c_library]
+
+
 
 task :run do
 	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni.rb"
@@ -136,6 +144,38 @@ end
 
 task :so_test do
 	run_i "nm -C -D /home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni/oni.so"
+end
+
+# rebuild literally EVERYTHING. start with building oF core, and work your way up.
+task :rebuild_everything => [:rebuild_base, :rebuild_project, c_library] do
+	
+end
+
+task :rebuild_base do
+	of_root = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
+	
+	path = "libs/openFrameworksCompiled/project"
+	path = File.expand_path(path, of_root)
+	Dir.chdir path do
+		run_i "make clean" # clean up the core
+	end
+	
+	path = "scripts/linux"
+	path = File.expand_path(path, of_root)
+	Dir.chdir path do
+		run_i "./compileOF.sh -j4" # build the core
+		
+		# run_i "./cleanAllExamples.sh"
+		# run_i "./buildAllExamples.sh"
+	end
+end
+
+task :rebuild_project do
+	# rebuilding the project should rebuild the addons too
+	Dir.chdir "ext/oni/cpp/oF_Test" do
+		run_i "rake clean"
+		run_i "rake build"
+	end
 end
 
 # namespace :windows do
