@@ -45,10 +45,9 @@ deps.each do |dependency_name|
 	
 	headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
 	libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib")
-	puts "headers"
-	p headers
-	puts "libs"
-	p libs
+	
+	puts "headers: #{headers}"
+	puts "libs:    #{libs}"
 	
 	dir_config(
 		dependency_name, # name to use with 'have_library'

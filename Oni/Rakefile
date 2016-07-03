@@ -369,6 +369,8 @@ end
 
 
 
+
+
 # this will be used by extconf in deployment
 task :build_core => [
 	'base:build',
@@ -387,10 +389,7 @@ task :build => [
 	c_library
 ]
 
-
-
 task :clean => [:clean_core, :clean_library]
-
 
 # rebuild literally EVERYTHING. start with building oF core, and work your way up.
 task :rebuild_everything => [
@@ -402,13 +401,19 @@ task :rebuild_everything => [
 	
 end
 
-
-
 # build the library, but scrap the CPP-only executable
 task :build_ext => :build do
 	# TODO: current build system generates a C++ only executable. Delete that.
 	# TODO: implement this
 end
+
+# note that the dependency ensures
+# the gem can not be packaged if
+# the c extension component fails to build
+task :package => c_library do
+	`gem build oni.gemspec`
+end
+
 
 task :default => :build
 
@@ -416,17 +421,10 @@ task :default => :build
 
 
 
-
-task :test => c_library
-
-task :package => c_library do
-	`gem build oni.gemspec`
-end
-
-
 # desc "Run tests"
 # task :default => [:test, c_library]
 
+task :test => c_library
 
 # the same as before
 Rake::TestTask.new do |t|
