@@ -312,7 +312,7 @@ end
 task :run => c_library do
 	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni.rb"
 	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni/oni.so"
-	require c_library
+	require File.expand_path(c_library)
 	
 	class Window < Oni::Window
 		def initialize
@@ -396,7 +396,13 @@ task :build => [
 	c_library
 ]
 
+task :rebuild_c_extension do
+	run_task(c_library)
+end
+
+
 task :clean => [:clean_core, :clean_library]
+
 
 # rebuild literally EVERYTHING. start with building oF core, and work your way up.
 task :rebuild_everything => [
