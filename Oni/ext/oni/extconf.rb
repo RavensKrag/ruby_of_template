@@ -40,11 +40,16 @@ dir_config(
 
 OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
 
-deps = %w[boost  fmodex  FreeImage  freetype  glfw  kiss  openFrameworks  openFrameworksCompiled  poco  tess2  utf8cpp]
+deps = %w[boost  fmodex  FreeImage  freetype  glfw  kiss  poco  utf8cpp]
 deps.each do |dependency_name|
 	
 	headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
-	libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib")
+	libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib/linux64")
+	
+	# adding linux64 to the end allows for some dependencies to be found, such as tess2.
+	# but the specific version of tess2 which is distributed with openframeworks is not compatable with shared libs
+		# /usr/bin/ld: /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/tess2/lib/linux64/libtess2.a(tess.o): relocation R_X86_64_32 against `.data' can not be used when making a shared object; recompile with -fPIC
+
 	
 	puts "headers: #{headers}"
 	puts "libs:    #{libs}"
