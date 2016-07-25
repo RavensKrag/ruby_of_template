@@ -63,6 +63,18 @@ deps.each do |dependency_name|
 end
 
 
+
+dir_config(
+	"tess2", # name to use with 'have_library'
+	File.expand_path("../of_v0.9.3_libs/custom/tess2/Include/", OF_ROOT),
+	File.expand_path("../of_v0.9.3_libs/custom/tess2/Build/",   OF_ROOT)
+)
+
+have_library("tess2")
+
+
+
+
 dependency_name = "openFrameworks"
 headers = "#{OF_ROOT}/libs/openFrameworks/"
 libs    = "#{OF_ROOT}/libs/openFrameworksCompiled/lib/linux64"
