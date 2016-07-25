@@ -154,6 +154,8 @@ end
 # (assumes the build environments for those libraries are already set up)
 # (read "how dynamic lib compile was achived.odt" for an explanation / history)
 namespace :dependencies do
+	# assuming for 'tess2' that 'premake' was already run,
+	# and makefiles have been altered to add -fPIC
 	task :build_tess2 do
 		folder = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
 		
@@ -176,6 +178,26 @@ namespace :dependencies do
 		
 		Dir.chdir folder do
 			run_i "./example"
+		end
+	end
+	
+	
+	# assuming for 'kiss' that 'cmake' was already run
+	# and -fPIC flag has been added to the flags.make file
+	task :build_kiss do
+		folder = File.expand_path('../of_v0.9.3_libs/custom/kiss/build', OF_ROOT)
+		
+		Dir.chdir folder do
+			run_i "make"
+		end
+	end
+	
+	task :rebuild_kiss do
+		folder = File.expand_path('../of_v0.9.3_libs/custom/kiss/build', OF_ROOT)
+		
+		Dir.chdir folder do
+			run_i "make clean"
+			run_i "make"
 		end
 	end
 end
@@ -414,11 +436,13 @@ end
 
 
 task :build_dependencies => [
-	'dependencies:build_tess2'
+	'dependencies:build_tess2',
+	'dependencies:build_kiss'
 ]
 
 task :rebuild_dependencies => [
-	'dependencies:rebuild_tess2'
+	'dependencies:rebuild_tess2',
+	'dependencies:rebuild_kiss'
 ]
 
 

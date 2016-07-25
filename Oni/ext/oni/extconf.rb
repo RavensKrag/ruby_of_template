@@ -40,7 +40,7 @@ dir_config(
 
 OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
 
-deps = %w[boost  fmodex  FreeImage  freetype  glfw  kiss  poco  utf8cpp]
+deps = %w[boost  fmodex  FreeImage  freetype  glfw  poco  utf8cpp]
 deps.each do |dependency_name|
 	
 	headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
@@ -71,6 +71,15 @@ dir_config(
 )
 
 have_library("tess2")
+
+
+dir_config(
+	"kiss", # name to use with 'have_library'
+	File.expand_path("../of_v0.9.3_libs/custom/kiss/include/", OF_ROOT),
+	File.expand_path("../of_v0.9.3_libs/custom/kiss/lib/",     OF_ROOT)
+)
+
+have_library("kiss")
 
 
 
