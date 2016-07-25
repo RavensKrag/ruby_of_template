@@ -144,6 +144,35 @@ namespace :base do
 end
 
 
+# C++ / C: Compile the depencies for oF with the -fPIC flag
+# These libraries are needed before final linking of the Ruby application.
+# There is an analogous set of libs tha come with the oF package
+# that are used for standard C++ sketch compilation,
+# but those were not compiled with the -fPIC flag,
+# so they will not link into a Ruby-compatible dynamic library.
+# 
+# (assumes the build environments for those libraries are already set up)
+# (read "how dynamic lib compile was achived.odt" for an explanation / history)
+namespace :dependencies do
+	task :build_tess2 do
+		folder = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
+		
+		Dir.chdir folder do
+			run_i "make"
+		end
+	end
+	
+	task :rebuild_tess2 do
+		folder = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
+		
+		Dir.chdir folder do
+			run_i "make clean"
+			run_i "make"
+		end
+	end
+end
+
+
 # C++ / C: particulars of one oF sketch.
 #          Loads certain oF addons, compiles against the oF base setup
 namespace :oF_sketch do
@@ -376,6 +405,14 @@ end
 
 
 
+task :build_dependencies => [
+	'dependencies:build_tess2'
+]
+
+task :rebuild_dependencies => [
+	'dependencies:rebuild_tess2'
+]
+
 
 
 # this will be used by extconf in deployment
@@ -393,6 +430,7 @@ task :build => [
 	'base:build',
 	'oF_sketch:build',
 	'oF_sketch_lib:build',
+	:build_dependencies,
 	c_library
 ]
 
@@ -409,6 +447,7 @@ task :rebuild_everything => [
 	'base:rebuild',
 	'oF_sketch:rebuild',
 	'oF_sketch_lib:rebuild',
+	:rebuild_dependencies,
 	c_library
 ] do
 	
