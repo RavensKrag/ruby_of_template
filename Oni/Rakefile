@@ -170,6 +170,14 @@ namespace :dependencies do
 			run_i "make"
 		end
 	end
+	
+	task :run_tess2_example do
+		folder = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
+		
+		Dir.chdir folder do
+			run_i "./example"
+		end
+	end
 end
 
 
