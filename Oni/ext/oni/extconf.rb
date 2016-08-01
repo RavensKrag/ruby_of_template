@@ -108,6 +108,9 @@ end
 # src: http://stackoverflow.com/questions/9251554/c-ruby-extension-with-external-libraries
 
 
+
+
+
 # === link up dependencies that were custom compiled with -fPIC
 
 dir_config(
@@ -131,6 +134,36 @@ have_library("kiss")
 
 
 
+
+# --- resolving other symbols (this section comes before oF core)
+
+# have_library("glew")
+# have_library("glew32")
+# have_library("glewmx")
+have_library("GLEW")
+
+
+
+
+
+# from /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/scripts/linux/ubuntu/install_dependencies.sh
+	# PACKAGES="curl libjack-jackd2-0 libjack-jackd2-dev freeglut3-dev libasound2-dev libxmu-dev libxxf86vm-dev g++${CXX_VER} libgl1-mesa-dev${XTAG} libglu1-mesa-dev libraw1394-dev libudev-dev libdrm-dev libglew-dev libopenal-dev libsndfile-dev libfreeimage-dev libcairo2-dev libfreetype6-dev libssl-dev libpulse-dev libusb-1.0-0-dev libgtk${GTK_VERSION}-dev  libopencv-dev libassimp-dev librtaudio-dev libboost-filesystem${BOOST_VER}-dev libgstreamer${GSTREAMER_VERSION}-dev libgstreamer-plugins-base${GSTREAMER_VERSION}-dev  ${GSTREAMER_FFMPEG} gstreamer${GSTREAMER_VERSION}-pulseaudio gstreamer${GSTREAMER_VERSION}-x gstreamer${GSTREAMER_VERSION}-plugins-bad gstreamer${GSTREAMER_VERSION}-alsa gstreamer${GSTREAMER_VERSION}-plugins-base gstreamer${GSTREAMER_VERSION}-plugins-good"
+
+
+# libgstreamer1.0-dev
+gstreamer_version = "1.0"
+have_library("gstreamer-#{gstreamer_version}")       # this works 
+have_library("gstreamer-#{gstreamer_version}-libav") # this doesn't
+
+
+
+
+
+# ---
+
+
+
+
 dependency_name = "openFrameworks"
 headers = "#{OF_ROOT}/libs/openFrameworks/"
 libs    = "#{OF_ROOT}/libs/openFrameworksCompiled/lib/linux64"
@@ -146,12 +179,17 @@ have_library(dependency_name)
 
 
 
-
 # dir_config(
 # 	"boost", # name to use with 'have_library'
 # 	Dir.glob(File.join(OF_ROOT, "libs/#{"boost"}/include/**/*.h")), # headers
 # 	Dir.glob(File.join(OF_ROOT, "libs/#{"boost"}/lib/**/*{.a,.o}")) # libs
 # )
+
+
+
+
+
+
 
 
 
