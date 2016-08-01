@@ -40,7 +40,7 @@ dir_config(
 
 OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
 
-deps = %w[boost  fmodex  FreeImage  freetype  glfw  poco  utf8cpp]
+deps = %w[boost  fmodex  FreeImage  freetype  glfw  utf8cpp]
 deps.each do |dependency_name|
 	
 	headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
@@ -63,6 +63,100 @@ deps.each do |dependency_name|
 end
 
 
+def find_poco(poco_incl_dir, poco_libs_dir)
+	# --- link up all of the 'poco' libraries
+	# each sub-library need to be specified separately, otherwise extconf gets confused
+	# extconf only wants to look for one .a file at a time, base on the name given in 'dir_config()'
+
+	
+	poco_libs = Dir.glob(File.join(poco_libs_dir, '*.a'))
+	# p poco_libs
+
+	poco_libs.each do |dot_a_file|
+		filename = File.basename dot_a_file
+		
+		
+		a = ('libPoco'.length)
+		b = (-1 * ('.a'.length+1))
+		range = a..b
+		segment = filename[range] # want just the part between 'libPoco' and '.a'
+		p segment
+		
+		
+		dependency_name = "Poco#{segment}"
+		headers = poco_incl_dir
+		libs    = poco_libs_dir
+		
+		
+		dir_config(
+			dependency_name, # name to use with 'have_library'
+			headers, libs
+		)
+		
+		have_library(dependency_name)
+	end
+
+	# -------------------------------------------------------------
+end
+
+# find_poco(
+# 	File.expand_path('./libs/poco/include/Poco/', OF_ROOT),
+# 	File.expand_path('./libs/poco/lib/linux64/',  OF_ROOT)
+# )
+
+
+# category_list = %w[Crypto Data DataSQLite Foundation JSON MongoDB Net NetSSL Util XML Zip]
+category_list = %w[Util Net XML Crypto Data DataSQLite JSON MongoDB NetSSL Zip Foundation]
+	# order changes linking order, which matters
+	# src: http://stackoverflow.com/questions/15701796/poco-c-static-linking-problems-with-undefined-references-to-symbols
+	# (that's for static linking tho)
+category_list.each do |category|
+	# category = category.downcase
+	
+	# version = '1.3.6p1-5.1build1'
+	# version = '1.3.6'
+	
+	
+	# find_library("Poco#{category}9v5", version)
+	# find_library("Poco#{category}", version)
+	
+	# find_library("Poco#{category}", 'main')
+	
+	
+	
+	dependency_name = "Poco#{category}"
+	
+	category_dir = 
+		if category.include? "Data"
+			"Data"
+		else
+			category
+		end
+	
+	poco_root = File.expand_path("../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/", OF_ROOT)
+	headers = File.expand_path("./#{category_dir}/include/Poco/#{category_dir}/", poco_root)
+	libs    = File.expand_path("./lib/Linux/x86_64/", poco_root)
+	
+	# p libs
+	dir_config(
+			dependency_name, # name to use with 'have_library'
+			headers, libs
+		)
+	
+	have_library(dependency_name)
+end
+
+# TODO: may need to tell the linker where the dynamic libraries are going to be
+# otherwise, you need to either put the dynamic libraries in the same directory as the executable
+# or edit LD_LIBRARY_PATH, or similar.
+# 
+# set rpath option to tell the linker @ link time where things will be
+# $LDFLAGS << " -Wl,-rpath,#{libs}"
+# 
+# src: http://stackoverflow.com/questions/9251554/c-ruby-extension-with-external-libraries
+
+
+# === link up dependencies that were custom compiled with -fPIC
 
 dir_config(
 	"tess2", # name to use with 'have_library'
@@ -81,6 +175,7 @@ dir_config(
 
 have_library("kiss")
 
+# ========================
 
 
 

@@ -200,6 +200,30 @@ namespace :dependencies do
 			run_i "make"
 		end
 	end
+	
+	
+	
+	
+	# all you need to build poco is here. no need for custom modification
+	task :build_poco do
+		folder = File.expand_path('../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/', OF_ROOT)
+		
+		Dir.chdir folder do
+			# run_i "./configure --static --no-shared-libs --no-tests --no-samples"
+			run_i "./configure"
+			run_i "make"
+		end
+	end
+	
+	task :rebuild_poco do
+		folder = File.expand_path('../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/', OF_ROOT)
+		
+		Dir.chdir folder do
+			# run_i "./configure --static"
+			run_i "make clean"
+			run_i "make"
+		end
+	end
 end
 
 
@@ -367,34 +391,6 @@ end
 
 
 
-# run project from the Ruby level
-task :run => c_library do
-	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni.rb"
-	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni/oni.so"
-	require File.expand_path(c_library)
-	
-	class Window < Oni::Window
-		def initialize
-			super()
-		end
-		
-		def setup
-			
-		end
-		
-		def update
-			
-		end
-		
-		def draw
-			
-		end
-	end
-	
-	x = Window.new
-	x.show
-end
-
 
 
 
@@ -437,12 +433,14 @@ end
 
 task :build_dependencies => [
 	'dependencies:build_tess2',
-	'dependencies:build_kiss'
+	'dependencies:build_kiss',
+	'dependencies:build_poco'
 ]
 
 task :rebuild_dependencies => [
 	'dependencies:rebuild_tess2',
-	'dependencies:rebuild_kiss'
+	'dependencies:rebuild_kiss',
+	'dependencies:rebuild_poco'
 ]
 
 
@@ -491,6 +489,41 @@ task :build_ext => :build do
 	# TODO: implement this
 end
 
+
+# run project from the Ruby level
+task :run => c_library do
+	# try changing directory to where the dynamic libraries are stored
+	Dir.chdir "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/"
+	# puts Dir.pwd
+	
+	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni.rb"
+	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni/oni.so"
+	require File.expand_path(c_library, File.absolute_path(File.dirname(__FILE__)))
+	
+	class Window < Oni::Window
+		def initialize
+			super()
+		end
+		
+		def setup
+			
+		end
+		
+		def update
+			
+		end
+		
+		def draw
+			
+		end
+	end
+	
+	x = Window.new
+	x.show
+end
+
+
+
 # note that the dependency ensures
 # the gem can not be packaged if
 # the c extension component fails to build
@@ -500,6 +533,14 @@ end
 
 
 task :default => :build
+
+
+
+
+
+
+
+
 
 
 
