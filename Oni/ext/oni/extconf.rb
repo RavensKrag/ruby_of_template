@@ -63,47 +63,6 @@ deps.each do |dependency_name|
 end
 
 
-def find_poco(poco_incl_dir, poco_libs_dir)
-	# --- link up all of the 'poco' libraries
-	# each sub-library need to be specified separately, otherwise extconf gets confused
-	# extconf only wants to look for one .a file at a time, base on the name given in 'dir_config()'
-
-	
-	poco_libs = Dir.glob(File.join(poco_libs_dir, '*.a'))
-	# p poco_libs
-
-	poco_libs.each do |dot_a_file|
-		filename = File.basename dot_a_file
-		
-		
-		a = ('libPoco'.length)
-		b = (-1 * ('.a'.length+1))
-		range = a..b
-		segment = filename[range] # want just the part between 'libPoco' and '.a'
-		p segment
-		
-		
-		dependency_name = "Poco#{segment}"
-		headers = poco_incl_dir
-		libs    = poco_libs_dir
-		
-		
-		dir_config(
-			dependency_name, # name to use with 'have_library'
-			headers, libs
-		)
-		
-		have_library(dependency_name)
-	end
-
-	# -------------------------------------------------------------
-end
-
-# find_poco(
-# 	File.expand_path('./libs/poco/include/Poco/', OF_ROOT),
-# 	File.expand_path('./libs/poco/lib/linux64/',  OF_ROOT)
-# )
-
 
 # category_list = %w[Crypto Data DataSQLite Foundation JSON MongoDB Net NetSSL Util XML Zip]
 category_list = %w[Util Net XML Crypto Data DataSQLite JSON MongoDB NetSSL Zip Foundation]
@@ -111,18 +70,11 @@ category_list = %w[Util Net XML Crypto Data DataSQLite JSON MongoDB NetSSL Zip F
 	# src: http://stackoverflow.com/questions/15701796/poco-c-static-linking-problems-with-undefined-references-to-symbols
 	# (that's for static linking tho)
 category_list.each do |category|
-	# category = category.downcase
-	
-	# version = '1.3.6p1-5.1build1'
-	# version = '1.3.6'
-	
-	
-	# find_library("Poco#{category}9v5", version)
-	# find_library("Poco#{category}", version)
-	
 	# find_library("Poco#{category}", 'main')
 	
 	
+	# each sub-library need to be specified separately, otherwise extconf gets confused
+	# extconf only wants to look for one .a file at a time, base on the name given in 'dir_config()'
 	
 	dependency_name = "Poco#{category}"
 	
