@@ -10,7 +10,7 @@ using namespace Rice;
 
 extern "C"
 
-void Init_Oni()
+void Init_oni()
 {
 	Module rb_mOni = define_module("Oni");
 	

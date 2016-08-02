@@ -40,7 +40,7 @@ dir_config(
 
 OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
 
-deps = %w[boost  fmodex  FreeImage  freetype  glfw  utf8cpp]
+deps = %w[fmodex  FreeImage  freetype  glfw  utf8cpp]
 deps.each do |dependency_name|
 	
 	headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
@@ -162,6 +162,122 @@ have_library("gstreamer-#{gstreamer_version}-libav") # this doesn't
 # ---
 
 
+# need to include C++ standard lib before looking for Boost
+have_library("stdc++")
+have_library("boost")
+have_library("boost_filesystem")
+have_library("boost_system")
+
+
+
+
+# ravenskrag@ravensnest:~/Experiments/RubyCPP/Oni$ dpkg --get-selections | grep libboost
+
+# libboost-date-time1.58.0:amd64			install
+# libboost-filesystem-dev:amd64			install
+# libboost-filesystem1.58-dev:amd64		install
+# libboost-filesystem1.58.0:amd64			install
+# libboost-filesystem1.58.0:i386			install
+# libboost-iostreams1.58.0:amd64			install
+# libboost-python1.58.0				install
+# libboost-system1.58-dev:amd64			install
+# libboost-system1.58.0:amd64			install
+# libboost-system1.58.0:i386			install
+# libboost1.58-dev:amd64				install
+
+
+# boost_ver = "1.58.0"
+# have_library("boost-system-#{boost_ver}")
+# have_library("boost-filesystem-#{boost_ver}")
+
+
+
+# Boost::System and Boost::Filesystem are header only libs
+# src: http://stackoverflow.com/questions/7894451/require-boostdynamic-bitset-in-extconf-rb
+# src: http://www.boost.org/doc/libs/1_57_0/more/getting_started/unix-variants.html#header-only-libraries
+
+
+boost_root = "/usr/include/boost"                                    # system boost
+# boost_root = File.expand_path("./libs/boost/include/boost", OF_ROOT) # boost provided by oF
+
+dir_config(
+	"boost", # name to use with 'have_library'
+	boost_root, # headers
+)
+p Dir.glob("#{boost_root}/system/**/*")
+
+Dir.glob("#{boost_root}/system/**/*.hpp").each do |header|
+	# base = File.basename(header)
+	# have_header(base)
+	# find_header("boost/system/#{base}")
+	
+	foo = header["#{boost_root}/system/".length..-1]
+	find_header("boost/system/#{foo}")
+end
+
+Dir.glob("#{boost_root}/filesystem/**/*.hpp").each do |header|
+	# base = File.basename(header)
+	# have_header(base)
+	# find_header("boost/filesystem/#{base}")
+	
+	foo = header["#{boost_root}/filesystem/".length..-1]
+	find_header("boost/system/#{foo}")
+end
+# have_header("boost_system.h")
+# have_header("boost_filesystem")
+
+
+# find_header("boost/system")
+# find_header("boost/filesystem")
+
+# have_header("boost/system")
+
+
+
+# have_library("boost_regex")
+find_header("boost/config.hpp")
+
+
+
+
+# checking for /usr/include/boost/system/windows_error.hpp... yes
+# checking for /usr/include/boost/system/api_config.hpp... yes
+# checking for /usr/include/boost/system/cygwin_error.hpp... yes
+# checking for /usr/include/boost/system/config.hpp... yes
+# checking for /usr/include/boost/system/detail/local_free_on_destruction.hpp... yes
+# checking for /usr/include/boost/system/system_error.hpp... no
+# checking for /usr/include/boost/system/linux_error.hpp... no
+# checking for /usr/include/boost/system/error_code.hpp... no
+# checking for /usr/include/boost/filesystem/path_traits.hpp... no
+# checking for /usr/include/boost/filesystem/operations.hpp... no
+# checking for /usr/include/boost/filesystem/fstream.hpp... no
+# checking for /usr/include/boost/filesystem/config.hpp... yes
+# checking for /usr/include/boost/filesystem/exception.hpp... yes
+# checking for /usr/include/boost/filesystem/detail/utf8_codecvt_facet.hpp... no
+# checking for /usr/include/boost/filesystem/convenience.hpp... no
+# checking for /usr/include/boost/filesystem/path.hpp... no
+
+
+# checking for OF_ROOT/libs/boost/include/boost/system/system_error.hpp... no
+# checking for OF_ROOT/libs/boost/include/boost/system/config.hpp... yes
+# checking for OF_ROOT/libs/boost/include/boost/system/detail/local_free_on_destruction.hpp... yes
+# checking for OF_ROOT/libs/boost/include/boost/system/error_code.hpp... no
+# checking for OF_ROOT/libs/boost/include/boost/system/api_config.hpp... yes
+# checking for OF_ROOT/libs/boost/include/boost/filesystem/operations.hpp... no
+# checking for OF_ROOT/libs/boost/include/boost/filesystem/config.hpp... yes
+# checking for OF_ROOT/libs/boost/include/boost/filesystem/path.hpp... no
+# checking for OF_ROOT/libs/boost/include/boost/filesystem/detail/utf8_codecvt_facet.hpp... no
+# checking for OF_ROOT/libs/boost/include/boost/filesystem/path_traits.hpp... no
+# checking for OF_ROOT/libs/boost/include/boost/filesystem/exception.hpp... yes
+# checking for OF_ROOT/libs/boost/include/boost/filesystem/fstream.hpp... no
+# checking for OF_ROOT/libs/boost/include/boost/filesystem/convenience.hpp... no
+
+
+
+
+
+
+
 
 
 dependency_name = "openFrameworks"
@@ -176,14 +292,6 @@ dir_config(
 have_library(dependency_name)
 # have_func(name, header_name)
 
-
-
-
-# dir_config(
-# 	"boost", # name to use with 'have_library'
-# 	Dir.glob(File.join(OF_ROOT, "libs/#{"boost"}/include/**/*.h")), # headers
-# 	Dir.glob(File.join(OF_ROOT, "libs/#{"boost"}/lib/**/*{.a,.o}")) # libs
-# )
 
 
 
@@ -204,7 +312,7 @@ have_library(dependency_name)
 # )
 
 
-have_library("stdc++")
+
 # have_library('openFrameworks')
 have_library('OFSketch')
 
