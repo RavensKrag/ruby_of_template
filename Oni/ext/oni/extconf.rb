@@ -164,6 +164,18 @@ have_library("gstreamer-#{gstreamer_version}-libav") # this doesn't
 
 # need to include C++ standard lib before looking for Boost
 have_library("stdc++")
+
+
+
+# boost_root = "/usr/include/boost"                                    # system boost
+boost_root = File.expand_path("./libs/boost/include/boost", OF_ROOT) # boost provided by oF
+
+dir_config(
+	"boost", # name to use with 'have_library'
+	boost_root, # headers
+)
+p Dir.glob("#{boost_root}/system/**/*")
+
 have_library("boost")
 have_library("boost_filesystem")
 have_library("boost_system")
@@ -197,46 +209,7 @@ have_library("boost_system")
 # src: http://www.boost.org/doc/libs/1_57_0/more/getting_started/unix-variants.html#header-only-libraries
 
 
-boost_root = "/usr/include/boost"                                    # system boost
-# boost_root = File.expand_path("./libs/boost/include/boost", OF_ROOT) # boost provided by oF
-
-dir_config(
-	"boost", # name to use with 'have_library'
-	boost_root, # headers
-)
-p Dir.glob("#{boost_root}/system/**/*")
-
-Dir.glob("#{boost_root}/system/**/*.hpp").each do |header|
-	# base = File.basename(header)
-	# have_header(base)
-	# find_header("boost/system/#{base}")
-	
-	foo = header["#{boost_root}/system/".length..-1]
-	find_header("boost/system/#{foo}")
-end
-
-Dir.glob("#{boost_root}/filesystem/**/*.hpp").each do |header|
-	# base = File.basename(header)
-	# have_header(base)
-	# find_header("boost/filesystem/#{base}")
-	
-	foo = header["#{boost_root}/filesystem/".length..-1]
-	find_header("boost/system/#{foo}")
-end
-# have_header("boost_system.h")
-# have_header("boost_filesystem")
-
-
-# find_header("boost/system")
-# find_header("boost/filesystem")
-
-# have_header("boost/system")
-
-
-
-# have_library("boost_regex")
-find_header("boost/config.hpp")
-
+# but manually passing header paths to find_header() or have_header() fails for some of Boost, and I'm not sure why.
 
 
 
