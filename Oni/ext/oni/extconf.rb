@@ -291,7 +291,6 @@ $CPPFLAGS += " " + more_flags
 
 
 of_project_objs = %w[
-	obj/linux64/Release/src/launcher.o
 	obj/linux64/Release/src/main.o
 	obj/linux64/Release/src/ofApp.o
 ].collect{ |line|

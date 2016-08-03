@@ -5,6 +5,7 @@ ext/oni/cpp/build_*
 *.o
 *.log
 *.def
+.d
 
 # Ignore files needed to build Windows pre-compiled gem
 *.dll

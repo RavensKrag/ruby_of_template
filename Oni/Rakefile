@@ -498,19 +498,19 @@ task :run => :build do
 		def initialize
 			super()
 			
-			puts "ruby: window#initialize"
+			puts "ruby: Window#initialize"
 		end
 		
 		def setup
-			puts "ruby: window#setup" # not working yet
+			puts "ruby: Window#setup" # not working yet
 		end
 		
 		def update
-			puts "ruby: window#update" # not working yet
+			puts "ruby: Window#update" # not working yet
 		end
 		
 		def draw
-			puts "ruby: window#draw" # not working yet
+			puts "ruby: Window#draw" # not working yet
 		end
 	end
 	
