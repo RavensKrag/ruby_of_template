@@ -17,6 +17,8 @@ def run_i(cmd_string)
 end
 
 
+# need to include C++ standard lib before looking for Boost
+have_library("stdc++")
 
 
 # oF stuff
@@ -40,7 +42,7 @@ dir_config(
 
 OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
 
-deps = %w[fmodex  FreeImage  freetype  utf8cpp]
+deps = %w[fmodex  FreeImage  freetype]
 deps.each do |dependency_name|
 	
 	headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
@@ -78,12 +80,54 @@ libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib/linux64")
 puts "headers: #{headers}"
 puts "libs:    #{libs}"
 
+# oF-provided static library
 dir_config(
 	"glfw#{glfw_version}", # name to use with 'have_library'
 	headers, libs
 )
 
-have_library("glfw3")
+# Mesa must be linked before glfw3
+# %w[X11 Xrandr Xi Xxf86vm gl].each do |lib|
+%w[X11 Xrandr Xi Xxf86vm Xcursor Xinerama].each do |lib|
+	# src: http://stackoverflow.com/questions/21685903/glfw3-undefined-reference-to-xrr
+	# have_library(lib)
+end
+# have_library("Xxf86vm") # Mesa3D - system library, needed to resolve symbols in glfw3
+# have_library("glfw3")   # oF version
+	# Even with oF-provided version, system still segfaults.
+	# But this segfault actually provides a decent stack trace
+	
+	# Same segfault regaurdless of which of the two library lists from that stackexchange thread I end up using.
+
+
+
+# system library.
+# have_library("glfw") # undefined symbol:  glfwSetErrorCallback (seems to be using glfw2)
+have_library("glfw") # after installing libglfw3-dev, this works, but then the program segfaults
+
+# ravenskrag@ravensnest:~/Experiments/RubyCPP/Oni$ dpkg --get-selections | grep libglfw
+# libglfw-dev:amd64				install
+# libglfw2:amd64					install
+
+
+
+
+
+# from oF sketch standalone C++ execution:
+# checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl libpulse-simple alsa gl glu glew gtk+-3.0 libmpg123 
+
+# puts "----"
+# %w[
+# 	cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl libpulse-simple alsa gl glu glew gtk+-3.0 libmpg123
+# ].each do |lib|
+# 	have_library(lib)
+# end
+# puts "----"
+
+
+
+
+
 # ---
 
 
@@ -186,8 +230,21 @@ have_library("gstreamer-#{gstreamer_version}-libav") # this doesn't
 # ---
 
 
-# need to include C++ standard lib before looking for Boost
-have_library("stdc++")
+
+
+
+
+utf8cpp_root = File.expand_path("./libs/utf8cpp/include/utf8", OF_ROOT) # boost provided by oF
+
+dir_config(
+	"utf8cpp", # name to use with 'have_library'
+	utf8cpp_root, # headers
+)
+p Dir.glob("#{utf8cpp_root}/**/*")
+
+have_library("utf8cpp_utf8")
+
+
 
 
 
@@ -268,8 +325,6 @@ have_library("boost_system")
 # checking for OF_ROOT/libs/boost/include/boost/filesystem/exception.hpp... yes
 # checking for OF_ROOT/libs/boost/include/boost/filesystem/fstream.hpp... no
 # checking for OF_ROOT/libs/boost/include/boost/filesystem/convenience.hpp... no
-
-
 
 
 
