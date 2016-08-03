@@ -35,8 +35,8 @@ REPO_ROOT = File.expand_path('../../', PATH_TO_FILE)
 dependency_name = "glfw"
 glfw_version    = "3"
 
-headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
-libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib/linux64")
+headers = File.expand_path("../of_v0.9.3_libs/custom/#{dependency_name}/include/#{dependency_name.upcase}", OF_ROOT)
+libs    = File.expand_path("../of_v0.9.3_libs/custom/#{dependency_name}/lib/linux64", OF_ROOT)
 
 # adding linux64 to the end allows for some dependencies to be found, such as tess2.
 # but the specific version of tess2 which is distributed with openframeworks is not compatable with shared libs
@@ -47,14 +47,13 @@ puts "headers: #{headers}"
 puts "libs:    #{libs}"
 
 
-name = "glfw#{glfw_version}"
 # oF-provided static library
 dir_config(
-	name, # name to use with 'have_library'
+	"glfw", # name to use with 'have_library'
 	headers, libs
 )
 
-have_library(name)   # oF version
+have_library("glfw")   # oF version
 
 
 
