@@ -20,6 +20,7 @@ void Init_oni()
 	
 	rb_cWindow
 		.define_constructor(Constructor<Launcher>())
+		// .define_method("initialize", &Launcher::initialize)
 		.define_method("show", &Launcher::show);
 	
 }
