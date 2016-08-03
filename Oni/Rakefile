@@ -496,7 +496,7 @@ task :run => :build do
 	
 	class Window < Oni::Window
 		def initialize
-			super()
+			super(self)
 			
 			puts "ruby: Window#initialize"
 		end

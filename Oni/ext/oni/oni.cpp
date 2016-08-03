@@ -19,7 +19,7 @@ void Init_oni()
 	Data_Type<Launcher> rb_cWindow = define_class_under<Launcher>(rb_mOni, "Window");
 	
 	rb_cWindow
-		.define_constructor(Constructor<Launcher>())
+		.define_constructor(Constructor<Launcher, Rice::Object>())
 		// .define_method("initialize", &Launcher::initialize)
 		.define_method("show", &Launcher::show);
 	

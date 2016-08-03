@@ -1,5 +1,10 @@
 #pragma once
 
+#include "rice/Data_Type.hpp"
+#include "rice/Constructor.hpp"
+#include "rice/Class.hpp"
+#include "rice/Module.hpp"
+
 // This header will be included in the C++ Rice level.
 // It should NOT pull in ANY oF headers.
 // Those symbols will be in the static library, so it be fine once it gets to the linker.
@@ -15,7 +20,7 @@ class Launcher
 {
 
 public:
-    Launcher();
+    Launcher(Rice::Object self);
     ~Launcher(void);
     
     void initialize();

@@ -1,21 +1,21 @@
+#include "rice/Data_Type.hpp"
+#include "rice/Constructor.hpp"
+#include "rice/Class.hpp"
+#include "rice/Module.hpp"
+
 #include "ofMain.h"
 #include "ofApp.h"
 
 #include "window.h"
 
 
-OniWindow::OniWindow() : 
+OniWindow::OniWindow(Rice::Object self) : 
 	ofApp()
 {
 	cout << "c++: constructor - window\n";
 	
-	// NOTE: constructor is not being called. This is what prevents the window from being opened
-	
-	ofSetupOpenGL(1024,768,OF_WINDOW); // <-------- setup the GL context
-	
-	
-	// TODO: save 'mApp' as a member variable on the 'Launcher' class
-	// mApp = new ofApp();
+	// ofSetupOpenGL(1024,768,OF_WINDOW); // <-------- setup the GL context
+	mSelf = self;
 }
 
 OniWindow::~OniWindow(){
@@ -24,14 +24,20 @@ OniWindow::~OniWindow(){
 
 void OniWindow::setup(){
 	ofApp::setup();
+	
+	mSelf.call("setup");
 }
 
 void OniWindow::update(){
 	ofApp::update();
+	
+	mSelf.call("update");
 }
 
 void OniWindow::draw(){
 	ofApp::draw();
+	
+	mSelf.call("draw");
 }
 
 

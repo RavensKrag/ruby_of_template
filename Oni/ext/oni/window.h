@@ -1,11 +1,20 @@
 #pragma once
 
+// #include "rice/Data_Type.hpp"
+// #include "rice/Constructor.hpp"
+// #include "rice/Class.hpp"
+// #include "rice/Module.hpp"
+
 #include "ofApp.h"
+
+namespace Rice{
+	class Object; // forward declaration
+}
 
 class OniWindow : public ofApp{
 
 	public:
-		OniWindow();
+		OniWindow(Rice::Object);
 		~OniWindow();
 		
 		void setup();
@@ -23,5 +32,8 @@ class OniWindow : public ofApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+	
+	private:
+		Rice::Object mSelf;
 		
 };
