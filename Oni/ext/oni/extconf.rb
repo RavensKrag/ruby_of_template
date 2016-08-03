@@ -16,61 +16,27 @@ def run_i(cmd_string)
 	stdout_and_stderr.close
 end
 
-
-# need to include C++ standard lib before looking for Boost
-have_library("stdc++")
-
-
-# oF stuff
-dir_config(
-	"OFSketch", # name to use with 'have_library'
-	File.expand_path("./cpp/oF_Test/mySketch/src/"), # headers
-	File.expand_path("./cpp/oF_Test/mySketch/lib/")  # libs
-	
-	# File.expand_path("./cpp/oF_Test/mySketch/obj/linux64/Release/src/")
-)
-
-# headers = []
-# libs = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/openFrameworksCompiled/lib/linux64/"
-# dir_config(
-# 	"openFrameworks", # name to use with 'have_library'
-# 	headers, # headers
-# 	File.expand_path(libs)  # libs
-# )
-
-
+PATH_TO_FILE = File.absolute_path(File.dirname(__FILE__))
 
 OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
+REPO_ROOT = File.expand_path('../../', PATH_TO_FILE)
 
-deps = %w[fmodex  FreeImage  freetype]
-deps.each do |dependency_name|
-	
-	headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
-	libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib/linux64")
-	
-	# adding linux64 to the end allows for some dependencies to be found, such as tess2.
-	# but the specific version of tess2 which is distributed with openframeworks is not compatable with shared libs
-		# /usr/bin/ld: /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/tess2/lib/linux64/libtess2.a(tess.o): relocation R_X86_64_32 against `.data' can not be used when making a shared object; recompile with -fPIC
 
-	
-	puts "headers: #{headers}"
-	puts "libs:    #{libs}"
-	
-	dir_config(
-		dependency_name, # name to use with 'have_library'
-		headers, libs
-	)
-	
-	have_library(dependency_name)
-end
+
+# C deps must be listed before the C++ core is loaded, and C++ deps must be listed after
+
+
+
+
+# === C libraries (mostly oF dependencies)
 
 
 # --- glfw is slightly different than expected: package has a version number, but the path does not
 dependency_name = "glfw"
 glfw_version    = "3"
 
-headers = File.join(OF_ROOT, "libs/#{dependency_name}/include")
-libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib/linux64")
+headers = File.expand_path("../of_v0.9.3_libs/custom/#{dependency_name}/include/#{dependency_name.upcase}", OF_ROOT)
+libs    = File.expand_path("../of_v0.9.3_libs/custom/#{dependency_name}/lib/linux64", OF_ROOT)
 
 # adding linux64 to the end allows for some dependencies to be found, such as tess2.
 # but the specific version of tess2 which is distributed with openframeworks is not compatable with shared libs
@@ -80,55 +46,14 @@ libs    = File.join(OF_ROOT, "libs/#{dependency_name}/lib/linux64")
 puts "headers: #{headers}"
 puts "libs:    #{libs}"
 
+
 # oF-provided static library
 dir_config(
-	"glfw#{glfw_version}", # name to use with 'have_library'
+	"glfw", # name to use with 'have_library'
 	headers, libs
 )
 
-# Mesa must be linked before glfw3
-# %w[X11 Xrandr Xi Xxf86vm gl].each do |lib|
-%w[X11 Xrandr Xi Xxf86vm Xcursor Xinerama].each do |lib|
-	# src: http://stackoverflow.com/questions/21685903/glfw3-undefined-reference-to-xrr
-	# have_library(lib)
-end
-# have_library("Xxf86vm") # Mesa3D - system library, needed to resolve symbols in glfw3
-# have_library("glfw3")   # oF version
-	# Even with oF-provided version, system still segfaults.
-	# But this segfault actually provides a decent stack trace
-	
-	# Same segfault regaurdless of which of the two library lists from that stackexchange thread I end up using.
-
-
-
-# system library.
-# have_library("glfw") # undefined symbol:  glfwSetErrorCallback (seems to be using glfw2)
-have_library("glfw") # after installing libglfw3-dev, this works, but then the program segfaults
-
-# ravenskrag@ravensnest:~/Experiments/RubyCPP/Oni$ dpkg --get-selections | grep libglfw
-# libglfw-dev:amd64				install
-# libglfw2:amd64					install
-
-
-
-
-
-# from oF sketch standalone C++ execution:
-# checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl libpulse-simple alsa gl glu glew gtk+-3.0 libmpg123 
-
-# puts "----"
-# %w[
-# 	cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl libpulse-simple alsa gl glu glew gtk+-3.0 libmpg123
-# ].each do |lib|
-# 	have_library(lib)
-# end
-# puts "----"
-
-
-
-
-
-# ---
+have_library("glfw")   # oF version
 
 
 
@@ -175,10 +100,6 @@ end
 # 
 # src: http://stackoverflow.com/questions/9251554/c-ruby-extension-with-external-libraries
 
-
-
-
-
 # === link up dependencies that were custom compiled with -fPIC
 
 dir_config(
@@ -203,169 +124,338 @@ have_library("kiss")
 
 
 
-# --- resolving other symbols (this section comes before oF core)
 
-# have_library("glew")
-# have_library("glew32")
-# have_library("glewmx")
-have_library("GLEW")
 
+# === C++ libraries, and various flags
+have_library("stdc++")
+
+$CPPFLAGS
+# => "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/  $(DEFS) $(cppflags)  -I/home/ravenskrag/.rvm/gems/ruby-2.1.1/gems/rice-2.1.0/ruby/lib/include"
+$LDFLAGS
+# => "-L. -fstack-protector -rdynamic -Wl,-export-dynamic  -L/home/ravenskrag/.rvm/gems/ruby-2.1.1/gems/rice-2.1.0/ruby/lib/lib -lrice"
+
+
+
+
+
+
+# $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(OF_CORE_INCLUDES_CFLAGS)
+
+	# "-O3 -DNDEBUG -march=native -mtune=native -Wall -std=c++14 -DGCC_HAS_REGEX -DOF_USING_GTK -DOF_USING_GTK -DOF_USING_MPG123 -fPIC  -D_REENTRANT -pthread"
+
+$LIBS
+   # => "-lpthread -ldl -lcrypt -lm   -lc"
+$LIBRUBYARG
+   # => "-Wl,-R -Wl,/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -L/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -lruby"
+$LIBRUBYARG_STATIC
+   # => "-Wl,-R -Wl,/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -L/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -lruby-static"
+$CXXFLAGS
+   # => " -Wall -g"
+$LDSHARED_CXX
+   # => "g++ -shared"
+
+optimization_flags = "-O3 -DNDEBUG -march=native -mtune=native"
+cxx_flags = "-std=c++14 -DGCC_HAS_REGEX -DOF_USING_GTK -DOF_USING_GTK -DOF_USING_MPG123"
+other_compile_flags = "-D_REENTRANT -pthread" # not sure where these come from
+
+$CXXFLAGS += " " + [
+		optimization_flags,
+		cxx_flags,
+		other_compile_flags
+	].join(' ')
+
+
+
+
+c_flags = "
+	-I/usr/include/gstreamer-1.0
+	-I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include
+	-I/usr/include/AL
+	-I/usr/include/alsa
+	-I/usr/include/libdrm
+	-I/usr/include/gtk-3.0
+	-I/usr/include/at-spi2-atk/2.0
+	-I/usr/include/at-spi-2.0
+	-I/usr/include/dbus-1.0
+	-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+	-I/usr/include/gtk-3.0
+	-I/usr/include/gio-unix-2.0/
+	-I/usr/include/mirclient
+	-I/usr/include/mircommon
+	-I/usr/include/mircookie
+	-I/usr/include/cairo
+	-I/usr/include/pango-1.0
+	-I/usr/include/harfbuzz
+	-I/usr/include/pango-1.0
+	-I/usr/include/atk-1.0
+	-I/usr/include/cairo
+	-I/usr/include/pixman-1
+	-I/usr/include/freetype2
+	-I/usr/include/libpng12
+	-I/usr/include/gdk-pixbuf-2.0
+	-I/usr/include/libpng12
+	-I/usr/include/glib-2.0
+	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+	-I/usr/include/assimp
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include/GLFW
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/include
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/include
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl -D_REENTRANT -pthread
+"
+
+addon_c_flags = "
+	-I/usr/include/gstreamer-1.0
+	-I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include
+	-I/usr/include/AL
+	-I/usr/include/alsa
+	-I/usr/include/libdrm
+	-I/usr/include/gtk-3.0
+	-I/usr/include/at-spi2-atk/2.0
+	-I/usr/include/at-spi-2.0
+	-I/usr/include/dbus-1.0
+	-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+	-I/usr/include/gtk-3.0
+	-I/usr/include/gio-unix-2.0/
+	-I/usr/include/mirclient
+	-I/usr/include/mircommon
+	-I/usr/include/mircookie
+	-I/usr/include/cairo
+	-I/usr/include/pango-1.0
+	-I/usr/include/harfbuzz
+	-I/usr/include/pango-1.0
+	-I/usr/include/atk-1.0
+	-I/usr/include/cairo
+	-I/usr/include/pixman-1
+	-I/usr/include/freetype2
+	-I/usr/include/libpng12
+	-I/usr/include/gdk-pixbuf-2.0
+	-I/usr/include/libpng12
+	-I/usr/include/glib-2.0
+	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+	-I/usr/include/assimp
+"
+
+
+other = "
+	-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/notes
+	-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/lib
+	-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src
+
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs/assimp
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/win32
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc
+"
+
+
+more_flags = 
+	[c_flags, addon_c_flags, other]
+		.collect{  |string_blob|  string_blob.split.join(' ') }
+		.join('   ')
+
+$CPPFLAGS += " " + more_flags
+
+
+
+
+
+
+
+
+
+
+
+of_project_objs = %w[
+	obj/linux64/Release/src/main.o
+	obj/linux64/Release/src/ofApp.o
+].collect{ |line|
+	"/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/#{line}"
+}.join(' ')
+
+of_project_addon_objs = "
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpMeshHelper.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpModelLoader.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpAnimation.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpTexture.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxToggle.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSliderGroup.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxLabel.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSlider.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxGuiGroup.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxButton.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxPanel.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxBaseGui.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPServer.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPClient.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxUDPManager.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPManager.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscMessage.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscParameterSync.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscBundle.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscSender.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscReceiver.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/IpEndpointName.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscTypes.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.o
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.o
+"
 
+of_project_libs = "
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/lib/linux64/libopenFrameworks.a
+"
 
+# NOTE: may need to modify -rpath in the future
+ld_flags = "
+	-Wl,-rpath=./libs:./bin/libs -Wl,--as-needed -Wl,--gc-sections
 
+	-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/
 
-# from /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/scripts/linux/ubuntu/install_dependencies.sh
-	# PACKAGES="curl libjack-jackd2-0 libjack-jackd2-dev freeglut3-dev libasound2-dev libxmu-dev libxxf86vm-dev g++${CXX_VER} libgl1-mesa-dev${XTAG} libglu1-mesa-dev libraw1394-dev libudev-dev libdrm-dev libglew-dev libopenal-dev libsndfile-dev libfreeimage-dev libcairo2-dev libfreetype6-dev libssl-dev libpulse-dev libusb-1.0-0-dev libgtk${GTK_VERSION}-dev  libopencv-dev libassimp-dev librtaudio-dev libboost-filesystem${BOOST_VER}-dev libgstreamer${GSTREAMER_VERSION}-dev libgstreamer-plugins-base${GSTREAMER_VERSION}-dev  ${GSTREAMER_FFMPEG} gstreamer${GSTREAMER_VERSION}-pulseaudio gstreamer${GSTREAMER_VERSION}-x gstreamer${GSTREAMER_VERSION}-plugins-bad gstreamer${GSTREAMER_VERSION}-alsa gstreamer${GSTREAMER_VERSION}-plugins-base gstreamer${GSTREAMER_VERSION}-plugins-good"
+	-lfmodex
+"
 
+of_core_libs_dot_a = "
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/lib/linux64/libglfw3.a
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/lib/linux64/libkiss.a
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/lib/linux64/libtess2.a
+	 /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNetSSL.a
+	 /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNet.a
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoCrypto.a
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoUtil.a
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoJSON.a
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoXML.a
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoFoundation.a
+"
 
-# libgstreamer1.0-dev
-gstreamer_version = "1.0"
-have_library("gstreamer-#{gstreamer_version}")       # this works 
-have_library("gstreamer-#{gstreamer_version}-libav") # this doesn't
+of_core_libs_dynamic_flags = "
+	-lz -lgstapp-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -ludev -lfontconfig -lfreetype -lsndfile -lopenal -lssl -lcrypto -lpulse-simple -lpulse -lasound -lGLEW -lGLU -lGL -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lmpg123 -lassimp -lglut -lX11 -lXrandr -lXxf86vm -lXi -lXcursor -ldl -lpthread -lfreeimage -lrtaudio -lboost_filesystem -lboost_system
+"
 
 
 
 
 
-# ---
+# optimization_ld_flags
+of_project_objs
+of_project_addon_objs
+# target_libs
+of_project_libs
+ld_flags
+# of_core_libs # spltting this up into dynamic lib flags and .a files
+of_core_libs_dot_a
+of_core_libs_dynamic_flags
 
+more_linker_flags = 
+	[
+		of_project_objs,
+		of_project_addon_objs,
+		of_project_libs,
+		ld_flags,
+		# of_core_libs, # split into the following two categories:
+		# of_core_libs_dot_a, # disabled, because these libs need to be replaced with -fPIC ones
+		of_core_libs_dynamic_flags, # these flags are very important
+	]
+	.collect{  |string_blob|  string_blob.split.join(' ') }
+	.join('   ')
 
+$LDFLAGS += " " + more_linker_flags
 
 
 
 
-utf8cpp_root = File.expand_path("./libs/utf8cpp/include/utf8", OF_ROOT) # boost provided by oF
 
-dir_config(
-	"utf8cpp", # name to use with 'have_library'
-	utf8cpp_root, # headers
-)
-p Dir.glob("#{utf8cpp_root}/**/*")
 
-have_library("utf8cpp_utf8")
 
+# === Copy over dynamic libraries to the correct location
 
+# -rpath flag specifies where to look for dynamic libraries
+# (the system also has some paths that it checks for, but these are the "local dlls", basically)
 
+# -rpath=./libs:./bin/libs
 
+src = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/fmodex/lib/linux64/libfmodex.so"
+dest = "/home/ravenskrag/Experiments/RubyCPP/Oni/bin/libs/"
+FileUtils.copy(src, dest)
 
-# boost_root = "/usr/include/boost"                                    # system boost
-boost_root = File.expand_path("./libs/boost/include/boost", OF_ROOT) # boost provided by oF
+# TODO: make sure that the 'bin/libs' directory exists before copying. (Maybe fileutils will handle automatically? maybe not)
 
-dir_config(
-	"boost", # name to use with 'have_library'
-	boost_root, # headers
-)
-p Dir.glob("#{boost_root}/system/**/*")
 
-have_library("boost")
-have_library("boost_filesystem")
-have_library("boost_system")
 
 
 
 
-# ravenskrag@ravensnest:~/Experiments/RubyCPP/Oni$ dpkg --get-selections | grep libboost
 
-# libboost-date-time1.58.0:amd64			install
-# libboost-filesystem-dev:amd64			install
-# libboost-filesystem1.58-dev:amd64		install
-# libboost-filesystem1.58.0:amd64			install
-# libboost-filesystem1.58.0:i386			install
-# libboost-iostreams1.58.0:amd64			install
-# libboost-python1.58.0				install
-# libboost-system1.58-dev:amd64			install
-# libboost-system1.58.0:amd64			install
-# libboost-system1.58.0:i386			install
-# libboost1.58-dev:amd64				install
 
 
-# boost_ver = "1.58.0"
-# have_library("boost-system-#{boost_ver}")
-# have_library("boost-filesystem-#{boost_ver}")
 
 
 
-# Boost::System and Boost::Filesystem are header only libs
-# src: http://stackoverflow.com/questions/7894451/require-boostdynamic-bitset-in-extconf-rb
-# src: http://www.boost.org/doc/libs/1_57_0/more/getting_started/unix-variants.html#header-only-libraries
 
 
-# but manually passing header paths to find_header() or have_header() fails for some of Boost, and I'm not sure why.
 
+p global_variables
+# => [:$;, :$-F, :$@, :$!, :$SAFE, :$~, :$&, :$`, :$', :$+, :$=, :$KCODE, :$-K, :$,, :$/, :$-0, :$\, :$_, :$stdin, :$stdout, :$stderr, :$>, :$<, :$., :$FILENAME, :$-i, :$*, :$?, :$$, :$:, :$-I, :$LOAD_PATH, :$", :$LOADED_FEATURES, :$VERBOSE, :$-v, :$-w, :$-W, :$DEBUG, :$-d, :$0, :$PROGRAM_NAME, :$CXX, :$LIBS, :$LIBRUBYARG, :$LIBRUBYARG_STATIC, :$RICE_CPPFLAGS, :$RICE_LDFLAGS, :$RICE_PREFIX, :$RICE_USING_MINGW32, :$DEFLIBPATH, :$CPPFLAGS, :$LDFLAGS, :$CXXFLAGS, :$LDSHARED_CXX, :$OBJEXT, :$DLDFLAGS, :$LIBPATH, :$static, :$config_h, :$default_static, :$configure_args, :$libdir, :$rubylibdir, :$archdir, :$-p, :$-l, :$-a, :$sitedir, :$sitelibdir, :$sitearchdir, :$vendordir, :$vendorlibdir, :$vendorarchdir, :$mswin, :$bccwin, :$mingw, :$cygwin, :$netbsd, :$os2, :$beos, :$haiku, :$solaris, :$universal, :$dest_prefix_pattern, :$extout, :$extout_prefix, :$extmk, :$hdrdir, :$topdir, :$top_srcdir, :$arch_hdrdir, :$have_devel, :$INCFLAGS, :$CFLAGS, :$ARCH_FLAG, :$LOCAL_LIBS, :$libs, :$srcdir, :$EXEEXT, :$NONINSTALLFILES, :$defs, :$typeof, :$arg_config, :$extconf_h, :$PKGCONFIG, :$VPATH, :$LIBRUBYARG_SHARED, :$warnflags, :$ruby, :$preload, :$nmake, :$cleanfiles, :$distcleanfiles, :$target, :$LIBEXT, :$objs, :$srcs, :$INSTALLFILES, :$distcleandirs, :$installed_list, :$ignore_error, :$makefile_created, :$enable_shared, :$make, :$curdir, :$fileutils_rb_have_lchmod, :$fileutils_rb_have_lchown, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9]
 
+compiler_variables = 
+[
+	['$CXX', $CXX],
+	['$LIBS', $LIBS],
+	['$LIBRUBYARG', $LIBRUBYARG],
+	['$LIBRUBYARG_STATIC', $LIBRUBYARG_STATIC],
+	['$RICE_CPPFLAGS', $RICE_CPPFLAGS],
+	['$RICE_LDFLAGS', $RICE_LDFLAGS],
+	['$RICE_PREFIX', $RICE_PREFIX],
+	['$RICE_USING_MINGW32', $RICE_USING_MINGW32],
+	['$DEFLIBPATH', $DEFLIBPATH],
+	['$CPPFLAGS', $CPPFLAGS],
+	['$LDFLAGS', $LDFLAGS],
+	['$CXXFLAGS', $CXXFLAGS],
+	['$LDSHARED_CXX', $LDSHARED_CXX],
+	['$OBJEXT', $OBJEXT],
+	['$DLDFLAGS', $DLDFLAGS],
+	['$LIBPATH', $LIBPATH],
+	['$static', $static],
+	['$config_h', $config_h],
+	['$default_static', $default_static],
+	['$configure_args', $configure_args],
+	['$libdir', $libdir],
+	['$rubylibdir', $rubylibdir],
+	['$archdir', $archdir],
+	['$defs', $defs],
+].to_h
 
-# checking for /usr/include/boost/system/windows_error.hpp... yes
-# checking for /usr/include/boost/system/api_config.hpp... yes
-# checking for /usr/include/boost/system/cygwin_error.hpp... yes
-# checking for /usr/include/boost/system/config.hpp... yes
-# checking for /usr/include/boost/system/detail/local_free_on_destruction.hpp... yes
-# checking for /usr/include/boost/system/system_error.hpp... no
-# checking for /usr/include/boost/system/linux_error.hpp... no
-# checking for /usr/include/boost/system/error_code.hpp... no
-# checking for /usr/include/boost/filesystem/path_traits.hpp... no
-# checking for /usr/include/boost/filesystem/operations.hpp... no
-# checking for /usr/include/boost/filesystem/fstream.hpp... no
-# checking for /usr/include/boost/filesystem/config.hpp... yes
-# checking for /usr/include/boost/filesystem/exception.hpp... yes
-# checking for /usr/include/boost/filesystem/detail/utf8_codecvt_facet.hpp... no
-# checking for /usr/include/boost/filesystem/convenience.hpp... no
-# checking for /usr/include/boost/filesystem/path.hpp... no
+compiler_variables.each do |name, var|
+	puts name
+	puts "   #{var.inspect}"
+end
 
 
-# checking for OF_ROOT/libs/boost/include/boost/system/system_error.hpp... no
-# checking for OF_ROOT/libs/boost/include/boost/system/config.hpp... yes
-# checking for OF_ROOT/libs/boost/include/boost/system/detail/local_free_on_destruction.hpp... yes
-# checking for OF_ROOT/libs/boost/include/boost/system/error_code.hpp... no
-# checking for OF_ROOT/libs/boost/include/boost/system/api_config.hpp... yes
-# checking for OF_ROOT/libs/boost/include/boost/filesystem/operations.hpp... no
-# checking for OF_ROOT/libs/boost/include/boost/filesystem/config.hpp... yes
-# checking for OF_ROOT/libs/boost/include/boost/filesystem/path.hpp... no
-# checking for OF_ROOT/libs/boost/include/boost/filesystem/detail/utf8_codecvt_facet.hpp... no
-# checking for OF_ROOT/libs/boost/include/boost/filesystem/path_traits.hpp... no
-# checking for OF_ROOT/libs/boost/include/boost/filesystem/exception.hpp... yes
-# checking for OF_ROOT/libs/boost/include/boost/filesystem/fstream.hpp... no
-# checking for OF_ROOT/libs/boost/include/boost/filesystem/convenience.hpp... no
-
-
-
-
-
-
-
-dependency_name = "openFrameworks"
-headers = "#{OF_ROOT}/libs/openFrameworks/"
-libs    = "#{OF_ROOT}/libs/openFrameworksCompiled/lib/linux64"
-
-dir_config(
-	dependency_name, # name to use with 'have_library'
-	headers, libs
-)
-
-have_library(dependency_name)
-# have_func(name, header_name)
-
-
-
-
-
-
-
-
-
-
-
-
-
-# C++ stuff
-# dir_config(
-# 	"OFSketch",
-# 	File.expand_path("./cpp/oF_Test/mySketch/lib/"), 
-# 	File.expand_path("./cpp/oF_Test/mySketch/lib/")
-# )
-
-
-
-# have_library('openFrameworks')
-have_library('OFSketch')
 
 create_makefile('oni/oni')

@@ -5,13 +5,14 @@
 
 #include "oni.h"
 #include "launcher.h"
-
+#include <iostream>
 using namespace Rice;
 
 extern "C"
 
 void Init_oni()
 {
+	std::cout << "c++: set up module\n";
 	Module rb_mOni = define_module("Oni");
 	
 	
@@ -19,7 +20,9 @@ void Init_oni()
 	
 	rb_cWindow
 		.define_constructor(Constructor<Launcher>())
+		// .define_method("initialize", &Launcher::initialize)
 		.define_method("show", &Launcher::show);
+	
 }
 
 
