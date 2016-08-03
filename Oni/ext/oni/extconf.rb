@@ -34,6 +34,37 @@ $LDFLAGS
 
 
 
+
+
+
+# $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(OF_CORE_INCLUDES_CFLAGS)
+
+	# "-O3 -DNDEBUG -march=native -mtune=native -Wall -std=c++14 -DGCC_HAS_REGEX -DOF_USING_GTK -DOF_USING_GTK -DOF_USING_MPG123 -fPIC  -D_REENTRANT -pthread"
+
+$LIBS
+   # => "-lpthread -ldl -lcrypt -lm   -lc"
+$LIBRUBYARG
+   # => "-Wl,-R -Wl,/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -L/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -lruby"
+$LIBRUBYARG_STATIC
+   # => "-Wl,-R -Wl,/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -L/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -lruby-static"
+$CXXFLAGS
+   # => " -Wall -g"
+$LDSHARED_CXX
+   # => "g++ -shared"
+
+optimization_flags = "-O3 -DNDEBUG -march=native -mtune=native"
+cxx_flags = "-std=c++14 -DGCC_HAS_REGEX -DOF_USING_GTK -DOF_USING_GTK -DOF_USING_MPG123"
+other_compile_flags = "-D_REENTRANT -pthread" # not sure where these come from
+
+$CXXFLAGS += " " + [
+		optimization_flags,
+		cxx_flags,
+		other_compile_flags
+	].join(' ')
+
+
+
+
 c_flags = "
 -I/usr/include/gstreamer-1.0
 -I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include
