@@ -334,7 +334,7 @@ of_project_libs = "
 	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/lib/linux64/libopenFrameworks.a
 "
 
-# NOTE: -rpath has been modified to include 
+# NOTE: may need to modify -rpath in the future
 ld_flags = "
 	-Wl,-rpath=./libs:./bin/libs -Wl,--as-needed -Wl,--gc-sections
 

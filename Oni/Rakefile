@@ -491,13 +491,7 @@ end
 
 
 # run project from the Ruby level
-task :run => c_library do
-	# try changing directory to where the dynamic libraries are stored
-	Dir.chdir "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/"
-	# puts Dir.pwd
-	
-	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni.rb"
-	# require "/home/ravenskrag/Experiments/RubyCPP/Oni/lib/oni/oni.so"
+task :run => :build do
 	require File.expand_path(c_library, File.absolute_path(File.dirname(__FILE__)))
 	
 	class Window < Oni::Window

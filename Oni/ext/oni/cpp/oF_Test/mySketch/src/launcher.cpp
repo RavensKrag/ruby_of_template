@@ -12,7 +12,7 @@ Launcher::Launcher(){
 }
 
 Launcher::~Launcher(){
-	delete mApp;
+	// delete mApp;
 }
 
 void Launcher::initialize(){
