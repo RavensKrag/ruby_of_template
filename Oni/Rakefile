@@ -3,22 +3,67 @@ require 'rake/clean'
 
 require 'fileutils'
 require 'open3'
+require 'open4' # TODO: add this to gemfile (version 1.3.4)
 
 
 
 
 # interactive command-line program execution
-def run_i(cmd_string)
-	stdin, stdout_and_stderr, wait_thr = Open3.popen2e cmd_string
+def run_i(cmd_string, &block)
 	
-	output = nil
-	begin
-		output = stdout_and_stderr.gets
-		puts output
-	end while output
+	# --- attempt to use Open4 to get the exit status code
+	# TODO: update the definitions of 'run_i' in other files, or centralize the definition in a single file.
 	
-	stdin.close
-	stdout_and_stderr.close
+	# exit_status =
+	# 	Open4::popen4(cmd_string) do |pid, stdin, stdout, stderr|
+	# 		output = nil
+	# 		begin
+	# 			output = stdout.gets.to_s + stderr.gets.to_s
+	# 			puts output
+	# 		end while output != ""
+	# 	end
+	
+	
+	# return exit_status
+	
+	
+	# --- with block syntax
+	exit_status = nil
+	Open3.popen2e(cmd_string) do |stdin, stdout_and_stderr, wait_thr|
+		output = nil
+		begin
+			output = stdout_and_stderr.gets
+			puts output
+		end while output
+		
+		
+		exit_status = wait_thr.value
+	end
+	
+	if block
+		# call the block if there is an error
+		raise block.call if exit_status != 0
+	end
+	
+	return exit_status
+	
+	
+	# --- original formulation
+	# stdin, stdout_and_stderr, wait_thr = Open3.popen2e cmd_string
+	
+	# output = nil
+	# begin
+	# 	output = stdout_and_stderr.gets
+	# 	puts output
+	# end while output
+	
+	# stdin.close
+	# stdout_and_stderr.close
+	
+	
+	# exit_status = wait_thr.value
+	# return exit_status
+		# return $?
 end
 
 # invoke a particular rake task by name (and then allow it to be run again later)
@@ -241,7 +286,9 @@ namespace :oF_sketch do
 	# generate all the .o files using the standard openFrameworks build system
 	task :build do
 		Dir.chdir OF_SKETCH_ROOT do
-			run_i "make -j#{number_of_cores}"
+			run_i "make -j#{number_of_cores}" do
+				"ERROR: Could not build oF sketch."
+			end
 		end
 	end
 
@@ -286,7 +333,9 @@ namespace :oF_sketch_lib do
 	file OF_SKETCH_LIB_FILE => OF_SKETCH_SRC_FILES do
 		swap_makefile(OF_SKETCH_ROOT, "Makefile", "Makefile.static_lib") do
 			Dir.chdir OF_SKETCH_ROOT do
-				run_i "make static_lib"
+				run_i "make static_lib" do
+					"ERROR: Could not make a static library out of the oF sketch project."
+				end
 			end
 		end
 	end
@@ -359,7 +408,9 @@ file c_library => source_files do
 		# as what RubyGems does
 		puts "=== starting extconf..."
 		
-		run_i "ruby extconf.rb"
+		run_i "ruby extconf.rb" do
+			"ERROR: Could not configure c extension."
+		end
 		
 		
 		puts "======= Top level Rakefile"
@@ -367,17 +418,11 @@ file c_library => source_files do
 		
 		
 		# Run make
+		
 		flags = ""
-		stdin, stdout_and_stderr, wait_thr = Open3.popen2e "make " + flags
-		
-		output = nil
-		begin
-			output = stdout_and_stderr.gets
-			puts output
-		end while output
-		
-		stdin.close
-		stdout_and_stderr.close
+		run_i "make #{flags}"  do
+			"ERROR: Could not build c extension."
+		end
 	end
 	
 	cp "ext/#{NAME}/#{NAME}.so", "lib/#{NAME}"
@@ -493,24 +538,52 @@ end
 # run project from the Ruby level
 task :run => :build do
 	require File.expand_path(c_library, File.absolute_path(File.dirname(__FILE__)))
+	# TODO: require the Ruby level class, instead of the C / C++ level one, so I can define some default behavior in Ruby
+	# TODO: rename things so this project doesn't have symbol collision with the other package I named "Oni", from which this project's template derives.
 	
 	class Window < Oni::Window
 		def initialize
-			super(self)
+			super(self) # pass Ruby instance to C++ land for callbacks, etc
 			
 			puts "ruby: Window#initialize"
 		end
 		
 		def setup
-			puts "ruby: Window#setup" # not working yet
+			puts "ruby: Window#setup"
 		end
 		
 		def update
-			puts "ruby: Window#update" # not working yet
+			# puts "ruby: Window#update"
 		end
 		
 		def draw
-			puts "ruby: Window#draw" # not working yet
+			# puts "ruby: Window#draw"
+		end
+		
+		def mouse_moved(x,y)
+			p [x,y]
+		end
+		
+		def mouse_pressed(x,y, button)
+			p [:pressed, x,y, button]
+			
+			exit() if button == 2
+		end
+		
+		def mouse_released(x,y, button)
+			p [:released, x,y, button]
+		end
+		
+		def mouse_dragged(x,y, button)
+			p [:dragged, x,y, button]
+		end
+		
+		
+		
+		private
+		
+		def exit(status_code=0)
+			super(status_code)
 		end
 	end
 	

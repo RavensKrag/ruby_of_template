@@ -333,6 +333,7 @@ of_project_libs = "
 "
 
 # NOTE: may need to modify -rpath in the future
+# TODO: specify directories for dynamic libraries relative to the root directory of this project, and then expand them into full paths before adding to -rpath. This means the gem will be able to find the dynamic libraries regaurdless of where the Ruby code is being called from.
 ld_flags = "
 	-Wl,-rpath=./libs:./bin/libs -Wl,--as-needed -Wl,--gc-sections
 

@@ -62,18 +62,30 @@ void OniWindow::keyReleased(int key){
 
 void OniWindow::mouseMoved(int x, int y ){
 	ofApp::mouseMoved(x,y);
+	
+	mSelf.call("mouse_moved", x,y);
 }
 
 void OniWindow::mouseDragged(int x, int y, int button){
 	ofApp::mouseDragged(x,y,button);
+	
+	mSelf.call("mouse_dragged", x,y, button);
 }
 
 void OniWindow::mousePressed(int x, int y, int button){
 	ofApp::mousePressed(x,y,button);
+	
+	mSelf.call("mouse_pressed", x,y, button);
+	
+	if(button == 4){
+		ofExit();
+	}
 }
 
 void OniWindow::mouseReleased(int x, int y, int button){
 	ofApp::mouseReleased(x,y,button);
+	
+	mSelf.call("mouse_released", x,y, button);
 }
 
 void OniWindow::mouseEntered(int x, int y){

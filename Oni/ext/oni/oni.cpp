@@ -6,6 +6,9 @@
 #include "oni.h"
 #include "launcher.h"
 #include <iostream>
+
+#include "ofAppRunner.h"
+
 using namespace Rice;
 
 extern "C"
@@ -21,6 +24,7 @@ void Init_oni()
 	rb_cWindow
 		.define_constructor(Constructor<Launcher, Rice::Object>())
 		// .define_method("initialize", &Launcher::initialize)
+		.define_method("exit", &ofExit)
 		.define_method("show", &Launcher::show);
 	
 }
