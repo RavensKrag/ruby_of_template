@@ -76,10 +76,6 @@ void OniWindow::mousePressed(int x, int y, int button){
 	ofApp::mousePressed(x,y,button);
 	
 	mSelf.call("mouse_pressed", x,y, button);
-	
-	if(button == 4){
-		ofExit();
-	}
 }
 
 void OniWindow::mouseReleased(int x, int y, int button){

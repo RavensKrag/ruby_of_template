@@ -3,31 +3,12 @@ require 'rake/clean'
 
 require 'fileutils'
 require 'open3'
-require 'open4' # TODO: add this to gemfile (version 1.3.4)
 
 
 
 
 # interactive command-line program execution
 def run_i(cmd_string, &block)
-	
-	# --- attempt to use Open4 to get the exit status code
-	# TODO: update the definitions of 'run_i' in other files, or centralize the definition in a single file.
-	
-	# exit_status =
-	# 	Open4::popen4(cmd_string) do |pid, stdin, stdout, stderr|
-	# 		output = nil
-	# 		begin
-	# 			output = stdout.gets.to_s + stderr.gets.to_s
-	# 			puts output
-	# 		end while output != ""
-	# 	end
-	
-	
-	# return exit_status
-	
-	
-	# --- with block syntax
 	exit_status = nil
 	Open3.popen2e(cmd_string) do |stdin, stdout_and_stderr, wait_thr|
 		output = nil
@@ -46,24 +27,6 @@ def run_i(cmd_string, &block)
 	end
 	
 	return exit_status
-	
-	
-	# --- original formulation
-	# stdin, stdout_and_stderr, wait_thr = Open3.popen2e cmd_string
-	
-	# output = nil
-	# begin
-	# 	output = stdout_and_stderr.gets
-	# 	puts output
-	# end while output
-	
-	# stdin.close
-	# stdout_and_stderr.close
-	
-	
-	# exit_status = wait_thr.value
-	# return exit_status
-		# return $?
 end
 
 # invoke a particular rake task by name (and then allow it to be run again later)
@@ -567,7 +530,8 @@ task :run => :build do
 		def mouse_pressed(x,y, button)
 			p [:pressed, x,y, button]
 			
-			exit() if button == 2
+			exit() if button == 4
+			# TODO: set button codes as constants?
 		end
 		
 		def mouse_released(x,y, button)
