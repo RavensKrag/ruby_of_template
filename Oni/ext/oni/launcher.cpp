@@ -1,7 +1,7 @@
 // #include "ofMain.h"
+// #include "ofGraphics.h"
+
 #include "launcher.h"
-// #include "ofMain.h"
-// #include "ofApp.h"
 #include "window.h"
 
 #include <iostream>
@@ -30,3 +30,25 @@ void Launcher::show(){
 	// pass in width and height too:
 	ofRunApp(mWindow);
 }
+
+
+void Launcher::DrawRectangle(float x,float y,float z,float w,float h){
+	ofDrawRectangle(x,y,z,w,h);
+}
+
+void Launcher::DrawCircle(float x, float y, float z, float radius){
+	ofDrawCircle(x, y, radius);
+}
+
+void Launcher::DrawEllipse(float x, float y, float z, float width, float height){
+	ofDrawEllipse(x, y, z, width, height);
+}
+
+void Launcher::DrawTriangle(float x1,float y1,float z1,float x2,float y2,float z2,float x3, float y3,float z3){
+	ofDrawTriangle(x1,y1,z1,x2,y2,z2,x3, y3,z3);
+}
+
+void Launcher::DrawLine(float x1,float y1,float z1,float x2,float y2,float z2){
+	ofDrawLine(x1,y1,z1,x2,y2,z2);
+}
+

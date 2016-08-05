@@ -7,7 +7,9 @@
 #include "launcher.h"
 #include <iostream>
 
-#include "ofAppRunner.h"
+// #include "ofApp.h"
+// #include "ofAppRunner.h"
+#include "ofMain.h"
 
 using namespace Rice;
 
@@ -25,7 +27,21 @@ void Init_oni()
 		.define_constructor(Constructor<Launcher, Rice::Object>())
 		// .define_method("initialize", &Launcher::initialize)
 		.define_method("show", &Launcher::show)
-		.define_method("exit", &ofExit);
+		.define_method("exit", &ofExit)
+		
+		// .define_method("ofBackground", &ofBackground)
+		// .define_method("ofSetColor",   &ofSetColor)
+		
+		.define_method("ofDrawRectangle", &Launcher::DrawRectangle)
+		.define_method("ofDrawCircle",    &Launcher::DrawCircle)
+		.define_method("ofDrawEllipse",   &Launcher::DrawEllipse)
+		.define_method("ofDrawTriangle",  &Launcher::DrawTriangle)
+		.define_method("ofDrawLine",      &Launcher::DrawLine)
+		
+		
+		
+		
+		;
 	
 }
 

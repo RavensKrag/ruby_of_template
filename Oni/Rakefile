@@ -504,11 +504,26 @@ task :run => :build do
 	# TODO: require the Ruby level class, instead of the C / C++ level one, so I can define some default behavior in Ruby
 	# TODO: rename things so this project doesn't have symbol collision with the other package I named "Oni", from which this project's template derives.
 	
+	
+	# TODO: Move Rice CPP files to another directory.
+	# TODO: load basic window definition from a Ruby file, instead of defining here.
+	# TODO: Update build system such that things don't have to rebuild just because you made a change to some Ruby code (should only rebuild when you need to update the C / C++ stuff.)
+		# right now, things are rebuilding just because I edited this file.
+		# but that may be because I'm editing the build system technically?
+		# so gonna have to fix that.
+	
+	
+	# TODO: wrap functions to set color of objects
+	# TODO: wrap function to set background color
+	# TODO: wrap functions to get window dimensions
+	# TODO: consider marking all drawing methods as private from Ruby-land
 	class Window < Oni::Window
 		def initialize
 			super(self) # pass Ruby instance to C++ land for callbacks, etc
 			
 			puts "ruby: Window#initialize"
+			
+			@p = [0,0]
 		end
 		
 		def setup
@@ -520,11 +535,16 @@ task :run => :build do
 		end
 		
 		def draw
-			# puts "ruby: Window#draw"
+			puts "ruby: Window#draw"
+			z = 1
+			ofDrawCircle(*@p,z, 20)
+			puts "draw complete"
 		end
 		
 		def mouse_moved(x,y)
 			p [x,y]
+			
+			@p = [x,y]
 		end
 		
 		def mouse_pressed(x,y, button)
