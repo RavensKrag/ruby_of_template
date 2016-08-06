@@ -1,6 +1,11 @@
 require File.expand_path('./oni', File.absolute_path(File.dirname(__FILE__)))
 
 
+# TODO: rename things so this project doesn't have symbol collision with the other package I named "Oni", from which this project's template derives.
+	
+# TODO: wrap functions to get window dimensions
+# TODO: consider marking all drawing methods as private from Ruby-land
+
 class Window < Oni::Window
 		def initialize
 			super(self) # pass Ruby instance to C++ land for callbacks, etc
