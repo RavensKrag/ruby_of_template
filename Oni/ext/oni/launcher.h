@@ -47,6 +47,21 @@ public:
 	// ofDrawRectRounded
 	// ofDrawCurve
 	// ofDrawBezier // <-- this one is pretty complicated. check it out. it's kinda cool.
+	
+	
+	
+	void Background(int r, int g, int b, int a);
+	void BackgroundHex(int hexColor, int alpha);
+	
+	void SetColor(int r, int g, int b, int a);
+	void SetHexColor(int hexColor);
+	// void ofBackgroundHex(int hexColor, int alpha);
+	// void ofBackground(int r, int g, int b, int a);
+	
+	// void ofSetColor(int r, int g, int b, int a);
+	// void ofSetHexColor(int hexColor);
+
+
 
 protected:
 	OniWindow* mWindow;

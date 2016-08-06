@@ -32,6 +32,9 @@ void Launcher::show(){
 }
 
 
+
+// --- graphics functions
+
 void Launcher::DrawRectangle(float x,float y,float z,float w,float h){
 	ofDrawRectangle(x,y,z,w,h);
 }
@@ -52,3 +55,27 @@ void Launcher::DrawLine(float x1,float y1,float z1,float x2,float y2,float z2){
 	ofDrawLine(x1,y1,z1,x2,y2,z2);
 }
 
+
+
+
+
+void Launcher::Background(int r, int g, int b, int a){
+	ofBackground(r, g, b, a);
+}
+
+void Launcher::BackgroundHex(int hexColor, int alpha){
+	ofBackgroundHex(hexColor, alpha);
+}
+
+
+
+void Launcher::SetColor(int r, int g, int b, int a){
+	ofSetColor(r, g, b, a);
+}
+
+void Launcher::SetHexColor(int hexColor){
+	ofSetHexColor(hexColor);
+}
+
+
+// ---------------------------------------------------

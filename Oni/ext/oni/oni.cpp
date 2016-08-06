@@ -32,6 +32,11 @@ void Init_oni()
 		// .define_method("ofBackground", &ofBackground)
 		// .define_method("ofSetColor",   &ofSetColor)
 		
+		.define_method("ofBackground",    &Launcher::Background)
+		.define_method("ofBackgroundHex", &Launcher::BackgroundHex)
+		.define_method("ofSetColor",      &Launcher::SetColor)
+		.define_method("ofSetHexColor",   &Launcher::SetHexColor)
+		
 		.define_method("ofDrawRectangle", &Launcher::DrawRectangle)
 		.define_method("ofDrawCircle",    &Launcher::DrawCircle)
 		.define_method("ofDrawEllipse",   &Launcher::DrawEllipse)
