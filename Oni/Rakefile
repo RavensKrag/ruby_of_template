@@ -33,7 +33,7 @@ end
 def run_task(task)
 	Rake::Task[task].reenable
 	Rake::Task[task].invoke
-	Rake::Task[task].reenable
+	# Rake::Task[task].reenable
 	# src: http://stackoverflow.com/questions/577944/how-to-run-rake-tasks-from-within-rake-tasks
 end
 
@@ -164,46 +164,54 @@ end
 namespace :dependencies do
 	# assuming for 'tess2' that 'premake' was already run,
 	# and makefiles have been altered to add -fPIC
-	task :build_tess2 do
-		folder = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
-		
-		Dir.chdir folder do
+	tess2_dir = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
+	tess2_filepath = File.expand_path('./libtess2.a', tess2_dir)
+	
+	
+	file tess2_filepath do
+		Dir.chdir tess2_dir do
 			run_i "make"
+		end
+	end
+	
+	task :build_tess2 => tess2_filepath
+	
+	task :clean_tess2 do
+		Dir.chdir tess2_dir do
+			run_i "make clean"
 		end
 	end
 	
 	task :rebuild_tess2 do
-		folder = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
-		
-		Dir.chdir folder do
-			run_i "make clean"
-			run_i "make"
-		end
+		run_task('dependencies:clean_tess2')
+		run_task('dependencies:build_tess2')
 	end
 	
 	task :run_tess2_example do
-		folder = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
-		
-		Dir.chdir folder do
+		Dir.chdir tess2_dir do
 			run_i "./example"
 		end
 	end
 	
 	
+	
 	# assuming for 'kiss' that 'cmake' was already run
 	# and -fPIC flag has been added to the flags.make file
-	task :build_kiss do
-		folder = File.expand_path('../of_v0.9.3_libs/custom/kiss/build', OF_ROOT)
-		
-		Dir.chdir folder do
+	# (kiss/build/CMakeFiles/kiss.dir/flags.make)
+	kiss_dir = File.expand_path('../of_v0.9.3_libs/custom/kiss/build', OF_ROOT)
+	kiss_filepath = File.expand_path('../lib/libkiss.a', kiss_dir)
+	
+	
+	file kiss_filepath do
+		Dir.chdir kiss_dir do
 			run_i "make"
 		end
 	end
 	
+	task :build_kiss => kiss_filepath
+	
 	task :rebuild_kiss do
-		folder = File.expand_path('../of_v0.9.3_libs/custom/kiss/build', OF_ROOT)
-		
-		Dir.chdir folder do
+		Dir.chdir kiss_dir do
 			run_i "make clean"
 			run_i "make"
 		end
@@ -213,20 +221,35 @@ namespace :dependencies do
 	
 	
 	# all you need to build poco is here. no need for custom modification
-	task :build_poco do
-		folder = File.expand_path('../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/', OF_ROOT)
+	poco_dir = File.expand_path('../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/', OF_ROOT)
+	poco_filepath = File.expand_path('./lib/Linux/x86_64/libPocoFoundation.so', poco_dir)
+		# building poco generates all of these dynamic libraries. just make project dependent on one file, for simplicity.
 		
-		Dir.chdir folder do
+		# lib/Linux/x86_64/libCppUnit.so
+		# lib/Linux/x86_64/libCppUnit.so.1
+		# lib/Linux/x86_64/libPocoCrypto.so
+		# lib/Linux/x86_64/libPocoData.so
+		# lib/Linux/x86_64/libPocoDataSQLite.so
+		# lib/Linux/x86_64/libPocoFoundation.so
+		# lib/Linux/x86_64/libPocoJSON.so
+		# lib/Linux/x86_64/libPocoNet.so
+		# lib/Linux/x86_64/libPocoNetSSL.so
+		# lib/Linux/x86_64/libPocoUtil.so
+		# lib/Linux/x86_64/libPocoXML.so
+		# lib/Linux/x86_64/libPocoZip.so
+	
+	file poco_filepath do
+		Dir.chdir poco_dir do
 			# run_i "./configure --static --no-shared-libs --no-tests --no-samples"
 			run_i "./configure"
 			run_i "make"
 		end
 	end
 	
+	task :build_poco => poco_filepath
+	
 	task :rebuild_poco do
-		folder = File.expand_path('../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/', OF_ROOT)
-		
-		Dir.chdir folder do
+		Dir.chdir poco_dir do
 			# run_i "./configure --static"
 			run_i "make clean"
 			run_i "make"
