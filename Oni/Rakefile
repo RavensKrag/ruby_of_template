@@ -408,6 +408,8 @@ file c_library => source_files do
 		# Run make
 		
 		flags = ""
+		flags += " -j4" if Dir.exists? '/home/ravenskrag' # if running on my machine
+		
 		run_i "make #{flags}"  do
 			"ERROR: Could not build c extension."
 		end

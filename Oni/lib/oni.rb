@@ -221,6 +221,51 @@ class Window
 	
 	private
 	
+	# Basic Graphics API
+	
+	def ofBackground(r, g, b, a)
+		
+	end
+	
+	def ofBackgroundHex(hexColor, alpha)
+		
+	end
+	
+	
+	def ofSetColor(r, g, b, a)
+		
+	end
+	
+	def ofSetHexColor(hexColor)
+		
+	end
+	
+	
+	
+	def ofDrawRectangle(x,y,z,w,h)
+		
+	end
+	
+	def ofDrawCircle(x, y, z, radius)
+		
+	end
+	
+	def ofDrawEllipse(x, y, z, width, height)
+		
+	end
+	
+	def ofDrawTriangle(x1,y1,z1,x2,y2,z2,x3, y3,z3)
+		
+	end
+	
+	def ofDrawLine(x1,y1,z1,x2,y2,z2)
+		
+	end
+	
+	
+	
+	# Minor tweak to set default argument.
+	# Rice isn't picking that up, and it's easier to do it here
 	def exit(status_code=0)
 		super(status_code)
 	end

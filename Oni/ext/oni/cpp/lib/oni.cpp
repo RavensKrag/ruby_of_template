@@ -29,9 +29,6 @@ void Init_oni()
 		.define_method("show", &Launcher::show)
 		.define_method("exit", &ofExit)
 		
-		// .define_method("ofBackground", &ofBackground)
-		// .define_method("ofSetColor",   &ofSetColor)
-		
 		.define_method("ofBackground",    &Launcher::Background)
 		.define_method("ofBackgroundHex", &Launcher::BackgroundHex)
 		.define_method("ofSetColor",      &Launcher::SetColor)

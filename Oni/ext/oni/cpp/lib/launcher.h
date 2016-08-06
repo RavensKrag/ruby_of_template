@@ -30,6 +30,20 @@ public:
 	
 	// NOTE: can't use the 'of' prefix for this interface, because it confuses the C++ compiler / linker when it tries to resolve the member functions of this class vs the original functions.
 	
+	
+	
+	void Background(int r, int g, int b, int a);
+	void BackgroundHex(int hexColor, int alpha);
+	
+	void SetColor(int r, int g, int b, int a);
+	void SetHexColor(int hexColor);
+	// void ofBackgroundHex(int hexColor, int alpha);
+	// void ofBackground(int r, int g, int b, int a);
+	
+	// void ofSetColor(int r, int g, int b, int a);
+	// void ofSetHexColor(int hexColor);
+	
+	
 	void DrawRectangle(float x,float y,float z,float w,float h);
 	void DrawCircle(float x, float y, float z, float radius);
 	void DrawEllipse(float x, float y, float z, float width, float height);
@@ -47,20 +61,6 @@ public:
 	// ofDrawRectRounded
 	// ofDrawCurve
 	// ofDrawBezier // <-- this one is pretty complicated. check it out. it's kinda cool.
-	
-	
-	
-	void Background(int r, int g, int b, int a);
-	void BackgroundHex(int hexColor, int alpha);
-	
-	void SetColor(int r, int g, int b, int a);
-	void SetHexColor(int hexColor);
-	// void ofBackgroundHex(int hexColor, int alpha);
-	// void ofBackground(int r, int g, int b, int a);
-	
-	// void ofSetColor(int r, int g, int b, int a);
-	// void ofSetHexColor(int hexColor);
-
 
 
 protected:
