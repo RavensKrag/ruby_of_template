@@ -22,6 +22,8 @@ OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release
 REPO_ROOT = File.expand_path('../../', PATH_TO_FILE)
 
 
+DYNAMIC_LIB_PATH = File.expand_path("./bin/libs/", REPO_ROOT)
+
 
 # C deps must be listed before the C++ core is loaded, and C++ deps must be listed after
 
@@ -335,7 +337,7 @@ of_project_libs = "
 # NOTE: may need to modify -rpath in the future
 # TODO: specify directories for dynamic libraries relative to the root directory of this project, and then expand them into full paths before adding to -rpath. This means the gem will be able to find the dynamic libraries regaurdless of where the Ruby code is being called from.
 ld_flags = "
-	-Wl,-rpath=./libs:./bin/libs -Wl,--as-needed -Wl,--gc-sections
+	-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH} -Wl,--as-needed -Wl,--gc-sections
 
 	-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/
 
@@ -399,10 +401,10 @@ $LDFLAGS += " " + more_linker_flags
 # -rpath flag specifies where to look for dynamic libraries
 # (the system also has some paths that it checks for, but these are the "local dlls", basically)
 
-# -rpath=./libs:./bin/libs
+# NOTE: DYNAMIC_LIB_PATH has been passed to -rpath
 
 src = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/fmodex/lib/linux64/libfmodex.so"
-dest = "/home/ravenskrag/Experiments/RubyCPP/Oni/bin/libs/"
+dest = DYNAMIC_LIB_PATH
 FileUtils.copy(src, dest)
 
 # TODO: make sure that the 'bin/libs' directory exists before copying. (Maybe fileutils will handle automatically? maybe not)
