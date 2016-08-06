@@ -164,11 +164,12 @@ end
 namespace :dependencies do
 	# assuming for 'tess2' that 'premake' was already run,
 	# and makefiles have been altered to add -fPIC
+	# (tess2/Build/tess2.make)
 	tess2_dir = File.expand_path('../of_v0.9.3_libs/custom/tess2/Build', OF_ROOT)
 	tess2_filepath = File.expand_path('./libtess2.a', tess2_dir)
 	
 	
-	file tess2_filepath do
+	file tess2_filepath => File.expand_path('tess2.make', tess2_dir) do
 		Dir.chdir tess2_dir do
 			run_i "make"
 		end
@@ -202,7 +203,8 @@ namespace :dependencies do
 	kiss_filepath = File.expand_path('../lib/libkiss.a', kiss_dir)
 	
 	
-	file kiss_filepath do
+	file kiss_filepath => File.expand_path('./CMakeFiles/kiss.dir/flags.make', kiss_dir) do
+		puts "building kiss..."
 		Dir.chdir kiss_dir do
 			run_i "make"
 		end
