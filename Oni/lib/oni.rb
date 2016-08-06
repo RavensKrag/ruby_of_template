@@ -223,45 +223,18 @@ class Window
 	
 	# Basic Graphics API
 	
-	def ofBackground(r, g, b, a)
-		
-	end
+	private :ofBackground #(r, g, b, a)
+	private :ofBackgroundHex #(hexColor, alpha)
 	
-	def ofBackgroundHex(hexColor, alpha)
-		
-	end
+	private :ofSetColor #(r, g, b, a)
+	private :ofSetHexColor #(hexColor)
 	
 	
-	def ofSetColor(r, g, b, a)
-		
-	end
-	
-	def ofSetHexColor(hexColor)
-		
-	end
-	
-	
-	
-	def ofDrawRectangle(x,y,z,w,h)
-		
-	end
-	
-	def ofDrawCircle(x, y, z, radius)
-		
-	end
-	
-	def ofDrawEllipse(x, y, z, width, height)
-		
-	end
-	
-	def ofDrawTriangle(x1,y1,z1,x2,y2,z2,x3, y3,z3)
-		
-	end
-	
-	def ofDrawLine(x1,y1,z1,x2,y2,z2)
-		
-	end
-	
+	private :ofDrawRectangle #(x,y,z,w,h)
+	private :ofDrawCircle #(x, y, z, radius)
+	private :ofDrawEllipse #(x, y, z, width, height)
+	private :ofDrawTriangle #(x1,y1,z1,x2,y2,z2,x3, y3,z3)
+	private :ofDrawLine #(x1,y1,z1,x2,y2,z2)
 	
 	
 	# Minor tweak to set default argument.
@@ -271,7 +244,8 @@ class Window
 	end
 	
 end
-	
+
+
 # class Animation
 # 	class Track
 # 		def playing?
