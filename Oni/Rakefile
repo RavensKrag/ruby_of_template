@@ -525,13 +525,11 @@ end
 
 # run project from the Ruby level
 task :run => :build do
-	require File.expand_path(c_library, File.absolute_path(File.dirname(__FILE__)))
-	# TODO: require the Ruby level class, instead of the C / C++ level one, so I can define some default behavior in Ruby
+	require File.expand_path('lib/oni', File.absolute_path(File.dirname(__FILE__)))
 	# TODO: rename things so this project doesn't have symbol collision with the other package I named "Oni", from which this project's template derives.
 	
 	
-	# TODO: Move Rice CPP files to another directory.
-	# TODO: load basic window definition from a Ruby file, instead of defining here.
+	
 	# TODO: Update build system such that things don't have to rebuild just because you made a change to some Ruby code (should only rebuild when you need to update the C / C++ stuff.)
 		# right now, things are rebuilding just because I edited this file.
 		# but that may be because I'm editing the build system technically?
@@ -553,11 +551,12 @@ task :run => :build do
 		end
 		
 		def setup
-			puts "ruby: Window#setup"
+			super()
 		end
 		
 		def update
-			# puts "ruby: Window#update"
+			super()
+			
 			@tick ||= 0
 			@tick += 1
 			if @tick == @trail_dt
@@ -580,7 +579,8 @@ task :run => :build do
 		end
 		
 		def draw
-			puts "ruby: Window#draw"
+			super()
+			
 			z = 1
 			
 			# ofSetColor(255,0,0, 255) # rgba
@@ -599,32 +599,24 @@ task :run => :build do
 		end
 		
 		def mouse_moved(x,y)
-			p [x,y]
+			super(x,y)
 			
 			@p = [x,y]
 		end
 		
 		def mouse_pressed(x,y, button)
-			p [:pressed, x,y, button]
+			super(x,y, button)
 			
 			exit() if button == 4
 			# TODO: set button codes as constants?
 		end
 		
 		def mouse_released(x,y, button)
-			p [:released, x,y, button]
+			super(x,y, button)
 		end
 		
 		def mouse_dragged(x,y, button)
-			p [:dragged, x,y, button]
-		end
-		
-		
-		
-		private
-		
-		def exit(status_code=0)
-			super(status_code)
+			super(x,y, button)
 		end
 	end
 	
