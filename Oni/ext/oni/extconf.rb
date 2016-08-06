@@ -459,4 +459,4 @@ end
 
 
 
-create_makefile('oni/oni')
+create_makefile('oni/oni', 'cpp/lib')

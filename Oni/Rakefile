@@ -353,7 +353,7 @@ source_files = Array.new
 
 
 # Dir.glob("ext/#{NAME}/cpp/oF_Test/*{.cpp,.h}")
-source_files += Dir.glob("ext/#{NAME}/**/*{.cpp,.h}")
+source_files += Dir.glob("ext/#{NAME}/cpp/lib/**/*{.cpp,.h}")
 source_files += ["ext/#{NAME}/extconf.rb", __FILE__]
 
 
@@ -513,8 +513,6 @@ task :run => :build do
 		# so gonna have to fix that.
 	
 	
-	# TODO: wrap functions to set color of objects
-	# TODO: wrap function to set background color
 	# TODO: wrap functions to get window dimensions
 	# TODO: consider marking all drawing methods as private from Ruby-land
 	class Window < Oni::Window
