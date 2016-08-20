@@ -21,7 +21,8 @@ void Init_oni()
 	Module rb_mOni = define_module("Oni");
 	
 	
-	Data_Type<Launcher> rb_cWindow = define_class_under<Launcher>(rb_mOni, "Window");
+	Data_Type<Launcher> rb_cWindow =
+		define_class_under<Launcher>(rb_mOni, "Window");
 	
 	rb_cWindow
 		.define_constructor(Constructor<Launcher, Rice::Object>())
@@ -40,11 +41,30 @@ void Init_oni()
 		.define_method("ofDrawTriangle",  &Launcher::DrawTriangle)
 		.define_method("ofDrawLine",      &Launcher::DrawLine)
 		
-		
-		
-		
-		;
+	;
 	
+	
+	
+	Data_Type<ofTrueTypeFont> rb_cTrueTypeFont = 
+		define_class_under<ofTrueTypeFont>(rb_mOni, "TrueTypeFont");
+	
+	// typedef ofTrueTypeFont (ofTrueTypeFont::*constructTrueTypeFont)();
+	
+	rb_cTrueTypeFont
+		.define_constructor(Constructor<ofTrueTypeFont>())
+		.define_method("load",   &ofTrueTypeFont::load,
+			(
+				Arg("filename"),
+				Arg("fontsize"),
+				Arg("_bAntiAliased") = true,
+				Arg("_bFullCharacterSet") = true,
+				Arg("makeContours") = false,
+				Arg("simplifyAmt") = 0.3f,
+				Arg("dpi") = 0
+			)
+		)
+		.define_method("draw_string",   &ofTrueTypeFont::drawString)
+	;
 }
 
 

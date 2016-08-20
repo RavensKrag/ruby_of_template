@@ -16,6 +16,11 @@ class Window < Oni::Window
 		
 		@p_history = Array.new
 		@trail_dt = 1
+		
+		
+		@font = Oni::TrueTypeFont.new
+		load_status = @font.load("DejaVu Sans", 20)
+		puts "Font loaded?: #{load_status}"
 	end
 	
 	def setup
@@ -64,6 +69,11 @@ class Window < Oni::Window
 			r = 0 if r < 0
 			ofDrawCircle(x,y,z, r)
 		end
+		
+		
+		ofSetColor(255,255,255, 255) # rgba
+		x,y = @p_history.last
+		@font.draw_string("TrueTypeFont Test!", x, y)
 	end
 	
 	def mouse_moved(x,y)
