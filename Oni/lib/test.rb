@@ -28,7 +28,7 @@ class Window < Oni::Window
 	end
 	
 	def update
-		super()
+		# super()
 		
 		@tick ||= 0
 		@tick += 1
@@ -52,9 +52,12 @@ class Window < Oni::Window
 	end
 	
 	def draw
-		super()
+		# super()
+		
 		
 		z = 1
+		
+		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
 		
 		# ofSetColor(255,0,0, 255) # rgba
 		# ofDrawCircle(*@p,z, 20)

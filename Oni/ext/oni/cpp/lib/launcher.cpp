@@ -34,6 +34,9 @@ void Launcher::show(){
 
 
 // --- graphics functions
+void Launcher::DrawBitmapString(const std::string& textString, float x, float y, float z){
+	ofDrawBitmapString(textString, x,y,z);
+}
 
 void Launcher::DrawRectangle(float x,float y,float z,float w,float h){
 	ofDrawRectangle(x,y,z,w,h);

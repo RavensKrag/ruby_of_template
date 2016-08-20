@@ -30,17 +30,18 @@ void Init_oni()
 		.define_method("show", &Launcher::show)
 		.define_method("exit", &ofExit)
 		
-		.define_method("ofBackground",    &Launcher::Background)
-		.define_method("ofBackgroundHex", &Launcher::BackgroundHex)
-		.define_method("ofSetColor",      &Launcher::SetColor)
-		.define_method("ofSetHexColor",   &Launcher::SetHexColor)
+		.define_method("ofBackground",       &Launcher::Background)
+		.define_method("ofBackgroundHex",    &Launcher::BackgroundHex)
+		.define_method("ofSetColor",         &Launcher::SetColor)
+		.define_method("ofSetHexColor",      &Launcher::SetHexColor)
 		
-		.define_method("ofDrawRectangle", &Launcher::DrawRectangle)
-		.define_method("ofDrawCircle",    &Launcher::DrawCircle)
-		.define_method("ofDrawEllipse",   &Launcher::DrawEllipse)
-		.define_method("ofDrawTriangle",  &Launcher::DrawTriangle)
-		.define_method("ofDrawLine",      &Launcher::DrawLine)
+		.define_method("ofDrawRectangle",    &Launcher::DrawRectangle)
+		.define_method("ofDrawCircle",       &Launcher::DrawCircle)
+		.define_method("ofDrawEllipse",      &Launcher::DrawEllipse)
+		.define_method("ofDrawTriangle",     &Launcher::DrawTriangle)
+		.define_method("ofDrawLine",         &Launcher::DrawLine)
 		
+		.define_method("ofDrawBitmapString", &Launcher::DrawBitmapString)
 	;
 	
 	

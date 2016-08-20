@@ -43,6 +43,7 @@ public:
 	// void ofSetColor(int r, int g, int b, int a);
 	// void ofSetHexColor(int hexColor);
 	
+	void DrawBitmapString(const std::string& textString, float x, float y, float z);
 	
 	void DrawRectangle(float x,float y,float z,float w,float h);
 	void DrawCircle(float x, float y, float z, float radius);
