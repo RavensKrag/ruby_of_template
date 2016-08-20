@@ -23,7 +23,7 @@ REPO_ROOT = File.expand_path('../../', PATH_TO_FILE)
 
 
 DYNAMIC_LIB_PATH = File.expand_path("./bin/libs/", REPO_ROOT)
-
+POCO_DYNAMIC_LIB_PATH = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/"
 
 # C deps must be listed before the C++ core is loaded, and C++ deps must be listed after
 
@@ -115,13 +115,16 @@ dir_config(
 have_library("tess2")
 
 
-dir_config(
-	"kiss", # name to use with 'have_library'
-	File.expand_path("../of_v0.9.3_libs/custom/kiss/include/", OF_ROOT),
-	File.expand_path("../of_v0.9.3_libs/custom/kiss/lib/",     OF_ROOT)
-)
 
-have_library("kiss")
+# THIS IS THE COMPLETELY WRONG KISS LIBARRY
+# from actually looking at the source code, the symbols being defined are completely different.
+# dir_config(
+# 	"kiss", # name to use with 'have_library'
+# 	File.expand_path("../of_v0.9.3_libs/custom/kiss/include/", OF_ROOT),
+# 	File.expand_path("../of_v0.9.3_libs/custom/kiss/lib/",     OF_ROOT)
+# )
+
+# have_library("kiss")
 
 # ========================
 
@@ -202,6 +205,7 @@ c_flags = "
 	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 	-I/usr/include/assimp
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks
@@ -334,7 +338,7 @@ of_project_libs = "
 # NOTE: may need to modify -rpath in the future
 # TODO: specify directories for dynamic libraries relative to the root directory of this project, and then expand them into full paths before adding to -rpath. This means the gem will be able to find the dynamic libraries regaurdless of where the Ruby code is being called from.
 ld_flags = "
-	-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH} -Wl,--as-needed -Wl,--gc-sections
+	-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH}:#{POCO_DYNAMIC_LIB_PATH} -Wl,--as-needed -Wl,--gc-sections
 
 	-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/
 
@@ -357,6 +361,12 @@ of_project_addon_objs
 of_project_libs
 ld_flags
 # of_core_libs # spltting this up into dynamic lib flags and .a files
+# of_core_libs_dot_a = "
+# 	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/lib/linux64/libkiss.a
+# "
+of_core_libs_dot_a = "
+	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/libkissfft.a
+"
 of_core_libs_dynamic_flags
 
 more_linker_flags = 
@@ -366,6 +376,7 @@ more_linker_flags =
 		of_project_libs,
 		ld_flags,
 		# of_core_libs, # split into the following two categories:
+		of_core_libs_dot_a,
 		of_core_libs_dynamic_flags, # these flags are very important
 	]
 	.collect{  |string_blob|  string_blob.split.join(' ') }

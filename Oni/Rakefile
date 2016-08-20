@@ -199,11 +199,11 @@ namespace :dependencies do
 	# assuming for 'kiss' that 'cmake' was already run
 	# and -fPIC flag has been added to the flags.make file
 	# (kiss/build/CMakeFiles/kiss.dir/flags.make)
-	kiss_dir = File.expand_path('../of_v0.9.3_libs/custom/kiss/build', OF_ROOT)
-	kiss_filepath = File.expand_path('../lib/libkiss.a', kiss_dir)
+	kiss_dir = File.expand_path('../of_v0.9.3_libs/custom/kiss/', OF_ROOT)
+	kiss_filepath = File.expand_path('./libkissfft.a', kiss_dir)
 	
 	
-	file kiss_filepath => File.expand_path('./CMakeFiles/kiss.dir/flags.make', kiss_dir) do
+	file kiss_filepath do
 		puts "building kiss..."
 		Dir.chdir kiss_dir do
 			run_i "make"
