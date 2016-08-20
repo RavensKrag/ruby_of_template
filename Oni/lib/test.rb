@@ -93,7 +93,7 @@ class Window < Oni::Window
 	def mouse_pressed(x,y, button)
 		super(x,y, button)
 		
-		exit() if button == 4
+		ofExit() if button == 4
 		# TODO: set button codes as constants?
 	end
 	
@@ -103,6 +103,12 @@ class Window < Oni::Window
 	
 	def mouse_dragged(x,y, button)
 		super(x,y, button)
+	end
+	
+	# Minor tweak to set default argument.
+	# Rice isn't picking that up, and it's easier to do it here
+	def ofExit(status_code=0)
+		super(status_code)
 	end
 end
 

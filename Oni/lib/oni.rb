@@ -201,6 +201,11 @@ class Window
 		puts "ruby: Window#draw"
 	end
 	
+	# NOTE: this method can not be called 'exit' because there is a method Kernel.exit
+	def on_exit
+		puts "ruby: exiting application..."
+	end
+	
 	def mouse_moved(x,y)
 		p [x,y]
 	end
@@ -239,9 +244,9 @@ class Window
 	
 	# Minor tweak to set default argument.
 	# Rice isn't picking that up, and it's easier to do it here
-	def exit(status_code=0)
-		super(status_code)
-	end
+	# def ofExit(status_code=0)
+	# 	super(status_code)
+	# end
 	
 end
 

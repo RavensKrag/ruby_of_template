@@ -40,6 +40,13 @@ void OniWindow::draw(){
 	mSelf.call("draw");
 }
 
+void OniWindow::exit(){
+	// ofApp::exit(); // no parent behavior for exit callback defined
+	cout << "c++: exit\n";
+	
+	mSelf.call("on_exit");
+}
+
 
 void OniWindow::keyPressed(int key){
 	// Something seems to be consuming most keyboard events

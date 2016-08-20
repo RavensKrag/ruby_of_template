@@ -27,8 +27,8 @@ void Init_oni()
 	rb_cWindow
 		.define_constructor(Constructor<Launcher, Rice::Object>())
 		// .define_method("initialize", &Launcher::initialize)
-		.define_method("show", &Launcher::show)
-		.define_method("exit", &ofExit)
+		.define_method("show",   &Launcher::show)
+		.define_method("ofExit", &ofExit)
 		
 		.define_method("ofBackground",       &Launcher::Background)
 		.define_method("ofBackgroundHex",    &Launcher::BackgroundHex)
