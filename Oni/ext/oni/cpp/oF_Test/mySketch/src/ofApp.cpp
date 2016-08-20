@@ -21,6 +21,10 @@ void ofApp::draw(){
 	ofDrawEllipse(400, 100, 80, 100); // Centered at (400 100), 80 wide x 100 high
 	ofDrawTriangle(500, 150, 550, 50, 600, 150); // Three corners: (500, 150), (550, 50), (600, 150)
 	ofDrawLine(700, 50, 700, 150); // Line from (700, 50) to (700, 150)
+	
+	
+	
+	ofDrawBitmapString("Hello World!", 300, 300);
 }
 
 //--------------------------------------------------------------

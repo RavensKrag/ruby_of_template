@@ -48,7 +48,7 @@ void Launcher::DrawEllipse(float x, float y, float z, float width, float height)
 }
 
 void Launcher::DrawTriangle(float x1,float y1,float z1,float x2,float y2,float z2,float x3, float y3,float z3){
-	ofDrawTriangle(x1,y1,z1,x2,y2,z2,x3, y3,z3);
+	ofDrawTriangle(x1,y1,z1,x2,y2,z2,x3,y3,z3);
 }
 
 void Launcher::DrawLine(float x1,float y1,float z1,float x2,float y2,float z2){
@@ -75,7 +75,15 @@ void Launcher::SetColor(int r, int g, int b, int a){
 
 void Launcher::SetHexColor(int hexColor){
 	ofSetHexColor(hexColor);
+	// NOTE: SetHexColor doesn't allow for alpha value. 
+	// maybe define a custom version here that does use alpha?
 }
+
+
+// ofPushStyle
+// ofPushMatrix
+// ofPopMatrix
+// ofPopStyle
 
 
 // ---------------------------------------------------
