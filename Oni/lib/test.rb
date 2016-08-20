@@ -54,10 +54,15 @@ class Window < Oni::Window
 	def draw
 		# super()
 		
+		# NOTE: background color should be set from C++ level, because C++ level code executes first. May consider flipping the order, or even defining TWO callbacks to Ruby.
+		# ofBackground(171, 160, 228,   255) # rgba
+		
 		
 		z = 1
 		
 		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
+		
+		ofDrawBitmapString("mouse: #{@p.inspect}", 20, 20, z);
 		
 		# ofSetColor(255,0,0, 255) # rgba
 		# ofDrawCircle(*@p,z, 20)
@@ -75,13 +80,13 @@ class Window < Oni::Window
 		
 		
 		ofSetColor(255,255,255, 255) # rgba
-		x,y = @p_history.last
+		x,y = @p
+			# not sure why, but need to get variables again?
+			# if you don't, the text trails behind the desired position by a couple seconds.
 		@font.draw_string("TrueTypeFont Test!", x, y)
 	end
 	
 	def mouse_moved(x,y)
-		super(x,y)
-		
 		@p = [x,y]
 	end
 	
