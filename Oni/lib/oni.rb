@@ -240,14 +240,6 @@ class Window
 	private :ofDrawEllipse #(x, y, z, width, height)
 	private :ofDrawTriangle #(x1,y1,z1,x2,y2,z2,x3, y3,z3)
 	private :ofDrawLine #(x1,y1,z1,x2,y2,z2)
-	
-	
-	# Minor tweak to set default argument.
-	# Rice isn't picking that up, and it's easier to do it here
-	# def ofExit(status_code=0)
-	# 	super(status_code)
-	# end
-	
 end
 
 
