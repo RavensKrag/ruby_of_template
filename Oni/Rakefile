@@ -454,6 +454,15 @@ task :dump_sketch_lib do
 	end
 end
 
+task :dump_sketch_executable do
+	directory = File.expand_path('./bin', OF_SKETCH_ROOT)
+	
+	Dir.chdir directory do
+		# the -C flag is for de-mangling the C++ function names
+		run_i "nm -C mySketch"
+	end
+end
+
 # check what symbols are in the dynamic library
 # (linux and OSX only)
 task :dump_so do
