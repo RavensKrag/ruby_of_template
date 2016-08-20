@@ -2,7 +2,7 @@
 // #include "ofGraphics.h"
 
 #include "launcher.h"
-#include "window.h"
+#include "app.h"
 
 #include <iostream>
 
@@ -12,7 +12,26 @@ Launcher::Launcher(Rice::Object self){
 	
 	ofSetupOpenGL(1024,768,OF_WINDOW); // <-------- setup the GL context
 	
-	mWindow = new OniWindow(self);
+	mApp = new OniApp(self);
+	// TODO: rename 'mWindow' to 'app'
+	
+	// window is the drawing context
+	// app is the thing that holds all the update and render logic
+	
+	// oF defines different types of windows that can be used, and I want to try the GLFW one
+	// (GLFW window appears to be the default, actually)
+	
+	
+	
+	// ofAppRunner.cpp   : ofSetupOpenGL
+	// ofAppRunner.cpp   : ofCreateWindow
+		// ofInit();
+		// mainLoop()->createWindow(settings);
+	
+	// ofMainLoop.cpp:43 : ofMainLoop::createWindow
+		// shared_ptr<ofAppGLFWWindow> window =
+		// shared_ptr<ofAppGLFWWindow>(new ofAppGLFWWindow());
+	// and various other types of windows
 }
 
 Launcher::~Launcher(){
@@ -28,7 +47,7 @@ void Launcher::show(){
 	// this kicks off the running of my app
 	// can be OF_WINDOW or OF_FULLSCREEN
 	// pass in width and height too:
-	ofRunApp(mWindow);
+	ofRunApp(mApp);
 }
 
 
