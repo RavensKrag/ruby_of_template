@@ -206,6 +206,7 @@ c_flags = "
 	-I/usr/include/assimp
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/
+	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/tools/
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks

@@ -10,7 +10,13 @@
 Launcher::Launcher(Rice::Object self){
 	cout << "c++: constructor - launcher\n";
 	
-	ofSetupOpenGL(1024,768,OF_WINDOW); // <-------- setup the GL context
+	// ofAppGlutWindow mWindow;
+	mWindow = new ofAppGlutWindow();
+		// Glut window seems to get keyboard input just fine.
+		// It seems to break the existing implementation of Ruby-level window closing,
+		// but the Ruby-level close callback is still being called, so that's good.
+	
+	ofSetupOpenGL(mWindow, 1024,768,OF_WINDOW); // <-------- setup the GL context
 	
 	mApp = new OniApp(self);
 	// TODO: rename 'mWindow' to 'app'
