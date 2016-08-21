@@ -93,8 +93,18 @@ class Window < Oni::Window
 	def mouse_pressed(x,y, button)
 		super(x,y, button)
 		
-		ofExit() if button == 4
+		ofExit() if button == 8
+		# different window systems return different numbers
+		# for the 'forward' mouse button:
+			# GLFW: 4
+			# Glut: 8
 		# TODO: set button codes as constants?
+		
+		
+		
+		if button == 7
+			p window_size()
+		end
 	end
 	
 	def mouse_released(x,y, button)

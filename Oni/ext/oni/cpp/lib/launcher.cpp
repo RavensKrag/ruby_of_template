@@ -57,6 +57,49 @@ void Launcher::show(){
 }
 
 
+void Launcher::hideCursor(){
+	mWindow->hideCursor();
+}
+
+void Launcher::showCursor(){
+	mWindow->showCursor();
+}
+
+void Launcher::setFullscreen(bool fullScreen){
+	mWindow->setFullscreen(fullScreen);
+}
+
+void Launcher::toggleFullscreen(){
+	mWindow->toggleFullscreen();
+}
+
+void Launcher::setWindowTitle(std::string title){
+	mWindow->setWindowTitle(title);
+}
+
+void Launcher::setWindowPosition(int x, int y){
+	mWindow->setWindowPosition(x,y);
+}
+
+void Launcher::setWindowShape(int w, int h){
+	mWindow->setWindowShape(w,h);
+}
+
+
+ofPoint Launcher::getWindowPosition(){
+	return mWindow->getWindowPosition();
+}
+
+ofPoint Launcher::getWindowSize(){
+	return mWindow->getWindowSize();
+}
+
+ofPoint Launcher::getScreenSize(){
+	return mWindow->getScreenSize();
+}
+
+
+
 
 // --- graphics functions
 void Launcher::DrawBitmapString(const std::string& textString, float x, float y, float z){

@@ -243,6 +243,17 @@ class Window
 end
 
 
+class Point
+	def to_s
+		super()
+	end
+	
+	def inspect
+		super()
+	end
+end
+
+
 # class Animation
 # 	class Track
 # 		def playing?
