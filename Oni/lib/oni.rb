@@ -80,11 +80,53 @@ end
 
 class Point
 	def to_s
-		super()
+		format = '%.03f'
+		x = format % self.x
+		y = format % self.y
+		z = format % self.z
+		
+		return "(#{x}, #{y}, #{z})"
 	end
 	
 	def inspect
 		super()
+	end
+	
+	
+	
+	
+	
+	
+	private :get_component
+	private :set_component
+	
+	def [](i)
+		return get_component(i)
+	end
+	
+	def x
+		self[0]
+	end
+	
+	def y
+		self[1]
+	end
+	
+	def z
+		self[2]
+	end
+	
+	def x=(value)
+		puts "SETTING: #{value.to_f}"
+		set_component(0, value.to_f)
+	end
+	
+	def y=(value)
+		set_component(1, value.to_f)
+	end
+	
+	def z=(value)
+		set_component(2, value.to_f)
 	end
 end
 

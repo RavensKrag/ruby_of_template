@@ -9,7 +9,7 @@
 
 // #include "ofApp.h"
 // #include "ofAppRunner.h"
-#include "ofMain.h"
+
 
 using namespace Rice;
 
@@ -27,7 +27,8 @@ void Init_oni()
 	
 	rb_cPoint
 		.define_constructor(Constructor<ofPoint, float, float, float>())
-		// .define_method("[]",   &ofVec3f_read_component)
+		.define_method("get_component",   &ofVec3f_get_component)
+		.define_method("set_component",   &ofVec3f_set_component)
 	;
 	
 	
@@ -113,5 +114,12 @@ void Init_oni()
 	;
 }
 
+float ofVec3f_get_component(ofPoint& p, int i){
+	return p[i];
+}
+
+void  ofVec3f_set_component(ofPoint& p, int i, float value){
+	p[i] = 100.0;
+}
 
 // VALUE klass = rb_define_class_under(outer, "Window", rb_cObject);

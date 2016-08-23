@@ -6,6 +6,8 @@ require File.expand_path('./oni', File.absolute_path(File.dirname(__FILE__)))
 # TODO: wrap functions to get window dimensions
 # TODO: consider marking all drawing methods as private from Ruby-land
 
+# TODO: when Ruby code throws an exception, supress the exception, trigger proper C++ shutdown, and then throw the exception again. Otherwise, you get segfaults, leaking, etc.
+
 class Window < Oni::Window
 	def initialize
 		super(self) # pass Ruby instance to C++ land for callbacks, etc
@@ -65,6 +67,7 @@ class Window < Oni::Window
 		
 		[
 			"mouse: #{@p.inspect}",
+			"window size: #{window_size.to_s}",
 			"dt: #{ofGetLastFrameTime()}",
 			"fps: #{ofGetFrameRate()}"
 		].each_with_index do |string, i|
@@ -123,9 +126,17 @@ class Window < Oni::Window
 		
 		
 		if button == 7
-			# p window_size()
-			p Oni::Point.new(200, 200, 0)
-			self.set_window_position(200, 200) 
+			point = Oni::Point.new(200, 200, 0)
+			puts point
+			puts point.x
+			
+				point.x = 100
+				
+			puts point.x
+			puts point
+			
+			
+			# self.set_window_position(200, 200) 
 			
 			
 			
