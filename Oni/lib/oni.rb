@@ -97,36 +97,34 @@ class Point
 	
 	
 	
+	# hide C++ level helper methods
 	private :get_component
 	private :set_component
 	
+	
+	# get / set value of a component by numerical index
 	def [](i)
 		return get_component(i)
 	end
 	
-	def x
-		self[0]
+	def []=(i, value)
+		return set_component(i, value.to_f)
 	end
 	
-	def y
-		self[1]
-	end
 	
-	def z
-		self[2]
-	end
-	
-	def x=(value)
-		puts "SETTING: #{value.to_f}"
-		set_component(0, value.to_f)
-	end
-	
-	def y=(value)
-		set_component(1, value.to_f)
-	end
-	
-	def z=(value)
-		set_component(2, value.to_f)
+	# get / set values of component by axis name
+	%w[x y z].each_with_index do |component, i|
+		# getters
+		# (same as array-style interface)
+		define_method component do
+			get_component(i)
+		end 
+		
+		# setters
+		# (use special C++ function to make sure data is written back to C++ land)
+		define_method "#{component}=" do |value|
+			set_component(i, value.to_f)
+		end 
 	end
 end
 
