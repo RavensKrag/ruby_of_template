@@ -20,5 +20,8 @@ class ofApp : public ofBaseApp{
 		virtual void windowResized(int w, int h);
 		virtual void dragEvent(ofDragInfo dragInfo);
 		virtual void gotMessage(ofMessage msg);
-		
+	
+	private:
+		ofTexture mTexture;
+		ofPoint mPoints[4];
 };

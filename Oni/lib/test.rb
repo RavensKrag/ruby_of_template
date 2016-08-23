@@ -8,6 +8,11 @@ require File.expand_path('./oni', File.absolute_path(File.dirname(__FILE__)))
 
 # TODO: when Ruby code throws an exception, supress the exception, trigger proper C++ shutdown, and then throw the exception again. Otherwise, you get segfaults, leaking, etc.
 
+
+# TODO: wrap basic texture mapping features
+# TODO: LATER use use of the batching sprite rendering extensions, wrapping that in Ruby, to draw images
+# TODO: wrap batching draw call API so you don't have to lean so hard to the immediate mode stuff
+
 class Window < Oni::Window
 	def initialize
 		super(self) # pass Ruby instance to C++ land for callbacks, etc
@@ -23,6 +28,10 @@ class Window < Oni::Window
 		@font = Oni::TrueTypeFont.new
 		load_status = @font.load("DejaVu Sans", 20)
 		puts "Font loaded?: #{load_status}"
+		
+		
+		@texture = Oni::Texture.new
+		ofLoadImage(@texture, "/home/ravenskrag/Pictures/Buddy Icons/100shinn1.png")
 	end
 	
 	def setup
@@ -79,7 +88,7 @@ class Window < Oni::Window
 		end
 		
 		
-		ofSetColor(0, 0, 0, 255) # rgba
+		ofSetColor(255, 255, 255, 255) # rgba
 		
 		
 		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
@@ -104,6 +113,17 @@ class Window < Oni::Window
 			# not sure why, but need to get variables again?
 			# if you don't, the text trails behind the desired position by a couple seconds.
 		@font.draw_string("TrueTypeFont Test!", x, y)
+		
+		
+		
+		
+		ofSetColor(255, 255, 255, 255)
+		# x = y = 300
+		width = height = 100
+		@texture.draw_wh(
+			x,y,	z,
+			width, height
+		)
 	end
 	
 	def on_exit

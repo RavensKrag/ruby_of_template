@@ -3,6 +3,19 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofLogToConsole();
+	
+	ofLoadImage(mTexture, "/home/ravenskrag/Pictures/Buddy Icons/100shinn1.png");
+	
+	
+	int x = 500;
+	int y = 500;
+	int width = 100;
+	int height = 100;
+	
+	mPoints[0].x = x;           mPoints[0].y = y;
+	mPoints[1].x = x + width;   mPoints[1].y = y;
+	mPoints[2].x = x + width;   mPoints[2].y = y + height;
+	mPoints[3].x = x;           mPoints[3].y = y + height;
 }
 
 //--------------------------------------------------------------
@@ -25,6 +38,9 @@ void ofApp::draw(){
 	
 	
 	ofDrawBitmapString("Hello World!", 300, 300);
+	
+	
+	mTexture.draw(mPoints[0], mPoints[1], mPoints[2], mPoints[3]);
 }
 
 //--------------------------------------------------------------

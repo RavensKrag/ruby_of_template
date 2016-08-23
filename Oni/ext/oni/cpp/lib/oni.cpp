@@ -112,6 +112,36 @@ void Init_oni()
 		)
 		.define_method("draw_string",   &ofTrueTypeFont::drawString)
 	;
+	
+	
+	
+	
+	
+	Data_Type<ofTexture> rb_cTexture = 
+		define_class_under<ofTexture>(rb_mOni, "Texture");
+	
+	
+	
+	typedef void (ofTexture::*ofTexture_draw_wh)(float x, float y, float z, float w, float h) const;
+	typedef void (ofTexture::*ofTexture_draw_pt)(const ofPoint & p1, const ofPoint & p2, const ofPoint & p3, const ofPoint & p4) const;
+	
+	rb_cTexture
+		.define_constructor(Constructor<ofTexture>())
+		.define_method("draw_wh",   ofTexture_draw_wh(&ofTexture::draw))
+		.define_method("draw_pt",   ofTexture_draw_pt(&ofTexture::draw))
+	;
+	
+	// void draw(float x, float y, float z, float w, float h) const;
+	// void draw(const ofPoint & p1, const ofPoint & p2, const ofPoint & p3, const ofPoint & p4) const;
+	// void drawSubsection // <-- many different interfaces. unsure which to bind
+	
+	
+	typedef bool (*load_image_from_file)(ofTexture & tex, string path);
+	
+	rb_cWindow
+		// textures
+		.define_method("ofLoadImage", load_image_from_file(&ofLoadImage))
+	;
 }
 
 float ofVec3f_get_component(ofPoint& p, int i){
