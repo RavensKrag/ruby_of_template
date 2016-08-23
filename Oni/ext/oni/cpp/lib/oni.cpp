@@ -79,6 +79,11 @@ void Init_oni()
 		
 		// bitmap string
 		.define_method("ofDrawBitmapString", &Launcher::DrawBitmapString)
+		
+		// timing and framerate
+		.define_method("ofGetLastFrameTime", &ofGetLastFrameTime)
+		.define_method("ofGetFrameRate", &ofGetFrameRate)
+		.define_method("ofSetFrameRate", &ofSetFrameRate)
 	;
 	
 	

@@ -57,12 +57,28 @@ class Window < Oni::Window
 		# NOTE: background color should be set from C++ level, because C++ level code executes first. May consider flipping the order, or even defining TWO callbacks to Ruby.
 		# ofBackground(171, 160, 228,   255) # rgba
 		
-		
 		z = 1
 		
-		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
 		
-		ofDrawBitmapString("mouse: #{@p.inspect}", 20, 20, z);
+		start = [20, 20]
+		row_spacing = 15
+		
+		[
+			"mouse: #{@p.inspect}",
+			"dt: #{ofGetLastFrameTime()}",
+			"fps: #{ofGetFrameRate()}"
+		].each_with_index do |string, i|
+			x,y = start
+			y += i*row_spacing
+			
+			ofDrawBitmapString(string, x,y,z)
+		end
+		
+		
+		
+		
+		
+		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
 		
 		# ofSetColor(255,0,0, 255) # rgba
 		# ofDrawCircle(*@p,z, 20)
