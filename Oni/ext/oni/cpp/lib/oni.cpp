@@ -26,7 +26,7 @@ void Init_oni()
 		define_class_under<ofPoint>(rb_mOni, "Point");
 	
 	rb_cPoint
-		.define_constructor(Constructor<ofPoint>())
+		.define_constructor(Constructor<ofPoint, float, float, float>())
 		// .define_method("[]",   &ofVec3f_read_component)
 	;
 	
@@ -51,16 +51,17 @@ void Init_oni()
 		.define_method("hide_cursor",       &Launcher::hideCursor)
 		
 		// fullscreen
-		.define_method("fullscreen",        &Launcher::setFullscreen)
-		.define_method("show_cursor",       &Launcher::toggleFullscreen)
+		.define_method("fullscreen",         &Launcher::setFullscreen)
+		.define_method("toggle_fullscreen",  &Launcher::toggleFullscreen)
 		
 		// window properties
-		.define_method("window_title=",     &Launcher::setWindowTitle)
-		.define_method("window_position=",  &Launcher::setWindowPosition)
-		.define_method("set_window_shape",  &Launcher::setWindowShape)
-		.define_method("window_position",   &Launcher::getWindowPosition)
-		.define_method("window_size",       &Launcher::getWindowSize)
-		.define_method("screen_size",       &Launcher::getScreenSize)
+		.define_method("window_title=",       &Launcher::setWindowTitle)
+		.define_method("set_window_position", &Launcher::setWindowPosition)
+		.define_method("set_window_shape",    &Launcher::setWindowShape)
+		.define_method("window_position",     &Launcher::getWindowPosition)
+		.define_method("window_size",         &Launcher::getWindowSize)
+		.define_method("screen_size",         &Launcher::getScreenSize)
+		// .define_method("set_window_icon",     &Launcher::setWindowIcon) // private C++ method
 		
 		
 		// colors

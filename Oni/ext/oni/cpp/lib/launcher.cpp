@@ -85,6 +85,10 @@ void Launcher::setWindowShape(int w, int h){
 	mWindow->setWindowShape(w,h);
 }
 
+void Launcher::setWindowIcon(const std::string path){
+	// mWindow->setWindowIcon(path); // this method is private. not sure what to do about that.
+}
+
 
 ofPoint Launcher::getWindowPosition(){
 	return mWindow->getWindowPosition();

@@ -38,7 +38,9 @@ public:
 	void setWindowTitle(std::string title);
 	void setWindowPosition(int x, int y);
 	void setWindowShape(int w, int h);
-
+	
+	void setWindowIcon(const std::string path);
+	
 	ofPoint getWindowPosition();
 	ofPoint getWindowSize();
 	ofPoint getScreenSize();

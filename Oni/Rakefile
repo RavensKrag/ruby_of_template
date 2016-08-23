@@ -116,6 +116,7 @@ number_of_cores = 4
 # use 'rake clean' and 'rake clobber' to
 # easily delete generated files
 CLEAN.include('ext/**/*{.o,.log,.so}')
+CLEAN.include('ext/**/*{.a}')
 # CLEAN.include('ext/**/Makefile')
 CLOBBER.include('lib/**/*.so')
 # CLOBBER.include('lib/**/*.gem') # fix this up. I do want to clobber the gem tho
@@ -513,7 +514,7 @@ task :rebuild_c_extension do
 end
 
 
-task :clean => [:clean_core, :clean_library]
+# task :clean => [:clean_core, :clean_library]
 
 
 # rebuild literally EVERYTHING. start with building oF core, and work your way up.
