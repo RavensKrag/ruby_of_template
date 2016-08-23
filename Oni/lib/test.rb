@@ -60,7 +60,7 @@ class Window < Oni::Window
 		z = 1
 		
 		
-		start = [20, 20]
+		start = [12, 15]
 		row_spacing = 15
 		
 		[
