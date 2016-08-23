@@ -116,6 +116,7 @@ number_of_cores = 4
 # use 'rake clean' and 'rake clobber' to
 # easily delete generated files
 CLEAN.include('ext/**/*{.o,.log,.so}')
+CLEAN.include('ext/**/*{.a}')
 # CLEAN.include('ext/**/Makefile')
 CLOBBER.include('lib/**/*.so')
 # CLOBBER.include('lib/**/*.gem') # fix this up. I do want to clobber the gem tho
@@ -199,11 +200,11 @@ namespace :dependencies do
 	# assuming for 'kiss' that 'cmake' was already run
 	# and -fPIC flag has been added to the flags.make file
 	# (kiss/build/CMakeFiles/kiss.dir/flags.make)
-	kiss_dir = File.expand_path('../of_v0.9.3_libs/custom/kiss/build', OF_ROOT)
-	kiss_filepath = File.expand_path('../lib/libkiss.a', kiss_dir)
+	kiss_dir = File.expand_path('../of_v0.9.3_libs/custom/kiss/', OF_ROOT)
+	kiss_filepath = File.expand_path('./libkissfft.a', kiss_dir)
 	
 	
-	file kiss_filepath => File.expand_path('./CMakeFiles/kiss.dir/flags.make', kiss_dir) do
+	file kiss_filepath do
 		puts "building kiss..."
 		Dir.chdir kiss_dir do
 			run_i "make"
@@ -454,6 +455,15 @@ task :dump_sketch_lib do
 	end
 end
 
+task :dump_sketch_executable do
+	directory = File.expand_path('./bin', OF_SKETCH_ROOT)
+	
+	Dir.chdir directory do
+		# the -C flag is for de-mangling the C++ function names
+		run_i "nm -C mySketch"
+	end
+end
+
 # check what symbols are in the dynamic library
 # (linux and OSX only)
 task :dump_so do
@@ -504,7 +514,7 @@ task :rebuild_c_extension do
 end
 
 
-task :clean => [:clean_core, :clean_library]
+# task :clean => [:clean_core, :clean_library]
 
 
 # rebuild literally EVERYTHING. start with building oF core, and work your way up.

@@ -6,10 +6,10 @@
 #include "ofMain.h"
 #include "ofApp.h"
 
-#include "window.h"
+#include "app.h"
 
 
-OniWindow::OniWindow(Rice::Object self) : 
+OniApp::OniApp(Rice::Object self) : 
 	ofApp()
 {
 	cout << "c++: constructor - window\n";
@@ -18,29 +18,29 @@ OniWindow::OniWindow(Rice::Object self) :
 	mSelf = self;
 }
 
-OniWindow::~OniWindow(){
+OniApp::~OniApp(){
 	
 }
 
-void OniWindow::setup(){
+void OniApp::setup(){
 	ofApp::setup();
 	
 	mSelf.call("setup");
 }
 
-void OniWindow::update(){
+void OniApp::update(){
 	ofApp::update();
 	
 	mSelf.call("update");
 }
 
-void OniWindow::draw(){
+void OniApp::draw(){
 	ofApp::draw();
 	
 	mSelf.call("draw");
 }
 
-void OniWindow::exit(){
+void OniApp::exit(){
 	// ofApp::exit(); // no parent behavior for exit callback defined
 	cout << "c++: exit\n";
 	
@@ -48,7 +48,7 @@ void OniWindow::exit(){
 }
 
 
-void OniWindow::keyPressed(int key){
+void OniApp::keyPressed(int key){
 	// Something seems to be consuming most keyboard events
 	// when the application is started via the Ruby layer in Rake.
 	// 
@@ -63,51 +63,51 @@ void OniWindow::keyPressed(int key){
 	ofLog() << key;
 }
 
-void OniWindow::keyReleased(int key){
+void OniApp::keyReleased(int key){
 	ofApp::keyReleased(key);
 }
 
-void OniWindow::mouseMoved(int x, int y ){
+void OniApp::mouseMoved(int x, int y ){
 	ofApp::mouseMoved(x,y);
 	
 	mSelf.call("mouse_moved", x,y);
 }
 
-void OniWindow::mouseDragged(int x, int y, int button){
+void OniApp::mouseDragged(int x, int y, int button){
 	ofApp::mouseDragged(x,y,button);
 	
 	mSelf.call("mouse_dragged", x,y, button);
 }
 
-void OniWindow::mousePressed(int x, int y, int button){
+void OniApp::mousePressed(int x, int y, int button){
 	ofApp::mousePressed(x,y,button);
 	
 	mSelf.call("mouse_pressed", x,y, button);
 }
 
-void OniWindow::mouseReleased(int x, int y, int button){
+void OniApp::mouseReleased(int x, int y, int button){
 	ofApp::mouseReleased(x,y,button);
 	
 	mSelf.call("mouse_released", x,y, button);
 }
 
-void OniWindow::mouseEntered(int x, int y){
+void OniApp::mouseEntered(int x, int y){
 	ofApp::mouseEntered(x,y);
 }
 
-void OniWindow::mouseExited(int x, int y){
+void OniApp::mouseExited(int x, int y){
 	ofApp::mouseExited(x,y);
 }
 
-void OniWindow::windowResized(int w, int h){
+void OniApp::windowResized(int w, int h){
 	ofApp::windowResized(w,h);
 }
 
-void OniWindow::dragEvent(ofDragInfo dragInfo){
+void OniApp::dragEvent(ofDragInfo dragInfo){
 	ofApp::dragEvent(dragInfo);
 }
 
-void OniWindow::gotMessage(ofMessage msg){
+void OniApp::gotMessage(ofMessage msg){
 	ofApp::gotMessage(msg);
 }
 

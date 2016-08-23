@@ -79,11 +79,15 @@ class Window < Oni::Window
 		end
 		
 		
-		ofSetColor(255,255,255, 255) # rgba
+		ofSetColor(0, 141, 240, 255) # rgba
 		x,y = @p
 			# not sure why, but need to get variables again?
 			# if you don't, the text trails behind the desired position by a couple seconds.
 		@font.draw_string("TrueTypeFont Test!", x, y)
+	end
+	
+	def on_exit
+		super()
 	end
 	
 	def mouse_moved(x,y)
@@ -93,8 +97,32 @@ class Window < Oni::Window
 	def mouse_pressed(x,y, button)
 		super(x,y, button)
 		
-		ofExit() if button == 4
+		ofExit() if button == 8
+		# different window systems return different numbers
+		# for the 'forward' mouse button:
+			# GLFW: 4
+			# Glut: 8
 		# TODO: set button codes as constants?
+		
+		
+		
+		if button == 7
+			# p window_size()
+			p Oni::Point.new(200, 200, 0)
+			self.set_window_position(200, 200) 
+			
+			
+			
+			@cursor_visible = true if @cursor_visible.nil?
+			p @cursor_visible
+			if @cursor_visible
+				hide_cursor
+			else
+				show_cursor
+			end
+				
+			@cursor_visible = !@cursor_visible
+		end
 	end
 	
 	def mouse_released(x,y, button)

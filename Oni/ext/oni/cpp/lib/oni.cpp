@@ -21,6 +21,18 @@ void Init_oni()
 	Module rb_mOni = define_module("Oni");
 	
 	
+	// ofPoint is the same as ofVec3
+	Data_Type<ofPoint> rb_cPoint =
+		define_class_under<ofPoint>(rb_mOni, "Point");
+	
+	rb_cPoint
+		.define_constructor(Constructor<ofPoint, float, float, float>())
+		// .define_method("[]",   &ofVec3f_read_component)
+	;
+	
+	
+	
+	
 	Data_Type<Launcher> rb_cWindow =
 		define_class_under<Launcher>(rb_mOni, "Window");
 	
@@ -34,19 +46,43 @@ void Init_oni()
 			)
 		)
 		
+		// mouse cursor
+		.define_method("show_cursor",       &Launcher::showCursor)
+		.define_method("hide_cursor",       &Launcher::hideCursor)
+		
+		// fullscreen
+		.define_method("fullscreen",         &Launcher::setFullscreen)
+		.define_method("toggle_fullscreen",  &Launcher::toggleFullscreen)
+		
+		// window properties
+		.define_method("window_title=",       &Launcher::setWindowTitle)
+		.define_method("set_window_position", &Launcher::setWindowPosition)
+		.define_method("set_window_shape",    &Launcher::setWindowShape)
+		.define_method("window_position",     &Launcher::getWindowPosition)
+		.define_method("window_size",         &Launcher::getWindowSize)
+		.define_method("screen_size",         &Launcher::getScreenSize)
+		// .define_method("set_window_icon",     &Launcher::setWindowIcon) // private C++ method
+		
+		
+		// colors
 		.define_method("ofBackground",       &Launcher::Background)
 		.define_method("ofBackgroundHex",    &Launcher::BackgroundHex)
 		.define_method("ofSetColor",         &Launcher::SetColor)
 		.define_method("ofSetHexColor",      &Launcher::SetHexColor)
 		
+		// draw primatives
 		.define_method("ofDrawRectangle",    &Launcher::DrawRectangle)
 		.define_method("ofDrawCircle",       &Launcher::DrawCircle)
 		.define_method("ofDrawEllipse",      &Launcher::DrawEllipse)
 		.define_method("ofDrawTriangle",     &Launcher::DrawTriangle)
 		.define_method("ofDrawLine",         &Launcher::DrawLine)
 		
+		// bitmap string
 		.define_method("ofDrawBitmapString", &Launcher::DrawBitmapString)
 	;
+	
+	
+
 	
 	
 	

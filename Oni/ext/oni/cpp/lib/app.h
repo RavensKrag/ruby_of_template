@@ -11,11 +11,11 @@ namespace Rice{
 	class Object; // forward declaration
 }
 
-class OniWindow : public ofApp{
+class OniApp : public ofApp{
 
 	public:
-		OniWindow(Rice::Object);
-		~OniWindow();
+		OniApp(Rice::Object);
+		~OniApp();
 		
 		void setup();
 		void update();
