@@ -61,6 +61,7 @@ class Window < Oni::Window
 		
 		z = 1
 		
+		ofSetColor(171, 160, 228, 255) # rgba
 		
 		start = [12, 15]
 		row_spacing = 15
@@ -68,8 +69,8 @@ class Window < Oni::Window
 		[
 			"mouse: #{@p.inspect}",
 			"window size: #{window_size.to_s}",
-			"dt: #{ofGetLastFrameTime()}",
-			"fps: #{ofGetFrameRate()}"
+			"dt: #{ofGetLastFrameTime.round(5)}",
+			"fps: #{ofGetFrameRate.round(5)}"
 		].each_with_index do |string, i|
 			x,y = start
 			y += i*row_spacing
@@ -78,7 +79,7 @@ class Window < Oni::Window
 		end
 		
 		
-		
+		ofSetColor(0, 0, 0, 255) # rgba
 		
 		
 		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
@@ -126,6 +127,7 @@ class Window < Oni::Window
 		
 		
 		if button == 7
+			# --- test Point class (wraps ofPoint, which is an alias for ofVec3f)
 			point = Oni::Point.new(200, 200, 0)
 			puts point
 			puts point.x
@@ -140,6 +142,7 @@ class Window < Oni::Window
 			
 			
 			
+			# --- toggle cursor visibility
 			@cursor_visible = true if @cursor_visible.nil?
 			p @cursor_visible
 			if @cursor_visible
