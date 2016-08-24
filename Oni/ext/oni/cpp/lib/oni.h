@@ -1,5 +1,6 @@
 #pragma once
 
+#include "rice.h"
 #include "ofMain.h"
 
 
