@@ -14,6 +14,8 @@ require File.expand_path('./oni', File.absolute_path(File.dirname(__FILE__)))
 # TODO: wrap batching draw call API so you don't have to lean so hard to the immediate mode stuff
 
 class Window < Oni::Window
+	include Oni::Graphics
+	
 	def initialize
 		super(self) # pass Ruby instance to C++ land for callbacks, etc
 		

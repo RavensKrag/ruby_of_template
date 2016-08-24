@@ -56,25 +56,6 @@ class Window
 	def mouse_dragged(x,y, button)
 		p [:dragged, x,y, button]
 	end
-	
-	
-	
-	private
-	
-	# Basic Graphics API
-	
-	private :ofBackground #(r, g, b, a)
-	private :ofBackgroundHex #(hexColor, alpha)
-	
-	private :ofSetColor #(r, g, b, a)
-	private :ofSetHexColor #(hexColor)
-	
-	
-	private :ofDrawRectangle #(x,y,z,w,h)
-	private :ofDrawCircle #(x, y, z, radius)
-	private :ofDrawEllipse #(x, y, z, width, height)
-	private :ofDrawTriangle #(x1,y1,z1,x2,y2,z2,x3, y3,z3)
-	private :ofDrawLine #(x1,y1,z1,x2,y2,z2)
 end
 
 
@@ -91,9 +72,6 @@ class Point
 	def inspect
 		super()
 	end
-	
-	
-	
 	
 	
 	
