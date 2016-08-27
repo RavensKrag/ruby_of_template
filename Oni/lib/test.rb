@@ -134,6 +134,30 @@ class Window < Oni::Window
 		super()
 	end
 	
+	def key_pressed(key)
+		super(key)
+		
+		begin
+			string = 
+				if key == 32
+					"<space>"
+				elsif key == 13
+					"<enter>"
+				else
+					key.chr
+				end
+				
+			puts string
+		rescue RangeError => e
+			
+		end
+	end
+	
+	def key_released(key)
+		super(key)
+	end
+	
+	
 	def mouse_moved(x,y)
 		@p = [x,y]
 	end

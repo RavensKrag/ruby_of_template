@@ -62,10 +62,15 @@ void OniApp::keyPressed(int key){
 	
 	
 	ofLog() << key;
+	
+	// TODO: consider listening for key symbols (the physical key buttons) as well / instead of this. Need to set up another hook into the oF event system to do that, but might be better / easier for setting up structural keybindings.
+	mSelf.call("key_pressed", key);
 }
 
 void OniApp::keyReleased(int key){
 	ofApp::keyReleased(key);
+	
+	mSelf.call("key_released", key);
 }
 
 void OniApp::mouseMoved(int x, int y ){

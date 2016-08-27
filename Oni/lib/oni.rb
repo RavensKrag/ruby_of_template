@@ -41,6 +41,16 @@ class Window
 		puts "ruby: exiting application..."
 	end
 	
+	
+	def key_pressed(key)
+		p [:pressed, key]
+	end
+	
+	def key_released(key)
+		p [:released, key]
+	end
+	
+	
 	def mouse_moved(x,y)
 		p [x,y]
 	end
