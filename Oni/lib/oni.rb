@@ -127,6 +127,25 @@ class Point
 	end
 end
 
+class Texture
+	# TODO: clean up the interface for 'draw_wh' and 'draw_pt' bound from C++ layer
+	# TODO: perhaps bind other methods of Texture?
+	# TODO: consider binding Image as well, so you can CPU and GPU level control from Ruby
+	
+	# TODO: figure out exactly how the texure memory is being allocated (pick it appart later)
+	# TODO: look into texture-atlasing for sprites, in the sprite-drawing libraries
+	
+	# TODO: figure out how textures can be used with mesh data
+end
+
+
+# TODO: split all of these classes into separate files
+# TODO: move 'test' file into the bin/ directory
+# TODO: find some test sprites that can be used to make sure rendering is working (commit them)
+
+# TODO: bind C++ functions to toggle vsync
+# TODO: bind graphics functions with typedef instead of the wrapper style. would make it cleaer that the functions are working with global state, and are not actually bound to the window
+
 
 # class Animation
 # 	class Track
