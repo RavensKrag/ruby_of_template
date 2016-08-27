@@ -18,17 +18,10 @@ ext/oni/cpp/build_*
 *.dll
 *.a
 
-# Do not track test resources
-media
-
-# Do not track Ogre config files
-*.cfg
-
-# More Ogre files
-Ogre.log
 
 # Packaged gems
 *.gem
+
 
 # Compiled extension binaries
 *.so
