@@ -2,6 +2,7 @@
 #include "rice/Constructor.hpp"
 #include "rice/Class.hpp"
 #include "rice/Module.hpp"
+#include "rice/Array.hpp"
 
 #include "ofMain.h"
 #include "ofApp.h"
@@ -117,7 +118,18 @@ void OniApp::dragEvent(ofDragInfo dragInfo){
 	
 	ofApp::dragEvent(dragInfo);
 	
-	mSelf.call("drag_event", dragInfo.files.front(), dragInfo.position);
+	
+	// NOTE: dragInfo.files is a std::vector, not an array. Apparently, Rice doesn't understand how to convert that into a Ruby array? so I guess that needs to be done manually...
+	
+	// ./test.rb:190:in `show': Unable to convert std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >* (ArgumentError)
+	
+	Rice::Array filepaths;
+	
+	for(std::__cxx11::basic_string<char>& e : dragInfo.files){
+		filepaths.push(to_ruby(e));
+	}
+
+	mSelf.call("drag_event", filepaths, dragInfo.position);
 }
 
 void OniApp::gotMessage(ofMessage msg){
