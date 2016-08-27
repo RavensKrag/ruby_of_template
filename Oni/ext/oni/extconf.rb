@@ -73,9 +73,6 @@ category_list = %w[Foundation XML JSON Util Net Crypto NetSSL Data DataSQLite Mo
 	# src: http://stackoverflow.com/questions/38822925/errors-while-statically-compiling-poco-with-ssl-in-gcc
 	
 category_list.each do |category|
-	# find_library("Poco#{category}", 'main')
-	
-	
 	# each sub-library need to be specified separately, otherwise extconf gets confused
 	# extconf only wants to look for one .a file at a time, base on the name given in 'dir_config()'
 	
@@ -310,11 +307,9 @@ $CPPFLAGS += " " + more_flags
 
 
 
-
-
-of_project_objs = %w[
-	obj/linux64/Release/src/main.o
-	obj/linux64/Release/src/ofApp.o
+of_project_objs = [
+	# 'obj/linux64/Release/src/main.o',
+	'obj/linux64/Release/src/ofApp.o'
 ].collect{ |line|
 	File.expand_path("./ext/oni/cpp/oF_Test/mySketch/#{line}", REPO_ROOT)
 }.join(' ')
@@ -413,7 +408,7 @@ $LDFLAGS += " " + more_linker_flags
 
 # NOTE: DYNAMIC_LIB_PATH has been passed to -rpath
 
-src = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/fmodex/lib/linux64/libfmodex.so"
+src = File.expand_path("./libs/fmodex/lib/linux64/libfmodex.so", OF_ROOT)
 dest = DYNAMIC_LIB_PATH
 FileUtils.copy(src, dest)
 
