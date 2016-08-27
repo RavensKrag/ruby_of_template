@@ -223,29 +223,22 @@ namespace :dependencies do
 	
 	
 	
-	# all you need to build poco is here. no need for custom modification
+	
+	
+	# Assuming -fPIC flag has been added to CFLAGS and CXFLAGS in the poco build config file
+	# (of_v0.9.3_libs/custom/poco/poco-1.7.4-all/build/config/Linux)
 	poco_dir = File.expand_path('../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/', OF_ROOT)
-	poco_filepath = File.expand_path('./lib/Linux/x86_64/libPocoFoundation.so', poco_dir)
-		# building poco generates all of these dynamic libraries. just make project dependent on one file, for simplicity.
-		
-		# lib/Linux/x86_64/libCppUnit.so
-		# lib/Linux/x86_64/libCppUnit.so.1
-		# lib/Linux/x86_64/libPocoCrypto.so
-		# lib/Linux/x86_64/libPocoData.so
-		# lib/Linux/x86_64/libPocoDataSQLite.so
-		# lib/Linux/x86_64/libPocoFoundation.so
-		# lib/Linux/x86_64/libPocoJSON.so
-		# lib/Linux/x86_64/libPocoNet.so
-		# lib/Linux/x86_64/libPocoNetSSL.so
-		# lib/Linux/x86_64/libPocoUtil.so
-		# lib/Linux/x86_64/libPocoXML.so
-		# lib/Linux/x86_64/libPocoZip.so
+	poco_filepath = File.expand_path('./lib/Linux/x86_64/libPocoFoundation.a', poco_dir)
+		# building poco generates a bunch of libraries. just make project dependent on one file, for simplicity.
 	
 	file poco_filepath do
 		Dir.chdir poco_dir do
 			# run_i "./configure --static --no-shared-libs --no-tests --no-samples"
-			run_i "./configure"
+			# run_i "./configure"
+			run_i "./configure --static --no-tests --no-samples"
 			run_i "make"
+			
+			# NOTE: This is going to end in an error, because it's trying to make the tests, even though I configured it to avoid the tests... oh well.
 		end
 	end
 	

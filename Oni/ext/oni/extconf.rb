@@ -23,9 +23,6 @@ REPO_ROOT = File.expand_path('../../', PATH_TO_FILE)
 
 
 DYNAMIC_LIB_PATH = File.expand_path("./bin/libs/", REPO_ROOT)
-POCO_DYNAMIC_LIB_PATH = File.expand_path(
-	"../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/", OF_ROOT
-)
 
 # C deps must be listed before the C++ core is loaded, and C++ deps must be listed after
 
@@ -67,7 +64,7 @@ have_library("glfw3")   # oF version
 # all_poco_categories = %w[Foundation XML JSON Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL MongoDB Zip PageCompiler PageCompiler/File2Page]
 	# src: /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Makefile
 
-category_list = %w[Foundation XML JSON Util Net Crypto NetSSL Data DataSQLite MongoDB Zip].reverse
+category_list = %w[Foundation XML JSON Util Net Crypto NetSSL Data DataSQLite MongoDB Zip]
 	# order changes linking order, which matters
 	# src: http://stackoverflow.com/questions/15701796/poco-c-static-linking-problems-with-undefined-references-to-symbols
 	# (that's for static linking tho)
@@ -360,7 +357,7 @@ of_project_libs = "
 # NOTE: may need to modify -rpath in the future
 # TODO: specify directories for dynamic libraries relative to the root directory of this project, and then expand them into full paths before adding to -rpath. This means the gem will be able to find the dynamic libraries regaurdless of where the Ruby code is being called from.
 ld_flags = "
-	-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH}:#{POCO_DYNAMIC_LIB_PATH} -Wl,--as-needed -Wl,--gc-sections
+	-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH} -Wl,--as-needed -Wl,--gc-sections
 
 	-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/
 
