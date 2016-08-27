@@ -1,0 +1,293 @@
+
+SHELL = /bin/sh
+
+# V=0 quiet, V=1 verbose.  other values don't work.
+V = 0
+Q1 = $(V:1=)
+Q = $(Q1:0=@)
+ECHO1 = $(V:1=@:)
+ECHO = $(ECHO1:0=@echo)
+
+#### Start of system configuration section. ####
+
+srcdir = cpp/lib
+topdir = /home/ravenskrag/.rvm/rubies/ruby-2.1.1/include/ruby-2.1.0
+hdrdir = $(topdir)
+arch_hdrdir = /home/ravenskrag/.rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+
+prefix = $(DESTDIR)/home/ravenskrag/.rvm/rubies/ruby-2.1.1
+
+rubysitearchprefix = $(rubylibprefix)/$(sitearch)
+
+rubyarchprefix = $(rubylibprefix)/$(arch)
+
+rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
+
+exec_prefix = $(prefix)
+
+vendorarchhdrdir = $(vendorhdrdir)/$(sitearch)
+
+sitearchhdrdir = $(sitehdrdir)/$(sitearch)
+
+rubyarchhdrdir = $(rubyhdrdir)/$(arch)
+
+vendorhdrdir = $(rubyhdrdir)/vendor_ruby
+
+sitehdrdir = $(rubyhdrdir)/site_ruby
+
+rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
+
+vendorarchdir = $(vendorlibdir)/$(sitearch)
+
+vendorlibdir = $(vendordir)/$(ruby_version)
+
+vendordir = $(rubylibprefix)/vendor_ruby
+
+sitearchdir = $(sitelibdir)/$(sitearch)
+
+sitelibdir = $(sitedir)/$(ruby_version)
+
+sitedir = $(rubylibprefix)/site_ruby
+
+rubyarchdir = $(rubylibdir)/$(arch)
+
+rubylibdir = $(rubylibprefix)/$(ruby_version)
+
+sitearchincludedir = $(includedir)/$(sitearch)
+
+archincludedir = $(includedir)/$(arch)
+
+sitearchlibdir = $(libdir)/$(sitearch)
+
+archlibdir = $(libdir)/$(arch)
+
+ridir = $(datarootdir)/$(RI_BASE_NAME)
+
+mandir = $(datarootdir)/man
+
+localedir = $(datarootdir)/locale
+
+libdir = $(exec_prefix)/lib
+
+psdir = $(docdir)
+
+pdfdir = $(docdir)
+
+dvidir = $(docdir)
+
+htmldir = $(docdir)
+
+infodir = $(datarootdir)/info
+
+docdir = $(datarootdir)/doc/$(PACKAGE)
+
+oldincludedir = $(DESTDIR)/usr/include
+
+includedir = $(prefix)/include
+
+localstatedir = $(prefix)/var
+
+sharedstatedir = $(prefix)/com
+
+sysconfdir = $(prefix)/etc
+
+datadir = $(datarootdir)
+
+datarootdir = $(prefix)/share
+
+libexecdir = $(exec_prefix)/libexec
+
+sbindir = $(exec_prefix)/sbin
+
+bindir = $(exec_prefix)/bin
+
+archdir = $(rubyarchdir)
+
+
+
+CC = gcc
+CXX = g++
+LIBRUBY = $(LIBRUBY_SO)
+LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
+LIBRUBYARG_SHARED = -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -Wl,-R -Wl,/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -L/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -lruby-static
+empty =
+OUTFLAG = -o $(empty)
+COUTFLAG = -o $(empty)
+
+RUBY_EXTCONF_H = 
+cflags   =  $(optflags) $(debugflags) $(warnflags)
+optflags = -O3 -fno-fast-math
+debugflags = -ggdb3
+warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration
+CCDLFLAGS = -fPIC
+CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC $(ARCH_FLAG)
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
+DEFS     = 
+CPPFLAGS = -I/home/ravenskrag/.rvm/gems/ruby-2.1.1/gems/rice-2.1.0/ruby/lib/include -I/usr/include/gstreamer-1.0 -I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include -I/usr/include/AL -I/usr/include/alsa -I/usr/include/libdrm -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/mirclient -I/usr/include/mircommon -I/usr/include/mircookie -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/assimp -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/glfw/include/ -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/glfw/include/GLFW -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/ -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/tools/ -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Foundation/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Zip/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/NetSSL/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/MongoDB/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/JSON/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Data/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Crypto/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/XML/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Net/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Util/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/tess2/Include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8 $(DEFS) $(cppflags) -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl -D_REENTRANT -pthread   -I/usr/include/gstreamer-1.0 -I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include -I/usr/include/AL -I/usr/include/alsa -I/usr/include/libdrm -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/mirclient -I/usr/include/mircommon -I/usr/include/mircookie -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/assimp   -I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/notes -I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/lib -I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs/assimp -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/win32 -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc
+CXXFLAGS = $(CFLAGS)  -Wall -g -O3 -DNDEBUG -march=native -mtune=native -std=c++14 -DGCC_HAS_REGEX -DOF_USING_GTK -DOF_USING_GTK -DOF_USING_MPG123 -D_REENTRANT -pthread
+ldflags  = -L. -fstack-protector -rdynamic -Wl,-export-dynamic  -L/home/ravenskrag/.rvm/gems/ruby-2.1.1/gems/rice-2.1.0/ruby/lib/lib -lrice /home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/obj/linux64/Release/src/main.o /home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/obj/linux64/Release/src/ofApp.o  /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/lib/linux64/libopenFrameworks.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/glfw/lib/linux64/libglfw3.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoZip.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoDataSQLite.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoData.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoNetSSL.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoCrypto.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoNet.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoUtil.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoJSON.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoXML.a /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/libPocoFoundation.a  -Wl,-rpath=./libs:./bin/libs:/home/ravenskrag/Experiments/RubyCPP/Oni/bin/libs -Wl,--as-needed -Wl,--gc-sections -L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/ -lfmodex   /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/libkissfft.a   -lz -lgstapp-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -ludev -lfontconfig -lfreetype -lsndfile -lopenal -lssl -lcrypto -lpulse-simple -lpulse -lasound -lGLEW -lGLU -lGL -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lmpg123 -lassimp -lglut -lX11 -lXrandr -lXxf86vm -lXi -lXcursor -ldl -lpthread -lfreeimage -lrtaudio -lboost_filesystem -lboost_system
+dldflags =  
+ARCH_FLAG = 
+DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
+LDSHARED = g++ -shared
+LDSHAREDXX = $(CXX) -shared
+AR = ar
+EXEEXT = 
+
+
+RUBY_INSTALL_NAME = ruby
+
+RUBY_SO_NAME = ruby
+
+RUBYW_INSTALL_NAME = 
+
+RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
+
+RUBYW_BASE_NAME = rubyw
+
+RUBY_BASE_NAME = ruby
+
+
+arch = x86_64-linux
+sitearch = $(arch)
+ruby_version = 2.1.0
+ruby = $(bindir)/ruby
+RUBY = $(ruby)
+ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/ruby.h $(hdrdir)/ruby/defines.h $(hdrdir)/ruby/missing.h $(hdrdir)/ruby/intern.h $(hdrdir)/ruby/st.h $(hdrdir)/ruby/subst.h $(arch_hdrdir)/ruby/config.h
+
+RM = rm -f
+RM_RF = $(RUBY) -run -e rm -- -rf
+RMDIRS = rmdir --ignore-fail-on-non-empty -p
+MAKEDIRS = /bin/mkdir -p
+INSTALL = /usr/bin/install -c
+INSTALL_PROG = $(INSTALL) -m 0755
+INSTALL_DATA = $(INSTALL) -m 644
+COPY = cp
+TOUCH = exit >
+
+#### End of system configuration section. ####
+
+preload = 
+
+
+CXX = g++
+
+libpath = . $(libdir) /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/tess2/Build /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64 /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/glfw/lib/linux64
+LIBPATH =  -L. -L$(libdir) -Wl,-R$(libdir) -L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/tess2/Build -Wl,-R/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/tess2/Build -L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64 -Wl,-R/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64 -L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/glfw/lib/linux64 -Wl,-R/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/glfw/lib/linux64
+DEFFILE = 
+
+CLEANFILES = mkmf.log
+DISTCLEANFILES = 
+DISTCLEANDIRS = 
+
+extout = 
+extout_prefix = 
+target_prefix = /oni
+LOCAL_LIBS = 
+LIBS = -lstdc++ -ltess2 -Wl,-R -Wl,/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -L/home/ravenskrag/.rvm/rubies/ruby-2.1.1/lib -lruby -lpthread -ldl -lcrypt -lm   -lc
+ORIG_SRCS = launcher.cpp Graphics.cpp Window.cpp app.cpp Point.cpp TrueTypeFont.cpp oni.cpp
+SRCS = $(ORIG_SRCS) 
+OBJS = launcher.o Graphics.o Window.o app.o Point.o TrueTypeFont.o oni.o
+HDRS = $(srcdir)/Window.h $(srcdir)/app.h $(srcdir)/oni.h $(srcdir)/rice.h $(srcdir)/Graphics.h $(srcdir)/launcher.h
+TARGET = oni
+TARGET_NAME = oni
+TARGET_ENTRY = Init_$(TARGET_NAME)
+DLLIB = $(TARGET).so
+EXTSTATIC = 
+STATIC_LIB = 
+
+TIMESTAMP_DIR = .
+BINDIR        = $(bindir)
+RUBYCOMMONDIR = $(sitedir)$(target_prefix)
+RUBYLIBDIR    = $(sitelibdir)$(target_prefix)
+RUBYARCHDIR   = $(sitearchdir)$(target_prefix)
+HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
+ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
+
+TARGET_SO     = $(DLLIB)
+CLEANLIBS     = $(TARGET).so 
+CLEANOBJS     = *.o  *.bak
+
+all:    $(DLLIB)
+static: $(STATIC_LIB)
+.PHONY: all install static install-so install-rb
+.PHONY: clean clean-so clean-static clean-rb
+
+clean-static::
+clean-rb-default::
+clean-rb::
+clean-so::
+clean: clean-so clean-static clean-rb-default clean-rb
+		-$(Q)$(RM) $(CLEANLIBS) $(CLEANOBJS) $(CLEANFILES) .*.time
+
+distclean-rb-default::
+distclean-rb::
+distclean-so::
+distclean-static::
+distclean: clean distclean-so distclean-static distclean-rb-default distclean-rb
+		-$(Q)$(RM) Makefile $(RUBY_EXTCONF_H) conftest.* mkmf.log
+		-$(Q)$(RM) core ruby$(EXEEXT) *~ $(DISTCLEANFILES)
+		-$(Q)$(RMDIRS) $(DISTCLEANDIRS) 2> /dev/null || true
+
+realclean: distclean
+install: install-so install-rb
+
+install-so: $(DLLIB) $(TIMESTAMP_DIR)/.RUBYARCHDIR.-.oni.time
+	$(INSTALL_PROG) $(DLLIB) $(RUBYARCHDIR)
+clean-static::
+	-$(Q)$(RM) $(STATIC_LIB)
+install-rb: pre-install-rb install-rb-default
+install-rb-default: pre-install-rb-default
+pre-install-rb: Makefile
+pre-install-rb-default: Makefile
+pre-install-rb-default:
+	$(ECHO) installing default oni libraries
+$(TIMESTAMP_DIR)/.RUBYARCHDIR.-.oni.time:
+	$(Q) $(MAKEDIRS) $(@D) $(RUBYARCHDIR)
+	$(Q) $(TOUCH) $@
+
+site-install: site-install-so site-install-rb
+site-install-so: install-so
+site-install-rb: install-rb
+
+.SUFFIXES: .c .m .cc .mm .cxx .cpp .C .o
+
+.cc.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+
+.mm.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+
+.cxx.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+
+.cpp.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+
+.C.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+
+.c.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
+
+.m.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
+
+$(DLLIB): $(OBJS) Makefile
+	$(ECHO) linking shared-object oni/$(DLLIB)
+	-$(Q)$(RM) $(@)
+	$(Q) $(LDSHAREDXX) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
+
+
+
+$(OBJS): $(HDRS) $(ruby_headers)

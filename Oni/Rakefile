@@ -473,6 +473,68 @@ end
 
 
 
+namespace :check_symbols do
+	filepath = File.expand_path("bin/data", GEM_ROOT)
+	
+	file 'oni.so.dump' do |t|
+		task_name = :dump_so
+		run_i "rake #{task_name} > #{File.join(filepath, t.name)}"
+	end
+	
+	file 'sketch.dump' do |t|
+		task_name = :dump_sketch_executable
+		run_i "rake #{task_name} > #{File.join(filepath, t.name)}"
+	end
+	
+	task :analyze => ['oni.so.dump', 'sketch.dump'] do |t|
+		# p t.prerequisites
+		
+		so_dump, sketch_dump = 
+			t.prerequisites.collect{ |prereq|
+				File.readlines File.join(filepath, prereq)
+			}.collect{ |lines|
+				lines
+				.reject{   |line| line.chomp == '' }
+				.collect{  |line|
+					line[17..-1].chomp
+				}
+			}
+		
+		puts "symbols in lib:    #{so_dump.size}"
+		puts "symbols in sketch: #{sketch_dump.size}"
+		
+		
+		only_so     = (so_dump.to_set - sketch_dump.to_set)
+		only_sketch = (sketch_dump.to_set - so_dump.to_set)
+		
+		puts "so - sketch (only in so):     #{only_so.to_a.size}"
+		puts "sketch - so (only in sketch): #{only_sketch.to_a.size}"
+		
+		[only_so, only_sketch].each do |set|
+			set.delete_if do |x|
+				x.include? "Rice" or
+				x.include? "rb_"
+			end
+		end
+		
+		puts "AFTER REDUCTION"
+		puts "so - sketch (only in so):     #{only_so.to_a.size}"
+		puts "sketch - so (only in sketch): #{only_sketch.to_a.size}"
+		
+		# NOTE: currently linking against custom poco dynamic libs. static libs have also been built. could link against that to increase similarity between 'sketch' and 'so' symbols
+		
+		# puts only_so.to_a
+		# puts only_sketch.to_a
+		# puts so_dump.to_set
+		# so_dump.each do ||
+			
+		# end
+		# p so_dump.first[17..-1]
+	end
+end
+
+
+
 
 
 

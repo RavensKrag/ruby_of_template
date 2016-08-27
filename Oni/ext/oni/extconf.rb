@@ -48,22 +48,37 @@ libs    = File.expand_path("../of_v0.9.3_libs/custom/#{dependency_name}/lib/linu
 puts "headers: #{headers}"
 puts "libs:    #{libs}"
 
-
-# oF-provided static library
+# oF-provided static library (custom version compiled with -fPIC)
 dir_config(
-	"glfw", # name to use with 'have_library'
+	"glfw3", # name to use with 'have_library'
 	headers, libs
 )
 
-have_library("glfw")   # oF version
+have_library("glfw3")   # oF version
 
+# NOTE: may fail to build correctly is glfw3 from the ubuntu repo is installed? not clear
+# TODO: try building against GLFW3 in ubuntu repo
+
+
+
+
+all_poco_categories = %w[Foundation XML JSON Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL MongoDB Zip PageCompiler PageCompiler/File2Page]
+# src: /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Makefile
 
 
 # category_list = %w[Crypto Data DataSQLite Foundation JSON MongoDB Net NetSSL Util XML Zip]
-category_list = %w[Util Net XML Crypto Data DataSQLite JSON MongoDB NetSSL Zip Foundation]
+
+# category_list = %w[Util Net XML Crypto Data DataSQLite JSON MongoDB NetSSL Zip Foundation]
+# category_list = all_poco_categories.collect{ |x| category_list.include? x }.reverse
+
+category_list = %w[Foundation XML JSON Util Net Crypto NetSSL Data DataSQLite MongoDB Zip]
 	# order changes linking order, which matters
 	# src: http://stackoverflow.com/questions/15701796/poco-c-static-linking-problems-with-undefined-references-to-symbols
 	# (that's for static linking tho)
+	
+	# "There are no OpenSSL related linker errors. The linker is single pass, so it does not revisit past libraries. That means -lPocoUtil must follow -lPocoNetSSL because PocoNetSSL uses symbols from PocoUtil."
+	# src: http://stackoverflow.com/questions/38822925/errors-while-statically-compiling-poco-with-ssl-in-gcc
+	
 category_list.each do |category|
 	# find_library("Poco#{category}", 'main')
 	
@@ -257,7 +272,6 @@ addon_c_flags = "
 
 
 other = "
-	-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/notes
 	-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/lib
 	-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src
 
