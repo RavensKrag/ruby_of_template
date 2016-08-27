@@ -18,6 +18,8 @@ class Window < Oni::Window
 	
 	def initialize
 		super(self) # pass Ruby instance to C++ land for callbacks, etc
+		# ofSetEscapeQuitsApp false
+		
 		
 		puts "ruby: Window#initialize"
 		

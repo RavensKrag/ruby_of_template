@@ -76,6 +76,9 @@ void Init_oni()
 		.define_method("ofGetLastFrameTime", &ofGetLastFrameTime)
 		.define_method("ofGetFrameRate", &ofGetFrameRate)
 		.define_method("ofSetFrameRate", &ofSetFrameRate)
+		
+		
+		.define_method("ofSetEscapeQuitsApp", &ofSetEscapeQuitsApp)
 	;
 	
 	
