@@ -521,6 +521,8 @@ namespace :check_symbols do
 		puts "so - sketch (only in so):     #{only_so.to_a.size}"
 		puts "sketch - so (only in sketch): #{only_sketch.to_a.size}"
 		
+		# NOTE: currently linking against custom poco dynamic libs. static libs have also been built. could link against that to increase similarity between 'sketch' and 'so' symbols
+		
 		# puts only_so.to_a
 		# puts only_sketch.to_a
 		# puts so_dump.to_set
