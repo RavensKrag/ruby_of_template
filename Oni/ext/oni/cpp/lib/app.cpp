@@ -93,21 +93,36 @@ void OniApp::mouseReleased(int x, int y, int button){
 
 void OniApp::mouseEntered(int x, int y){
 	ofApp::mouseEntered(x,y);
+	
+	mSelf.call("mouse_entered", x,y);
 }
 
 void OniApp::mouseExited(int x, int y){
 	ofApp::mouseExited(x,y);
+	
+	mSelf.call("mouse_exited", x,y);
 }
 
 void OniApp::windowResized(int w, int h){
 	ofApp::windowResized(w,h);
+	
+	mSelf.call("window_resized", w,h);
 }
 
 void OniApp::dragEvent(ofDragInfo dragInfo){
+	// NOTE: drag event example works with Nautilus, but not Thunar (GLFW window)
+	
+	// https://github.com/openframeworks/openFrameworks/issues/1862
+	// ^ this issue explains that Glut windows can not process file drag events on Linux
+	
 	ofApp::dragEvent(dragInfo);
+	
+	mSelf.call("drag_event", dragInfo.files.front(), dragInfo.position);
 }
 
 void OniApp::gotMessage(ofMessage msg){
 	ofApp::gotMessage(msg);
+	
+	// mSelf.call("got_message", msg);
 }
 

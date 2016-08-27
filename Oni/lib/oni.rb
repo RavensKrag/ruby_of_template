@@ -56,6 +56,27 @@ class Window
 	def mouse_dragged(x,y, button)
 		p [:dragged, x,y, button]
 	end
+	
+	
+	def mouse_entered(x,y)
+		p [:mouse_in, x,y]
+	end
+	
+	def mouse_exited(x,y)
+		p [:mouse_out, x,y]
+	end
+	
+	def window_resized(w,h)
+		p [:resize, w,h]
+	end
+	
+	def drag_event(files, position)
+		p [files, position]
+	end
+	
+	def got_message()
+		# NOTE: not currently bound
+	end
 end
 
 
