@@ -23,7 +23,9 @@ REPO_ROOT = File.expand_path('../../', PATH_TO_FILE)
 
 
 DYNAMIC_LIB_PATH = File.expand_path("./bin/libs/", REPO_ROOT)
-POCO_DYNAMIC_LIB_PATH = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/"
+POCO_DYNAMIC_LIB_PATH = File.expand_path(
+	"../of_v0.9.3_libs/custom/poco/poco-1.7.4-all/lib/Linux/x86_64/", OF_ROOT
+)
 
 # C deps must be listed before the C++ core is loaded, and C++ deps must be listed after
 
@@ -62,16 +64,10 @@ have_library("glfw3")   # oF version
 
 
 
-all_poco_categories = %w[Foundation XML JSON Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL MongoDB Zip PageCompiler PageCompiler/File2Page]
-# src: /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Makefile
+# all_poco_categories = %w[Foundation XML JSON Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL MongoDB Zip PageCompiler PageCompiler/File2Page]
+	# src: /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/poco/poco-1.7.4-all/Makefile
 
-
-# category_list = %w[Crypto Data DataSQLite Foundation JSON MongoDB Net NetSSL Util XML Zip]
-
-# category_list = %w[Util Net XML Crypto Data DataSQLite JSON MongoDB NetSSL Zip Foundation]
-# category_list = all_poco_categories.collect{ |x| category_list.include? x }.reverse
-
-category_list = %w[Foundation XML JSON Util Net Crypto NetSSL Data DataSQLite MongoDB Zip]
+category_list = %w[Foundation XML JSON Util Net Crypto NetSSL Data DataSQLite MongoDB Zip].reverse
 	# order changes linking order, which matters
 	# src: http://stackoverflow.com/questions/15701796/poco-c-static-linking-problems-with-undefined-references-to-symbols
 	# (that's for static linking tho)
@@ -120,26 +116,39 @@ end
 # src: http://stackoverflow.com/questions/9251554/c-ruby-extension-with-external-libraries
 
 # === link up dependencies that were custom compiled with -fPIC
+dependency_name = "tess2" # Name to use with 'have_library'. Also the name of the lib file
 
 dir_config(
-	"tess2", # name to use with 'have_library'
+	dependency_name, 
 	File.expand_path("../of_v0.9.3_libs/custom/tess2/Include/", OF_ROOT),
 	File.expand_path("../of_v0.9.3_libs/custom/tess2/Build/",   OF_ROOT)
 )
 
-have_library("tess2")
+have_library(dependency_name)
 
 
 
-# THIS IS THE COMPLETELY WRONG KISS LIBARRY
-# from actually looking at the source code, the symbols being defined are completely different.
-# dir_config(
-# 	"kiss", # name to use with 'have_library'
-# 	File.expand_path("../of_v0.9.3_libs/custom/kiss/include/", OF_ROOT),
-# 	File.expand_path("../of_v0.9.3_libs/custom/kiss/lib/",     OF_ROOT)
-# )
 
-# have_library("kiss")
+
+dependency_name = "kissfft"
+
+headers = [
+	File.expand_path("../of_v0.9.3_libs/custom/kiss/", OF_ROOT),
+	File.expand_path("../of_v0.9.3_libs/custom/kiss/tools/", OF_ROOT),
+]
+libs    = File.expand_path("../of_v0.9.3_libs/custom/kiss/",     OF_ROOT)
+
+dir_config(
+	dependency_name,
+	headers, libs
+)
+
+have_library(dependency_name)
+
+# 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/
+# 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/tools/
+
+# /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/libkissfft.a
 
 # ========================
 
@@ -220,8 +229,6 @@ c_flags = "
 	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 	-I/usr/include/assimp
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/tools/
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks
@@ -312,7 +319,7 @@ of_project_objs = %w[
 	obj/linux64/Release/src/main.o
 	obj/linux64/Release/src/ofApp.o
 ].collect{ |line|
-	"/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/#{line}"
+	File.expand_path("./ext/oni/cpp/oF_Test/mySketch/#{line}", REPO_ROOT)
 }.join(' ')
 
 of_project_addon_objs = "
@@ -379,9 +386,6 @@ ld_flags
 # of_core_libs_dot_a = "
 # 	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/lib/linux64/libkiss.a
 # "
-of_core_libs_dot_a = "
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_libs/custom/kiss/libkissfft.a
-"
 of_core_libs_dynamic_flags
 
 more_linker_flags = 
@@ -391,7 +395,7 @@ more_linker_flags =
 		of_project_libs,
 		ld_flags,
 		# of_core_libs, # split into the following two categories:
-		of_core_libs_dot_a,
+		# of_core_libs_dot_a,
 		of_core_libs_dynamic_flags, # these flags are very important
 	]
 	.collect{  |string_blob|  string_blob.split.join(' ') }

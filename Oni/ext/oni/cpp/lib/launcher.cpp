@@ -21,7 +21,6 @@ Launcher::Launcher(Rice::Object self){
 	ofSetupOpenGL(mWindow, 1024,768,OF_WINDOW); // <-------- setup the GL context
 	
 	mApp = new OniApp(self);
-	// TODO: rename 'mWindow' to 'app'
 	
 	// window is the drawing context
 	// app is the thing that holds all the update and render logic
