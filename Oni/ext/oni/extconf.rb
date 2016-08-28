@@ -154,6 +154,76 @@ have_library(dependency_name)
 # === C++ libraries, and various flags
 have_library("stdc++")
 
+
+
+
+
+
+
+dependency_name = "fmodex"
+
+headers = File.expand_path("./libs/fmodex/include",      OF_ROOT)
+libs    = File.expand_path("./libs/fmodex/lib/linux64/", OF_ROOT)
+
+dir_config(
+	dependency_name,
+	headers, libs
+)
+
+have_library(dependency_name)
+
+
+# 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include
+
+
+# -L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/
+# -lfmodex
+
+
+
+
+
+
+dependency_name = "utf8cpp"
+
+headers = [
+	File.expand_path("./libs/utf8cpp/include", OF_ROOT),
+	File.expand_path("./libs/utf8cpp/include/utf8", OF_ROOT),
+]
+libs = "" # this is a header-only library
+
+dir_config(
+	dependency_name,
+	headers, libs
+)
+
+puts "adding #{dependency_name} to include path..."
+
+# have_header(File.expand_path("./libs/utf8cpp/include/utf8.h", OF_ROOT))
+# this line fails, but the directory configuration is actually working fine
+# would be nice to get this to work too...
+
+have_header('utf8.h')
+have_header('utf8/core.h')
+
+
+
+# -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include
+# -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $CPPFLAGS
 # => "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/  $(DEFS) $(cppflags)  -I/home/ravenskrag/.rvm/gems/ruby-2.1.1/gems/rice-2.1.0/ruby/lib/include"
 $LDFLAGS
@@ -222,9 +292,6 @@ c_flags = "
 	-I/usr/include/glib-2.0
 	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 	-I/usr/include/assimp
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math
 	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound
@@ -314,6 +381,13 @@ of_project_objs = [
 	File.expand_path("./ext/oni/cpp/oF_Test/mySketch/#{line}", REPO_ROOT)
 }.join(' ')
 
+
+
+
+
+
+
+
 of_project_addon_objs = "
 	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpMeshHelper.o
 	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpModelLoader.o
@@ -354,9 +428,6 @@ of_project_libs = "
 ld_flags = "
 	-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH} -Wl,--as-needed -Wl,--gc-sections
 
-	-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/
-
-	-lfmodex
 "
 
 
