@@ -112,6 +112,10 @@ number_of_cores = 4
 # TODO: accept platform, target, and number of cores as Rake arguments
 # (maybe you actually want to figure out platform automatially)
 
+OF_BUILD_VARIABLE_FILE = File.expand_path("./oF_build_variables.yaml", GEM_ROOT)
+
+
+
 
 
 # use 'rake clean' and 'rake clobber' to
@@ -384,8 +388,7 @@ namespace :oF_sketch_lib do
 				# p final
 				
 				
-				name = 'oF_build_variables.yaml'
-				filepath = File.expand_path("./#{name}", GEM_ROOT)
+				filepath = OF_BUILD_VARIABLE_FILE
 				File.open(filepath, "w") do |f|
 					f.puts final.to_yaml
 				end
@@ -418,11 +421,15 @@ source_files = Array.new
 
 # Dir.glob("ext/#{NAME}/cpp/oF_Test/*{.cpp,.h}")
 source_files += Dir.glob("ext/#{NAME}/cpp/lib/**/*{.cpp,.h}")
-source_files += ["ext/#{NAME}/extconf.rb", __FILE__]
+source_files += ["ext/#{NAME}/extconf.rb", __FILE__, OF_BUILD_VARIABLE_FILE]
 
 
 # FIXME: can't seem to just run rake again to rebuild. keep having to clobber, and then do a full clean build again.
 
+
+
+
+file OF_BUILD_VARIABLE_FILE => 'oF_sketch_lib:print_vars'
 
 
 # Mimic RubyGems gem install procedure, for testing purposes.
