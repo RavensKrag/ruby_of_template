@@ -497,42 +497,44 @@ FileUtils.copy(src, dest)
 
 
 
+File.open("./extconf_variables.rb", "w") do |f|
+	# p global_variables
+	f.puts global_variables.inspect
+	
+	# => [:$;, :$-F, :$@, :$!, :$SAFE, :$~, :$&, :$`, :$', :$+, :$=, :$KCODE, :$-K, :$,, :$/, :$-0, :$\, :$_, :$stdin, :$stdout, :$stderr, :$>, :$<, :$., :$FILENAME, :$-i, :$*, :$?, :$$, :$:, :$-I, :$LOAD_PATH, :$", :$LOADED_FEATURES, :$VERBOSE, :$-v, :$-w, :$-W, :$DEBUG, :$-d, :$0, :$PROGRAM_NAME, :$CXX, :$LIBS, :$LIBRUBYARG, :$LIBRUBYARG_STATIC, :$RICE_CPPFLAGS, :$RICE_LDFLAGS, :$RICE_PREFIX, :$RICE_USING_MINGW32, :$DEFLIBPATH, :$CPPFLAGS, :$LDFLAGS, :$CXXFLAGS, :$LDSHARED_CXX, :$OBJEXT, :$DLDFLAGS, :$LIBPATH, :$static, :$config_h, :$default_static, :$configure_args, :$libdir, :$rubylibdir, :$archdir, :$-p, :$-l, :$-a, :$sitedir, :$sitelibdir, :$sitearchdir, :$vendordir, :$vendorlibdir, :$vendorarchdir, :$mswin, :$bccwin, :$mingw, :$cygwin, :$netbsd, :$os2, :$beos, :$haiku, :$solaris, :$universal, :$dest_prefix_pattern, :$extout, :$extout_prefix, :$extmk, :$hdrdir, :$topdir, :$top_srcdir, :$arch_hdrdir, :$have_devel, :$INCFLAGS, :$CFLAGS, :$ARCH_FLAG, :$LOCAL_LIBS, :$libs, :$srcdir, :$EXEEXT, :$NONINSTALLFILES, :$defs, :$typeof, :$arg_config, :$extconf_h, :$PKGCONFIG, :$VPATH, :$LIBRUBYARG_SHARED, :$warnflags, :$ruby, :$preload, :$nmake, :$cleanfiles, :$distcleanfiles, :$target, :$LIBEXT, :$objs, :$srcs, :$INSTALLFILES, :$distcleandirs, :$installed_list, :$ignore_error, :$makefile_created, :$enable_shared, :$make, :$curdir, :$fileutils_rb_have_lchmod, :$fileutils_rb_have_lchown, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9]
 
+	compiler_variables = 
+	[
+		['$CXX', $CXX],
+		['$LIBS', $LIBS],
+		['$LIBRUBYARG', $LIBRUBYARG],
+		['$LIBRUBYARG_STATIC', $LIBRUBYARG_STATIC],
+		['$RICE_CPPFLAGS', $RICE_CPPFLAGS],
+		['$RICE_LDFLAGS', $RICE_LDFLAGS],
+		['$RICE_PREFIX', $RICE_PREFIX],
+		['$RICE_USING_MINGW32', $RICE_USING_MINGW32],
+		['$DEFLIBPATH', $DEFLIBPATH],
+		['$CPPFLAGS', $CPPFLAGS],
+		['$LDFLAGS', $LDFLAGS],
+		['$CXXFLAGS', $CXXFLAGS],
+		['$LDSHARED_CXX', $LDSHARED_CXX],
+		['$OBJEXT', $OBJEXT],
+		['$DLDFLAGS', $DLDFLAGS],
+		['$LIBPATH', $LIBPATH],
+		['$static', $static],
+		['$config_h', $config_h],
+		['$default_static', $default_static],
+		['$configure_args', $configure_args],
+		['$libdir', $libdir],
+		['$rubylibdir', $rubylibdir],
+		['$archdir', $archdir],
+		['$defs', $defs],
+	].to_h
 
-p global_variables
-# => [:$;, :$-F, :$@, :$!, :$SAFE, :$~, :$&, :$`, :$', :$+, :$=, :$KCODE, :$-K, :$,, :$/, :$-0, :$\, :$_, :$stdin, :$stdout, :$stderr, :$>, :$<, :$., :$FILENAME, :$-i, :$*, :$?, :$$, :$:, :$-I, :$LOAD_PATH, :$", :$LOADED_FEATURES, :$VERBOSE, :$-v, :$-w, :$-W, :$DEBUG, :$-d, :$0, :$PROGRAM_NAME, :$CXX, :$LIBS, :$LIBRUBYARG, :$LIBRUBYARG_STATIC, :$RICE_CPPFLAGS, :$RICE_LDFLAGS, :$RICE_PREFIX, :$RICE_USING_MINGW32, :$DEFLIBPATH, :$CPPFLAGS, :$LDFLAGS, :$CXXFLAGS, :$LDSHARED_CXX, :$OBJEXT, :$DLDFLAGS, :$LIBPATH, :$static, :$config_h, :$default_static, :$configure_args, :$libdir, :$rubylibdir, :$archdir, :$-p, :$-l, :$-a, :$sitedir, :$sitelibdir, :$sitearchdir, :$vendordir, :$vendorlibdir, :$vendorarchdir, :$mswin, :$bccwin, :$mingw, :$cygwin, :$netbsd, :$os2, :$beos, :$haiku, :$solaris, :$universal, :$dest_prefix_pattern, :$extout, :$extout_prefix, :$extmk, :$hdrdir, :$topdir, :$top_srcdir, :$arch_hdrdir, :$have_devel, :$INCFLAGS, :$CFLAGS, :$ARCH_FLAG, :$LOCAL_LIBS, :$libs, :$srcdir, :$EXEEXT, :$NONINSTALLFILES, :$defs, :$typeof, :$arg_config, :$extconf_h, :$PKGCONFIG, :$VPATH, :$LIBRUBYARG_SHARED, :$warnflags, :$ruby, :$preload, :$nmake, :$cleanfiles, :$distcleanfiles, :$target, :$LIBEXT, :$objs, :$srcs, :$INSTALLFILES, :$distcleandirs, :$installed_list, :$ignore_error, :$makefile_created, :$enable_shared, :$make, :$curdir, :$fileutils_rb_have_lchmod, :$fileutils_rb_have_lchown, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9]
-
-compiler_variables = 
-[
-	['$CXX', $CXX],
-	['$LIBS', $LIBS],
-	['$LIBRUBYARG', $LIBRUBYARG],
-	['$LIBRUBYARG_STATIC', $LIBRUBYARG_STATIC],
-	['$RICE_CPPFLAGS', $RICE_CPPFLAGS],
-	['$RICE_LDFLAGS', $RICE_LDFLAGS],
-	['$RICE_PREFIX', $RICE_PREFIX],
-	['$RICE_USING_MINGW32', $RICE_USING_MINGW32],
-	['$DEFLIBPATH', $DEFLIBPATH],
-	['$CPPFLAGS', $CPPFLAGS],
-	['$LDFLAGS', $LDFLAGS],
-	['$CXXFLAGS', $CXXFLAGS],
-	['$LDSHARED_CXX', $LDSHARED_CXX],
-	['$OBJEXT', $OBJEXT],
-	['$DLDFLAGS', $DLDFLAGS],
-	['$LIBPATH', $LIBPATH],
-	['$static', $static],
-	['$config_h', $config_h],
-	['$default_static', $default_static],
-	['$configure_args', $configure_args],
-	['$libdir', $libdir],
-	['$rubylibdir', $rubylibdir],
-	['$archdir', $archdir],
-	['$defs', $defs],
-].to_h
-
-compiler_variables.each do |name, var|
-	puts name
-	puts "   #{var.inspect}"
+	compiler_variables.each do |name, var|
+		f.puts name
+		f.puts "   #{var.inspect}"
+	end
 end
 
 
