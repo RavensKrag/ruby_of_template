@@ -375,9 +375,17 @@ namespace :oF_sketch_lib do
 				final = 
 					out[start_i..end_i]
 					.collect{ |line|
-						key, value = line.split('=').collect{ |x| x.strip }
+						parts = line.split('=')
 						
+						
+						i = line.index("=")
+						key   = line[0..(i-1)]
+						value = line[((i+1)..-1)]
+						
+						
+						key, value = [key, value].collect{ |x| x.strip }
 						value = value.split()
+						
 						
 						[key, value]
 					}.to_h

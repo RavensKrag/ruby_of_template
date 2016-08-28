@@ -270,122 +270,71 @@ $CXXFLAGS
 $LDSHARED_CXX
    # => "g++ -shared"
 
-optimization_flags = "-O3 -DNDEBUG -march=native -mtune=native"
-cxx_flags = "-std=c++14 -DGCC_HAS_REGEX -DOF_USING_GTK -DOF_USING_GTK -DOF_USING_MPG123"
-other_compile_flags = "-D_REENTRANT -pthread" # not sure where these come from
+
+
+
+optimization_flags = of_build_variables['PLATFORM_OPTIMIZATION_CFLAGS_RELEASE'].join(' ')
+cxx_flags          = of_build_variables['CFLAGS']
+                     	.reject{ |flag|
+                     		["-fPIC", "-Wall"].include? flag
+                 		}
+                     	.join(' ')
 
 $CXXFLAGS += " " + [
 		optimization_flags,
 		cxx_flags,
-		other_compile_flags
 	].join(' ')
 
+# ALL_INSTALLED_ADDONS
+# PROJECT_ADDONS
+# VALID_PROJECT_ADDONS
+
+# OF_PROJECT_ADDONS_OBJS
+# PROJECT_ADDONS_OBJ_FILES
+# PROJECT_ADDONS_SOURCE_FILES
+# OF_PROJECT_ADDONS_DEPS
+# OF_ADDON_INCLUDES_CFLAGS
 
 
 
-c_flags = "
-	-I/usr/include/gstreamer-1.0
-	-I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include
-	-I/usr/include/AL
-	-I/usr/include/alsa
-	-I/usr/include/libdrm
-	-I/usr/include/gtk-3.0
-	-I/usr/include/at-spi2-atk/2.0
-	-I/usr/include/at-spi-2.0
-	-I/usr/include/dbus-1.0
-	-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
-	-I/usr/include/gtk-3.0
-	-I/usr/include/gio-unix-2.0/
-	-I/usr/include/mirclient
-	-I/usr/include/mircommon
-	-I/usr/include/mircookie
-	-I/usr/include/cairo
-	-I/usr/include/pango-1.0
-	-I/usr/include/harfbuzz
-	-I/usr/include/pango-1.0
-	-I/usr/include/atk-1.0
-	-I/usr/include/cairo
-	-I/usr/include/pixman-1
-	-I/usr/include/freetype2
-	-I/usr/include/libpng12
-	-I/usr/include/gdk-pixbuf-2.0
-	-I/usr/include/libpng12
-	-I/usr/include/glib-2.0
-	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
-	-I/usr/include/assimp
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl -D_REENTRANT -pthread
-"
-
-addon_c_flags = "
-	-I/usr/include/gstreamer-1.0
-	-I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include
-	-I/usr/include/AL
-	-I/usr/include/alsa
-	-I/usr/include/libdrm
-	-I/usr/include/gtk-3.0
-	-I/usr/include/at-spi2-atk/2.0
-	-I/usr/include/at-spi-2.0
-	-I/usr/include/dbus-1.0
-	-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
-	-I/usr/include/gtk-3.0
-	-I/usr/include/gio-unix-2.0/
-	-I/usr/include/mirclient
-	-I/usr/include/mircommon
-	-I/usr/include/mircookie
-	-I/usr/include/cairo
-	-I/usr/include/pango-1.0
-	-I/usr/include/harfbuzz
-	-I/usr/include/pango-1.0
-	-I/usr/include/atk-1.0
-	-I/usr/include/cairo
-	-I/usr/include/pixman-1
-	-I/usr/include/freetype2
-	-I/usr/include/libpng12
-	-I/usr/include/gdk-pixbuf-2.0
-	-I/usr/include/libpng12
-	-I/usr/include/glib-2.0
-	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
-	-I/usr/include/assimp
-"
 
 
-other = "
-	-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/lib
-	-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src
 
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs/assimp
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/win32
-	-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc
-"
+# OF_CORE_INCLUDES_CFLAGS
+# ADDON_INCLUDE_CFLAGS
+# CORE_PKG_CONFIG_LIBRARIES
 
 
-more_flags = 
-	[c_flags, addon_c_flags, other]
-		.collect{  |string_blob|  string_blob.split.join(' ') }
-		.join('   ')
+# p of_build_variables['OF_CORE_INCLUDES_CFLAGS']
 
-$CPPFLAGS += " " + more_flags
+
+c_flags = 
+	of_build_variables['PROJECT_INCLUDE_CFLAGS'] # includes files for core, addons, everything
+	.reject{ |flag|
+		# reject these libraries, because they have already been specified in extconf.rb above
+		%w[
+			fmodex
+			glfw
+			kiss
+			poco
+			tess2
+			utf8cpp
+		].any?{ |keyword|
+			flag.include? keyword
+		}
+	}
+	.reject{ |flag|
+		# bunch of local paths in here, not sure if they are relevant at the Ruby level?
+		# gonna get rid of them for now
+		%w[-I./ -I/. -I.].any?{ |fragment|
+			flag.include? fragment
+		}
+	}
+	.join(' ')
+p c_flags
+
+
+$CPPFLAGS += " " + c_flags
 
 
 
