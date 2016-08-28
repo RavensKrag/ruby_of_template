@@ -2,6 +2,9 @@ require 'mkmf-rice'
 require 'fileutils'
 require 'open3'
 
+require 'yaml'
+
+
 # interactive command-line program execution
 def run_i(cmd_string)
 	stdin, stdout_and_stderr, wait_thr = Open3.popen2e cmd_string
@@ -216,6 +219,20 @@ have_header('utf8/core.h')
 
 
 
+
+
+
+
+
+
+
+
+
+# === Set extra flags based on data from oF build system
+
+filepath = File.expand_path("./oF_build_variables.yaml", REPO_ROOT)
+of_build_variables = YAML.load_file(filepath)
+# p of_build_variables
 
 
 

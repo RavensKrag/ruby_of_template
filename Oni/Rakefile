@@ -3,6 +3,7 @@ require 'rake/clean'
 
 require 'fileutils'
 require 'open3'
+require 'yaml'
 
 
 
@@ -355,7 +356,41 @@ namespace :oF_sketch_lib do
 	task :print_vars do
 		swap_makefile(OF_SKETCH_ROOT, "Makefile", "Makefile.static_lib") do
 			Dir.chdir OF_SKETCH_ROOT do
-				run_i "make printvars"
+				# run_i "make printvars"
+				
+				out = `make printvars`
+				# p out
+				
+				out = out.each_line.to_a
+				
+				
+				
+				start_i = 8-1-1-3+1
+				end_i   = -(1+1)
+				
+				final = 
+					out[start_i..end_i]
+					.collect{ |line|
+						key, value = line.split('=').collect{ |x| x.strip }
+						
+						value = value.split()
+						
+						[key, value]
+					}.to_h
+				
+				
+				
+				# p out[0..start_i]
+				# p final
+				
+				
+				name = 'oF_build_variables.yaml'
+				filepath = File.expand_path("./#{name}", GEM_ROOT)
+				File.open(filepath, "w") do |f|
+					f.puts final.to_yaml
+				end
+				
+				puts "=> Variables written to '#{filepath}'"
 			end
 		end
 	end
