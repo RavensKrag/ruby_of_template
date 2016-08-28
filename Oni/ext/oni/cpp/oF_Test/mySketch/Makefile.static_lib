@@ -65,6 +65,19 @@ variable_test:
 	@echo $(OF_CORE_THIRDPARTY_HEADER_PATHS)
 	@echo "=================="
 
+
+# print all all of the variables that are available in this makefile
+.PHONY: printvars
+printvars:
+	$(foreach v, $(.VARIABLES), $(info $(v) = $($(v))))
+# original idea came from this link:
+# src: https://www.cmcrossroads.com/article/dumping-every-makefile-variable
+# 
+# the actual code that solved the problem came from here:
+# src: http://stackoverflow.com/questions/7117978/gnu-make-list-the-values-of-all-variables-or-macros-in-a-particular-run
+
+
+
 # create static library
 static_lib: lib/libOFSketch.a
 	

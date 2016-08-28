@@ -349,6 +349,16 @@ namespace :oF_sketch_lib do
 			end
 		end
 	end
+	
+	
+	
+	task :print_vars do
+		swap_makefile(OF_SKETCH_ROOT, "Makefile", "Makefile.static_lib") do
+			Dir.chdir OF_SKETCH_ROOT do
+				run_i "make printvars"
+			end
+		end
+	end
 end
 
 
