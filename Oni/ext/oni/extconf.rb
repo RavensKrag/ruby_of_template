@@ -44,8 +44,8 @@ libs    = File.expand_path("../of_v0.9.3_libs/custom/#{dependency_name}/lib/linu
 	# /usr/bin/ld: /home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/libs/tess2/lib/linux64/libtess2.a(tess.o): relocation R_X86_64_32 against `.data' can not be used when making a shared object; recompile with -fPIC
 
 
-puts "headers: #{headers}"
-puts "libs:    #{libs}"
+# puts "headers: #{headers}"
+# puts "libs:    #{libs}"
 
 # oF-provided static library (custom version compiled with -fPIC)
 dir_config(
@@ -231,6 +231,10 @@ $LDFLAGS
 
 
 
+
+
+# TODO: Automate process of setting the rest of the build environment. Want to be able to add new oF extensions using the oF extension build system, and not have to worry about if those changes are going to propagate over to the Ruby side or not.
+# TODO: centralize setting of build variables. Some duplication between extconf.rb and rakefile.
 
 
 
