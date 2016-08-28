@@ -344,12 +344,37 @@ $CPPFLAGS += " " + c_flags
 
 
 
-of_project_objs = [
-	# 'obj/linux64/Release/src/main.o',
-	'obj/linux64/Release/src/ofApp.o'
-].collect{ |line|
-	File.expand_path("./ext/oni/cpp/oF_Test/mySketch/#{line}", REPO_ROOT)
-}.join(' ')
+of_build_variables['OF_PROJECT_ADDONS_OBJS']
+
+
+
+of_build_variables['OF_PROJECT_OBJS']
+
+of_build_variables['OBJS_WITHOUT_EXTERNAL']
+of_build_variables['OBJS_WITH_PREFIX']
+
+# these last two are the same thing.
+# they seem to intend to give full paths for the files specified in OF_PROJECT_OBJS
+# but there is some sort of bug.
+# 
+# ex) 
+# 	obj/linux64/Release/src/main.o
+# 	obj/linux64/Release//home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src/main.o
+# 
+# notice how the second line puts the root of the path at an odd position...
+# (luckly I already had code to expand these local paths)
+
+
+
+
+of_project_objs = 
+	of_build_variables['OF_PROJECT_OBJS']
+	.collect{ |line|
+		File.expand_path("./ext/oni/cpp/oF_Test/mySketch/#{line}", REPO_ROOT)
+	}.join(' ')
+
+
+of_project_addon_objs = of_build_variables['OF_PROJECT_ADDONS_OBJS'].join(' ')
 
 
 
@@ -358,52 +383,40 @@ of_project_objs = [
 
 
 
-of_project_addon_objs = "
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpMeshHelper.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpModelLoader.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpAnimation.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpTexture.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxToggle.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSliderGroup.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxLabel.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSlider.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxGuiGroup.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxButton.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxPanel.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxBaseGui.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPServer.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPClient.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxUDPManager.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPManager.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscMessage.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscParameterSync.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscBundle.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscSender.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscReceiver.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/IpEndpointName.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscTypes.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.o
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.o
-"
 
-of_project_libs = "
-	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/lib/linux64/libopenFrameworks.a
-"
+
+
+
+
+# libopenFrameworks.a
+of_project_libs = of_build_variables['TARGET_LIBS'].join(' ')
+
+
+
+# basic linker flags
+ld_flags = 
+	of_build_variables['ALL_LDFLAGS']
+	.reject{ |flag|
+		flag.include? "fmodex" # already specified in extconf.rb
+	}
+	.reject{ |flag|
+		flag.include? '-rpath'
+	}
+ld_flags.unshift "-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH}" # add to front
+ld_flags = ld_flags.join(' ')
 
 # NOTE: may need to modify -rpath in the future
-# TODO: specify directories for dynamic libraries relative to the root directory of this project, and then expand them into full paths before adding to -rpath. This means the gem will be able to find the dynamic libraries regaurdless of where the Ruby code is being called from.
-ld_flags = "
-	-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH} -Wl,--as-needed -Wl,--gc-sections
-
-"
+# NOTE: specify directories for dynamic libraries relative to the root directory of this project, and then expand them into full paths before adding to -rpath. This means the gem will be able to find the dynamic libraries regaurdless of where the Ruby code is being called from.
 
 
-of_core_libs_dynamic_flags = "
-	-lz -lgstapp-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -ludev -lfontconfig -lfreetype -lsndfile -lopenal -lssl -lcrypto -lpulse-simple -lpulse -lasound -lGLEW -lGLU -lGL -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lmpg123 -lassimp -lglut -lX11 -lXrandr -lXxf86vm -lXi -lXcursor -ldl -lpthread -lfreeimage -lrtaudio -lboost_filesystem -lboost_system
-"
+# more linker flags
+of_core_libs_dynamic_flags = 
+	of_build_variables['OF_CORE_LIBS']
+	.reject{ |flag|
+		# remove the core dependencies, because extconf.rb specifies special versions.
+		flag.include? "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs"
+	}
+	.join(' ')
 
 
 
