@@ -234,9 +234,7 @@ filepath = File.expand_path("./oF_build_variables.yaml", REPO_ROOT)
 of_build_variables = YAML.load_file(filepath)
 # p of_build_variables
 
-
-
-
+# TODO: centralize setting of build variables. Some duplication between extconf.rb and rakefile.
 
 
 
@@ -245,13 +243,6 @@ $CPPFLAGS
 # => "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/oF_Test/mySketch/src -I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/  $(DEFS) $(cppflags)  -I/home/ravenskrag/.rvm/gems/ruby-2.1.1/gems/rice-2.1.0/ruby/lib/include"
 $LDFLAGS
 # => "-L. -fstack-protector -rdynamic -Wl,-export-dynamic  -L/home/ravenskrag/.rvm/gems/ruby-2.1.1/gems/rice-2.1.0/ruby/lib/lib -lrice"
-
-
-
-
-
-# TODO: Automate process of setting the rest of the build environment. Want to be able to add new oF extensions using the oF extension build system, and not have to worry about if those changes are going to propagate over to the Ruby side or not.
-# TODO: centralize setting of build variables. Some duplication between extconf.rb and rakefile.
 
 
 
@@ -273,6 +264,8 @@ $LDSHARED_CXX
 
 
 
+
+# NOTE: there is also OPTIMIZATION_CFLAGS and OPTIMIZATION_LDFLAGS, but those are not used here
 optimization_flags = of_build_variables['PLATFORM_OPTIMIZATION_CFLAGS_RELEASE'].join(' ')
 cxx_flags          = of_build_variables['CFLAGS']
                      	.reject{ |flag|
@@ -285,27 +278,8 @@ $CXXFLAGS += " " + [
 		cxx_flags,
 	].join(' ')
 
-# ALL_INSTALLED_ADDONS
-# PROJECT_ADDONS
-# VALID_PROJECT_ADDONS
-
-# OF_PROJECT_ADDONS_OBJS
-# PROJECT_ADDONS_OBJ_FILES
-# PROJECT_ADDONS_SOURCE_FILES
-# OF_PROJECT_ADDONS_DEPS
-# OF_ADDON_INCLUDES_CFLAGS
 
 
-
-
-
-
-# OF_CORE_INCLUDES_CFLAGS
-# ADDON_INCLUDE_CFLAGS
-# CORE_PKG_CONFIG_LIBRARIES
-
-
-# p of_build_variables['OF_CORE_INCLUDES_CFLAGS']
 
 
 c_flags = 
