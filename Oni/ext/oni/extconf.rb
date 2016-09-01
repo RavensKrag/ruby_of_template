@@ -290,7 +290,7 @@ c_flags =
 		}
 	}
 	.join(' ')
-p c_flags
+# p c_flags
 
 
 $CPPFLAGS += " " + c_flags
