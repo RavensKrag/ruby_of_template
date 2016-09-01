@@ -6,29 +6,11 @@ require 'open3'
 require 'yaml'
 
 
+GEM_ROOT = File.absolute_path(File.dirname(__FILE__))
+require File.expand_path('./build_libs/common', GEM_ROOT)
+# ^ this file declares GEM_ROOT constant, other constants, and a some functions
 
 
-# interactive command-line program execution
-def run_i(cmd_string, &block)
-	exit_status = nil
-	Open3.popen2e(cmd_string) do |stdin, stdout_and_stderr, wait_thr|
-		output = nil
-		begin
-			output = stdout_and_stderr.gets
-			puts output
-		end while output
-		
-		
-		exit_status = wait_thr.value
-	end
-	
-	if block
-		# call the block if there is an error
-		raise block.call if exit_status != 0
-	end
-	
-	return exit_status
-end
 
 # invoke a particular rake task by name (and then allow it to be run again later)
 def run_task(task)
@@ -76,43 +58,6 @@ end
 
 # generate depend file for gcc dependencies
 # sh "gcc -MM *.c > depend"
-
-NAME = 'oni'
-
-
-
-# === this path is most likely not going to be under the root directory of the Ruby gem
-OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
-
-
-# === these paths should be under the root directory of this Ruby gem
-GEM_ROOT = File.absolute_path(File.dirname(__FILE__))
-
-
-'ext/oni/cpp/oF_Test'
-	'./mySketch'
-	'./mySketch/lib'
-
-CPP_ROOT = File.expand_path('ext/oni/cpp/', GEM_ROOT)
-
-	OF_SKETCH_ROOT = File.expand_path('oF_Test/mySketch/', CPP_ROOT)
-		
-		OF_SKETCH_SRC_DIR         = File.expand_path('src', OF_SKETCH_ROOT)
-		OF_SKETCH_SRC_FILES       = Dir.glob(File.join(OF_SKETCH_SRC_DIR, '*{.cpp,.h}'))
-		
-		OF_SKETCH_LIB_OUTPUT_PATH = File.expand_path('lib', OF_SKETCH_ROOT)
-		
-
-# === Other build configuration variables
-OF_SKETCH_LIB_FILE = File.join(OF_SKETCH_LIB_OUTPUT_PATH, 'libOFSketch.a')
-PLATFORM           = "linux64"
-TARGET             = "Release"
-
-number_of_cores = 4
-# TODO: accept platform, target, and number of cores as Rake arguments
-# (maybe you actually want to figure out platform automatially)
-
-OF_BUILD_VARIABLE_FILE = File.expand_path("./oF_build_variables.yaml", GEM_ROOT)
 
 
 
@@ -273,7 +218,7 @@ namespace :oF_sketch do
 	# generate all the .o files using the standard openFrameworks build system
 	task :build do
 		Dir.chdir OF_SKETCH_ROOT do
-			run_i "make -j#{number_of_cores}" do
+			run_i "make -j#{NUMBER_OF_CORES}" do
 				"ERROR: Could not build oF sketch."
 			end
 		end
@@ -430,6 +375,8 @@ source_files = Array.new
 # Dir.glob("ext/#{NAME}/cpp/oF_Test/*{.cpp,.h}")
 source_files += Dir.glob("ext/#{NAME}/cpp/lib/**/*{.cpp,.h}")
 source_files += ["ext/#{NAME}/extconf.rb", __FILE__, OF_BUILD_VARIABLE_FILE]
+
+# NOTE: adding OF_BUILD_VARIABLE_FILE to the dependencies for the 'c_library' makes it so extconf.rb has to run every time, because the variable file is being regenerated every time.
 
 
 # FIXME: can't seem to just run rake again to rebuild. keep having to clobber, and then do a full clean build again.

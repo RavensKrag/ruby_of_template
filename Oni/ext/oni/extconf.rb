@@ -4,31 +4,16 @@ require 'open3'
 
 require 'yaml'
 
+path_to_file = File.absolute_path(File.dirname(__FILE__))
+gem_root = File.expand_path('../../', path_to_file)
 
-# interactive command-line program execution
-def run_i(cmd_string)
-	stdin, stdout_and_stderr, wait_thr = Open3.popen2e cmd_string
-	
-	output = nil
-	begin
-		output = stdout_and_stderr.gets
-		puts output
-	end while output
-	
-	stdin.close
-	stdout_and_stderr.close
-end
-
-PATH_TO_FILE = File.absolute_path(File.dirname(__FILE__))
-
-OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
-REPO_ROOT = File.expand_path('../../', PATH_TO_FILE)
+require File.expand_path('./build_libs/common', gem_root)
+# ^ this file declares GEM_ROOT constant, other constants, and a some functions
 
 
-DYNAMIC_LIB_PATH = File.expand_path("./bin/libs/", REPO_ROOT)
+
 
 # C deps must be listed before the C++ core is loaded, and C++ deps must be listed after
-
 
 
 
@@ -230,7 +215,7 @@ have_header('utf8/core.h')
 
 # === Set extra flags based on data from oF build system
 
-filepath = File.expand_path("./oF_build_variables.yaml", REPO_ROOT)
+filepath = File.expand_path("./oF_build_variables.yaml", GEM_ROOT)
 of_build_variables = YAML.load_file(filepath)
 # p of_build_variables
 
@@ -344,7 +329,7 @@ of_build_variables['OBJS_WITH_PREFIX']
 of_project_objs = 
 	of_build_variables['OF_PROJECT_OBJS']
 	.collect{ |line|
-		File.expand_path("./ext/oni/cpp/oF_Test/mySketch/#{line}", REPO_ROOT)
+		File.expand_path("./ext/oni/cpp/oF_Test/mySketch/#{line}", GEM_ROOT)
 	}.join(' ')
 
 
