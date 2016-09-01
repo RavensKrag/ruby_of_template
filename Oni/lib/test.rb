@@ -17,7 +17,7 @@ class Window < Oni::Window
 	include Oni::Graphics
 	
 	def initialize
-		super(self) # pass Ruby instance to C++ land for callbacks, etc
+		super("Test App")
 		# ofSetEscapeQuitsApp false
 		
 		
@@ -134,6 +134,9 @@ class Window < Oni::Window
 		super()
 	end
 	
+	
+	
+	
 	def key_pressed(key)
 		super(key)
 		
@@ -156,6 +159,9 @@ class Window < Oni::Window
 	def key_released(key)
 		super(key)
 	end
+	
+	
+	
 	
 	
 	def mouse_moved(x,y)

@@ -24,6 +24,13 @@ module Oni
 
 
 class Window
+	alias :rice_cpp_initialize :initialize
+	def initialize(title)
+		rice_cpp_initialize(self) # pass Ruby instance to C++ land for callbacks, etc
+		self.window_title = title
+	end
+	
+	
 	def setup
 		puts "ruby: Window#setup"
 	end
