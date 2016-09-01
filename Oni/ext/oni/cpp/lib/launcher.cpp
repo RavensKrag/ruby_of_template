@@ -103,5 +103,28 @@ ofPoint Launcher::getScreenSize(){
 	return mWindow->getScreenSize();
 }
 
+void Launcher::setClipboardString(const std::string& text){
+	mWindow->setClipboardString(text);
+}
+
+std::string Launcher::getClipboardString(){
+	return mWindow->getClipboardString();
+}
+
+// TODO: bind more methdos.
+	// * allow setting of window title
+
+// ofAppGLFWWindow::setWindowTitle(string title)
+// ofPoint ofAppGLFWWindow::getWindowPosition();
+// ofPoint ofAppGLFWWindow::getScreenSize();
+// int ofAppGLFWWindow::getCurrentMonitor();
+
+
+// #ifdef TARGET_LINUX
+// 	void setWindowIcon(const string & path);
+// 	void setWindowIcon(const ofPixels & iconPixels);
+// #endif
+
+
 
 // ---------------------------------------------------

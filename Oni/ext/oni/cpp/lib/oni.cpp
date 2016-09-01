@@ -71,11 +71,15 @@ void Init_oni()
 		// .define_method("set_window_icon",     &Launcher::setWindowIcon) // private C++ method
 		
 		
-		
 		// timing and framerate
 		.define_method("ofGetLastFrameTime", &ofGetLastFrameTime)
 		.define_method("ofGetFrameRate", &ofGetFrameRate)
 		.define_method("ofSetFrameRate", &ofSetFrameRate)
+		
+		
+		// clipboard support
+		.define_method("clipboard_string=",         &Launcher::setClipboardString)
+		.define_method("clipboard_string",          &Launcher::getClipboardString)
 		
 		
 		.define_method("ofSetEscapeQuitsApp", &ofSetEscapeQuitsApp)

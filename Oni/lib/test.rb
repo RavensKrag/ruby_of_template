@@ -96,6 +96,7 @@ class Window < Oni::Window
 		
 		
 		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
+		ofDrawBitmapString("clipboard: #{self.clipboard_string.inspect}", 300, 450, z);
 		
 		# ofSetColor(255,0,0, 255) # rgba
 		# ofDrawCircle(*@p,z, 20)
@@ -206,6 +207,8 @@ class Window < Oni::Window
 			end
 				
 			@cursor_visible = !@cursor_visible
+		elsif button == 5
+			self.clipboard_string = "hello world"
 		end
 	end
 	

@@ -48,6 +48,11 @@ public:
 	ofPoint getScreenSize();
 	
 	
+	void setClipboardString(const std::string& text);
+	std::string getClipboardString();
+	
+	
+	
 	
 	// NOTE: can't use the 'of' prefix for this interface, because it confuses the C++ compiler / linker when it tries to resolve the member functions of this class vs the original functions.
 	
