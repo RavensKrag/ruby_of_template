@@ -96,7 +96,7 @@ class Window < Oni::Window
 		
 		
 		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
-		ofDrawBitmapString("clipboard: #{self.clipboard_string.inspect}", 300, 450, z);
+		ofDrawBitmapString("clipboard: #{self.clipboard_string.inspect}", 100, 400, z);
 		
 		# ofSetColor(255,0,0, 255) # rgba
 		# ofDrawCircle(*@p,z, 20)
