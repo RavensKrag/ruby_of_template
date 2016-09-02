@@ -372,7 +372,6 @@ source_files = Array.new
 # source_files += Dir.glob("ext/#{NAME}/*{.rb,.c}")
 
 
-# Dir.glob("ext/#{NAME}/cpp/oF_Test/*{.cpp,.h}")
 source_files += Dir.glob("ext/#{NAME}/cpp/lib/**/*{.cpp,.h}")
 source_files += ["ext/#{NAME}/extconf.rb", __FILE__, OF_BUILD_VARIABLE_FILE]
 
@@ -584,7 +583,7 @@ task :rebuild_c_extension do
 end
 
 
-# task :clean => [:clean_core, :clean_library]
+task :clean => ['oF_sketch:clean']
 
 
 # rebuild literally EVERYTHING. start with building oF core, and work your way up.

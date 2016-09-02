@@ -1,0 +1,18 @@
+apparently there's also a makefile-based system?
+
+# to find out commands relevent to the openframeworks build system use:
+make help
+
+# these files control the build process
+addons.make
+config.make
+compile.project.mk
+
+# 
+# and this system will scan all available folders under the main directory for
+# .cpp files (don't use .c files)
+# 
+# config: set up paths to ignore
+#         or additional paths to search
+#         or flags, and other options
+# addons: specify which openFrameworks addons to use

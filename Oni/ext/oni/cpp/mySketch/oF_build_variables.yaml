@@ -1,0 +1,2578 @@
+---
+GNUMAKEFLAGS: []
+"<D": []
+"?F": []
+CORE_EXCLUSIONS:
+- "%.mm"
+- "%.m"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQtUtils.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQuickTimeGrabber.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQuickTimePlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofDirectShowGrabber.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofDirectShowPlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppEGLWindow.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glew/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/cairo/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glu/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/CppUnit"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/CppUnit/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/quicktime/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/videoInput/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/freetype/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/FreeImage/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/assimp/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glut/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/rtAudio/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openssl/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/%"
+DESKTOP_SESSION:
+- gnome
+".SHELLFLAGS":
+- "-c"
+OF_CORE_HEADER_FILES:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofMatrix4x4.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofVec2f.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofMatrix3x3.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofMath.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofVec3f.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofQuaternion.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofVectorMath.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofVec4f.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofFmodSoundPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofSoundStream.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofBaseSoundStream.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofSoundUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofSoundPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofRtAudioSoundStream.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofOpenALSoundPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofSoundBuffer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofBaseSoundPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQuickTimeGrabber.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofDirectShowPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofGstUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQTKitGrabber.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofAVFoundationPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQTKitMovieRenderer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofVideoPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofDirectShowGrabber.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQuickTimePlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofGstVideoGrabber.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQtUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofGstVideoPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQTKitPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofAVFoundationVideoPlayer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofVideoGrabber.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication/ofArduino.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication/ofSerial.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofWindowSettings.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppGLFWWindow.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppNoWindow.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppGlutWindow.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppEGLWindow.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofBaseApp.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppBaseWindow.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppRunner.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofMainLoop.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofIcon.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofSystemUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofTimer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofMatrixStack.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofFpsCounter.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofLog.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofThread.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofURLFileLoader.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofNoise.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofConstants.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofXml.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofFileUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofThreadChannel.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events/ofEventUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events/ofEvents.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events/ofEvent.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofNode.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/of3dUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/of3dPrimitives.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofMesh.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofEasyCam.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofCamera.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofRectangle.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofColor.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofParameterGroup.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofParameter.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofBaseTypes.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofPoint.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofTypes.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofCairoRenderer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofTrueTypeFont.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofPath.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofPolyline.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/of3dGraphics.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofImage.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofGraphics.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofTessellator.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofRendererCollection.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofBitmapFont.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofPixels.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofTexture.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofGLUtils.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofGLProgrammableRenderer.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofVbo.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofLight.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofVboMesh.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofFbo.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofMaterial.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofShader.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofBufferObject.h"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofGLRenderer.h"
+PLATFORM_SHARED_LIBRARIES: []
+OF_CORE_THIRDPARTY_STATIC_LIBS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/lib/linux64/libglfw3.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/lib/linux64/libkiss.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/lib/linux64/libtess2.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNetSSL.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNet.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoCrypto.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoUtil.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoJSON.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoXML.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoFoundation.a"
+XDG_SESSION_TYPE:
+- x11
+CWEAVE:
+- cweave
+PROJECT_CFLAGS:
+- "-fPIC"
+"?D": []
+rvm_path:
+- "/home/ravenskrag/.rvm"
+PARSED_ADDONS_FILTERED_SOURCE_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/src/ofxTrueTypeFontUC.cpp"
+GCC_MAJOR_GT_4:
+- '1'
+OF_CORE_THIRDPARTY_HEADER_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include/GLFW"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8"
+OF_PROJECT_CFLAGS:
+- "-Wall"
+- "-std=c++14"
+- "-DGCC_HAS_REGEX"
+- "-DOF_USING_GTK"
+- "-DOF_USING_GTK"
+- "-DOF_USING_MPG123"
+- "-fPIC"
+"@D":
+- "."
+XAUTHORITY:
+- "/run/user/1000/gdm/Xauthority"
+GDMSESSION:
+- gnome
+XMODIFIERS:
+- "@im=ibus"
+CURDIR:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch"
+OF_LIBS_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs"
+SHELL:
+- "/bin/sh"
+RM:
+- rm
+- "-f"
+CO:
+- co
+VTE_VERSION:
+- '4205'
+OF_PROJECT_ADDONS_OBJS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpMeshHelper.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpModelLoader.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpAnimation.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpTexture.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxToggle.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSliderGroup.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxLabel.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSlider.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxGuiGroup.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxButton.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxPanel.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxBaseGui.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPServer.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPClient.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxUDPManager.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPManager.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscMessage.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscParameterSync.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscBundle.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscSender.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscReceiver.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/IpEndpointName.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscTypes.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepad.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadHandler.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadCamera.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadOIS.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadLinux.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxTrueTypeFontUC/src/ofxTrueTypeFontUC.o"
+_:
+- "/home/ravenskrag/.rvm/gems/ruby-2.1.1/bin/rake"
+PREPROCESS.F:
+- f77
+- "-F"
+src_to_obj: []
+ALL_CXXFLAGS: []
+LINK.m:
+- cc
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+XDG_CONFIG_DIRS:
+- "/etc/xdg/xdg-gnome:/usr/share/upstart/xdg:/etc/xdg"
+OUTPUT_OPTION:
+- "-o"
+- printvars
+PLATFORM_OPTIMIZATION_CFLAGS_RELEASE:
+- "-O3"
+- "-DNDEBUG"
+- "-march=native"
+- "-mtune=native"
+OF_PROJECT_LIBS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64/libwgois64.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64/libwgois64.a"
+COMPILE.cpp:
+- g++
+- "-c"
+_system_version:
+- '16.04'
+HAS_SYSTEM_GTK3:
+- '0'
+MAKEFILE_LIST:
+- Makefile
+- config.make
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/linux64/config.linux64.default.mk"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/makefileCommon/config.project.mk"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/makefileCommon/config.addons.mk"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/linux64/config.linux64.default.mk"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk"
+NODEPS:
+- clean
+PLATFORM_OPTIMIZATION_CFLAGS_DEBUG: []
+"@F":
+- printvars
+PLATFORM_PKG_CONFIG:
+- pkg-config
+OF_PROJECT_CXXFLAGS: []
+IM_CONFIG_PHASE:
+- '1'
+OF_ADDONS_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons"
+ADDON_PKG_CONFIG_LIBRARIES: []
+PROJECT_ADDONS_PKG_CONFIG_LIBRARIES:
+- assimp
+USERNAME:
+- ravenskrag
+SESSIONTYPE:
+- gnome-session
+CXXFLAGS: []
+MANDATORY_PATH:
+- "/usr/share/gconf/gnome.mandatory.path"
+XDG_DATA_DIRS:
+- "/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop"
+CROSS_COMPILING:
+- '0'
+PROJECT_ADDONS:
+- ofxAssimpModelLoader
+- ofxGui
+- ofxNetwork
+- ofxOsc
+- ofxGamepad
+- ofxTrueTypeFontUC
+OF_EXPORT_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//export"
+OF_CORE_LIB_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/lib/linux64"
+DBUS_SESSION_BUS_ADDRESS:
+- unix:abstract=/tmp/dbus-EbtNCwEYm7
+GCC_MAJOR_EQ_4:
+- '0'
+CC:
+- cc
+PROJECT_ADDONS_SOURCE_FILES:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src/ofxAssimpMeshHelper.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src/ofxAssimpModelLoader.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src/ofxAssimpAnimation.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src/ofxAssimpTexture.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src/ofxToggle.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src/ofxSliderGroup.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src/ofxLabel.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src/ofxSlider.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src/ofxGuiGroup.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src/ofxButton.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src/ofxPanel.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src/ofxBaseGui.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src/ofxTCPServer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src/ofxTCPClient.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src/ofxUDPManager.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src/ofxTCPManager.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src/ofxOscMessage.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src/ofxOscParameterSync.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src/ofxOscBundle.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src/ofxOscSender.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src/ofxOscReceiver.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src/ofxGamepad.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src/ofxGamepadHandler.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src/ofxGamepadCamera.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src/ofxGamepadOIS.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src/ofxGamepadLinux.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/src/ofxTrueTypeFontUC.cpp"
+PARSED_ADDONS_FILTERED_LIBS_SOURCE_INCLUDE_PATHS: []
+addon:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC"
+GCC_MINOR_GTEQ_9:
+- '0'
+PROJECT_ADDONS_LDFLAGS: []
+PLATFORM_REQUIRED_ADDONS: []
+CHECKOUT,v:
+- "+co"
+- printvars
+obj_prefix:
+- obj/linux64/Release/
+unscaped_var_line:
+- ADDON_SOURCES_EXCLUDE
+- "="
+- libs/oscpack/src/ip/posix/%
+OF_PROJECT_OBJS:
+- obj/linux64/Release/src/main.o
+- obj/linux64/Release/src/ofApp.o
+CLUTTER_IM_MODULE:
+- xim
+LESSOPEN:
+- "|"
+- "/usr/bin/lesspipe"
+- "%s"
+OF_PROJECT_DEFINES: []
+CPP:
+- cc
+- "-E"
+OF_APPS_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//apps"
+LINK.cc:
+- g++
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+PARSED_ADDONS_LIBS_SOURCE_INCLUDES: []
+PARSED_ALL_PLATFORM_LIBS: []
+LEX:
+- lex
+MAKE_HOST:
+- x86_64-pc-linux-gnu
+PATH:
+- "/home/ravenskrag/.rvm/gems/ruby-2.1.1/bin:/home/ravenskrag/.rvm/gems/ruby-2.1.1@global/bin:/home/ravenskrag/.rvm/rubies/ruby-2.1.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ravenskrag/.rvm/bin:/var/lib/gems/1.9.1/bin:/home/ravenskrag/.rvm/bin"
+OF_CORE_LIBS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/lib/linux64/libglfw3.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/lib/linux64/libkiss.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/lib/linux64/libtess2.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNetSSL.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNet.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoCrypto.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoUtil.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoJSON.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoXML.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoFoundation.a"
+- "-lz"
+- "-lgstapp-1.0"
+- "-lgstvideo-1.0"
+- "-lgstbase-1.0"
+- "-lgstreamer-1.0"
+- "-ludev"
+- "-lfontconfig"
+- "-lfreetype"
+- "-lsndfile"
+- "-lopenal"
+- "-lssl"
+- "-lcrypto"
+- "-lpulse-simple"
+- "-lpulse"
+- "-lasound"
+- "-lGLEW"
+- "-lGLU"
+- "-lGL"
+- "-lgtk-3"
+- "-lgdk-3"
+- "-lpangocairo-1.0"
+- "-lpango-1.0"
+- "-latk-1.0"
+- "-lcairo-gobject"
+- "-lcairo"
+- "-lgdk_pixbuf-2.0"
+- "-lgio-2.0"
+- "-lgobject-2.0"
+- "-lglib-2.0"
+- "-lmpg123"
+- "-lassimp"
+- "-lglut"
+- "-lX11"
+- "-lXrandr"
+- "-lXxf86vm"
+- "-lXi"
+- "-lXcursor"
+- "-ldl"
+- "-lpthread"
+- "-lfreeimage"
+- "-lrtaudio"
+- "-lboost_filesystem"
+- "-lboost_system"
+LD:
+- ld
+B_PROCESS_ADDONS:
+- 'yes'
+ALL_OF_CORE_LIBS_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/lib/linux64"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/lib/linux64"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/lib/linux64"
+TEXI2DVI:
+- texi2dvi
+OF_CORE_THIRDPARTY_SHARED_LIBS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/libfmodex.so"
+GPG_AGENT_INFO:
+- "/home/ravenskrag/.gnupg/S.gpg-agent:0:1"
+YACC:
+- yacc
+PG_OF_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release"
+SESSION_MANAGER:
+- local/ravensnest:@/tmp/.ICE-unix/4020,unix/ravensnest:/tmp/.ICE-unix/4020
+OF_LIBS_OF_COMPILED_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled"
+COMPILE.mod:
+- m2c
+XDG_RUNTIME_DIR:
+- "/run/user/1000"
+FIND:
+- find
+CFLAGS:
+- "-Wall"
+- "-std=c++14"
+- "-DGCC_HAS_REGEX"
+- "-DOF_USING_GTK"
+- "-DOF_USING_GTK"
+- "-DOF_USING_MPG123"
+- "-fPIC"
+ARFLAGS:
+- rv
+LINK.r:
+- f77
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+PARSED_ADDONS_LIBS_SOURCES: []
+PARSED_ADDONS_FILTERED_INCLUDE_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/src"
+WINDOWID:
+- '65011850'
+COMPILE.f:
+- f77
+- "-c"
+OF_CORE_SOURCE_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl"
+LINT.c:
+- lint
+YACC.m:
+- yacc
+ADDONS_INCLUDES_FILTER:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/libs/assimp/%"
+LINT:
+- lint
+LINK.p:
+- pc
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+YACC.y:
+- yacc
+PROJECT_ADDONS_OBJ_FILES:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpMeshHelper.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpModelLoader.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpAnimation.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpTexture.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxToggle.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSliderGroup.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxLabel.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSlider.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxGuiGroup.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxButton.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxPanel.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxBaseGui.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPServer.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPClient.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxUDPManager.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPManager.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscMessage.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscParameterSync.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscBundle.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscSender.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscReceiver.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/IpEndpointName.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscTypes.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepad.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadHandler.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadCamera.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadOIS.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadLinux.o"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxTrueTypeFontUC/src/ofxTrueTypeFontUC.o"
+_system_name:
+- Ubuntu
+AR:
+- ar
+XDG_MENU_PREFIX:
+- gnome-
+PROJECT_ADDONS_CXXS: []
+ALL_LDFLAGS:
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+".FEATURES":
+- target-specific
+- order-only
+- second-expansion
+- else-if
+- shortest-stem
+- undefine
+- oneshell
+- archives
+- jobserver
+- output-sync
+- check-symlink
+- load
+HAS_SYSTEM_MPG123:
+- '0'
+PROCESS_NEXT:
+- '0'
+TANGLE:
+- tangle
+SESSION:
+- gnome
+ALL_OF_CORE_LIBS_PLATFORM_LIB_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/*/lib/linux64"
+OF_CORE_LIBS_PLATFORM_LIBS_STATICS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/lib/linux64/libglfw3.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/lib/linux64/libkiss.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoZip.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libCppUnit.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoDataSQLited.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNetd.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNet.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoDataSQLite.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoCrypto.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoDatad.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoJSONd.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNetSSLd.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoZipd.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoJSON.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoUtild.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoData.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoFoundationd.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoUtil.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libCppUnitd.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoXMLd.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoCryptod.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoXML.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoFoundation.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNetSSL.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/lib/linux64/libtess2.a"
+OPTIMIZATION_LDFLAGS: []
+LS_COLORS:
+- 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+PLATFORM_STATIC_LIBRARIES:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNetSSL.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoNet.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoCrypto.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoUtil.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoJSON.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoXML.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/linux64/libPocoFoundation.a"
+JOB:
+- dbus
+XDG_SESSION_DESKTOP:
+- gnome
+remove-dupes-func: []
+SSH_AUTH_SOCK:
+- "/run/user/1000/keyring/ssh"
+OF_PROJECT_EXCLUSIONS:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/bin"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/.git"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/bin/%"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/%"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/.git/%"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/%.xcodeproj"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/%.xcodeproj/%"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/build"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/build/%"
+GET:
+- get
+"%F": []
+DISPLAY:
+- ":1"
+PROJECT_OPTIMIZATION_CFLAGS_DEBUG: []
+COMPILE.F:
+- f77
+- "-c"
+CTANGLE:
+- ctangle
+PLATFORM_CFLAGS:
+- "-Wall"
+- "-std=c++14"
+- "-DGCC_HAS_REGEX"
+PARSED_ADDONS_LIBS_PLATFORM_LIB_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/libs/*/lib/linux64"
+PARSED_ADDONS_LIBS_PLATFORM_LIBS_STATICS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64/libwgois64.a"
+GTK_IM_MODULE:
+- ibus
+".LIBPATTERNS":
+- lib%.so
+- lib%.a
+PLATFORM_OS:
+- Linux
+rvm_bin_path:
+- "/home/ravenskrag/.rvm/bin"
+PWD:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni"
+ALL_OF_PROJECT_SOURCE_PATHS:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/notes"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/bin"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/bin/data"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/bin/libs"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/lib"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/src"
+OBJS_WITHOUT_EXTERNAL:
+- obj/linux64/Release//home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src/main.o
+- obj/linux64/Release//home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src/ofApp.o
+PARSED_ADDONS_SOURCE_INCLUDES:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/src"
+OF_CORE_LIBS_THAT_DONT_NEED_ORDER:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2"
+OF_CORE_HEADER_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl"
+ADDON_INCLUDES_EXCLUDE:
+- libs/assimp/%
+LINK.S:
+- cc
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+INVALID_PROJECT_ADDONS: []
+GEM_HOME:
+- "/home/ravenskrag/.rvm/gems/ruby-2.1.1"
+XDG_SEAT:
+- seat0
+PREPROCESS.r:
+- f77
+- "-F"
+INVALID_GLOBAL_ADDONS: []
+OF_PROJECT_SOURCE_FILES:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src/main.cpp"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src/ofApp.cpp"
+parse_addon: []
+LINK.c:
+- cc
+- "-Wall"
+- "-std=c++14"
+- "-DGCC_HAS_REGEX"
+- "-DOF_USING_GTK"
+- "-DOF_USING_GTK"
+- "-DOF_USING_MPG123"
+- "-fPIC"
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+PROJECT_ADDONS_FRAMEWORKS: []
+GTK_MODULES:
+- gail:atk-bridge
+LINK.s:
+- cc
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+HOME:
+- "/home/ravenskrag"
+OPTIMIZATION_CFLAGS:
+- "-O3"
+- "-DNDEBUG"
+- "-march=native"
+- "-mtune=native"
+PARSED_ADDONS_LIBS:
+- "./lib/libOFSketch.a"
+- "./lib/libOFSketch.a"
+- "./bin/libs/libfmodex.so"
+- "./bin/libs/libfmodex.so"
+- "./bin/libs/libfmodex.so"
+OF_PROJECT_OBJ_FILES:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src/main.o"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src/ofApp.o"
+PARSED_ADDONS_SOURCE_PATHS: []
+LESSCLOSE:
+- "/usr/bin/lesspipe"
+- "%s"
+- "%s"
+OF_CORE_DEFINES_CFLAGS:
+- "-DOF_USING_GTK"
+- "-DOF_USING_GTK"
+- "-DOF_USING_MPG123"
+OF_PROJECT_ADDONS_DEPS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpMeshHelper.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpModelLoader.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpAnimation.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpTexture.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxToggle.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSliderGroup.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxLabel.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSlider.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxGuiGroup.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxButton.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxPanel.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxBaseGui.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPServer.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPClient.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxUDPManager.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPManager.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscMessage.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscParameterSync.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscBundle.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscSender.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscReceiver.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/IpEndpointName.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscTypes.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepad.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadHandler.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadCamera.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadOIS.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadLinux.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxTrueTypeFontUC/src/ofxTrueTypeFontUC.d"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/main.d"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/ofApp.d"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/main.d"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/ofApp.d"
+LOGNAME:
+- ravenskrag
+QT_LINUX_ACCESSIBILITY_ALWAYS_ON:
+- '1'
+ABI_LIB_SUBPATH:
+- linux64
+_ORIGINAL_GEM_PATH:
+- "/home/ravenskrag/.rvm/gems/ruby-2.1.1:/home/ravenskrag/.rvm/gems/ruby-2.1.1@global"
+OF_ADDON_INCLUDES_CFLAGS:
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs/assimp"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/vs2008"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/osx"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/vs2010"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/mac"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/linux"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/mac"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/linux"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+OF_SHARED_MAKEFILES_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/makefileCommon"
+PARSED_ADDONS_LIBS_INCLUDES:
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+PLATFORM_VARIANT:
+- default
+PROJECT_AFTER: []
+MAKE_VERSION:
+- '4.1'
+GNOME_DESKTOP_SESSION_ID:
+- this-is-deprecated
+"^D": []
+XDG_VTNR:
+- '2'
+OF_CORE_SOURCE_FILES:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofMatrix4x4.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofVec4f.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofQuaternion.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofMath.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofVec2f.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math/ofMatrix3x3.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofOpenALSoundPlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofSoundBuffer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofSoundStream.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofSoundPlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofBaseSoundStream.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofRtAudioSoundStream.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound/ofFmodSoundPlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofVideoGrabber.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofGstUtils.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofGstVideoPlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofVideoPlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofGstVideoGrabber.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication/ofSerial.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication/ofArduino.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppRunner.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppNoWindow.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppGlutWindow.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofMainLoop.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppGLFWWindow.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofLog.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofURLFileLoader.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofSystemUtils.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofFileUtils.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofXml.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofTimer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofUtils.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofMatrixStack.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofFpsCounter.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils/ofThread.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events/ofEvents.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofEasyCam.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofCamera.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/of3dUtils.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/of3dPrimitives.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofNode.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d/ofMesh.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofColor.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofRectangle.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofParameterGroup.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofBaseTypes.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types/ofParameter.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofTessellator.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofCairoRenderer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofGraphics.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofTrueTypeFont.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofPolyline.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofBitmapFont.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofImage.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofRendererCollection.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofPath.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/ofPixels.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics/of3dGraphics.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofVboMesh.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofMaterial.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofFbo.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofGLProgrammableRenderer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofBufferObject.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofShader.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofVbo.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofTexture.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofLight.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofGLRenderer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl/ofGLUtils.cpp"
+MAKELEVEL:
+- '0'
+GEM_PATH:
+- "/home/ravenskrag/.rvm/gems/ruby-2.1.1:/home/ravenskrag/.rvm/gems/ruby-2.1.1@global"
+OF_PLATFORM_MAKEFILES:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project/linux64"
+PROJECT_ADDONS_SS: []
+COMPILE.m:
+- cc
+- "-c"
+GCC_MINOR_GTEQ_7:
+- '1'
+MAKE:
+- make
+space: []
+MAKECMDGOALS:
+- printvars
+VALID_PROJECT_ADDONS:
+- ofxNetwork
+- ofxTrueTypeFontUC
+- ofxOsc
+- ofxGamepad
+- ofxAssimpModelLoader
+- ofxGui
+QT_IM_MODULE:
+- ibus
+ABIS_TO_COMPILE: []
+IRBRC:
+- "/home/ravenskrag/.rvm/rubies/ruby-2.1.1/.irbrc"
+SHLVL:
+- '1'
+PLATFORM_LIBRARIES:
+- glut
+- X11
+- Xrandr
+- Xxf86vm
+- Xi
+- Xcursor
+- dl
+- pthread
+- freeimage
+- rtaudio
+- boost_filesystem
+- boost_system
+PARSED_ADDONS_LIBS_SOURCE_PATHS: []
+OF_LIBS_OF_COMPILED_PROJECT_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/project"
+OF_PROJECT_LDFLAGS:
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+AS:
+- as
+TARGET_NAME:
+- Release
+OF_PROJECT_OBJ_OUTPUT_PATH:
+- obj/linux64/Release/
+PREPROCESS.S:
+- cc
+- "-E"
+PARSED_ADDONS_SOURCE_FILES:
+- "./src/main.cpp"
+- "./src/ofApp.cpp"
+- "./src/main.cpp"
+- "./src/ofApp.cpp"
+HOST_OS:
+- Linux
+ADDONS_SOURCES_FILTER: []
+COMPILE.p:
+- pc
+- "-c"
+XDG_SESSION_ID:
+- '1'
+PARSED_ADDONS_LIBS_PLATFORM_LIBS_SHARED:
+- "./bin/libs/libfmodex.so"
+- "./bin/libs/libfmodex.so"
+- "./bin/libs/libfmodex.so"
+USER:
+- ravenskrag
+ADDON_DEPENDENCIES: []
+FC:
+- f77
+".DEFAULT_GOAL":
+- Release
+XDG_CURRENT_DESKTOP:
+- GNOME
+ADDON_SOURCES_FILTERED:
+- "./src/main.cpp"
+- "./src/ofApp.cpp"
+- "./src/main.cpp"
+- "./src/ofApp.cpp"
+PLATFORM_ARCH:
+- x86_64
+OF_PROJECT_DEPS:
+- obj/linux64/Release/src/main.d
+- obj/linux64/Release/src/ofApp.d
+OF_ROOT:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
+PARSED_ADDONS_LIBS_INCLUDES_PATHS: []
+PROJECT_ADDONS_INCLUDES:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs/assimp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/win32"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/vs2008"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/osx"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/vs2010"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/mac"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/linux"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/win32"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/mac"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/linux"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/win32"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/src"
+- "/."
+- "."
+- "./notes"
+- "/./bin"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "/./lib"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+- "/."
+- "."
+- "./notes"
+- "/./bin"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "/./lib"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+- "/."
+- "."
+- "./notes"
+- "/./bin"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "/./lib"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+rvm_version:
+- 1.27.0
+- "(latest)"
+"%D": []
+ADDON_FRAMEWORKS: []
+GNOME_KEYRING_PID: []
+OF_EXAMPLES_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//examples"
+SRC_OBJ_FILE:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/ofApp.o"
+PARSED_ADDONS_FILTERED_LIBS_SOURCE_PATHS:
+- "./src/main.cpp"
+- "./src/ofApp.cpp"
+WEAVE:
+- weave
+MAKE_COMMAND:
+- make
+LINK.cpp:
+- g++
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+PROJECT_ADDONS_CPPS: []
+F77:
+- f77
+COMPILE.cc:
+- g++
+- "-c"
+ADDON_LIBS_EXCLUDE: []
+REQUESTED_PROJECT_ADDONS:
+- ofxAssimpModelLoader
+- ofxGui
+- ofxNetwork
+- ofxOsc
+- ofxGamepad
+- ofxTrueTypeFontUC
+OF_PROJECT_INCLUDES_CFLAGS:
+- "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/notes"
+- "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/lib"
+- "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src"
+".VARIABLES":
+- GNUMAKEFLAGS
+- "<D"
+- "?F"
+- CORE_EXCLUSIONS
+- DESKTOP_SESSION
+- ".SHELLFLAGS"
+- OF_CORE_HEADER_FILES
+- PLATFORM_SHARED_LIBRARIES
+- OF_CORE_THIRDPARTY_STATIC_LIBS
+- XDG_SESSION_TYPE
+- CWEAVE
+- PROJECT_CFLAGS
+- "?D"
+- rvm_path
+- PARSED_ADDONS_FILTERED_SOURCE_PATHS
+- GCC_MAJOR_GT_4
+- OF_CORE_THIRDPARTY_HEADER_PATHS
+- OF_PROJECT_CFLAGS
+- "@D"
+- XAUTHORITY
+- GDMSESSION
+- XMODIFIERS
+- CURDIR
+- OF_LIBS_PATH
+- SHELL
+- RM
+- CO
+- VTE_VERSION
+- OF_PROJECT_ADDONS_OBJS
+- _
+- PREPROCESS.F
+- src_to_obj
+- ALL_CXXFLAGS
+- LINK.m
+- XDG_CONFIG_DIRS
+- OUTPUT_OPTION
+- PLATFORM_OPTIMIZATION_CFLAGS_RELEASE
+- OF_PROJECT_LIBS
+- COMPILE.cpp
+- _system_version
+- HAS_SYSTEM_GTK3
+- MAKEFILE_LIST
+- NODEPS
+- PLATFORM_OPTIMIZATION_CFLAGS_DEBUG
+- "@F"
+- PLATFORM_PKG_CONFIG
+- OF_PROJECT_CXXFLAGS
+- IM_CONFIG_PHASE
+- OF_ADDONS_PATH
+- ADDON_PKG_CONFIG_LIBRARIES
+- PROJECT_ADDONS_PKG_CONFIG_LIBRARIES
+- USERNAME
+- SESSIONTYPE
+- CXXFLAGS
+- MANDATORY_PATH
+- XDG_DATA_DIRS
+- CROSS_COMPILING
+- PROJECT_ADDONS
+- OF_EXPORT_PATH
+- OF_CORE_LIB_PATH
+- DBUS_SESSION_BUS_ADDRESS
+- GCC_MAJOR_EQ_4
+- CC
+- PROJECT_ADDONS_SOURCE_FILES
+- PARSED_ADDONS_FILTERED_LIBS_SOURCE_INCLUDE_PATHS
+- addon
+- GCC_MINOR_GTEQ_9
+- PROJECT_ADDONS_LDFLAGS
+- PLATFORM_REQUIRED_ADDONS
+- CHECKOUT,v
+- obj_prefix
+- unscaped_var_line
+- OF_PROJECT_OBJS
+- CLUTTER_IM_MODULE
+- LESSOPEN
+- OF_PROJECT_DEFINES
+- CPP
+- OF_APPS_PATH
+- LINK.cc
+- PARSED_ADDONS_LIBS_SOURCE_INCLUDES
+- PARSED_ALL_PLATFORM_LIBS
+- LEX
+- MAKE_HOST
+- PATH
+- OF_CORE_LIBS
+- LD
+- B_PROCESS_ADDONS
+- ALL_OF_CORE_LIBS_PATHS
+- TEXI2DVI
+- OF_CORE_THIRDPARTY_SHARED_LIBS
+- GPG_AGENT_INFO
+- YACC
+- PG_OF_PATH
+- SESSION_MANAGER
+- OF_LIBS_OF_COMPILED_PATH
+- COMPILE.mod
+- XDG_RUNTIME_DIR
+- FIND
+- CFLAGS
+- ARFLAGS
+- LINK.r
+- PARSED_ADDONS_LIBS_SOURCES
+- PARSED_ADDONS_FILTERED_INCLUDE_PATHS
+- WINDOWID
+- COMPILE.f
+- OF_CORE_SOURCE_PATHS
+- LINT.c
+- YACC.m
+- ADDONS_INCLUDES_FILTER
+- LINT
+- LINK.p
+- YACC.y
+- PROJECT_ADDONS_OBJ_FILES
+- _system_name
+- AR
+- XDG_MENU_PREFIX
+- PROJECT_ADDONS_CXXS
+- ALL_LDFLAGS
+- ".FEATURES"
+- HAS_SYSTEM_MPG123
+- PROCESS_NEXT
+- TANGLE
+- SESSION
+- ALL_OF_CORE_LIBS_PLATFORM_LIB_PATHS
+- OF_CORE_LIBS_PLATFORM_LIBS_STATICS
+- OPTIMIZATION_LDFLAGS
+- LS_COLORS
+- PLATFORM_STATIC_LIBRARIES
+- JOB
+- XDG_SESSION_DESKTOP
+- remove-dupes-func
+- SSH_AUTH_SOCK
+- OF_PROJECT_EXCLUSIONS
+- GET
+- "%F"
+- DISPLAY
+- PROJECT_OPTIMIZATION_CFLAGS_DEBUG
+- COMPILE.F
+- CTANGLE
+- PLATFORM_CFLAGS
+- PARSED_ADDONS_LIBS_PLATFORM_LIB_PATHS
+- PARSED_ADDONS_LIBS_PLATFORM_LIBS_STATICS
+- GTK_IM_MODULE
+- ".LIBPATTERNS"
+- PLATFORM_OS
+- rvm_bin_path
+- PWD
+- ALL_OF_PROJECT_SOURCE_PATHS
+- OBJS_WITHOUT_EXTERNAL
+- PARSED_ADDONS_SOURCE_INCLUDES
+- OF_CORE_LIBS_THAT_DONT_NEED_ORDER
+- OF_CORE_HEADER_PATHS
+- ADDON_INCLUDES_EXCLUDE
+- LINK.S
+- INVALID_PROJECT_ADDONS
+- GEM_HOME
+- XDG_SEAT
+- PREPROCESS.r
+- INVALID_GLOBAL_ADDONS
+- OF_PROJECT_SOURCE_FILES
+- parse_addon
+- LINK.c
+- PROJECT_ADDONS_FRAMEWORKS
+- GTK_MODULES
+- LINK.s
+- HOME
+- OPTIMIZATION_CFLAGS
+- PARSED_ADDONS_LIBS
+- OF_PROJECT_OBJ_FILES
+- PARSED_ADDONS_SOURCE_PATHS
+- LESSCLOSE
+- OF_CORE_DEFINES_CFLAGS
+- OF_PROJECT_ADDONS_DEPS
+- LOGNAME
+- QT_LINUX_ACCESSIBILITY_ALWAYS_ON
+- ABI_LIB_SUBPATH
+- _ORIGINAL_GEM_PATH
+- OF_ADDON_INCLUDES_CFLAGS
+- OF_SHARED_MAKEFILES_PATH
+- PARSED_ADDONS_LIBS_INCLUDES
+- PLATFORM_VARIANT
+- PROJECT_AFTER
+- MAKE_VERSION
+- GNOME_DESKTOP_SESSION_ID
+- "^D"
+- XDG_VTNR
+- OF_CORE_SOURCE_FILES
+- MAKELEVEL
+- GEM_PATH
+- OF_PLATFORM_MAKEFILES
+- PROJECT_ADDONS_SS
+- COMPILE.m
+- GCC_MINOR_GTEQ_7
+- MAKE
+- space
+- MAKECMDGOALS
+- VALID_PROJECT_ADDONS
+- QT_IM_MODULE
+- ABIS_TO_COMPILE
+- IRBRC
+- SHLVL
+- PLATFORM_LIBRARIES
+- PARSED_ADDONS_LIBS_SOURCE_PATHS
+- OF_LIBS_OF_COMPILED_PROJECT_PATH
+- OF_PROJECT_LDFLAGS
+- AS
+- TARGET_NAME
+- OF_PROJECT_OBJ_OUTPUT_PATH
+- PREPROCESS.S
+- PARSED_ADDONS_SOURCE_FILES
+- HOST_OS
+- ADDONS_SOURCES_FILTER
+- COMPILE.p
+- XDG_SESSION_ID
+- PARSED_ADDONS_LIBS_PLATFORM_LIBS_SHARED
+- USER
+- ADDON_DEPENDENCIES
+- FC
+- ".DEFAULT_GOAL"
+- XDG_CURRENT_DESKTOP
+- ADDON_SOURCES_FILTERED
+- PLATFORM_ARCH
+- OF_PROJECT_DEPS
+- OF_ROOT
+- PARSED_ADDONS_LIBS_INCLUDES_PATHS
+- PROJECT_ADDONS_INCLUDES
+- rvm_version
+- "%D"
+- ADDON_FRAMEWORKS
+- GNOME_KEYRING_PID
+- OF_EXAMPLES_PATH
+- SRC_OBJ_FILE
+- PARSED_ADDONS_FILTERED_LIBS_SOURCE_PATHS
+- WEAVE
+- MAKE_COMMAND
+- LINK.cpp
+- PROJECT_ADDONS_CPPS
+- F77
+- COMPILE.cc
+- ADDON_LIBS_EXCLUDE
+- REQUESTED_PROJECT_ADDONS
+- OF_PROJECT_INCLUDES_CFLAGS
+- ".VARIABLES"
+- addon_obj_path
+- PC
+- "*F"
+- ADDON_SOURCES_EXCLUDE
+- ADDON_INCLUDES_FILTERED
+- PLATFORM_DEFINES
+- PLATFORM_LIBRARY_SEARCH_PATHS
+- COMPILE.def
+- GNOME_KEYRING_CONTROL
+- MAKEFLAGS
+- PLATFORM_CORE_EXCLUSIONS
+- MFLAGS
+- "*D"
+- PROJECT_ADDONS_OBJ_PATH
+- OF_CORE_LIBS_THAT_NEED_ORDER
+- LEX.l
+- LEX.m
+- ALL_OF_CORE_SOURCE_PATHS
+- "+D"
+- COMPILE.r
+- OBJS_WITH_PREFIX
+- OF_PROJECT_SOURCE_PATHS
+- ADDON_INCLUDES
+- "+F"
+- M2C
+- parse_addons_sources
+- PLATFORM_HEADER_SEARCH_PATHS
+- ALL_OF_CORE_LIBSORDER_MAKE_FILES
+- PROJECT_ADDONS_MS
+- APPNAME
+- ALL_OF_CORE_THIRDPARTY_SHARED_LIBS
+- QT_ACCESSIBILITY
+- PROJECT_ADDONS_MMS
+- AVAILABLE_PLATFORM_VARIANTS
+- parse_addons_libraries
+- DEFAULTS_PATH
+- LDFLAGS
+- PLATFORM_PKG_CONFIG_LIBRARIES
+- parse_addons_includes
+- MAKEFILES
+- UPSTART_SESSION
+- ADDON_LDFLAGS
+- _system_type
+- ALL_OF_CORE_THIRDPARTY_HEADER_PATHS
+- HOST_ARCH
+- "<F"
+- TARGET_LIBS
+- HAS_SYSTEM_GTK2
+- CXX
+- ALL_CFLAGS
+- INSTANCE
+- COFLAGS
+- OF_CORE_LIBRARY_LDFLAGS
+- LINK.C
+- OF_CORE_INCLUDES_CFLAGS
+- ADDON_CPPFLAGS
+- COMPILE.C
+- QT4_IM_MODULE
+- GJS_DEBUG_TOPICS
+- OF_LIBS_OPENFRAMEWORKS_PATH
+- OF_PROJECT_DEPENDENCY_FILES
+- "^F"
+- COMPILE.S
+- LINK.F
+- rvm_prefix
+- PROJECT_ROOT
+- SUFFIXES
+- PARSED_ADDONS_FILTERED_LIBS_INCLUDE_PATHS
+- PLATFORM_LDFLAGS
+- COMPILE.c
+- ADDON_INCLUDE_CFLAGS
+- PARSED_ADDONS_INCLUDES
+- _system_arch
+- ADDON_CFLAGS
+- WINDOWPATH
+- COMPILE.s
+- PROJECT_ADDONS_CFLAGS
+- ".INCLUDE_DIRS"
+- PARSED_ADDONS_OFX_SOURCES
+- GJS_DEBUG_OUTPUT
+- OF_PROJECT_DEFINES_CFLAGS
+- ADDON_DATA
+- CORE_PKG_CONFIG_LIBRARIES
+- ".RECIPEPREFIX"
+- MAKEINFO
+- MAKE_TERMERR
+- OBJC
+- PROJECT_ADDONS_CCS
+- LINK.f
+- ADDON_LIBS
+- TEX
+- GST_VERSION
+- PROJECT_ADDONS_LIBS
+- LANG
+- TERM
+- F77FLAGS
+- LINK.o
+- ADDON_SOURCES
+- ALL_INSTALLED_ADDONS
+- OF_CORE_BASE_CXXFLAGS
+- PLATFORM_LIB_SUBPATH
+- ADDON_PATHS
+- PROJECT_INCLUDE_CFLAGS
+- MY_RUBY_HOME
+- OF_CORE_BASE_CFLAGS
+addon_obj_path:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch"
+PC:
+- pc
+"*F": []
+ADDON_SOURCES_EXCLUDE: []
+ADDON_INCLUDES_FILTERED:
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+PLATFORM_DEFINES:
+- OF_USING_GTK
+- OF_USING_GTK
+- OF_USING_MPG123
+PLATFORM_LIBRARY_SEARCH_PATHS: []
+COMPILE.def:
+- m2c
+GNOME_KEYRING_CONTROL: []
+MAKEFLAGS: []
+PLATFORM_CORE_EXCLUSIONS:
+- "%.mm"
+- "%.m"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQtUtils.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQuickTimeGrabber.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofQuickTimePlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofDirectShowGrabber.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video/ofDirectShowPlayer.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app/ofAppEGLWindow.cpp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glew/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/cairo/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glu/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/lib/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/CppUnit"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/CppUnit/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/quicktime/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/videoInput/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/freetype/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/FreeImage/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/assimp/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glut/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/rtAudio/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openssl/%"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/%"
+MFLAGS: []
+"*D": []
+PROJECT_ADDONS_OBJ_PATH:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons/"
+OF_CORE_LIBS_THAT_NEED_ORDER: []
+LEX.l:
+- lex
+- "-t"
+LEX.m:
+- lex
+- "-t"
+ALL_OF_CORE_SOURCE_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl"
+"+D": []
+COMPILE.r:
+- f77
+- "-c"
+OBJS_WITH_PREFIX:
+- obj/linux64/Release//home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src/main.o
+- obj/linux64/Release//home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src/ofApp.o
+OF_PROJECT_SOURCE_PATHS:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/notes"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/lib"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src"
+ADDON_INCLUDES:
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+"+F": []
+M2C:
+- m2c
+parse_addons_sources: []
+PLATFORM_HEADER_SEARCH_PATHS: []
+ALL_OF_CORE_LIBSORDER_MAKE_FILES: []
+PROJECT_ADDONS_MS: []
+APPNAME:
+- mySketch
+ALL_OF_CORE_THIRDPARTY_SHARED_LIBS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/libfmodex.so"
+QT_ACCESSIBILITY:
+- '1'
+PROJECT_ADDONS_MMS: []
+AVAILABLE_PLATFORM_VARIANTS:
+- default
+- default
+parse_addons_libraries: []
+DEFAULTS_PATH:
+- "/usr/share/gconf/gnome.default.path"
+LDFLAGS:
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+PLATFORM_PKG_CONFIG_LIBRARIES:
+- cairo
+- zlib
+- gstreamer-app-1.0
+- gstreamer-1.0
+- gstreamer-video-1.0
+- gstreamer-base-1.0
+- libudev
+- freetype2
+- fontconfig
+- sndfile
+- openal
+- openssl
+- libpulse-simple
+- alsa
+- gl
+- glu
+- glew
+- gtk+-3.0
+- libmpg123
+parse_addons_includes: []
+MAKEFILES: []
+UPSTART_SESSION:
+- unix:abstract=/com/ubuntu/upstart-session/1000/3799
+ADDON_LDFLAGS: []
+_system_type:
+- Linux
+ALL_OF_CORE_THIRDPARTY_HEADER_PATHS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/FreeImage/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/math"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/math/special_functions"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/math/special_functions/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/math/tools"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/math/policies"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/exception"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/exception/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessor"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/config"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/mwcw"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/bcc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/bcc551"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/no_ctps"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/plain"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/msvc60"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/msvc70"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/bcc_pre590"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/no_ttp"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/dmc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/aux_/preprocessed/gcc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/vector"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/vector/aux_"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/vector/aux_/preprocessed"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/vector/aux_/preprocessed/typeof_based"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/vector/aux_/preprocessed/no_ctps"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/vector/aux_/preprocessed/plain"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/list"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/list/aux_"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/list/aux_/preprocessed"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/list/aux_/preprocessed/plain"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/mpl/limits"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/smart_ptr"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/smart_ptr/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/timer"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/core"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/filesystem"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/filesystem/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/system"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/system/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/detail/winapi"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/variadic"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/comparison"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/punctuation"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/punctuation/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/array"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/slot"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/slot/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/logical"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/seq"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/seq/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/list"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/list/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/list/detail/edg"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/list/detail/dmc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/detail/dmc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/arithmetic"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/arithmetic/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/control"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/control/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/control/detail/edg"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/control/detail/msvc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/control/detail/dmc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/config"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/debug"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/iteration"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/iteration/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/iteration/detail/bounds"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/iteration/detail/iter"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/repetition"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/repetition/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/repetition/detail/edg"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/repetition/detail/msvc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/repetition/detail/dmc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/tuple"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/tuple/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/facilities"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/preprocessor/facilities/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/utility"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/utility/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/numeric"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/numeric/conversion"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/numeric/conversion/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/numeric/conversion/detail/preprocessed"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/config"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/config/compiler"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/config/platform"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/config/stdlib"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/config/no_tr1"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/config/abi"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/compiler"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/platform"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/other"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/language"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/os"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/os/bsd"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/architecture"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/architecture/x86"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/library"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/library/c"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/predef/library/std"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/included"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/impl"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/utils"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/utils/runtime"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/utils/runtime/cla"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/utils/runtime/cla/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/utils/runtime/cla/iface"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/utils/runtime/env"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/utils/iterator"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/utils/basic_cstring"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/test/output"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/bind"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/ratio"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/ratio/mpl"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/ratio/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/ratio/detail/mpl"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/align"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/align/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/functional"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/functional/hash"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/functional/hash/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/integer"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/typeof"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/typeof/msvc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/typeof/dmc"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/chrono"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/chrono/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/chrono/detail/inlined"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/chrono/detail/inlined/win"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/chrono/detail/inlined/posix"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/chrono/detail/inlined/mac"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/io"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/io/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/iterator"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/iterator/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/move"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/move/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/lexical_cast"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/lexical_cast/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/container"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/container/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/optional"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/concept"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/concept/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/range"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/range/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/range/algorithm"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/type_traits"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/boost/include/boost/type_traits/detail"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/freetype/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/freetype/include/freetype2"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/freetype/include/freetype2/config"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/freetype/include/freetype2/internal"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/freetype/include/freetype2/internal/services"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include/GLFW"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/Crypto"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/Util"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/DOM"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/XML"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/Dynamic"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/SAX"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/Net"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/JSON"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/SevenZip"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/MongoDB"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/Zip"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/Data"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include/Poco/Data/SQLite"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8"
+HOST_ARCH:
+- x86_64
+"<F": []
+TARGET_LIBS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworksCompiled/lib/linux64/libopenFrameworks.a"
+HAS_SYSTEM_GTK2:
+- '0'
+CXX:
+- g++
+ALL_CFLAGS:
+- "-Wall"
+- "-std=c++14"
+- "-DGCC_HAS_REGEX"
+- "-DOF_USING_GTK"
+- "-DOF_USING_GTK"
+- "-DOF_USING_MPG123"
+- "-fPIC"
+INSTANCE: []
+COFLAGS: []
+OF_CORE_LIBRARY_LDFLAGS:
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+LINK.C:
+- g++
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+OF_CORE_INCLUDES_CFLAGS:
+- "-D_REENTRANT"
+- "-pthread"
+- "-I/usr/include/gstreamer-1.0"
+- "-I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include"
+- "-I/usr/include/AL"
+- "-I/usr/include/alsa"
+- "-I/usr/include/libdrm"
+- "-I/usr/include/gtk-3.0"
+- "-I/usr/include/at-spi2-atk/2.0"
+- "-I/usr/include/at-spi-2.0"
+- "-I/usr/include/dbus-1.0"
+- "-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include"
+- "-I/usr/include/gtk-3.0"
+- "-I/usr/include/gio-unix-2.0/"
+- "-I/usr/include/mirclient"
+- "-I/usr/include/mircommon"
+- "-I/usr/include/mircookie"
+- "-I/usr/include/cairo"
+- "-I/usr/include/pango-1.0"
+- "-I/usr/include/harfbuzz"
+- "-I/usr/include/pango-1.0"
+- "-I/usr/include/atk-1.0"
+- "-I/usr/include/cairo"
+- "-I/usr/include/pixman-1"
+- "-I/usr/include/freetype2"
+- "-I/usr/include/libpng12"
+- "-I/usr/include/gdk-pixbuf-2.0"
+- "-I/usr/include/libpng12"
+- "-I/usr/include/glib-2.0"
+- "-I/usr/lib/x86_64-linux-gnu/glib-2.0/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include/GLFW"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl"
+ADDON_CPPFLAGS: []
+COMPILE.C:
+- g++
+- "-c"
+QT4_IM_MODULE:
+- xim
+GJS_DEBUG_TOPICS:
+- JS
+- ERROR;JS
+- LOG
+OF_LIBS_OPENFRAMEWORKS_PATH:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks"
+OF_PROJECT_DEPENDENCY_FILES:
+- obj/linux64/Release/src/main.d
+- obj/linux64/Release/src/ofApp.d
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpMeshHelper.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpModelLoader.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpAnimation.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxAssimpModelLoader/src/ofxAssimpTexture.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxToggle.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSliderGroup.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxLabel.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxSlider.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxGuiGroup.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxButton.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxPanel.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGui/src/ofxBaseGui.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPServer.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPClient.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxUDPManager.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxNetwork/src/ofxTCPManager.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscMessage.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscParameterSync.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscBundle.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscSender.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/src/ofxOscReceiver.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/ip/IpEndpointName.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscTypes.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepad.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadHandler.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadCamera.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadOIS.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxGamepad/src/ofxGamepadLinux.d"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//addons/obj/linux64/Release/ofxTrueTypeFontUC/src/ofxTrueTypeFontUC.d"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/main.d"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/ofApp.d"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/main.d"
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/obj/linux64/Release/addons//./src/ofApp.d"
+"^F": []
+COMPILE.S:
+- cc
+- "-c"
+LINK.F:
+- f77
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+rvm_prefix:
+- "/home/ravenskrag"
+PROJECT_ROOT:
+- "/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch"
+SUFFIXES:
+- ".out"
+- ".a"
+- ".ln"
+- ".o"
+- ".c"
+- ".cc"
+- ".C"
+- ".cpp"
+- ".p"
+- ".f"
+- ".F"
+- ".m"
+- ".r"
+- ".y"
+- ".l"
+- ".ym"
+- ".yl"
+- ".s"
+- ".S"
+- ".mod"
+- ".sym"
+- ".def"
+- ".h"
+- ".info"
+- ".dvi"
+- ".tex"
+- ".texinfo"
+- ".texi"
+- ".txinfo"
+- ".w"
+- ".ch"
+- ".web"
+- ".sh"
+- ".elc"
+- ".el"
+PARSED_ADDONS_FILTERED_LIBS_INCLUDE_PATHS:
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+PLATFORM_LDFLAGS:
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+COMPILE.c:
+- cc
+- "-Wall"
+- "-std=c++14"
+- "-DGCC_HAS_REGEX"
+- "-DOF_USING_GTK"
+- "-DOF_USING_GTK"
+- "-DOF_USING_MPG123"
+- "-fPIC"
+- "-c"
+ADDON_INCLUDE_CFLAGS:
+- "-D_REENTRANT"
+- "-pthread"
+- "-I/usr/include/gstreamer-1.0"
+- "-I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include"
+- "-I/usr/include/AL"
+- "-I/usr/include/alsa"
+- "-I/usr/include/libdrm"
+- "-I/usr/include/gtk-3.0"
+- "-I/usr/include/at-spi2-atk/2.0"
+- "-I/usr/include/at-spi-2.0"
+- "-I/usr/include/dbus-1.0"
+- "-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include"
+- "-I/usr/include/gtk-3.0"
+- "-I/usr/include/gio-unix-2.0/"
+- "-I/usr/include/mirclient"
+- "-I/usr/include/mircommon"
+- "-I/usr/include/mircookie"
+- "-I/usr/include/cairo"
+- "-I/usr/include/pango-1.0"
+- "-I/usr/include/harfbuzz"
+- "-I/usr/include/pango-1.0"
+- "-I/usr/include/atk-1.0"
+- "-I/usr/include/cairo"
+- "-I/usr/include/pixman-1"
+- "-I/usr/include/freetype2"
+- "-I/usr/include/libpng12"
+- "-I/usr/include/gdk-pixbuf-2.0"
+- "-I/usr/include/libpng12"
+- "-I/usr/include/glib-2.0"
+- "-I/usr/lib/x86_64-linux-gnu/glib-2.0/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include/GLFW"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs/assimp"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/vs2008"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/osx"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/vs2010"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/mac"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/linux"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/mac"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/linux"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+PARSED_ADDONS_INCLUDES:
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+- "."
+- "./notes"
+- "./bin"
+- "./bin/data"
+- "./bin/libs"
+- "./lib"
+- "./src"
+- "./obj"
+- "./obj/linux64"
+- "./obj/linux64/Release"
+- "./obj/linux64/Release/src"
+_system_arch:
+- x86_64
+ADDON_CFLAGS: []
+WINDOWPATH:
+- '2'
+COMPILE.s:
+- as
+PROJECT_ADDONS_CFLAGS: []
+".INCLUDE_DIRS":
+- "/usr/include"
+- "/usr/local/include"
+- "/usr/include"
+PARSED_ADDONS_OFX_SOURCES:
+- "./src/main.cpp"
+- "./src/ofApp.cpp"
+GJS_DEBUG_OUTPUT:
+- stderr
+OF_PROJECT_DEFINES_CFLAGS: []
+ADDON_DATA: []
+CORE_PKG_CONFIG_LIBRARIES:
+- cairo
+- zlib
+- gstreamer-app-1.0
+- gstreamer-1.0
+- gstreamer-video-1.0
+- gstreamer-base-1.0
+- libudev
+- freetype2
+- fontconfig
+- sndfile
+- openal
+- openssl
+- libpulse-simple
+- alsa
+- gl
+- glu
+- glew
+- gtk+-3.0
+- libmpg123
+".RECIPEPREFIX": []
+MAKEINFO:
+- makeinfo
+MAKE_TERMERR:
+- "/dev/pts/2"
+OBJC:
+- cc
+PROJECT_ADDONS_CCS: []
+LINK.f:
+- f77
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+ADDON_LIBS:
+- "./lib/libOFSketch.a"
+- "./lib/libOFSketch.a"
+- "./bin/libs/libfmodex.so"
+- "./bin/libs/libfmodex.so"
+- "./bin/libs/libfmodex.so"
+TEX:
+- tex
+GST_VERSION:
+- '1.0'
+PROJECT_ADDONS_LIBS:
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64/libwgois64.a"
+- "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64/libwgois64.a"
+- "./lib/libOFSketch.a"
+- "./lib/libOFSketch.a"
+- "./bin/libs/libfmodex.so"
+- "./bin/libs/libfmodex.so"
+- "./bin/libs/libfmodex.so"
+LANG:
+- en_US.UTF-8
+TERM:
+- xterm-256color
+F77FLAGS: []
+LINK.o:
+- cc
+- "-Wl,-rpath=./libs:./bin/libs"
+- "-Wl,--as-needed"
+- "-Wl,--gc-sections"
+- "-L/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/lib/linux64/"
+- "-lfmodex"
+ADDON_SOURCES:
+- "./src/main.cpp"
+- "./src/ofApp.cpp"
+- "./src/main.cpp"
+- "./src/ofApp.cpp"
+ALL_INSTALLED_ADDONS:
+- ofxLearn
+- ofxThreadedImageLoader
+- ofxNetwork
+- ofxChipmunk
+- ofxAbletonLive
+- ofxLSystemGrammar
+- ofxKinect
+- ofxVectorGraphics
+- ofxTrueTypeFontUC
+- ofxXmlSettings
+- ofxController
+- ofxOpenCv
+- ofxSvg
+- ofxOsc
+- ofxGamepad
+- obj
+- ofxBullet
+- ofxEmscripten
+- ofxAssimpModelLoader
+- ofxPd
+- ofxPlaylist
+- ofxSpatialHash
+- ofxMarkovChain
+- ofxGui
+- ofxBlender
+- ofxLSystem
+OF_CORE_BASE_CXXFLAGS: []
+PLATFORM_LIB_SUBPATH:
+- linux64
+PROJECT_INCLUDE_CFLAGS:
+- "-D_REENTRANT"
+- "-pthread"
+- "-I/usr/include/gstreamer-1.0"
+- "-I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include"
+- "-I/usr/include/AL"
+- "-I/usr/include/alsa"
+- "-I/usr/include/libdrm"
+- "-I/usr/include/gtk-3.0"
+- "-I/usr/include/at-spi2-atk/2.0"
+- "-I/usr/include/at-spi-2.0"
+- "-I/usr/include/dbus-1.0"
+- "-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include"
+- "-I/usr/include/gtk-3.0"
+- "-I/usr/include/gio-unix-2.0/"
+- "-I/usr/include/mirclient"
+- "-I/usr/include/mircommon"
+- "-I/usr/include/mircookie"
+- "-I/usr/include/cairo"
+- "-I/usr/include/pango-1.0"
+- "-I/usr/include/harfbuzz"
+- "-I/usr/include/pango-1.0"
+- "-I/usr/include/atk-1.0"
+- "-I/usr/include/cairo"
+- "-I/usr/include/pixman-1"
+- "-I/usr/include/freetype2"
+- "-I/usr/include/libpng12"
+- "-I/usr/include/gdk-pixbuf-2.0"
+- "-I/usr/include/libpng12"
+- "-I/usr/include/glib-2.0"
+- "-I/usr/lib/x86_64-linux-gnu/glib-2.0/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/fmodex/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/glfw/include/GLFW"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/poco/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/tess2/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/utf8cpp/include/utf8"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/math"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/sound"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/video"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/communication"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/app"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/utils"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/events"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/3d"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/types"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/graphics"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/openFrameworks/gl"
+- "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/notes"
+- "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/lib"
+- "-I/home/ravenskrag/Experiments/RubyCPP/Oni/ext/oni/cpp/mySketch/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxAssimpModelLoader/libs/assimp"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGui/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxNetwork/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/posix"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxOsc/libs/oscpack/src/osc"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/src"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/vs2008"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/osx"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/vs2010"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/lib/linux64"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/mac"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/linux"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/mac"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/linux"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxGamepad/libs/wgois/include/win32"
+- "-I/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/addons/ofxTrueTypeFontUC/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+- "-I/."
+- "-I."
+- "-I./notes"
+- "-I/./bin"
+- "-I./bin"
+- "-I./bin/data"
+- "-I./bin/libs"
+- "-I/./lib"
+- "-I./lib"
+- "-I./src"
+- "-I./obj"
+- "-I./obj/linux64"
+- "-I./obj/linux64/Release"
+- "-I./obj/linux64/Release/src"
+MY_RUBY_HOME:
+- "/home/ravenskrag/.rvm/rubies/ruby-2.1.1"
+OF_CORE_BASE_CFLAGS:
+- "-Wall"
+- "-std=c++14"
+- "-DGCC_HAS_REGEX"

@@ -43,7 +43,7 @@ cpp_root = File.expand_path("ext/#{NAME}/cpp/", GEM_ROOT)
 	
 	# This way, you can set OF_SKETCH_ROOT to some other value before requiring this file,
 	# and everything else will update to match.
-	OF_SKETCH_ROOT = File.expand_path('oF_Test/mySketch/', cpp_root) unless defined? OF_SKETCH_ROOT
+	OF_SKETCH_ROOT = File.expand_path('mySketch/', cpp_root) unless defined? OF_SKETCH_ROOT
 		
 		OF_SKETCH_SRC_DIR         = File.expand_path('src', OF_SKETCH_ROOT)
 		OF_SKETCH_SRC_FILES       = Dir.glob(File.join(OF_SKETCH_SRC_DIR, '*{.cpp,.h}'))
