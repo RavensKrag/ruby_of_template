@@ -384,7 +384,15 @@ source_files += ["ext/#{NAME}/extconf.rb", __FILE__, OF_BUILD_VARIABLE_FILE]
 
 
 
-file OF_BUILD_VARIABLE_FILE => 'oF_sketch_lib:print_vars'
+file OF_BUILD_VARIABLE_FILE => 
+[
+	File.expand_path("./Makefile.static_lib", OF_SKETCH_ROOT),
+	File.expand_path("./addons.make",         OF_SKETCH_ROOT),
+	__FILE__, # if the Rake task changes, then update the output file
+	COMMON_CONFIG # if config variables change, then build may be different
+] do
+	run_task 'oF_sketch_lib:print_vars'
+end
 
 
 # Mimic RubyGems gem install procedure, for testing purposes.
