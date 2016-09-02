@@ -23,6 +23,7 @@ class Window < Oni::Window
 		
 		puts "ruby: Window#initialize"
 		
+		
 		@p = [0,0]
 		
 		@p_history = Array.new
@@ -97,6 +98,9 @@ class Window < Oni::Window
 		
 		ofDrawBitmapString("hello again from ruby!", 300, 350, z);
 		ofDrawBitmapString("clipboard: #{self.clipboard_string.inspect}", 100, 400, z);
+		# ^ NOTE: I think this gives you an error when the contains something that is not a string?
+		# [ error ] ofAppGLFWWindow: 65545: X11: Failed to convert selection to string
+
 		
 		# ofSetColor(255,0,0, 255) # rgba
 		# ofDrawCircle(*@p,z, 20)
