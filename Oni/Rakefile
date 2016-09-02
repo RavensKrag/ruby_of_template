@@ -6,8 +6,7 @@ require 'open3'
 require 'yaml'
 
 
-gem_root = File.absolute_path(File.dirname(__FILE__))
-require File.expand_path('./build_libs/common', gem_root)
+require './build_libs/common'
 # ^ this file declares GEM_ROOT constant, other constants, and a some functions
 
 
@@ -606,7 +605,7 @@ end
 
 # run project from the Ruby level
 task :run => :build do
-	require File.expand_path('lib/test', File.absolute_path(File.dirname(__FILE__)))
+	require File.expand_path('lib/projects/template/main.rb', GEM_ROOT)
 	# test file creates a new subclass of Oni::Window, and runs a basic graphics test.
 end
 

@@ -1,4 +1,5 @@
-require File.expand_path('./oni', File.absolute_path(File.dirname(__FILE__)))
+root = File.expand_path('../../../', File.absolute_path(File.dirname(__FILE__)))
+require File.expand_path('lib/oni', root)
 
 
 # TODO: rename things so this project doesn't have symbol collision with the other package I named "Oni", from which this project's template derives.
