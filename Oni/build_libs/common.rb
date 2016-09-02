@@ -23,9 +23,9 @@ DYNAMIC_LIB_PATH = File.expand_path("./bin/libs/", GEM_ROOT)
 # 	'./mySketch'
 # 	'./mySketch/lib'
 
-CPP_ROOT = File.expand_path('ext/oni/cpp/', GEM_ROOT)
+cpp_root = File.expand_path("ext/#{NAME}/cpp/", GEM_ROOT)
 
-	OF_SKETCH_ROOT = File.expand_path('oF_Test/mySketch/', CPP_ROOT)
+	OF_SKETCH_ROOT = File.expand_path('oF_Test/mySketch/', cpp_root)
 		
 		OF_SKETCH_SRC_DIR         = File.expand_path('src', OF_SKETCH_ROOT)
 		OF_SKETCH_SRC_FILES       = Dir.glob(File.join(OF_SKETCH_SRC_DIR, '*{.cpp,.h}'))

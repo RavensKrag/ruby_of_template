@@ -329,44 +329,36 @@ of_build_variables['OBJS_WITH_PREFIX']
 of_project_objs = 
 	of_build_variables['OF_PROJECT_OBJS']
 	.collect{ |line|
-		File.expand_path("./ext/oni/cpp/oF_Test/mySketch/#{line}", GEM_ROOT)
+		File.expand_path("./#{line}", OF_SKETCH_ROOT)
 	}.join(' ')
 
 
 of_project_addon_objs = of_build_variables['OF_PROJECT_ADDONS_OBJS'].join(' ')
 
 
-
-
-
-
-
-
-
-
-
-
-
 # libopenFrameworks.a
 of_project_libs = of_build_variables['TARGET_LIBS'].join(' ')
 
 
-
 # basic linker flags
-ld_flags = 
-	of_build_variables['ALL_LDFLAGS']
-	.reject{ |flag|
-		flag.include? "fmodex" # already specified in extconf.rb
-	}
-	.reject{ |flag|
-		flag.include? '-rpath'
-	}
-ld_flags.unshift "-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH}" # add to front
-ld_flags = ld_flags.join(' ')
-
-# NOTE: may need to modify -rpath in the future
-# NOTE: specify directories for dynamic libraries relative to the root directory of this project, and then expand them into full paths before adding to -rpath. This means the gem will be able to find the dynamic libraries regaurdless of where the Ruby code is being called from.
-
+ld_flags = ->(){
+	ld_flags = 
+		of_build_variables['ALL_LDFLAGS']
+		.reject{ |flag|
+			flag.include? "fmodex" # already specified in extconf.rb
+		}
+		.reject{ |flag|
+			flag.include? '-rpath'
+		}
+	ld_flags.unshift "-Wl,-rpath=./libs:./bin/libs:#{DYNAMIC_LIB_PATH}" # add to front
+	ld_flags = ld_flags.join(' ')
+	
+	
+	# NOTE: may need to modify -rpath in the future
+	# NOTE: specify directories for dynamic libraries relative to the root directory of this project, and then expand them into full paths before adding to -rpath. This means the gem will be able to find the dynamic libraries regaurdless of where the Ruby code is being called from.
+	
+	return ld_flags
+}[]
 
 # more linker flags
 of_core_libs_dynamic_flags = 
@@ -380,27 +372,12 @@ of_core_libs_dynamic_flags =
 
 
 
-
-# optimization_ld_flags
-of_project_objs
-of_project_addon_objs
-# target_libs
-of_project_libs
-ld_flags
-# of_core_libs # spltting this up into dynamic lib flags and .a files
-# of_core_libs_dot_a = "
-# 	/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release//libs/kiss/lib/linux64/libkiss.a
-# "
-of_core_libs_dynamic_flags
-
 more_linker_flags = 
 	[
 		of_project_objs,
 		of_project_addon_objs,
 		of_project_libs,
 		ld_flags,
-		# of_core_libs, # split into the following two categories:
-		# of_core_libs_dot_a,
 		of_core_libs_dynamic_flags, # these flags are very important
 	]
 	.collect{  |string_blob|  string_blob.split.join(' ') }

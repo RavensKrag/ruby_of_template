@@ -81,7 +81,7 @@ namespace :base do
 		path = "scripts/linux"
 		path = File.expand_path(path, OF_ROOT)
 		Dir.chdir path do
-			run_i "./compileOF.sh -j4" # build the core
+			run_i "./compileOF.sh -j#{NUMBER_OF_CORES}" # build the core
 			
 			# run_i "./cleanAllExamples.sh"
 			# run_i "./buildAllExamples.sh"
@@ -409,7 +409,7 @@ file c_library => source_files do
 		# Run make
 		
 		flags = ""
-		flags += " -j4" if Dir.exists? '/home/ravenskrag' # if running on my machine
+		flags += " -j#{NUMBER_OF_CORES}" if Dir.exists? '/home/ravenskrag' # if running on my machine
 		
 		run_i "make #{flags}"  do
 			"ERROR: Could not build c extension."
