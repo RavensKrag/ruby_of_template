@@ -8,6 +8,16 @@ NAME = 'oni'
 
 
 
+# === Platform-dependent build configuration variables
+
+PLATFORM           = "linux64"
+TARGET             = "Release"
+NUMBER_OF_CORES    = 4
+
+	# TODO: accept platform, target, and number of cores as Rake arguments
+	# (maybe you actually want to figure out platform automatially)
+
+
 # === this path is most likely not going to be under the root directory of the Ruby gem
 OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release/"
 
@@ -15,39 +25,35 @@ OF_ROOT = "/home/ravenskrag/Experiments/OpenFrameworks/of_v0.9.3_linux64_release
 # === these fils should be under the root directory of this Ruby gem
 path_to_file = File.absolute_path(File.dirname(__FILE__))
 
-COMMON_CONFIG = path_to_file
+COMMON_CONFIG = File.absolute_path(__FILE__)
 
 GEM_ROOT = File.expand_path('../', path_to_file)
 
 DYNAMIC_LIB_PATH = File.expand_path("./bin/libs/", GEM_ROOT)
 
 
+
+# === the sketch MAY be under the root directory, but could be configured to lie elsewhere
+
 # 'ext/oni/cpp/oF_Test'
 # 	'./mySketch'
 # 	'./mySketch/lib'
 
 cpp_root = File.expand_path("ext/#{NAME}/cpp/", GEM_ROOT)
-
-	OF_SKETCH_ROOT = File.expand_path('oF_Test/mySketch/', cpp_root)
+	
+	# This way, you can set OF_SKETCH_ROOT to some other value before requiring this file,
+	# and everything else will update to match.
+	OF_SKETCH_ROOT = File.expand_path('oF_Test/mySketch/', cpp_root) unless defined? OF_SKETCH_ROOT
 		
 		OF_SKETCH_SRC_DIR         = File.expand_path('src', OF_SKETCH_ROOT)
 		OF_SKETCH_SRC_FILES       = Dir.glob(File.join(OF_SKETCH_SRC_DIR, '*{.cpp,.h}'))
 		
 		OF_SKETCH_LIB_OUTPUT_PATH = File.expand_path('lib', OF_SKETCH_ROOT)
+		OF_SKETCH_LIB_FILE = File.join(OF_SKETCH_LIB_OUTPUT_PATH, 'libOFSketch.a')
+		
+		
+		OF_BUILD_VARIABLE_FILE = File.expand_path("./oF_build_variables.yaml", OF_SKETCH_ROOT)
 
-
-OF_BUILD_VARIABLE_FILE = File.expand_path("./oF_build_variables.yaml", GEM_ROOT)
-
-
-# === Other build configuration variables
-OF_SKETCH_LIB_FILE = File.join(OF_SKETCH_LIB_OUTPUT_PATH, 'libOFSketch.a')
-
-PLATFORM           = "linux64"
-TARGET             = "Release"
-NUMBER_OF_CORES    = 4
-
-# TODO: accept platform, target, and number of cores as Rake arguments
-# (maybe you actually want to figure out platform automatially)
 
 
 

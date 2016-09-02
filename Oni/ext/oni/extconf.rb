@@ -215,8 +215,7 @@ have_header('utf8/core.h')
 
 # === Set extra flags based on data from oF build system
 
-filepath = File.expand_path("./oF_build_variables.yaml", GEM_ROOT)
-of_build_variables = YAML.load_file(filepath)
+of_build_variables = YAML.load_file(OF_BUILD_VARIABLE_FILE)
 # p of_build_variables
 
 # TODO: centralize setting of build variables. Some duplication between extconf.rb and rakefile.

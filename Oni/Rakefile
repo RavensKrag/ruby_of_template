@@ -6,8 +6,8 @@ require 'open3'
 require 'yaml'
 
 
-GEM_ROOT = File.absolute_path(File.dirname(__FILE__))
-require File.expand_path('./build_libs/common', GEM_ROOT)
+gem_root = File.absolute_path(File.dirname(__FILE__))
+require File.expand_path('./build_libs/common', gem_root)
 # ^ this file declares GEM_ROOT constant, other constants, and a some functions
 
 
